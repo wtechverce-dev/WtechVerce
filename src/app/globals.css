@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --w-orange: #FF6B00;
+  --w-orange-light: #FF8833;
+  --w-purple: #8A2BE2;
+  --w-purple-dark: #6B21A8;
+  --w-bg: #050505;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #050505;
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+  color: #ffffff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-bebas), var(--font-jakarta), system-ui, sans-serif;
+  letter-spacing: 0.04em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #050505; }
+::-webkit-scrollbar-thumb { background: #6B21A8; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #FF6B00; }
+
+/* Gradient text utility */
+.text-gradient {
+  background: linear-gradient(90deg, #FF6B00, #8A2BE2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Canvas wrapper - ensure height */
+canvas {
+  display: block;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-33.333333%); }
+}
