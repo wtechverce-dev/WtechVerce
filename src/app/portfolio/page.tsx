@@ -5,66 +5,70 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import { ArrowUpRight, ExternalLink } from "lucide-react";
 import Button from "@/components/ui/Button";
+import dynamic from "next/dynamic";
+import GSAPScrollAnimations from "@/components/ui/GSAPScrollAnimations";
+
+const ParticleSphere = dynamic(() => import("@/components/3d/ParticleSphere"), { ssr: false, loading: () => null });
 
 const projects = [
   {
-    title: "Aura SaaS Platform",
-    category: "SaaS Development",
-    description: "Multi-tenant subscription platform with real-time analytics, billing automation, and team collaboration tools.",
-    tags: ["Next.js", "Supabase", "Stripe", "PostgreSQL"],
+    title: "LeadStonk.com",
+    category: "B2B Lead Generation",
+    description: "A comprehensive B2B lead generation platform focusing on high-quality B2B leads and automated outreach.",
+    tags: ["Next.js", "Node.js", "MongoDB", "Stripe"],
     gradient: "from-[#FF6B00]/30 to-[#8A2BE2]/20",
     border: "#FF6B00",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80",
     featured: true,
   },
   {
-    title: "NexGen AI Dashboard",
-    category: "AI Solutions",
-    description: "Intelligent data visualization platform with GPT-powered insights and automated reporting pipelines.",
-    tags: ["React", "OpenAI", "Python", "AWS"],
+    title: "SmileCare Dental",
+    category: "Dentist Clinic",
+    description: "Modern dental clinic website with online appointment booking and secure patient portal.",
+    tags: ["React", "TailwindCSS", "Firebase"],
     gradient: "from-[#8A2BE2]/30 to-[#FF6B00]/20",
     border: "#8A2BE2",
-    image: "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80",
     featured: true,
   },
   {
-    title: "Vanguard Enterprise Portal",
-    category: "Web Application",
-    description: "Enterprise-grade internal management portal with role-based access, audit logs, and custom workflows.",
-    tags: ["Next.js", "TypeScript", "Node.js", "Redis"],
+    title: "GrowthBoost Agency",
+    category: "Marketing Agency",
+    description: "Creative digital marketing agency portfolio highlighting campaign success stories and analytics.",
+    tags: ["Next.js", "Framer Motion", "Sanity CMS"],
     gradient: "from-[#FF8833]/20 to-[#6B21A8]/20",
     border: "#FF8833",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
     featured: false,
   },
   {
-    title: "Orbit Design System",
-    category: "UI/UX Design",
-    description: "Complete design system with 200+ components, dark/light theming, and Figma-to-code pipeline.",
-    tags: ["Figma", "React", "Storybook", "Tailwind"],
+    title: "Elite Real Estate",
+    category: "Real Estate",
+    description: "Premium real estate platform with advanced property search and 3D virtual tours.",
+    tags: ["React", "PostgreSQL", "AWS"],
     gradient: "from-[#6B21A8]/20 to-[#FF6B00]/20",
     border: "#6B21A8",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1582407947304-fd86f28320be?auto=format&fit=crop&w=800&q=80",
     featured: false,
   },
   {
-    title: "FlowBot Automation",
-    category: "AI Solutions",
-    description: "AI workflow automation engine connecting 50+ business tools with zero-code interface builder.",
-    tags: ["Python", "LangChain", "FastAPI", "Docker"],
+    title: "PureFitness Gym",
+    category: "Fitness Center",
+    description: "Fitness center management system with membership subscriptions and class scheduling.",
+    tags: ["Next.js", "TypeScript", "Prisma"],
     gradient: "from-[#FF6B00]/20 to-[#8A2BE2]/30",
     border: "#FF6B00",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=800&q=80",
     featured: false,
   },
   {
-    title: "CoreMarket Platform",
-    category: "Web Development",
-    description: "B2B marketplace with vendor management, escrow payments, and real-time inventory tracking.",
-    tags: ["Next.js", "Stripe", "Elasticsearch", "AWS"],
+    title: "UrbanBites",
+    category: "Restaurant",
+    description: "Restaurant ordering system with digital menu and real-time order tracking.",
+    tags: ["React Native", "Node.js", "Socket.io"],
     gradient: "from-[#8A2BE2]/20 to-[#FF8833]/20",
     border: "#8A2BE2",
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80",
     featured: false,
   },
 ];
@@ -72,11 +76,15 @@ const projects = [
 export default function PortfolioPage() {
   return (
     <main className="min-h-screen bg-[#050505] text-white overflow-x-hidden">
-      <Navbar />
+      <GSAPScrollAnimations />
 
       {/* Page Hero */}
       <section className="pt-40 pb-20 px-6 md:px-12 max-w-7xl mx-auto relative">
         <div className="absolute top-20 right-0 w-[400px] h-[400px] bg-[#8A2BE2]/10 rounded-full blur-[100px] pointer-events-none" />
+        {/* ParticleSphere 3D */}
+        <div className="absolute top-0 right-[-50px] w-[450px] h-[450px] opacity-50 pointer-events-none hidden lg:block">
+          <ParticleSphere />
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -208,16 +216,6 @@ export default function PortfolioPage() {
         </motion.div>
       </section>
 
-      <footer className="bg-[#030303] border-t border-white/5 py-10">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-1">
-            <span className="text-2xl font-black italic text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B00] to-[#8A2BE2]">W</span>
-            <span className="text-lg font-bold text-white">tech</span>
-            <span className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8A2BE2] to-[#FF6B00]">verce</span>
-          </div>
-          <p className="text-gray-600 text-sm">© {new Date().getFullYear()} W Techverce. All rights reserved.</p>
-        </div>
-      </footer>
     </main>
   );
 }

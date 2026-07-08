@@ -66,7 +66,6 @@ const steps = [
 export default function ProcessPage() {
   return (
     <main className="min-h-screen bg-[#050505] text-white overflow-x-hidden">
-      <Navbar />
 
       {/* Hero */}
       <section className="pt-40 pb-24 px-6 md:px-12 max-w-7xl mx-auto relative">
@@ -180,16 +179,6 @@ export default function ProcessPage() {
         </motion.div>
       </section>
 
-      <footer className="bg-[#030303] border-t border-white/5 py-10">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-1">
-            <span className="text-2xl font-black italic text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B00] to-[#8A2BE2]">W</span>
-            <span className="text-lg font-bold text-white">tech</span>
-            <span className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8A2BE2] to-[#FF6B00]">verce</span>
-          </div>
-          <p className="text-gray-600 text-sm">© {new Date().getFullYear()} W Techverce. All rights reserved.</p>
-        </div>
-      </footer>
     </main>
   );
 }

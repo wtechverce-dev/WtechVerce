@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "@/components/ui/Button";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
@@ -39,7 +40,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         <Link href="/">
-          <img src="/wtech.png" alt="wtechverce" className="h-24 w-auto object-contain" />
+          <Image src="/wtech.png" alt="wtechverce" width={200} height={96} priority className="h-24 w-auto object-contain" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-12 md:gap-16">

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Button from "@/components/ui/Button";
+import { useState } from "react";
 import { Send, Mail, MapPin, Globe, Phone } from "lucide-react";
 
 const faqs = [
@@ -13,9 +14,60 @@ const faqs = [
 ];
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    service: "",
+    budget: "",
+    message: ""
+  });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.name || !formData.email || !formData.message) {
+      setErrorMessage("Please fill in all required fields (Name, Email, Project Details).");
+      setStatus("error");
+      return;
+    }
+
+    setStatus("loading");
+    setErrorMessage("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          company: formData.company,
+          project: formData.service, // Map service to project for admin panel compatibility
+          budget: formData.budget
+        }),
+      });
+
+      if (!res.ok) throw new Error("Failed to send message");
+
+      setStatus("success");
+      setFormData({ name: "", email: "", company: "", service: "", budget: "", message: "" });
+      
+      setTimeout(() => setStatus("idle"), 5000);
+    } catch (err) {
+      setStatus("error");
+      setErrorMessage("Something went wrong. Please try again.");
+    }
+  };
+
   return (
     <main className="min-h-screen bg-[#050505] text-white overflow-x-hidden">
-      <Navbar />
 
       <section className="pt-40 pb-32 px-6 md:px-12 max-w-7xl mx-auto relative">
         {/* Glow */}
@@ -57,8 +109,8 @@ export default function ContactPage() {
               <h3 className="text-xl font-bold mb-6">Contact Information</h3>
               <div className="flex flex-col gap-6">
                 {[
-                  { icon: <Mail className="w-5 h-5" />, label: "Email", value: "hello@wtechverce.com", color: "#FF6B00" },
-                  { icon: <Phone className="w-5 h-5" />, label: "WhatsApp", value: "+92 300 0000000", color: "#8A2BE2" },
+                  { icon: <Mail className="w-5 h-5" />, label: "Email", value: "WTechVerse@gmail.com", color: "#FF6B00" },
+                  { icon: <Phone className="w-5 h-5" />, label: "WhatsApp", value: "0313-7102600", color: "#8A2BE2" },
                   { icon: <MapPin className="w-5 h-5" />, label: "Location", value: "Pakistan · Global Remote", color: "#FF8833" },
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-4">
@@ -111,29 +163,51 @@ export default function ContactPage() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="lg:col-span-3 bg-[#0a0a0a] border border-[#8A2BE2]/20 rounded-3xl p-8 md:p-10 shadow-[0_0_60px_rgba(107,33,168,0.07)]"
+            className="lg:col-span-3 bg-[#0a0a0a] border border-[#8A2BE2]/20 rounded-3xl p-8 md:p-10 shadow-[0_0_60px_rgba(107,33,168,0.07)] relative overflow-hidden"
           >
+            {status === 'success' && (
+              <div className="absolute inset-0 bg-[#0A0A0A]/90 backdrop-blur-sm z-20 flex flex-col items-center justify-center p-8 text-center">
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  className="w-16 h-16 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center mb-4"
+                >
+                  <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </motion.div>
+                <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
+                <p className="text-gray-400">Thank you for reaching out. We will get back to you shortly.</p>
+              </div>
+            )}
+
             <h3 className="text-2xl font-bold mb-8">Tell Us About Your Project</h3>
-            <form onSubmit={(e) => e.preventDefault()} className="flex flex-col gap-5">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+              {status === 'error' && (
+                <div className="bg-red-500/10 border border-red-500/20 text-red-400 px-4 py-3 rounded-xl text-sm">
+                  {errorMessage}
+                </div>
+              )}
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="name" className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Your Name</label>
-                  <input type="text" id="name" className="bg-[#050505] border border-white/8 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#FF6B00]/50 transition-colors placeholder-gray-600" placeholder="John Smith" />
+                  <label htmlFor="name" className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Your Name *</label>
+                  <input type="text" id="name" value={formData.name} onChange={handleChange} className="bg-[#050505] border border-white/8 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#FF6B00]/50 transition-colors placeholder-gray-600" placeholder="John Smith" disabled={status === 'loading'} />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="email" className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Email Address</label>
-                  <input type="email" id="email" className="bg-[#050505] border border-white/8 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#8A2BE2]/50 transition-colors placeholder-gray-600" placeholder="john@company.com" />
+                  <label htmlFor="email" className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Email Address *</label>
+                  <input type="email" id="email" value={formData.email} onChange={handleChange} className="bg-[#050505] border border-white/8 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#8A2BE2]/50 transition-colors placeholder-gray-600" placeholder="john@company.com" disabled={status === 'loading'} />
                 </div>
               </div>
 
               <div className="flex flex-col gap-2">
                 <label htmlFor="company" className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Company (Optional)</label>
-                <input type="text" id="company" className="bg-[#050505] border border-white/8 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#FF6B00]/50 transition-colors placeholder-gray-600" placeholder="Your Company Name" />
+                <input type="text" id="company" value={formData.company} onChange={handleChange} className="bg-[#050505] border border-white/8 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#FF6B00]/50 transition-colors placeholder-gray-600" placeholder="Your Company Name" disabled={status === 'loading'} />
               </div>
 
               <div className="flex flex-col gap-2">
                 <label htmlFor="service" className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Service Needed</label>
-                <select id="service" className="bg-[#050505] border border-white/8 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#8A2BE2]/50 transition-colors appearance-none cursor-pointer">
+                <select id="service" value={formData.service} onChange={handleChange} className="bg-[#050505] border border-white/8 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#8A2BE2]/50 transition-colors appearance-none cursor-pointer" disabled={status === 'loading'}>
                   <option value="">Select a service...</option>
                   <option value="web">Web Development</option>
                   <option value="saas">SaaS Development</option>
@@ -146,7 +220,7 @@ export default function ContactPage() {
 
               <div className="flex flex-col gap-2">
                 <label htmlFor="budget" className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Budget Range</label>
-                <select id="budget" className="bg-[#050505] border border-white/8 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#FF6B00]/50 transition-colors appearance-none cursor-pointer">
+                <select id="budget" value={formData.budget} onChange={handleChange} className="bg-[#050505] border border-white/8 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#FF6B00]/50 transition-colors appearance-none cursor-pointer" disabled={status === 'loading'}>
                   <option value="">Select budget range...</option>
                   <option>Under $5,000</option>
                   <option>$5,000 – $15,000</option>
@@ -156,29 +230,19 @@ export default function ContactPage() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="message" className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Project Details</label>
-                <textarea id="message" rows={5} className="bg-[#050505] border border-white/8 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#8A2BE2]/50 transition-colors resize-none placeholder-gray-600" placeholder="Describe your project, goals, timeline, and anything else we should know..."></textarea>
+                <label htmlFor="message" className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Project Details *</label>
+                <textarea id="message" value={formData.message} onChange={handleChange} rows={5} className="bg-[#050505] border border-white/8 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#8A2BE2]/50 transition-colors resize-none placeholder-gray-600" placeholder="Describe your project, goals, timeline, and anything else we should know..." disabled={status === 'loading'}></textarea>
               </div>
 
-              <Button type="submit" variant="primary" size="md" className="mt-4 w-full">
-                Send Message
-                <Send className="w-5 h-5" />
+              <Button type="submit" variant="primary" size="md" className="mt-4 w-full" disabled={status === 'loading'}>
+                {status === 'loading' ? 'Sending...' : 'Send Message'}
+                {!status || status !== 'loading' && <Send className="w-5 h-5" />}
               </Button>
             </form>
           </motion.div>
         </div>
       </section>
 
-      <footer className="bg-[#030303] border-t border-white/5 py-10">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-1">
-            <span className="text-2xl font-black italic text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B00] to-[#8A2BE2]">W</span>
-            <span className="text-lg font-bold text-white">tech</span>
-            <span className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8A2BE2] to-[#FF6B00]">verce</span>
-          </div>
-          <p className="text-gray-600 text-sm">© {new Date().getFullYear()} W Techverce. All rights reserved.</p>
-        </div>
-      </footer>
     </main>
   );
 }

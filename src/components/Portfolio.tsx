@@ -6,27 +6,27 @@ import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
-    title: "Aura SaaS Platform",
-    category: "SaaS Development",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80",
+    title: "LeadStonk.com",
+    category: "B2B Lead Generation",
+    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80",
     color: "from-[var(--color-w-purple)] to-transparent",
   },
   {
-    title: "NexGen AI Dashboard",
-    category: "AI Solutions",
-    image: "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80",
+    title: "SmileCare Dental",
+    category: "Dentist Clinic",
+    image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&q=80",
     color: "from-[var(--color-w-orange)] to-transparent",
   },
   {
-    title: "Vanguard Enterprise",
-    category: "Web Application",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80",
+    title: "GrowthBoost Agency",
+    category: "Marketing Agency",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80",
     color: "from-[#FF8833] to-transparent",
   },
   {
-    title: "Orbit Design System",
-    category: "UI/UX Design",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80",
+    title: "Elite Real Estate",
+    category: "Real Estate",
+    image: "https://images.unsplash.com/photo-1582407947304-fd86f28320be?auto=format&fit=crop&q=80",
     color: "from-[#8A2BE2] to-transparent",
   },
 ];

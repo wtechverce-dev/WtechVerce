@@ -9,11 +9,16 @@ import ScrambleText from "@/components/ui/ScrambleText";
 import SplitReveal from "@/components/ui/SplitReveal";
 import TechMarquee from "@/components/ui/TechMarquee";
 import Button from "@/components/ui/Button";
+import GSAPScrollAnimations from "@/components/ui/GSAPScrollAnimations";
 import {
   ArrowRight, Sparkles, Shield, Zap, Globe, Code, Cloud, Cpu,
   LayoutTemplate, Settings, Server, Star, ChevronDown, ChevronUp,
   ArrowUpRight, CheckCircle, Users, Award, TrendingUp, Search
 } from "lucide-react";
+
+const FloatingCrystal = dynamic(() => import("@/components/3d/FloatingCrystal"), { ssr: false, loading: () => null });
+const NeuralNetwork3D = dynamic(() => import("@/components/3d/NeuralNetwork3D"), { ssr: false, loading: () => null });
+const TorusRings = dynamic(() => import("@/components/3d/TorusRings"), { ssr: false, loading: () => null });
 
 const HeroGlobeScene = dynamic(() => import("@/components/3d/GlobeScene"), {
   ssr: false,
@@ -61,10 +66,10 @@ const services = [
 
 // ─── PORTFOLIO DATA ────────────────────────────────
 const projects = [
-  { title: "Aura SaaS Platform", category: "SaaS", img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80", color: "#FD4F00" },
-  { title: "NexGen AI Dashboard", category: "AI Solutions", img: "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80", color: "#6C24FA" },
-  { title: "Vanguard Enterprise", category: "Web App", img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80", color: "#FD4F00" },
-  { title: "Orbit Design System", category: "UI/UX", img: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80", color: "#FD4F00" },
+  { title: "LeadStonk.com", category: "B2B Lead Generation", img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80", color: "#FD4F00" },
+  { title: "SmileCare Dental", category: "Dentist Clinic", img: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80", color: "#6C24FA" },
+  { title: "GrowthBoost Agency", category: "Marketing Agency", img: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80", color: "#FD4F00" },
+  { title: "Elite Real Estate", category: "Real Estate", img: "https://images.unsplash.com/photo-1582407947304-fd86f28320be?auto=format&fit=crop&w=800&q=80", color: "#6C24FA" },
 ];
 
 // ─── TIMELINE DATA ────────────────────────────────
@@ -137,7 +142,7 @@ function FAQItem({ faq, index }: { faq: { q: string; a: string }; index: number 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#070C12] text-white overflow-x-hidden">
-      <Navbar />
+      <GSAPScrollAnimations />
 
       {/* ══════════════════════════════════════════
           HERO SECTION — 3D Laptop + Nodes
@@ -607,6 +612,10 @@ export default function Home() {
         {/* Background grid */}
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#6C24FA]/10 rounded-full blur-[120px] pointer-events-none" />
+        {/* 3D NeuralNetwork decoration */}
+        <div className="absolute right-[-120px] top-0 w-[500px] h-[500px] opacity-40 pointer-events-none hidden lg:block">
+          <NeuralNetwork3D />
+        </div>
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="text-center mb-20">
@@ -647,6 +656,10 @@ export default function Home() {
       ══════════════════════════════════════════ */}
       <section className="py-32 relative overflow-hidden bg-[#070C12]">
         <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-[#FD4F00]/8 rounded-full blur-[120px] pointer-events-none -translate-y-1/2" />
+        {/* 3D Crystal decoration */}
+        <div className="absolute left-[-80px] top-1/2 -translate-y-1/2 w-[400px] h-[400px] opacity-30 pointer-events-none hidden lg:block">
+          <FloatingCrystal />
+        </div>
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="text-center mb-20">
@@ -693,6 +706,10 @@ export default function Home() {
       ══════════════════════════════════════════ */}
       <section className="py-32 relative overflow-hidden">
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-[#6C24FA]/8 rounded-full blur-[100px] pointer-events-none" />
+        {/* 3D TorusRings decoration */}
+        <div className="absolute right-[-60px] bottom-10 w-[380px] h-[380px] opacity-35 pointer-events-none hidden lg:block">
+          <TorusRings />
+        </div>
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="text-center mb-20">
             <span className="inline-block px-4 py-1.5 rounded-full border border-[#6C24FA]/40 bg-[#6C24FA]/10 text-[#a78bfa] text-sm font-semibold mb-6 tracking-widest uppercase">Industries</span>
@@ -724,55 +741,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════
-          FOOTER
-      ══════════════════════════════════════════ */}
-      <footer className="bg-[#070C12] border-t border-white/6 py-16">
-        <div className="w-full px-6 md:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-            {/* Brand */}
-            <div className="md:col-span-2">
-              <div className="flex items-center gap-1 mb-4">
-                <span className="text-3xl font-black italic text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] to-[#6C24FA]">W</span>
-                <span className="text-xl font-bold text-white">tech</span>
-                <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#6C24FA] to-[#FD4F00]">verce</span>
-              </div>
-              <p className="text-gray-500 text-sm leading-relaxed max-w-xs">
-                World-class digital agency building futuristic web apps, AI solutions, and enterprise SaaS platforms.
-              </p>
-            </div>
-
-            {/* Links */}
-            <div>
-              <h4 className="font-bold text-white mb-4 text-sm tracking-widest uppercase">Services</h4>
-              <div className="flex flex-col gap-2.5">
-                {["Web Development", "SaaS Development", "AI Solutions", "UI/UX Design"].map((s, i) => (
-                  <Link key={i} href="/services" className="text-gray-500 text-sm hover:text-white transition-colors">{s}</Link>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-white mb-4 text-sm tracking-widest uppercase">Company</h4>
-              <div className="flex flex-col gap-2.5">
-                {[["Portfolio", "/portfolio"], ["Process", "/process"], ["Contact", "/contact"]].map(([label, href], i) => (
-                  <Link key={i} href={href} className="text-gray-500 text-sm hover:text-white transition-colors">{label}</Link>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-600 text-sm">© {new Date().getFullYear()} W Techverce. All rights reserved.</p>
-            <div className="flex gap-6 text-sm text-gray-500">
-              <a href="#" className="hover:text-white transition-colors">Twitter</a>
-              <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
-              <a href="#" className="hover:text-white transition-colors">Instagram</a>
-              <a href="#" className="hover:text-white transition-colors">hello@wtechverce.com</a>
-            </div>
-          </div>
-        </div>
-      </footer>
     </main>
   );
 }

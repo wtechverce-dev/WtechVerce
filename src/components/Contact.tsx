@@ -2,9 +2,58 @@
 
 import { motion } from "framer-motion";
 import Button from "@/components/ui/Button";
-import { Send, Mail, MapPin } from "lucide-react";
+import { Send, Mail, MapPin, CheckCircle, AlertCircle } from "lucide-react";
+import { useState } from "react";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    project: "",
+    message: ""
+  });
+  
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.name || !formData.email || !formData.message) {
+      setErrorMessage("Please fill in all required fields.");
+      setStatus("error");
+      return;
+    }
+
+    setStatus("loading");
+    setErrorMessage("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      setStatus("success");
+      setFormData({ name: "", email: "", project: "", message: "" });
+      
+      setTimeout(() => {
+        setStatus("idle");
+      }, 5000);
+    } catch (err) {
+      setStatus("error");
+      setErrorMessage("Something went wrong. Please try again.");
+    }
+  };
+
   return (
     <section id="contact" className="py-32 bg-[var(--color-w-bg)] relative">
       <div className="container mx-auto px-6 relative z-10">
@@ -65,23 +114,44 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-3 bg-[#0A0A0A] p-8 rounded-3xl border border-[var(--color-w-purple)]/20 shadow-[0_0_30px_rgba(107,33,168,0.05)]"
+            className="lg:col-span-3 bg-[#0A0A0A] p-8 rounded-3xl border border-[var(--color-w-purple)]/20 shadow-[0_0_30px_rgba(107,33,168,0.05)] relative overflow-hidden"
           >
-            <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
+            {status === 'success' && (
+              <div className="absolute inset-0 bg-[#0A0A0A]/90 backdrop-blur-sm z-20 flex flex-col items-center justify-center p-8 text-center">
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  className="w-16 h-16 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center mb-4"
+                >
+                  <CheckCircle className="w-8 h-8" />
+                </motion.div>
+                <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
+                <p className="text-gray-400">Thank you for reaching out. We will get back to you shortly.</p>
+              </div>
+            )}
+            
+            <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
+              {status === 'error' && (
+                <div className="bg-red-500/10 border border-red-500/20 text-red-400 px-4 py-3 rounded-xl flex items-center gap-3">
+                  <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                  <p className="text-sm">{errorMessage}</p>
+                </div>
+              )}
+              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="name" className="text-sm font-medium text-gray-400">Name</label>
-                  <input type="text" id="name" className="bg-[#050505] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[var(--color-w-orange)] transition-colors" placeholder="John Doe" />
+                  <label htmlFor="name" className="text-sm font-medium text-gray-400">Name *</label>
+                  <input type="text" id="name" value={formData.name} onChange={handleChange} className="bg-[#050505] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[var(--color-w-orange)] transition-colors" placeholder="John Doe" disabled={status === 'loading'} />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="email" className="text-sm font-medium text-gray-400">Email</label>
-                  <input type="email" id="email" className="bg-[#050505] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[var(--color-w-purple)] transition-colors" placeholder="john@example.com" />
+                  <label htmlFor="email" className="text-sm font-medium text-gray-400">Email *</label>
+                  <input type="email" id="email" value={formData.email} onChange={handleChange} className="bg-[#050505] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[var(--color-w-purple)] transition-colors" placeholder="john@example.com" disabled={status === 'loading'} />
                 </div>
               </div>
 
               <div className="flex flex-col gap-2">
                 <label htmlFor="project" className="text-sm font-medium text-gray-400">Project Type</label>
-                <select id="project" className="bg-[#050505] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[var(--color-w-orange)] transition-colors appearance-none">
+                <select id="project" value={formData.project} onChange={handleChange} className="bg-[#050505] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[var(--color-w-orange)] transition-colors appearance-none" disabled={status === 'loading'}>
                   <option value="">Select a service</option>
                   <option value="web">Web Development</option>
                   <option value="saas">SaaS Development</option>
@@ -91,13 +161,13 @@ export default function Contact() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="message" className="text-sm font-medium text-gray-400">Message</label>
-                <textarea id="message" rows={4} className="bg-[#050505] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[var(--color-w-purple)] transition-colors resize-none" placeholder="Tell us about your project..."></textarea>
+                <label htmlFor="message" className="text-sm font-medium text-gray-400">Message *</label>
+                <textarea id="message" rows={4} value={formData.message} onChange={handleChange} className="bg-[#050505] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[var(--color-w-purple)] transition-colors resize-none" placeholder="Tell us about your project..." disabled={status === 'loading'}></textarea>
               </div>
 
-              <Button type="submit" variant="white" size="md" className="mt-4">
-                Send Message
-                <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              <Button type="submit" variant="white" size="md" className="mt-4" disabled={status === 'loading'}>
+                {status === 'loading' ? 'Sending...' : 'Send Message'}
+                {!status || status !== 'loading' && <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
               </Button>
             </form>
           </motion.div>

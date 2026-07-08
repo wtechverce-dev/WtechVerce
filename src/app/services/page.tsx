@@ -7,7 +7,7 @@ import { Code, Cloud, Cpu, LayoutTemplate, Settings, Server, ArrowRight } from "
 import Navbar from "@/components/Navbar";
 import Button from "@/components/ui/Button";
 
-const LaptopScene = dynamic(() => import("@/components/3d/LaptopScene"), {
+const CyberCore = dynamic(() => import("@/components/3d/CyberCore"), {
   ssr: false,
   loading: () => (
     <div className="w-full h-full flex items-center justify-center">
@@ -64,7 +64,6 @@ const allServices = [
 export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-[#050505] text-white overflow-x-hidden">
-      <Navbar />
 
       {/* Hero Section with 3D Laptop */}
       <section className="relative min-h-screen flex items-center pt-24 overflow-hidden">
@@ -84,7 +83,7 @@ export default function ServicesPage() {
               <span className="text-sm font-medium text-[#8A2BE2]">Our Services</span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-black tracking-tight mb-6 leading-[1.05]">
+            <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-6 leading-[1.05]">
               What We
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B00] to-[#8A2BE2]">
@@ -112,14 +111,14 @@ export default function ServicesPage() {
             </div>
           </motion.div>
 
-          {/* Right: 3D Laptop */}
+          {/* Right: 3D Cyber Core */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="h-[500px] md:h-[600px] w-full"
+            className="h-[400px] md:h-[600px] w-full"
           >
-            <LaptopScene />
+            <CyberCore />
           </motion.div>
         </div>
 
@@ -211,16 +210,6 @@ export default function ServicesPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#030303] border-t border-white/5 py-10">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-1">
-            <span className="text-2xl font-black italic text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B00] to-[#8A2BE2]">W</span>
-            <span className="text-lg font-bold text-white">tech</span>
-            <span className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8A2BE2] to-[#FF6B00]">verce</span>
-          </div>
-          <p className="text-gray-600 text-sm">© {new Date().getFullYear()} W Techverce. All rights reserved.</p>
-        </div>
-      </footer>
     </main>
   );
 }
