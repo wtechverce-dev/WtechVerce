@@ -1,44 +1,47 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import { sql } from '@vercel/postgres';
 
 export async function POST(request: Request) {
   try {
     const data = await request.json();
     
-    const { name, email, message, ...otherFields } = data;
+    // Extracted fields that are sent from the frontend
+    const { name, email, company, project, budget, message } = data;
     
     if (!name || !email || !message) {
       return NextResponse.json({ error: 'Name, email, and message are required' }, { status: 400 });
     }
 
-    const newMessage = {
-      id: Date.now().toString(),
-      name,
-      email,
-      message,
-      ...otherFields,
-      createdAt: new Date().toISOString(),
-    };
-
-    const filePath = path.join(process.cwd(), 'data', 'messages.json');
-    
-    let messages: any[] = [];
-    if (fs.existsSync(filePath)) {
-      const fileData = fs.readFileSync(filePath, 'utf-8');
-      if (fileData) {
-        messages = JSON.parse(fileData);
-      }
-    } else {
-      // Create directory if it doesn't exist
-      const dirPath = path.join(process.cwd(), 'data');
-      if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath, { recursive: true });
+    // Attempt to insert data into PostgreSQL
+    try {
+      await sql`
+        INSERT INTO messages (name, email, company, project, budget, message)
+        VALUES (${name}, ${email}, ${company || ''}, ${project || ''}, ${budget || ''}, ${message})
+      `;
+    } catch (dbError: any) {
+      // If table doesn't exist, create it and try again
+      if (dbError.message.includes('relation "messages" does not exist')) {
+        await sql`
+          CREATE TABLE messages (
+            id SERIAL PRIMARY KEY,
+            name VARCHAR(255) NOT NULL,
+            email VARCHAR(255) NOT NULL,
+            company VARCHAR(255),
+            project VARCHAR(255),
+            budget VARCHAR(255),
+            message TEXT NOT NULL,
+            createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+          );
+        `;
+        // Retry insertion
+        await sql`
+          INSERT INTO messages (name, email, company, project, budget, message)
+          VALUES (${name}, ${email}, ${company || ''}, ${project || ''}, ${budget || ''}, ${message})
+        `;
+      } else {
+        throw dbError;
       }
     }
-
-    messages.push(newMessage);
-    fs.writeFileSync(filePath, JSON.stringify(messages, null, 2));
 
     return NextResponse.json({ success: true, message: 'Message saved successfully' });
   } catch (error) {
