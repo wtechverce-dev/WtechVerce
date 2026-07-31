@@ -109,7 +109,7 @@ export default function ContactPage() {
               <h3 className="text-xl font-bold mb-6">Contact Information</h3>
               <div className="flex flex-col gap-6">
                 {[
-                  { icon: <Mail className="w-5 h-5" />, label: "Email", value: "WTechVerse@gmail.com", color: "#FF6B00" },
+                  { icon: <Mail className="w-5 h-5" />, label: "Email", value: "wtechverce@gmail.com", color: "#FF6B00" },
                   { icon: <Phone className="w-5 h-5" />, label: "WhatsApp", value: "0313-7102600", color: "#8A2BE2" },
                   { icon: <MapPin className="w-5 h-5" />, label: "Location", value: "Pakistan · Global Remote", color: "#FF8833" },
                 ].map((item, i) => (
