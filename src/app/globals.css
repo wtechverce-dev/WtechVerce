@@ -58,3 +58,8 @@ canvas {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-33.333333%); }
 }
+
+@keyframes marquee-ticker {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-33.333333%); }
+}
