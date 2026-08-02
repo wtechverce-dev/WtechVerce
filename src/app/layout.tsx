@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/ui/SmoothScroll";
 import JsonLd from "@/components/JsonLd";
+import Script from "next/script";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -21,32 +22,30 @@ export const metadata: Metadata = {
   // ─── Core SEO ───────────────────────────────────────────────────────────────
   metadataBase: new URL("https://wtechverce.com"),
   title: {
-    default: "WTechVerce | Premium Web Development & AI Agency",
+    default: "Digital Marketing Agency for Small Business | WTechVerce",
     template: "%s | WTechVerce",
   },
   description:
-    "WTechVerce is a premium digital agency specializing in Web Development, SaaS Platforms, AI Solutions, and UI/UX Design. We build world-class digital products that drive real business growth.",
+    "Full-service digital marketing agency for small businesses, SaaS, eCommerce & more. Transparent reporting, no lock-in contracts. Get a free audit.",
   keywords: [
+    "digital marketing agency",
+    "digital marketing agency services",
+    "full service digital marketing agency",
+    "top digital marketing agency",
+    "digital marketing agency for small businesses",
+    "digital marketing agency for small business",
+    "agency digital marketing",
+    "small business digital marketing agency",
+    "digital marketing agency united states",
+    "digital marketing agency pricing",
+    "leading digital marketing agency",
+    "digital marketing consulting agency",
     "WTechVerce",
-    "web development agency",
-    "SaaS development",
-    "AI solutions",
-    "UI UX design agency",
-    "custom software development",
-    "digital agency Pakistan",
-    "Next.js development",
-    "React development agency",
-    "mobile app development",
-    "enterprise web solutions",
-    "startup web development",
-    "full stack development",
-    "hire web developers",
-    "best web agency",
   ],
   authors: [{ name: "WTechVerce", url: "https://wtechverce.com" }],
   creator: "WTechVerce",
   publisher: "WTechVerce",
-  category: "technology",
+  category: "marketing",
 
   // ─── Canonical & Alternates ─────────────────────────────────────────────────
   alternates: {
@@ -59,15 +58,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://wtechverce.com",
     siteName: "WTechVerce",
-    title: "WTechVerce | Premium Web Development & AI Agency",
+    title: "Digital Marketing Agency for Small Business | WTechVerce",
     description:
-      "We build world-class web apps, SaaS platforms, and AI solutions. Partner with WTechVerce to launch your next big digital product.",
+      "Full-service digital marketing agency for small businesses, SaaS, eCommerce & more. Transparent reporting, no lock-in contracts. Get a free audit.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "WTechVerce - Premium Web Development & AI Agency",
+        alt: "WTechVerce - Digital Marketing Agency",
         type: "image/png",
       },
     ],
@@ -78,9 +77,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@wtechverce",
     creator: "@wtechverce",
-    title: "WTechVerce | Premium Web Development & AI Agency",
+    title: "Digital Marketing Agency for Small Business | WTechVerce",
     description:
-      "We build world-class web apps, SaaS platforms, and AI solutions. Partner with WTechVerce today.",
+      "Full-service digital marketing agency for small businesses, SaaS, eCommerce & more. Transparent reporting, no lock-in contracts. Get a free audit.",
     images: ["/og-image.png"],
   },
 
@@ -102,7 +101,6 @@ export const metadata: Metadata = {
   // ─── Verification (fill in after Google/Bing Search Console setup) ──────────
   verification: {
     google: "REPLACE_WITH_GOOGLE_SEARCH_CONSOLE_TOKEN",
-    // yandex: "REPLACE_WITH_YANDEX_TOKEN",
   },
 
   // ─── App Metadata ────────────────────────────────────────────────────────────
@@ -131,6 +129,19 @@ export default function RootLayout({
         <meta name="theme-color" content="#050505" />
         <meta name="color-scheme" content="dark" />
         <JsonLd />
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-EGLJGCFRP6"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-EGLJGCFRP6');
+          `}
+        </Script>
       </head>
       <body className="min-h-screen bg-[#050505] text-white antialiased selection:bg-[#8A2BE2] selection:text-white font-sans flex flex-col">
         <SmoothScroll>
@@ -142,3 +153,4 @@ export default function RootLayout({
     </html>
   );
 }
+
