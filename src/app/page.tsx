@@ -293,7 +293,10 @@ export default function Home() {
         </div>
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 grid lg:grid-cols-2 gap-16">
           <div className="bg-white/[0.02] border border-white/10 p-10 rounded-3xl">
-            <h2 className="text-3xl font-black mb-10 text-white">Problems We Solve</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-10 tracking-tight">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] to-[#ff8c55]">Problems</span>
+              <span className="text-white"> We Solve</span>
+            </h2>
             <div className="space-y-8">
               {[
                 { prob: `"We're getting traffic but no leads."`, sol: "Usually a targeting or conversion problem, not a traffic problem. We diagnose which." },
@@ -312,7 +315,10 @@ export default function Home() {
           </div>
           <div className="bg-white/[0.02] border border-white/10 p-10 rounded-3xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#6C24FA]/10 blur-[80px] pointer-events-none rounded-full" />
-            <h2 className="text-3xl font-black mb-10 text-white">Why Businesses Choose WTechVerce</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-10 tracking-tight">
+              <span className="text-white">Why Businesses </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6C24FA] to-[#a855f7]">Choose WTechVerce</span>
+            </h2>
             <div className="space-y-10 relative z-10">
               {[
                 { title: "Transparent Reporting", desc: "You see exactly what we're doing and why, in reports built for business owners — not marketers." },
