@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Bebas_Neue } from "next/font/google";
+import { DM_Sans, Syne } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/ui/SmoothScroll";
 import JsonLd from "@/components/JsonLd";
 import Script from "next/script";
 
-const jakarta = Plus_Jakarta_Sans({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-jakarta",
+  variable: "--font-dm-sans",
   display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-const bebas = Bebas_Neue({
+const syne = Syne({
   subsets: ["latin"],
-  weight: "400",
-  variable: "--font-bebas",
+  variable: "--font-syne",
   display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -122,7 +123,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${jakarta.variable} ${bebas.variable}`}>
+    <html lang="en" className={`${dmSans.variable} ${syne.variable}`}>
       <head>
         <link rel="icon" type="image/jpeg" href="/wtechvercefavicon.jpeg" sizes="any" />
         <link rel="apple-touch-icon" href="/wtechvercefavicon.jpeg" />
