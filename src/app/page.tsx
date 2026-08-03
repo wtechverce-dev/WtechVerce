@@ -343,6 +343,86 @@ export default function Home() {
       <ImageMarqueeSection />
 
       {/* ══════════════════════════════════════════
+          SECTION 1.7: FOUNDER SECTION
+      ══════════════════════════════════════════ */}
+      <section className="py-24 bg-[#02050A] relative overflow-hidden">
+        {/* Background noise/texture */}
+        <div className="absolute inset-0 opacity-[0.03]"
+          style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")" }} />
+
+        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+          <FadeIn>
+            {/* Board-style card with screws */}
+            <div className="relative rounded-[2.5rem] border border-white/8 overflow-hidden"
+              style={{ background: "linear-gradient(135deg, #0A0F1E 0%, #07091A 100%)" }}>
+
+              {/* Corner screws */}
+              {["top-5 left-5", "top-5 right-5", "bottom-5 left-5", "bottom-5 right-5"].map((pos, i) => (
+                <div key={i} className={`absolute ${pos} w-5 h-5 rounded-full border-2 border-white/15 flex items-center justify-center`}>
+                  <div className="w-2 h-[1px] bg-white/20 rotate-45" />
+                </div>
+              ))}
+
+              {/* Ambient glow */}
+              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#FD4F00]/5 rounded-full blur-[150px] pointer-events-none" />
+              <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#6C24FA]/8 rounded-full blur-[120px] pointer-events-none" />
+
+              <div className="flex flex-col md:flex-row items-end justify-between p-10 md:p-16 gap-10 relative z-10 min-h-[420px]">
+
+                {/* LEFT: founder image */}
+                <div className="shrink-0 relative self-end">
+                  <div className="w-[180px] md:w-[220px] h-[220px] md:h-[280px] rounded-2xl overflow-hidden border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.6)]">
+                    <img src="/waheed.png" alt="Waheed Ahmed"
+                      className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-700" />
+                  </div>
+                  {/* Name tag */}
+                  <div className="mt-4 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm inline-block">
+                    <p className="text-white text-sm font-bold">Waheed Ahmed</p>
+                    <p className="text-[#FD4F00] text-[10px] uppercase tracking-widest font-black">Founder & CEO</p>
+                  </div>
+                </div>
+
+                {/* CENTER: bio text */}
+                <div className="flex-1 max-w-lg text-center md:text-left self-center">
+                  <span className="inline-block text-[10px] font-black uppercase tracking-[0.3em] text-white/30 mb-4">About Us</span>
+                  <p className="text-white/70 text-base md:text-lg leading-relaxed">
+                    WTechVerce is built on one belief — that great design and clean code can transform a business. 
+                    As a <span className="text-white font-bold">MERN Stack Developer</span> and digital strategist, 
+                    I founded this agency to help brands grow through <span className="text-[#FD4F00] font-bold">premium web experiences</span>, 
+                    data-driven SEO, and results-focused marketing.
+                  </p>
+                  <div className="mt-8 flex flex-wrap gap-3 justify-center md:justify-start">
+                    {["React.js", "Next.js", "Node.js", "MongoDB", "SEO"].map((tech) => (
+                      <span key={tech} className="px-3 py-1.5 border border-white/10 rounded-full text-white/60 text-xs font-bold uppercase tracking-widest hover:border-[#FD4F00]/50 hover:text-[#FD4F00] transition-colors duration-300">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* RIGHT: giant text */}
+                <div className="shrink-0 self-end text-right">
+                  <p className="text-[5rem] md:text-[8rem] font-black leading-none uppercase tracking-tighter text-white/5 select-none">
+                    FOUND<br />ER
+                  </p>
+                </div>
+
+              </div>
+
+              {/* Bottom marquee ticker */}
+              <div className="border-t border-white/5 overflow-hidden py-4">
+                <div className="flex gap-0 w-max" style={{ animation: "marquee-ticker 25s linear infinite" }}>
+                  {Array(8).fill("MERN STACK · WEB DEVELOPMENT · SEO · DIGITAL MARKETING · UI/UX DESIGN ·").map((t, i) => (
+                    <span key={i} className="text-white/20 text-xs font-black uppercase tracking-widest px-6 whitespace-nowrap">{t}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════
           SECTION 2: BENTO GRID — What We Do Best
       ══════════════════════════════════════════ */}
       <section className="py-28 bg-[#040810]">
