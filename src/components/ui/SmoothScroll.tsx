@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { usePathname } from "next/navigation";
+import { ReactLenis } from "lenis/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -91,5 +92,9 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     };
   }, [pathname]);
 
-  return <>{children}</>;
+  return (
+    <ReactLenis root options={{ lerp: 0.08, duration: 1.2, smoothWheel: true }}>
+      {children}
+    </ReactLenis>
+  );
 }
