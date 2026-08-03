@@ -286,7 +286,7 @@ export default function Home() {
                   
                   {/* Inner white circle with logo */}
                   <div className="relative z-10 w-24 h-24 bg-white rounded-full flex items-center justify-center overflow-hidden p-3 shadow-lg">
-                    <img src="/wtech.png" alt="WTechVerce" className="w-full h-full object-contain" />
+                    <img src="/favicon.ico" alt="WTechVerce" className="w-full h-full object-contain" />
                   </div>
                 </div>
               </div>
@@ -805,7 +805,7 @@ export default function Home() {
 
                     {/* Inner white circle with logo */}
                     <div className="relative z-10 w-28 h-28 bg-white rounded-full flex items-center justify-center shadow-lg overflow-hidden p-4">
-                      <img src="/wtech.png" alt="WTechVerce" className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" />
+                      <img src="/favicon.ico" alt="WTechVerce" className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" />
                     </div>
                   </div>
                 </Link>
