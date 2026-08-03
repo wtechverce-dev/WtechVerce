@@ -350,7 +350,7 @@ export default function Home() {
         <div className="absolute inset-0 opacity-[0.03]"
           style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")" }} />
 
-        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+        <div className="w-full px-6 md:px-12 relative z-10">
           <FadeIn>
             {/* Board-style card with screws */}
             <div className="relative rounded-[2.5rem] border border-white/8 overflow-hidden"
@@ -372,7 +372,7 @@ export default function Home() {
                 {/* LEFT: founder image */}
                 <div className="shrink-0 relative self-end">
                   <div className="w-[180px] md:w-[220px] h-[220px] md:h-[280px] rounded-2xl overflow-hidden border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.6)]">
-                    <img src="/waheed.png" alt="Waheed Ahmed"
+                    <img src="/waheed.jpg" alt="Waheed Ahmed"
                       className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-700" />
                   </div>
                   {/* Name tag */}
