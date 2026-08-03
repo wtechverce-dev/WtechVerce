@@ -16,6 +16,17 @@ html {
   scroll-behavior: smooth;
 }
 
+.animate-gradient {
+  animation: gradient-shift 4s ease infinite;
+  background-size: 200% auto;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
 body {
   background: #050505;
   font-family: var(--font-dm-sans), system-ui, sans-serif;
