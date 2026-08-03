@@ -334,26 +334,43 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-black leading-tight">Featured Projects</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
-            {[1, 2].map((item, i) => (
+            {[
+              {
+                title: "Leadstonk",
+                category: "Custom Development & SEO",
+                image: "/projects/leadstonk.jpg",
+                desc: "Full-stack platform build combined with a high-ROI organic search strategy."
+              },
+              {
+                title: "Premium Dental Clinic",
+                category: "Web Development & Marketing",
+                image: "/projects/dental.jpg",
+                desc: "Modern patient portal and lead-generation campaigns driving daily appointments."
+              }
+            ].map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="group relative rounded-3xl overflow-hidden aspect-[4/3] bg-white/5 border border-white/10 cursor-pointer"
+                className="group relative rounded-3xl overflow-hidden aspect-[4/3] bg-[#070C12] border border-white/10 cursor-pointer"
               >
-                {/* Abstract Placeholder */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#FD4F00]/20 to-[#6C24FA]/20 group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
+                <img 
+                  src={item.image} 
+                  alt={item.title} 
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-50 group-hover:opacity-80"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#070C12] via-[#070C12]/60 to-transparent" />
                 
-                <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+                <div className="absolute bottom-0 left-0 w-full p-8">
                   <span className="text-[#FD4F00] font-bold text-xs tracking-widest uppercase mb-2 block">
-                    {i === 0 ? "SaaS Platform" : "eCommerce Growth"}
+                    {item.category}
                   </span>
-                  <h3 className="text-3xl font-black text-white">
-                    {i === 0 ? "CloudScale Analytics" : "Luxe Retail Brand"}
+                  <h3 className="text-3xl font-black text-white mb-2">
+                    {item.title}
                   </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">{item.desc}</p>
                 </div>
               </motion.div>
             ))}
