@@ -417,7 +417,7 @@ export default function Home() {
                   </p>
                   {/* Skills */}
                   <div className="flex flex-wrap gap-2">
-                    {[{ l: "React.js", c: "#61DAFB" }, { l: "Next.js", c: "#fff" }, { l: "Node.js", c: "#68A063" }, { l: "MongoDB", c: "#4DB33D" }, { l: "Express", c: "#aaa" }].map((t) => (
+                    {[{ l: "React.js", c: "#61DAFB" }, { l: "Next.js", c: "#fff" }, { l: "Node.js", c: "#68A063" }, { l: "MongoDB", c: "#4DB33D" }, { l: "Express", c: "#aaa" }, { l: "WordPress", c: "#21759b" }, { l: "GSAP", c: "#88CE02" }, { l: "Webflow", c: "#4353FF" }].map((t) => (
                       <span key={t.l} className="px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider border"
                         style={{ color: t.c, borderColor: `${t.c}30`, background: `${t.c}10` }}>{t.l}</span>
                     ))}
@@ -462,11 +462,11 @@ export default function Home() {
                   <h3 className="text-3xl font-black text-white mb-1">Umair Ali Raza</h3>
                   <p className="text-[#6C24FA] text-xs uppercase tracking-[0.3em] font-black mb-4">SEO Expert · WordPress Specialist</p>
                   <p className="text-white/50 text-sm leading-relaxed mb-6">
-                    Full-spectrum SEO strategist with deep expertise in <span className="text-white font-semibold">Technical SEO, On-Page & Off-Page optimization</span>, and WordPress development. Drives organic traffic, top Google rankings, and measurable ROI for every client.
+                    Full-spectrum SEO strategist with deep expertise in <span className="text-white font-semibold">Local SEO</span>, and WordPress development. Drives organic traffic, top Google rankings, and measurable ROI for every client.
                   </p>
                   {/* Skills */}
                   <div className="flex flex-wrap gap-2">
-                    {[{ l: "Technical SEO", c: "#6C24FA" }, { l: "On-Page SEO", c: "#a78bfa" }, { l: "Link Building", c: "#FD4F00" }, { l: "WordPress", c: "#21759b" }, { l: "Analytics", c: "#f59e0b" }].map((t) => (
+                    {[{ l: "Local SEO", c: "#6C24FA" }, { l: "On-Page SEO", c: "#a78bfa" }, { l: "Link Building", c: "#FD4F00" }, { l: "E-Commerce SEO", c: "#f59e0b" }].map((t) => (
                       <span key={t.l} className="px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider border"
                         style={{ color: t.c, borderColor: `${t.c}30`, background: `${t.c}10` }}>{t.l}</span>
                     ))}
