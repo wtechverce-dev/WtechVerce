@@ -338,7 +338,7 @@ export default function Home() {
               {
                 title: "Leadstonk",
                 category: "Custom Development & SEO",
-                image: "/projects/leadstonk.jpg",
+                image: "/projects/leadstonk.png",
                 desc: "Full-stack platform build combined with a high-ROI organic search strategy."
               },
               {
