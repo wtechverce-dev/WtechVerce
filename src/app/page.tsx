@@ -606,65 +606,91 @@ export default function Home() {
             </div>
           </FadeIn>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {/* Leadstonk card — light premium */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Leadstonk card — full bleed premium */}
             <FadeIn delay={0.05} direction="left">
-              <div className="rounded-[2.5rem] bg-[#f5f3ef] relative overflow-hidden group cursor-pointer">
-                {/* Top info bar */}
-                <div className="flex items-center justify-between px-8 pt-8 pb-4">
-                  <div>
-                    <span className="block text-xs font-black uppercase tracking-widest text-gray-500 mb-1">Case Study 01</span>
-                    <h3 className="text-2xl font-black text-gray-900">Leadstonk.com</h3>
-                  </div>
-                  <div className="flex gap-2">
-                    <span className="px-3 py-1.5 bg-black text-white text-[10px] font-black rounded-full uppercase tracking-widest">SEO</span>
-                    <span className="px-3 py-1.5 bg-black text-white text-[10px] font-black rounded-full uppercase tracking-widest">Web Dev</span>
-                  </div>
+              <div className="relative rounded-[2rem] overflow-hidden group cursor-pointer h-[540px]"
+                style={{ background: "linear-gradient(135deg, #0d0d1a 0%, #1a0a2e 100%)" }}>
+                {/* Animated gradient border */}
+                <div className="absolute inset-0 rounded-[2rem] p-[1px] z-0">
+                  <div className="absolute inset-0 rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+                    style={{ background: "linear-gradient(135deg, #FD4F00, #6C24FA, #FD4F00)", backgroundSize: "200% 200%", animation: "gradient-shift 3s ease infinite" }} />
                 </div>
-                {/* Screenshot in a device frame */}
-                <div className="mx-6 mb-6 rounded-2xl overflow-hidden shadow-2xl border-4 border-white group-hover:shadow-[0_20px_60px_rgba(0,0,0,0.25)] transition-all duration-700">
-                  <img src="/projects/leadstonk.png" alt="Leadstonk" className="w-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-700" />
+                {/* Ambient glows */}
+                <div className="absolute -top-20 -left-20 w-80 h-80 bg-[#FD4F00]/20 rounded-full blur-[100px] pointer-events-none group-hover:bg-[#FD4F00]/30 transition-all duration-700" />
+                <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-[#6C24FA]/25 rounded-full blur-[100px] pointer-events-none" />
+                {/* Full-bleed image top half */}
+                <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
+                  <img src="/projects/leadstonk.png" alt="Leadstonk"
+                    className="w-full h-full object-cover object-top opacity-25 group-hover:opacity-35 group-hover:scale-105 transition-all duration-700" />
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0" style={{ background: "linear-gradient(to top, #0d0d1a 40%, transparent 100%)" }} />
                 </div>
-                {/* Bottom metrics */}
-                <div className="flex gap-6 px-8 pb-8">
-                  {[["3x", "Lead Volume"], ["#1", "Rankings"], ["85%", "Bounce Reduction"]].map(([val, label]) => (
-                    <div key={label}>
-                      <div className="text-xl font-black text-gray-900">{val}</div>
-                      <div className="text-gray-500 text-[10px] uppercase tracking-widest font-bold">{label}</div>
+                {/* Content */}
+                <div className="absolute inset-0 flex flex-col justify-between p-8 z-10">
+                  {/* Top badges */}
+                  <div className="flex items-start justify-between">
+                    <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/40">Case Study 01</span>
+                    <div className="flex gap-2">
+                      <span className="px-3 py-1.5 bg-[#FD4F00] text-white text-[10px] font-black rounded-full uppercase tracking-widest shadow-[0_0_20px_rgba(253,79,0,0.5)]">SEO</span>
+                      <span className="px-3 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-[10px] font-black rounded-full uppercase tracking-widest">Web Dev</span>
                     </div>
-                  ))}
+                  </div>
+                  {/* Bottom content */}
+                  <div>
+                    <h3 className="text-4xl font-black text-white mb-2 group-hover:text-[#FD4F00] transition-colors duration-500">Leadstonk.com</h3>
+                    <p className="text-white/50 text-sm mb-6 leading-relaxed">B2B Lead Generation platform with full-stack web development and aggressive SEO strategy.</p>
+                    {/* Metrics row */}
+                    <div className="grid grid-cols-3 gap-4 pt-6 border-t border-white/10">
+                      {[["3x", "Lead Volume"], ["#1", "Rankings"], ["85%", "Bounce Drop"]].map(([val, label]) => (
+                        <div key={label} className="text-center">
+                          <div className="text-3xl font-black text-white mb-1 group-hover:text-[#FD4F00] transition-colors duration-300">{val}</div>
+                          <div className="text-white/40 text-[10px] uppercase tracking-widest font-bold">{label}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </FadeIn>
 
-            {/* Dental Clinic card — dark premium */}
+            {/* Dental Clinic card — full bleed premium */}
             <FadeIn delay={0.1} direction="right">
-              <div className="rounded-[2.5rem] bg-[#070D18] border border-white/8 relative overflow-hidden group cursor-pointer">
-                {/* Ambient glow */}
-                <div className="absolute top-0 right-0 w-60 h-60 bg-[#6C24FA]/15 rounded-full blur-[80px] pointer-events-none" />
-                {/* Top info bar */}
-                <div className="flex items-center justify-between px-8 pt-8 pb-4 relative z-10">
-                  <div>
-                    <span className="block text-xs font-black uppercase tracking-widest text-gray-500 mb-1">Case Study 02</span>
-                    <h3 className="text-2xl font-black text-white">Dental Clinic</h3>
-                  </div>
-                  <div className="flex gap-2">
-                    <span className="px-3 py-1.5 bg-[#FD4F00] text-white text-[10px] font-black rounded-full uppercase tracking-widest">SEO</span>
-                    <span className="px-3 py-1.5 bg-white/10 text-white text-[10px] font-black rounded-full uppercase tracking-widest">Marketing</span>
-                  </div>
+              <div className="relative rounded-[2rem] overflow-hidden group cursor-pointer h-[540px]"
+                style={{ background: "linear-gradient(135deg, #070D18 0%, #0f1a2e 100%)" }}>
+                {/* Ambient glows */}
+                <div className="absolute -top-20 -right-20 w-80 h-80 bg-[#6C24FA]/25 rounded-full blur-[100px] pointer-events-none group-hover:bg-[#6C24FA]/40 transition-all duration-700" />
+                <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-[#FD4F00]/15 rounded-full blur-[80px] pointer-events-none" />
+                {/* Full-bleed image */}
+                <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
+                  <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" alt="Dental Clinic"
+                    className="w-full h-full object-cover opacity-30 group-hover:opacity-45 group-hover:scale-105 transition-all duration-700" />
+                  <div className="absolute inset-0" style={{ background: "linear-gradient(to top, #070D18 40%, transparent 100%)" }} />
                 </div>
-                {/* Screenshot in dark device frame */}
-                <div className="mx-6 mb-6 rounded-2xl overflow-hidden shadow-2xl border border-white/10 group-hover:border-[#FD4F00]/30 group-hover:shadow-[0_20px_60px_rgba(253,79,0,0.15)] transition-all duration-700 relative z-10">
-                  <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" alt="Dental Clinic" className="w-full object-cover group-hover:scale-[1.03] transition-transform duration-700" />
-                </div>
-                {/* Bottom metrics */}
-                <div className="flex gap-6 px-8 pb-8 relative z-10">
-                  {[["3x", "Patient Inquiries"], ["Pg.1", "Google Rank"], ["4mo", "Time to Results"]].map(([val, label]) => (
-                    <div key={label}>
-                      <div className="text-xl font-black text-white">{val}</div>
-                      <div className="text-gray-500 text-[10px] uppercase tracking-widest font-bold">{label}</div>
+                {/* Content */}
+                <div className="absolute inset-0 flex flex-col justify-between p-8 z-10">
+                  {/* Top badges */}
+                  <div className="flex items-start justify-between">
+                    <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/40">Case Study 02</span>
+                    <div className="flex gap-2">
+                      <span className="px-3 py-1.5 bg-[#6C24FA] text-white text-[10px] font-black rounded-full uppercase tracking-widest shadow-[0_0_20px_rgba(108,36,250,0.5)]">SEO</span>
+                      <span className="px-3 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-[10px] font-black rounded-full uppercase tracking-widest">Marketing</span>
                     </div>
-                  ))}
+                  </div>
+                  {/* Bottom content */}
+                  <div>
+                    <h3 className="text-4xl font-black text-white mb-2 group-hover:text-[#6C24FA] transition-colors duration-500">Dental Clinic</h3>
+                    <p className="text-white/50 text-sm mb-6 leading-relaxed">Local SEO and digital marketing strategy that tripled patient inquiries within 4 months.</p>
+                    {/* Metrics row */}
+                    <div className="grid grid-cols-3 gap-4 pt-6 border-t border-white/10">
+                      {[["3x", "Patient Inquiries"], ["Pg.1", "Google Rank"], ["4mo", "Time to Results"]].map(([val, label]) => (
+                        <div key={label} className="text-center">
+                          <div className="text-3xl font-black text-white mb-1 group-hover:text-[#6C24FA] transition-colors duration-300">{val}</div>
+                          <div className="text-white/40 text-[10px] uppercase tracking-widest font-bold">{label}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </FadeIn>
