@@ -8,6 +8,7 @@ import MarqueeTicker from "@/components/ui/MarqueeTicker";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 import ScrambleText from "@/components/ui/ScrambleText";
 import Button from "@/components/ui/Button";
+import { InteractiveServices } from "@/components/ui/InteractiveServices";
 import {
   ArrowRight, ArrowUpRight, ChevronDown, ChevronUp,
   Search, Target, Megaphone, Code,
@@ -485,6 +486,11 @@ export default function Home() {
           </FadeIn>
         </div>
       </section>
+
+      {/* ══════════════════════════════════════════
+          SECTION 3.5: INTERACTIVE EXPERTISE
+      ══════════════════════════════════════════ */}
+      <InteractiveServices />
 
       {/* ══════════════════════════════════════════
           SECTION 4: GIANT OUTLINE MARQUEE + PORTFOLIO
