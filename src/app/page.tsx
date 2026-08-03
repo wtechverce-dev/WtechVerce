@@ -460,7 +460,7 @@ export default function Home() {
                 {/* Info */}
                 <div className="p-8">
                   <h3 className="text-3xl font-black text-white mb-1">Umair Ali Raza</h3>
-                  <p className="text-[#6C24FA] text-xs uppercase tracking-[0.3em] font-black mb-4">SEO Expert · WordPress Specialist</p>
+                  <p className="text-[#6C24FA] text-xs uppercase tracking-[0.3em] font-black mb-4">SEO Expert · Local SEO</p>
                   <p className="text-white/50 text-sm leading-relaxed mb-6">
                     Full-spectrum SEO strategist with deep expertise in <span className="text-white font-semibold">Local SEO</span>, and WordPress development. Drives organic traffic, top Google rankings, and measurable ROI for every client.
                   </p>
