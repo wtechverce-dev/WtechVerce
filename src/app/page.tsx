@@ -343,176 +343,142 @@ export default function Home() {
       <ImageMarqueeSection />
 
       {/* ══════════════════════════════════════════
-          SECTION 1.7: FOUNDER SECTION — VIP
+          SECTION 1.7: MEET THE TEAM — VIP
       ══════════════════════════════════════════ */}
       <section className="py-28 bg-[#02050A] relative overflow-hidden">
         {/* Animated background blobs */}
         <motion.div
-          animate={{ scale: [1, 1.2, 1], opacity: [0.08, 0.15, 0.08] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[600px] h-[600px] bg-[#FD4F00] rounded-full blur-[180px] pointer-events-none"
+          animate={{ scale: [1, 1.3, 1], opacity: [0.06, 0.12, 0.06] }}
+          transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-1/2 left-1/3 -translate-y-1/2 w-[700px] h-[700px] bg-[#FD4F00] rounded-full blur-[200px] pointer-events-none"
         />
         <motion.div
-          animate={{ scale: [1.2, 1, 1.2], opacity: [0.1, 0.18, 0.1] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-          className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-[#6C24FA] rounded-full blur-[180px] pointer-events-none"
+          animate={{ scale: [1.2, 1, 1.2], opacity: [0.08, 0.14, 0.08] }}
+          transition={{ duration: 11, repeat: Infinity, ease: "easeInOut", delay: 3 }}
+          className="absolute top-1/2 right-1/3 -translate-y-1/2 w-[600px] h-[600px] bg-[#6C24FA] rounded-full blur-[200px] pointer-events-none"
         />
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+          {/* Section header */}
+          <FadeIn>
+            <div className="text-center mb-20">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#FD4F00]/30 bg-[#FD4F00]/10 text-[#FD4F00] text-xs font-black uppercase tracking-widest mb-6">
+                Meet The Team
+              </span>
+              <h2 className="text-5xl md:text-6xl font-black text-white tracking-tighter leading-[0.95]">
+                The people behind <br />
+                <span className="text-transparent bg-clip-text" style={{ backgroundImage: "linear-gradient(135deg, #FD4F00, #6C24FA)" }}>
+                  WTechVerce
+                </span>
+              </h2>
+            </div>
+          </FadeIn>
 
-            {/* ── LEFT: Photo Column ── */}
-            <FadeIn direction="left" className="w-full lg:w-[420px] shrink-0">
-              <div className="relative mx-auto w-fit">
-                {/* Rotating gradient ring */}
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  className="absolute -inset-3 rounded-[2.5rem] z-0"
-                  style={{ background: "conic-gradient(from 0deg, #FD4F00, #6C24FA, #FD4F00, #6C24FA, #FD4F00)", padding: "2px" }}
-                >
-                  <div className="w-full h-full rounded-[2.3rem] bg-[#02050A]" />
-                </motion.div>
+          {/* Team cards grid */}
+          <div className="grid md:grid-cols-2 gap-10">
 
-                {/* Photo */}
-                <div className="relative z-10 w-[300px] md:w-[380px] h-[380px] md:h-[480px] rounded-[2rem] overflow-hidden shadow-[0_40px_120px_rgba(253,79,0,0.2)]">
+            {/* ── CARD 1: Waheed Ahmed ── */}
+            <FadeIn direction="left" delay={0.05}>
+              <div className="group relative rounded-[2.5rem] overflow-hidden border border-white/8 hover:border-[#FD4F00]/30 transition-all duration-500"
+                style={{ background: "linear-gradient(135deg, #0A0F1E 0%, #0d0820 100%)" }}>
+                {/* Glow on hover */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+                  style={{ background: "radial-gradient(ellipse at top left, rgba(253,79,0,0.08) 0%, transparent 70%)" }} />
+
+                {/* Photo — FULL portrait */}
+                <div className="relative h-[400px] md:h-[480px] overflow-hidden">
                   <img
                     src="/waheed.jpg"
                     alt="Waheed Ahmed"
-                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   />
-                  {/* Bottom gradient overlay */}
-                  <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(2,5,10,0.9) 0%, transparent 50%)" }} />
-                  {/* Name badge inside photo */}
-                  <div className="absolute bottom-5 left-5 right-5">
-                    <div className="backdrop-blur-xl bg-white/5 border border-white/15 rounded-2xl px-5 py-4">
-                      <p className="text-white text-xl font-black">Waheed Ahmed</p>
-                      <p className="text-[#FD4F00] text-xs uppercase tracking-[0.3em] font-black mt-1">Founder & CEO · WTechVerce</p>
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0" style={{ background: "linear-gradient(to top, #0A0F1E 15%, rgba(10,15,30,0.2) 60%, transparent 100%)" }} />
+
+                  {/* Floating rotating badge */}
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                    className="absolute top-5 right-5 w-16 h-16"
+                    style={{ background: "conic-gradient(from 0deg, #FD4F00, #6C24FA, #FD4F00)", borderRadius: "50%", padding: "2px" }}
+                  >
+                    <div className="w-full h-full rounded-full bg-[#0A0F1E] flex items-center justify-center">
+                      <span className="text-[10px] font-black text-white text-center leading-tight">3+<br/>YRS</span>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
 
-                {/* Floating badge — experience */}
-                <motion.div
-                  animate={{ y: [-6, 6, -6] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -top-4 -right-4 z-20 bg-gradient-to-br from-[#FD4F00] to-[#c43b00] text-white rounded-2xl px-4 py-3 shadow-[0_10px_40px_rgba(253,79,0,0.4)]"
-                >
-                  <p className="text-2xl font-black">3+</p>
-                  <p className="text-[10px] uppercase tracking-widest font-bold opacity-80">Years Exp.</p>
-                </motion.div>
-
-                {/* Floating badge — projects */}
-                <motion.div
-                  animate={{ y: [6, -6, 6] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute -bottom-4 -right-6 z-20 bg-gradient-to-br from-[#6C24FA] to-[#4a12d4] text-white rounded-2xl px-4 py-3 shadow-[0_10px_40px_rgba(108,36,250,0.4)]"
-                >
-                  <p className="text-2xl font-black">50+</p>
-                  <p className="text-[10px] uppercase tracking-widest font-bold opacity-80">Projects</p>
-                </motion.div>
+                {/* Info */}
+                <div className="p-8">
+                  <h3 className="text-3xl font-black text-white mb-1">Waheed Ahmed</h3>
+                  <p className="text-[#FD4F00] text-xs uppercase tracking-[0.3em] font-black mb-4">Founder & CEO · MERN Stack Developer</p>
+                  <p className="text-white/50 text-sm leading-relaxed mb-6">
+                    Full-stack MERN developer building premium web products. Expert in React, Next.js, Node.js & MongoDB — turning ideas into high-converting digital experiences.
+                  </p>
+                  {/* Skills */}
+                  <div className="flex flex-wrap gap-2">
+                    {[{ l: "React.js", c: "#61DAFB" }, { l: "Next.js", c: "#fff" }, { l: "Node.js", c: "#68A063" }, { l: "MongoDB", c: "#4DB33D" }, { l: "Express", c: "#aaa" }].map((t) => (
+                      <span key={t.l} className="px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider border"
+                        style={{ color: t.c, borderColor: `${t.c}30`, background: `${t.c}10` }}>{t.l}</span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </FadeIn>
 
-            {/* ── RIGHT: Content Column ── */}
-            <FadeIn direction="right" className="flex-1">
-              {/* Tag */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-              >
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#FD4F00]/30 bg-[#FD4F00]/10 text-[#FD4F00] text-xs font-black uppercase tracking-widest mb-6">
-                  Meet The Founder
-                </span>
-              </motion.div>
+            {/* ── CARD 2: Umair Ali Raza ── */}
+            <FadeIn direction="right" delay={0.1}>
+              <div className="group relative rounded-[2.5rem] overflow-hidden border border-white/8 hover:border-[#6C24FA]/30 transition-all duration-500"
+                style={{ background: "linear-gradient(135deg, #07091A 0%, #0f0a1e 100%)" }}>
+                {/* Glow on hover */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+                  style={{ background: "radial-gradient(ellipse at top right, rgba(108,36,250,0.1) 0%, transparent 70%)" }} />
 
-              {/* Headline */}
-              <motion.h2
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-5xl md:text-7xl font-black text-white leading-[0.95] tracking-tighter mb-8"
-              >
-                Building the <br />
-                <span className="text-transparent bg-clip-text"
-                  style={{ backgroundImage: "linear-gradient(135deg, #FD4F00, #6C24FA)" }}>
-                  Digital Future
-                </span><br />
-                of Pakistan.
-              </motion.h2>
+                {/* Photo — FULL portrait */}
+                <div className="relative h-[400px] md:h-[480px] overflow-hidden">
+                  <img
+                    src="/umair.jpg"
+                    alt="Umair Ali Raza"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  />
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0" style={{ background: "linear-gradient(to top, #07091A 15%, rgba(7,9,26,0.2) 60%, transparent 100%)" }} />
 
-              {/* Bio */}
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-white/60 text-lg leading-relaxed mb-10 max-w-xl"
-              >
-                I'm a <span className="text-white font-bold">MERN Stack Developer</span> and founder of WTechVerce — 
-                a digital agency that builds premium websites, crushes SEO rankings, and creates brands that 
-                <span className="text-[#FD4F00] font-bold"> actually convert</span>. Every pixel we ship is intentional.
-              </motion.p>
-
-              {/* Tech stack pills */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="flex flex-wrap gap-3 mb-12"
-              >
-                {[
-                  { label: "React.js", color: "#61DAFB" },
-                  { label: "Next.js", color: "#ffffff" },
-                  { label: "Node.js", color: "#68A063" },
-                  { label: "MongoDB", color: "#4DB33D" },
-                  { label: "Express.js", color: "#aaaaaa" },
-                  { label: "SEO", color: "#FD4F00" },
-                ].map((tech, i) => (
-                  <motion.span
-                    key={tech.label}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.3 + i * 0.07 }}
-                    whileHover={{ scale: 1.08, y: -2 }}
-                    className="px-4 py-2 rounded-full border text-xs font-black uppercase tracking-widest cursor-default transition-all duration-300"
-                    style={{ borderColor: `${tech.color}30`, color: tech.color, background: `${tech.color}10` }}
+                  {/* Floating rotating badge */}
+                  <motion.div
+                    animate={{ rotate: -360 }}
+                    transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                    className="absolute top-5 right-5 w-16 h-16"
+                    style={{ background: "conic-gradient(from 180deg, #6C24FA, #FD4F00, #6C24FA)", borderRadius: "50%", padding: "2px" }}
                   >
-                    {tech.label}
-                  </motion.span>
-                ))}
-              </motion.div>
+                    <div className="w-full h-full rounded-full bg-[#07091A] flex items-center justify-center">
+                      <span className="text-[10px] font-black text-white text-center leading-tight">SEO<br/>PRO</span>
+                    </div>
+                  </motion.div>
+                </div>
 
-              {/* Stats row */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="grid grid-cols-3 gap-6 pt-8 border-t border-white/8"
-              >
-                {[
-                  { val: "50+", label: "Projects Delivered" },
-                  { val: "3+", label: "Years Experience" },
-                  { val: "100%", label: "Client Satisfaction" },
-                ].map(({ val, label }) => (
-                  <div key={label}>
-                    <div className="text-3xl md:text-4xl font-black text-white mb-1"
-                      style={{ textShadow: "0 0 30px rgba(253,79,0,0.3)" }}>{val}</div>
-                    <div className="text-white/40 text-[11px] uppercase tracking-widest font-bold">{label}</div>
+                {/* Info */}
+                <div className="p-8">
+                  <h3 className="text-3xl font-black text-white mb-1">Umair Ali Raza</h3>
+                  <p className="text-[#6C24FA] text-xs uppercase tracking-[0.3em] font-black mb-4">SEO Expert · WordPress Specialist</p>
+                  <p className="text-white/50 text-sm leading-relaxed mb-6">
+                    Full-spectrum SEO strategist with deep expertise in <span className="text-white font-semibold">Technical SEO, On-Page & Off-Page optimization</span>, and WordPress development. Drives organic traffic, top Google rankings, and measurable ROI for every client.
+                  </p>
+                  {/* Skills */}
+                  <div className="flex flex-wrap gap-2">
+                    {[{ l: "Technical SEO", c: "#6C24FA" }, { l: "On-Page SEO", c: "#a78bfa" }, { l: "Link Building", c: "#FD4F00" }, { l: "WordPress", c: "#21759b" }, { l: "Analytics", c: "#f59e0b" }].map((t) => (
+                      <span key={t.l} className="px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider border"
+                        style={{ color: t.c, borderColor: `${t.c}30`, background: `${t.c}10` }}>{t.l}</span>
+                    ))}
                   </div>
-                ))}
-              </motion.div>
+                </div>
+              </div>
             </FadeIn>
 
           </div>
         </div>
       </section>
+
 
       {/* ══════════════════════════════════════════
           SECTION 2: BENTO GRID — What We Do Best
