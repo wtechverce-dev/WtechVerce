@@ -9,6 +9,7 @@ import NoiseTexture from "@/components/ui/NoiseTexture";
 import ScrambleText from "@/components/ui/ScrambleText";
 import Button from "@/components/ui/Button";
 import { InteractiveServices } from "@/components/ui/InteractiveServices";
+import { ImageMarqueeSection } from "@/components/ui/ImageMarqueeSection";
 import {
   ArrowRight, ArrowUpRight, ChevronDown, ChevronUp,
   Search, Target, Megaphone, Code,
@@ -335,6 +336,11 @@ export default function Home() {
           </FadeIn>
         </div>
       </section>
+
+      {/* ══════════════════════════════════════════
+          SECTION 1.5: IMAGE MARQUEE SECTION
+      ══════════════════════════════════════════ */}
+      <ImageMarqueeSection />
 
       {/* ══════════════════════════════════════════
           SECTION 2: BENTO GRID — What We Do Best

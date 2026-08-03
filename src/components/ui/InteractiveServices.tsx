@@ -35,7 +35,7 @@ export function InteractiveServices() {
   return (
     <section
       ref={sectionRef}
-      className="py-32 bg-[#1A1A1A] relative overflow-hidden cursor-none"
+      className="py-32 bg-[#070D18] relative overflow-hidden cursor-none"
       onMouseEnter={() => setIsHoveringSection(true)}
       onMouseLeave={() => {
         setIsHoveringSection(false);
@@ -56,7 +56,7 @@ export function InteractiveServices() {
               >
                 <h3
                   className={`text-5xl md:text-[7rem] font-black tracking-tighter transition-colors duration-300 ${
-                    hoveredIndex === i ? "text-white" : "text-[#333333]"
+                    hoveredIndex === i ? "text-white" : "text-white/10"
                   }`}
                 >
                   {svc.title}
@@ -106,8 +106,8 @@ export function InteractiveServices() {
               translateY: "-50%",
             }}
           >
-            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#ccff00] flex items-center justify-center shadow-2xl">
-              <ArrowUpRight className="w-8 h-8 md:w-10 md:h-10 text-black stroke-[3]" />
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-gradient-to-br from-[#FD4F00] to-[#6C24FA] flex items-center justify-center shadow-2xl">
+              <ArrowUpRight className="w-8 h-8 md:w-10 md:h-10 text-white stroke-[3]" />
             </div>
           </motion.div>
         )}
