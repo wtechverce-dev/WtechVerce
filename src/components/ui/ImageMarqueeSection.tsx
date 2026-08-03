@@ -44,14 +44,14 @@ export function ImageMarqueeSection() {
   });
 
   return (
-    <section className="py-32 bg-white overflow-hidden flex flex-col items-center border-y border-gray-100">
+    <section className="py-32 bg-[#02050A] overflow-hidden flex flex-col items-center border-y border-white/5">
       <div className="max-w-4xl mx-auto px-6 text-center mb-10 relative z-10">
-        <h2 className="text-5xl md:text-[6rem] font-medium tracking-tighter text-black leading-[1]">
+        <h2 className="text-5xl md:text-[6rem] font-medium tracking-tighter text-white leading-[1]">
           Good design <br /> makes life better.
         </h2>
       </div>
 
-      <div className="w-full relative h-[600px] md:h-[700px] overflow-hidden flex items-center mt-10">
+      <div className="w-full relative h-[600px] md:h-[700px] overflow-hidden flex items-center -mt-12">
         <motion.div
           animate={{ x: ["0%", "-33.333333%"] }}
           transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
@@ -74,7 +74,7 @@ export function ImageMarqueeSection() {
 
       <div className="flex justify-center z-10 mt-8 relative">
         <Link href="/about">
-          <button className="flex items-center gap-2 bg-[#ccff00] hover:bg-[#bbf000] text-black px-8 py-4 rounded-full font-bold transition-all hover:scale-105 active:scale-95 shadow-[0_10px_30px_rgba(204,255,0,0.2)]">
+          <button className="flex items-center gap-2 bg-gradient-to-br from-[#FD4F00] to-[#6C24FA] text-white px-8 py-4 rounded-full font-bold transition-all hover:scale-105 active:scale-95 shadow-[0_10px_30px_rgba(253,79,0,0.3)]">
             <span className="text-lg">Learn about us</span> <ArrowUpRight className="w-5 h-5 stroke-[3]" />
           </button>
         </Link>
