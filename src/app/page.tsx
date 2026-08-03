@@ -279,40 +279,65 @@ export default function Home() {
       </section>
 
       {/* ══════════════════════════════════════════
-          WHO WE WORK WITH
+          WHO WE WORK WITH (BENTO GRID STYLE)
       ══════════════════════════════════════════ */}
-      <section className="py-28 border-t border-white/8 bg-white/[0.01] relative overflow-hidden">
+      <section className="py-32 border-t border-white/5 bg-[#03070b] relative overflow-hidden">
+        {/* Abstract glowing background element */}
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#6C24FA]/5 rounded-full blur-[120px] pointer-events-none translate-x-1/3 -translate-y-1/3" />
+        
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
-            <div>
-              <span className="text-[#6C24FA] text-xs uppercase tracking-widest font-bold mb-4 block">Industries</span>
-              <h2 className="text-4xl md:text-5xl font-black leading-tight">Who We Work With</h2>
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-20">
+            <div className="max-w-2xl">
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[#6C24FA] text-xs font-bold uppercase tracking-widest mb-6">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#6C24FA] animate-pulse" />
+                Industries
+              </span>
+              <h2 className="text-5xl md:text-6xl font-black leading-tight tracking-tight">
+                Who We <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/40">Work With</span>
+              </h2>
             </div>
-            <p className="text-gray-400 max-w-sm leading-relaxed lg:text-right">The fundamentals of good marketing don't change — but the playbook inside each industry does.</p>
+            <p className="text-gray-400 max-w-sm leading-relaxed lg:text-right text-lg">
+              The fundamentals of good marketing don't change — but the playbook inside each industry does.
+            </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+
+          {/* Premium Bento Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { icon: <Store className="w-5 h-5" />, title: "Small & Local Businesses", desc: "Local SEO, Google Business Profile, and reviews that move foot traffic.", link: "/local-seo" },
-              { icon: <Cloud className="w-5 h-5" />, title: "SaaS & Startups", desc: "Demand-gen funnels around free trials and content your buyers are searching.", link: "/saas-marketing" },
-              { icon: <Globe className="w-5 h-5" />, title: "eCommerce Brands", desc: "Paid media and SEO side by side with real ROAS tracking.", link: "/ecommerce-marketing" },
-              { icon: <Briefcase className="w-5 h-5" />, title: "Law Firms", desc: "Local SEO with targeted PPC — not budget burned on non-converting clicks.", link: "/law-firm-marketing" },
-              { icon: <Hammer className="w-5 h-5" />, title: "Home Services", desc: "Service-area targeting and call tracking so you know what generated the job.", link: "/home-services-marketing" },
-              { icon: <Stethoscope className="w-5 h-5" />, title: "Medical & Dental", desc: "HIPAA-conscious content and local search visibility that builds trust fast.", link: "/healthcare-marketing" },
-              { icon: <Building2 className="w-5 h-5" />, title: "Enterprise", desc: "We slot into existing marketing teams as a specialist extension.", link: "/enterprise-marketing" },
+              { icon: <Store className="w-6 h-6" />, title: "Small & Local Businesses", desc: "Local SEO, Google Business Profile, and reviews that move foot traffic.", link: "/local-seo", span: "md:col-span-2", bg: "from-[#FD4F00]/10 to-transparent" },
+              { icon: <Cloud className="w-6 h-6" />, title: "SaaS & Startups", desc: "Demand-gen funnels around free trials and content your buyers are searching.", link: "/saas-marketing", span: "md:col-span-1", bg: "from-[#6C24FA]/10 to-transparent" },
+              { icon: <Globe className="w-6 h-6" />, title: "eCommerce Brands", desc: "Paid media and SEO side by side with real ROAS tracking.", link: "/ecommerce-marketing", span: "md:col-span-1", bg: "from-blue-500/10 to-transparent" },
+              { icon: <Briefcase className="w-6 h-6" />, title: "Law Firms", desc: "Local SEO with targeted PPC — not budget burned on non-converting clicks.", link: "/law-firm-marketing", span: "md:col-span-2", bg: "from-emerald-500/10 to-transparent" },
+              { icon: <Hammer className="w-6 h-6" />, title: "Home Services", desc: "Service-area targeting and call tracking so you know what generated the job.", link: "/home-services-marketing", span: "md:col-span-1", bg: "from-amber-500/10 to-transparent" },
+              { icon: <Stethoscope className="w-6 h-6" />, title: "Medical & Dental", desc: "HIPAA-conscious content and local search visibility that builds trust fast.", link: "/healthcare-marketing", span: "md:col-span-1", bg: "from-teal-500/10 to-transparent" },
+              { icon: <Building2 className="w-6 h-6" />, title: "Enterprise", desc: "We slot into existing marketing teams as a specialist extension.", link: "/enterprise-marketing", span: "md:col-span-1", bg: "from-pink-500/10 to-transparent" },
             ].map((ind, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.06 }}
-                className="group p-6 rounded-2xl border border-white/8 bg-white/[0.02] hover:border-[#FD4F00]/50 hover:bg-[#FD4F00]/5 transition-all duration-300"
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className={`group relative p-8 rounded-3xl border border-white/5 bg-[#0D1219] overflow-hidden ${ind.span}`}
               >
-                <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#FD4F00] mb-4 group-hover:scale-110 transition-transform">
-                  {ind.icon}
+                {/* Hover Gradient Background */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${ind.bg} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                
+                {/* Content */}
+                <div className="relative z-10 h-full flex flex-col justify-between">
+                  <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white mb-8 group-hover:scale-110 group-hover:bg-white/10 transition-all duration-300 shadow-xl">
+                    {ind.icon}
+                  </div>
+                  <div>
+                    <h3 className="font-black text-2xl text-white mb-3 tracking-tight group-hover:text-[#FD4F00] transition-colors">{ind.title}</h3>
+                    <p className="text-gray-400 text-sm leading-relaxed">{ind.desc}</p>
+                  </div>
                 </div>
-                <h3 className="font-bold text-white text-sm mb-2 leading-snug">{ind.title}</h3>
-                <p className="text-gray-500 text-xs leading-relaxed hidden sm:block">{ind.desc}</p>
+
+                {/* Arrow Icon */}
+                <div className="absolute top-8 right-8 opacity-0 -translate-x-4 translate-y-4 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300">
+                  <ArrowUpRight className="w-6 h-6 text-white" />
+                </div>
               </motion.div>
             ))}
           </div>
@@ -379,36 +404,46 @@ export default function Home() {
       </section>
 
       {/* ══════════════════════════════════════════
-          SERVICES — Locomotive-style rows
+          SERVICES — PREMIUM LIST
       ══════════════════════════════════════════ */}
-      <section id="services" className="py-28 relative overflow-hidden">
+      <section id="services" className="py-32 bg-[#03070b] border-t border-white/5 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-          <div className="mb-14">
-            <span className="text-[#FD4F00] text-xs uppercase tracking-widest font-bold mb-4 block">What We Offer</span>
-            <h2 className="text-4xl md:text-5xl font-black leading-tight max-w-xl">Full-Service Digital Marketing — What's Actually Included</h2>
+          <div className="mb-20">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FD4F00]/10 border border-[#FD4F00]/20 text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#FD4F00] animate-pulse" />
+              What We Offer
+            </span>
+            <h2 className="text-5xl md:text-7xl font-black leading-[1.1] tracking-tight max-w-3xl text-white">
+              Full-Service Digital Marketing
+            </h2>
           </div>
-          <div className="divide-y divide-white/8">
+          
+          <div className="flex flex-col gap-4">
             {services.map((svc, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.04 }}
-                className="group grid grid-cols-12 gap-4 md:gap-6 py-7 md:py-9 items-center hover:bg-white/[0.025] transition-colors duration-300 rounded-2xl px-4 -mx-4 cursor-pointer"
+                transition={{ duration: 0.5, delay: i * 0.05 }}
+                className="group relative flex flex-col md:flex-row md:items-center justify-between gap-6 p-6 md:p-8 rounded-3xl bg-[#0D1219] border border-white/5 hover:border-white/20 transition-all duration-300 cursor-pointer overflow-hidden"
               >
-                <div className="col-span-2 md:col-span-1">
-                  <span className="text-2xl md:text-3xl font-black text-white/10 group-hover:text-[#FD4F00]/40 transition-colors">{svc.num}</span>
-                </div>
-                <div className="col-span-8 md:col-span-4 flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 transition-all group-hover:scale-110" style={{ background: `${svc.color}18`, border: `1px solid ${svc.color}40`, color: svc.color }}>
+                {/* Background Hover Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.02] to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                
+                <div className="flex items-center gap-6 md:gap-10 relative z-10">
+                  <span className="text-4xl font-black text-white/5 group-hover:text-white/20 transition-colors w-16">{svc.num}</span>
+                  <div className="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-110 shadow-xl" style={{ background: `${svc.color}15`, border: `1px solid ${svc.color}30`, color: svc.color }}>
                     {svc.icon}
                   </div>
-                  <Link href={svc.link} className="text-lg md:text-xl font-bold text-white group-hover:text-[#FD4F00] transition-colors">{svc.title}</Link>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white group-hover:text-[#FD4F00] transition-colors">{svc.title}</h3>
                 </div>
-                <div className="col-span-12 md:col-span-6 flex items-center justify-between gap-4">
-                  <p className="text-gray-400 text-sm leading-relaxed">{svc.desc}</p>
-                  <ArrowUpRight className="w-5 h-5 text-white/15 group-hover:text-[#FD4F00] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all flex-shrink-0 hidden md:block" />
+                
+                <div className="flex items-center justify-between md:justify-end gap-10 md:w-1/2 relative z-10 pl-22 md:pl-0">
+                  <p className="text-gray-400 text-base leading-relaxed md:max-w-md">{svc.desc}</p>
+                  <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-[#FD4F00] group-hover:border-[#FD4F00] group-hover:text-white transition-all duration-300 shrink-0">
+                    <ArrowUpRight className="w-5 h-5 text-white/40 group-hover:text-white transition-colors" />
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -454,16 +489,21 @@ export default function Home() {
       </section>
 
       {/* ══════════════════════════════════════════
-          PROBLEMS + WHY US
+          PROBLEMS + WHY US (PREMIUM SPLIT)
       ══════════════════════════════════════════ */}
-      <section className="py-28 border-t border-white/8 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-16 relative z-10">
+      <section className="py-32 border-t border-white/5 bg-[#070C12] relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-20 relative z-10">
+          
+          {/* Left Column: Problems */}
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-            <span className="text-[#FD4F00] text-xs uppercase tracking-widest font-bold mb-5 block">Pain Points</span>
-            <h2 className="text-4xl font-black mb-10 leading-tight">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] to-[#ff8c55]">Problems</span> We Solve
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FD4F00]/10 border border-[#FD4F00]/20 text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#FD4F00] animate-pulse" />
+              Pain Points
+            </span>
+            <h2 className="text-5xl font-black mb-12 leading-tight tracking-tight text-white">
+              Problems We <span className="text-[#FD4F00] italic pr-2">Solve</span>
             </h2>
-            <div className="space-y-6">
+            <div className="space-y-8">
               {[
                 { prob: `"We're getting traffic but no leads."`, sol: "Usually a targeting or conversion problem, not a traffic problem. We diagnose which." },
                 { prob: `"Our last agency just sent reports we didn't understand."`, sol: "We report in plain language tied to revenue, not impressions and clicks." },
@@ -471,34 +511,41 @@ export default function Home() {
                 { prob: `"We tried marketing before and it didn't work."`, sol: "Usually because channels were run in isolation. We fix that." },
                 { prob: `"We don't know if our budget is being spent well."`, sol: "Full transparency into spend, performance, and what changes next." },
               ].map((item, i) => (
-                <div key={i} className="flex gap-4 group">
-                  <span className="text-[#FD4F00] font-black text-sm shrink-0 mt-1 w-6">{String(i + 1).padStart(2, "0")}</span>
+                <div key={i} className="flex gap-6 group">
+                  <div className="text-[#FD4F00]/30 font-black text-4xl shrink-0 group-hover:text-[#FD4F00] transition-colors duration-300">
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
                   <div>
-                    <h4 className="text-white font-semibold italic mb-1">{item.prob}</h4>
+                    <h4 className="text-xl text-white font-bold mb-2 group-hover:text-[#FD4F00] transition-colors">{item.prob}</h4>
                     <p className="text-gray-400 text-sm leading-relaxed">{item.sol}</p>
                   </div>
                 </div>
               ))}
             </div>
           </motion.div>
+
+          {/* Right Column: Why Us */}
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.1 }}>
-            <span className="text-[#6C24FA] text-xs uppercase tracking-widest font-bold mb-5 block">Why WTechVerce</span>
-            <h2 className="text-4xl font-black mb-10 leading-tight">
-              Why Businesses <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6C24FA] to-[#a855f7]">Choose Us</span>
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#6C24FA]/10 border border-[#6C24FA]/20 text-[#6C24FA] text-xs font-bold uppercase tracking-widest mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#6C24FA] animate-pulse" />
+              Why WTechVerce
+            </span>
+            <h2 className="text-5xl font-black mb-12 leading-tight tracking-tight text-white">
+              Why Businesses <span className="text-[#6C24FA] italic pr-2">Choose Us</span>
             </h2>
-            <div className="space-y-7">
+            <div className="space-y-6">
               {[
-                { title: "Transparent Reporting", desc: "Reports built for business owners — tied to revenue, not vanity metrics.", icon: <LineChart className="w-5 h-5" /> },
-                { title: "No Lock-In Contracts", desc: "Month-to-month. You stay because results justify it, not because a contract traps you.", icon: <CheckCircle className="w-5 h-5" /> },
-                { title: "Dedicated Strategist", desc: "A real point of contact who knows your business — not a rotating support inbox.", icon: <Sparkles className="w-5 h-5" /> },
-                { title: "Full-Funnel Coordination", desc: "SEO, ads, content, and email all coordinated into one goal: more customers.", icon: <TrendingUp className="w-5 h-5" /> },
+                { title: "Transparent Reporting", desc: "Reports built for business owners — tied to revenue, not vanity metrics.", icon: <LineChart className="w-6 h-6" /> },
+                { title: "No Lock-In Contracts", desc: "Month-to-month. You stay because results justify it, not because a contract traps you.", icon: <CheckCircle className="w-6 h-6" /> },
+                { title: "Dedicated Strategist", desc: "A real point of contact who knows your business — not a rotating support inbox.", icon: <Sparkles className="w-6 h-6" /> },
+                { title: "Full-Funnel Coordination", desc: "SEO, ads, content, and email all coordinated into one goal: more customers.", icon: <TrendingUp className="w-6 h-6" /> },
               ].map((item, i) => (
-                <div key={i} className="flex gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#6C24FA]/10 border border-[#6C24FA]/30 flex items-center justify-center text-[#6C24FA] shrink-0">
+                <div key={i} className="flex gap-6 p-6 rounded-3xl bg-[#0D1219] border border-white/5 hover:border-[#6C24FA]/30 hover:bg-[#6C24FA]/5 transition-all duration-300 group">
+                  <div className="w-14 h-14 rounded-2xl bg-[#6C24FA]/10 border border-[#6C24FA]/20 flex items-center justify-center text-[#6C24FA] shrink-0 group-hover:scale-110 group-hover:bg-[#6C24FA] group-hover:text-white transition-all shadow-lg">
                     {item.icon}
                   </div>
                   <div>
-                    <h4 className="text-white font-bold mb-1">{item.title}</h4>
+                    <h4 className="text-white font-bold text-lg mb-2">{item.title}</h4>
                     <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
@@ -546,40 +593,47 @@ export default function Home() {
       </section>
 
       {/* ══════════════════════════════════════════
-          COMPARISON TABLE
+          COMPARISON TABLE (PREMIUM)
       ══════════════════════════════════════════ */}
-      <section className="py-28 border-t border-white/8 bg-white/[0.01] overflow-hidden">
+      <section className="py-32 border-t border-white/5 bg-[#03070b] overflow-hidden">
         <div className="max-w-5xl mx-auto px-6 md:px-12">
-          <div className="text-center mb-12">
-            <span className="text-[#FD4F00] text-xs uppercase tracking-widest font-bold mb-4 block">The Difference</span>
-            <h2 className="text-4xl md:text-5xl font-black">WTechVerce vs. Typical Agencies</h2>
+          <div className="text-center mb-16">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FD4F00]/10 border border-[#FD4F00]/20 text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#FD4F00] animate-pulse" />
+              The Difference
+            </span>
+            <h2 className="text-5xl md:text-6xl font-black tracking-tight text-white">WTechVerce vs. Typical Agencies</h2>
           </div>
-          <div className="rounded-3xl overflow-hidden border border-white/10">
-            <table className="w-full text-left">
-              <thead>
-                <tr className="border-b border-white/10">
-                  <th className="p-5 text-gray-500 font-medium text-sm">Feature</th>
-                  <th className="p-5 text-gray-400 font-medium text-sm">Typical Agency</th>
-                  <th className="p-5 text-[#FD4F00] font-bold text-sm bg-[#FD4F00]/5">WTechVerce ✦</th>
-                </tr>
-              </thead>
-              <tbody className="text-sm">
-                {[
-                  ["Contract terms", "12-month lock-in", "Month-to-month"],
-                  ["Reporting", "Raw data dumps", "Plain-language, revenue-tied"],
-                  ["Strategy", "One-size-fits-all", "Built around your audit"],
-                  ["Point of contact", "Rotating managers", "Dedicated strategist"],
-                  ["Channels", "Siloed execution", "Coordinated: SEO, PPC, content"],
-                  ["Pricing", "Hidden or bundled", "Clear and itemized"],
-                ].map(([label, bad, good], i) => (
-                  <tr key={i} className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
-                    <td className="p-5 text-gray-300 font-medium">{label}</td>
-                    <td className="p-5 text-gray-500">{bad}</td>
-                    <td className="p-5 text-white font-semibold bg-[#FD4F00]/5">{good}</td>
+          
+          <div className="rounded-[2.5rem] p-4 bg-[#0D1219] border border-white/10 shadow-2xl relative">
+            <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#FD4F00]/10 blur-[100px] pointer-events-none rounded-full" />
+            <div className="rounded-[2rem] overflow-hidden bg-[#070A0F] border border-white/5 relative z-10">
+              <table className="w-full text-left">
+                <thead>
+                  <tr className="border-b border-white/10 bg-white/[0.02]">
+                    <th className="p-8 text-gray-400 font-bold text-xs uppercase tracking-widest w-1/3">Feature</th>
+                    <th className="p-8 text-gray-500 font-bold text-xs uppercase tracking-widest w-1/3">Typical Agency</th>
+                    <th className="p-8 text-[#FD4F00] font-black text-sm uppercase tracking-widest bg-[#FD4F00]/10 w-1/3">WTechVerce ✦</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody className="text-base">
+                  {[
+                    ["Contract terms", "12-month lock-in", "Month-to-month"],
+                    ["Reporting", "Raw data dumps", "Plain-language, revenue-tied"],
+                    ["Strategy", "One-size-fits-all", "Built around your audit"],
+                    ["Point of contact", "Rotating managers", "Dedicated strategist"],
+                    ["Channels", "Siloed execution", "Coordinated: SEO, PPC, content"],
+                    ["Pricing", "Hidden or bundled", "Clear and itemized"],
+                  ].map(([label, bad, good], i) => (
+                    <tr key={i} className="border-b border-white/5 hover:bg-white/[0.02] transition-colors group">
+                      <td className="p-8 text-gray-300 font-bold">{label}</td>
+                      <td className="p-8 text-gray-500 group-hover:text-gray-400 transition-colors">{bad}</td>
+                      <td className="p-8 text-white font-black bg-[#FD4F00]/5 group-hover:bg-[#FD4F00]/10 transition-colors">{good}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
