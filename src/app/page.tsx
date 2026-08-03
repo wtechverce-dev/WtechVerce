@@ -267,45 +267,28 @@ export default function Home() {
 
               {/* ANIMATED SPINNING BADGE */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-                {/* Outermost slow glow pulse */}
-                <motion.div
-                  animate={{ scale: [1, 1.4, 1], opacity: [0.15, 0.35, 0.15] }}
-                  transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -inset-8 rounded-full bg-[#FD4F00]/20 blur-2xl"
-                />
-                {/* Outer spinning text ring */}
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
-                  className="w-36 h-36 relative"
-                >
-                  <svg viewBox="0 0 130 130" className="w-full h-full">
-                    <defs>
-                      <path id="outer-ring" d="M 65,65 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0" />
-                    </defs>
-                    <text fill="rgba(255,255,255,0.7)" fontSize="8.5" letterSpacing="4" fontWeight="800" fontFamily="sans-serif">
-                      <textPath href="#outer-ring">WTECHVERCE · DIGITAL AGENCY · GROWTH ·</textPath>
-                    </text>
-                  </svg>
-                </motion.div>
-                {/* Inner counter-spinning dashes ring */}
-                <motion.div
-                  animate={{ rotate: -360 }}
-                  transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24"
-                >
-                  <svg viewBox="0 0 100 100" className="w-full h-full">
-                    <circle cx="50" cy="50" r="38" fill="none" stroke="rgba(253,79,0,0.35)" strokeWidth="1.5" strokeDasharray="6 4" />
-                  </svg>
-                </motion.div>
-                {/* Center glowing core */}
-                <motion.div
-                  animate={{ scale: [1, 1.08, 1], boxShadow: ["0 0 30px rgba(253,79,0,0.5)", "0 0 60px rgba(253,79,0,0.9)", "0 0 30px rgba(253,79,0,0.5)"] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-gradient-to-br from-[#FD4F00] to-[#6C24FA] flex items-center justify-center"
-                >
-                  <span className="text-white font-black text-[9px] tracking-widest text-center uppercase leading-tight">W<br/>T</span>
-                </motion.div>
+                <div className="relative w-40 h-40 rounded-full bg-gradient-to-br from-[#FD4F00] to-[#6C24FA] flex items-center justify-center shadow-[0_0_40px_rgba(253,79,0,0.4)]">
+                  {/* Spinning text inside the colored circle */}
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                    className="absolute inset-0"
+                  >
+                    <svg viewBox="0 0 160 160" className="w-full h-full" style={{ transform: "rotate(-90deg)" }}>
+                      <defs>
+                        <path id="badge-text" d="M 80,80 m -62,0 a 62,62 0 1,1 124,0 a 62,62 0 1,1 -124,0" />
+                      </defs>
+                      <text fill="white" fontSize="12.5" letterSpacing="2.5" fontWeight="800" fontFamily="sans-serif">
+                        <textPath href="#badge-text">WTECHVERCE • IT SOLUTION • WTECHVERCE • IT SOLUTION • </textPath>
+                      </text>
+                    </svg>
+                  </motion.div>
+                  
+                  {/* Inner white circle with logo */}
+                  <div className="relative z-10 w-24 h-24 bg-white rounded-full flex items-center justify-center overflow-hidden p-3 shadow-lg">
+                    <img src="/wtech.png" alt="WTechVerce" className="w-full h-full object-contain" />
+                  </div>
+                </div>
               </div>
 
               {/* Floating stat card */}
@@ -799,51 +782,31 @@ export default function Home() {
               <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1800&q=80" alt="WTechVerce Team" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-black/55" />
 
-              {/* SPINNING RING CIRCLE BUTTON — same style as badge */}
+              {/* SPINNING RING CIRCLE BUTTON */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
                 <Link href="/contact">
-                  <div className="relative w-44 h-44 group cursor-pointer">
-                    {/* Outer glow pulse */}
-                    <motion.div
-                      animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.5, 0.2] }}
-                      transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-                      className="absolute inset-0 rounded-full bg-[#FD4F00]/40 blur-2xl"
-                    />
-                    {/* Spinning text ring */}
+                  <div className="relative w-44 h-44 rounded-full bg-gradient-to-br from-[#FD4F00] to-[#6C24FA] flex items-center justify-center shadow-[0_0_60px_rgba(253,79,0,0.5)] group hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    
+                    {/* Spinning text */}
                     <motion.div
                       animate={{ rotate: 360 }}
-                      transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+                      transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
                       className="absolute inset-0"
                     >
-                      <svg viewBox="0 0 160 160" className="w-full h-full">
+                      <svg viewBox="0 0 176 176" className="w-full h-full" style={{ transform: "rotate(-90deg)" }}>
                         <defs>
-                          <path id="cta-ring" d="M 80,80 m -58,0 a 58,58 0 1,1 116,0 a 58,58 0 1,1 -116,0" />
+                          <path id="cta-text" d="M 88,88 m -70,0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0" />
                         </defs>
-                        <text fill="rgba(255,255,255,0.8)" fontSize="9" letterSpacing="5" fontWeight="800" fontFamily="sans-serif">
-                          <textPath href="#cta-ring">START PROJECT · WTECHVERCE · GET IN TOUCH ·</textPath>
+                        <text fill="white" fontSize="13.5" letterSpacing="2.5" fontWeight="800" fontFamily="sans-serif">
+                          <textPath href="#cta-text">START PROJECT • WTECHVERCE • GET IN TOUCH • WTECHVERCE • </textPath>
                         </text>
                       </svg>
                     </motion.div>
-                    {/* Counter-rotating dashes */}
-                    <motion.div
-                      animate={{ rotate: -360 }}
-                      transition={{ duration: 7, repeat: Infinity, ease: "linear" }}
-                      className="absolute inset-4"
-                    >
-                      <svg viewBox="0 0 120 120" className="w-full h-full">
-                        <circle cx="60" cy="60" r="48" fill="none" stroke="rgba(253,79,0,0.5)" strokeWidth="1.5" strokeDasharray="8 5" />
-                      </svg>
-                    </motion.div>
-                    {/* Center filled circle */}
-                    <motion.div
-                      whileHover={{ scale: 1.1 }}
-                      animate={{ boxShadow: ["0 0 30px rgba(253,79,0,0.5)", "0 0 60px rgba(108,36,250,0.7)", "0 0 30px rgba(253,79,0,0.5)"] }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 rounded-full bg-gradient-to-br from-[#FD4F00] to-[#6C24FA] flex flex-col items-center justify-center"
-                    >
-                      <span className="text-white font-black text-xs tracking-widest uppercase text-center leading-snug">Start<br/>Project</span>
-                      <ArrowRight className="w-4 h-4 text-white mt-1" />
-                    </motion.div>
+
+                    {/* Inner white circle with logo */}
+                    <div className="relative z-10 w-28 h-28 bg-white rounded-full flex items-center justify-center shadow-lg overflow-hidden p-4">
+                      <img src="/wtech.png" alt="WTechVerce" className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" />
+                    </div>
                   </div>
                 </Link>
               </div>
