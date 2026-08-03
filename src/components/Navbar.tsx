@@ -39,24 +39,24 @@ export default function Navbar() {
       <div
         className={`w-full transition-all duration-700 flex items-center justify-between ${
           isScrolled
-            ? "max-w-4xl bg-[#07091A]/50 backdrop-blur-3xl border border-white/10 rounded-full px-4 py-2.5 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),0_20px_40px_rgba(0,0,0,0.8)]"
+            ? "max-w-6xl bg-[#02050A]/80 backdrop-blur-2xl border border-white/10 rounded-full px-8 py-3 shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
             : "max-w-7xl bg-transparent px-4 md:px-8 py-2"
         }`}
       >
         {/* Brand / Logo */}
-        <Link href="/" className="relative flex items-center shrink-0 pl-2">
+        <Link href="/" className="relative flex items-center shrink-0">
           <Image
             src="/wtech.png"
             alt="WTechVerce"
             width={200}
             height={80}
             priority
-            className={`object-contain transition-all duration-500 ${isScrolled ? "h-10 w-auto opacity-90 hover:opacity-100" : "h-14 md:h-16 w-auto"}`}
+            className={`object-contain transition-all duration-500 ${isScrolled ? "h-12 w-auto" : "h-20 md:h-24 w-auto"}`}
           />
         </Link>
 
         {/* Desktop Links (Center) */}
-        <nav className="hidden md:flex items-center gap-2" onMouseLeave={() => setHoveredLink(null)}>
+        <nav className="hidden md:flex items-center gap-2 md:gap-4" onMouseLeave={() => setHoveredLink(null)}>
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             const isHovered = hoveredLink === link.href;
@@ -66,8 +66,8 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onMouseEnter={() => setHoveredLink(link.href)}
-                className={`relative px-5 py-2.5 rounded-full text-xs font-black tracking-[0.15em] uppercase transition-colors duration-300 z-10 ${
-                  isActive || isHovered ? "text-white" : "text-white/50"
+                className={`relative px-5 py-2.5 rounded-full text-sm font-medium tracking-wide transition-colors duration-300 z-10 ${
+                  isActive || isHovered ? "text-white" : "text-white/60 hover:text-white"
                 }`}
               >
                 <span className="relative z-20">{link.label}</span>
@@ -95,9 +95,9 @@ export default function Navbar() {
         </nav>
 
         {/* CTA Button */}
-        <div className="hidden md:block shrink-0 pr-1">
-          <Button href="/contact" variant="primary" size="sm" className="!py-2.5 !px-6 !text-xs !tracking-widest !rounded-full shadow-[0_0_20px_rgba(253,79,0,0.3)] hover:shadow-[0_0_30px_rgba(253,79,0,0.6)] border border-[#FD4F00]/50">
-            START PROJECT
+        <div className="hidden md:block shrink-0">
+          <Button href="/contact" variant="primary" size="sm" className="!py-3 !px-8 !text-sm">
+            Start Project →
           </Button>
         </div>
 
