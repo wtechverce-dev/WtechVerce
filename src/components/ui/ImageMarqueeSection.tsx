@@ -31,15 +31,13 @@ export function ImageMarqueeSection() {
       const distance = cardCenter - centerX;
       
       // Normalize distance (-1 at left edge of screen, 1 at right edge)
-      // We use a wider denominator to smooth the curve across a larger apparent radius
-      const normalized = distance / (window.innerWidth / 1.5);
+      const normalized = distance / (window.innerWidth / 2.2);
       
-      // Rotation: e.g. -25deg on left edge, 25deg on right edge
-      const rotate = normalized * 25; 
+      // Rotation: e.g. -40deg on left edge, 40deg on right edge
+      const rotate = normalized * 40; 
       
-      // Y Offset: parabola shape, so it curves downward at edges
-      // Math.pow ensures distance in either direction results in a positive drop
-      const y = Math.pow(normalized, 2) * 120;
+      // Y Offset: deeper parabola shape for a much stronger arch
+      const y = Math.pow(normalized, 2) * 280;
       
       card.style.transform = `translateY(${y}px) rotate(${rotate}deg)`;
     });
@@ -53,7 +51,7 @@ export function ImageMarqueeSection() {
         </h2>
       </div>
 
-      <div className="w-full relative h-[450px] md:h-[550px] overflow-hidden flex items-center">
+      <div className="w-full relative h-[600px] md:h-[700px] overflow-hidden flex items-center mt-10">
         <motion.div
           animate={{ x: ["0%", "-33.333333%"] }}
           transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
