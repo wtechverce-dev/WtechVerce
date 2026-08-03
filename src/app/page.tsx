@@ -267,34 +267,44 @@ export default function Home() {
 
               {/* ANIMATED SPINNING BADGE */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-                {/* Outer pulsing ring */}
+                {/* Outermost slow glow pulse */}
                 <motion.div
-                  animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.6, 0.3] }}
-                  transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute inset-0 rounded-full bg-[#FD4F00]/30 blur-xl"
+                  animate={{ scale: [1, 1.4, 1], opacity: [0.15, 0.35, 0.15] }}
+                  transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -inset-8 rounded-full bg-[#FD4F00]/20 blur-2xl"
                 />
-                {/* Spinning text ring */}
+                {/* Outer spinning text ring */}
                 <motion.div
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
-                  className="w-32 h-32 relative"
+                  transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
+                  className="w-36 h-36 relative"
                 >
-                  <svg viewBox="0 0 120 120" className="w-full h-full">
+                  <svg viewBox="0 0 130 130" className="w-full h-full">
                     <defs>
-                      <path id="circle-text-path" d="M 60,60 m -40,0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" />
+                      <path id="outer-ring" d="M 65,65 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0" />
                     </defs>
-                    <text className="fill-white" fontSize="9" letterSpacing="3" fontWeight="700" fontFamily="sans-serif">
-                      <textPath href="#circle-text-path">WTECHVERCE · DIGITAL AGENCY ·</textPath>
+                    <text fill="rgba(255,255,255,0.7)" fontSize="8.5" letterSpacing="4" fontWeight="800" fontFamily="sans-serif">
+                      <textPath href="#outer-ring">WTECHVERCE · DIGITAL AGENCY · GROWTH ·</textPath>
                     </text>
                   </svg>
                 </motion.div>
-                {/* Center core */}
+                {/* Inner counter-spinning dashes ring */}
                 <motion.div
-                  animate={{ scale: [1, 1.05, 1] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-gradient-to-br from-[#FD4F00] to-[#c03800] flex items-center justify-center shadow-[0_0_40px_rgba(253,79,0,0.6)]"
+                  animate={{ rotate: -360 }}
+                  transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24"
                 >
-                  <span className="text-white font-black text-[8px] tracking-wider text-center uppercase leading-tight">W<br/>T</span>
+                  <svg viewBox="0 0 100 100" className="w-full h-full">
+                    <circle cx="50" cy="50" r="38" fill="none" stroke="rgba(253,79,0,0.35)" strokeWidth="1.5" strokeDasharray="6 4" />
+                  </svg>
+                </motion.div>
+                {/* Center glowing core */}
+                <motion.div
+                  animate={{ scale: [1, 1.08, 1], boxShadow: ["0 0 30px rgba(253,79,0,0.5)", "0 0 60px rgba(253,79,0,0.9)", "0 0 30px rgba(253,79,0,0.5)"] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-gradient-to-br from-[#FD4F00] to-[#6C24FA] flex items-center justify-center"
+                >
+                  <span className="text-white font-black text-[9px] tracking-widest text-center uppercase leading-tight">W<br/>T</span>
                 </motion.div>
               </div>
 
@@ -590,7 +600,7 @@ export default function Home() {
       </section>
 
       {/* ══════════════════════════════════════════
-          SECTION 6: CASE STUDIES — 2×2 GRID
+          SECTION 6: CASE STUDIES — PREMIUM CARDS
       ══════════════════════════════════════════ */}
       <section className="py-24 bg-[#040810]">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -601,33 +611,70 @@ export default function Home() {
             </div>
           </FadeIn>
 
-          <div className="grid md:grid-cols-2 gap-5">
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Leadstonk card — light premium */}
             <FadeIn delay={0.05} direction="left">
-              <div className="aspect-[4/3] rounded-[2.5rem] bg-[#f2f0eb] p-10 relative overflow-hidden group">
-                <div className="absolute top-7 left-7 z-10">
-                  <span className="px-3 py-1.5 bg-black text-white text-xs font-bold rounded-full uppercase tracking-widest">Leadstonk</span>
+              <div className="rounded-[2.5rem] bg-[#f5f3ef] relative overflow-hidden group cursor-pointer">
+                {/* Top info bar */}
+                <div className="flex items-center justify-between px-8 pt-8 pb-4">
+                  <div>
+                    <span className="block text-xs font-black uppercase tracking-widest text-gray-500 mb-1">Case Study 01</span>
+                    <h3 className="text-2xl font-black text-gray-900">Leadstonk.com</h3>
+                  </div>
+                  <div className="flex gap-2">
+                    <span className="px-3 py-1.5 bg-black text-white text-[10px] font-black rounded-full uppercase tracking-widest">SEO</span>
+                    <span className="px-3 py-1.5 bg-black text-white text-[10px] font-black rounded-full uppercase tracking-widest">Web Dev</span>
+                  </div>
                 </div>
-                <div className="absolute top-7 right-7 z-10">
-                  <span className="px-3 py-1.5 bg-black/10 text-black text-xs font-bold rounded-full uppercase tracking-widest">SEO + Web Dev</span>
+                {/* Screenshot in a device frame */}
+                <div className="mx-6 mb-6 rounded-2xl overflow-hidden shadow-2xl border-4 border-white group-hover:shadow-[0_20px_60px_rgba(0,0,0,0.25)] transition-all duration-700">
+                  <img src="/projects/leadstonk.png" alt="Leadstonk" className="w-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-700" />
                 </div>
-                <img src="/projects/leadstonk.png" alt="Leadstonk" className="w-full h-full object-cover object-top rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-700" />
+                {/* Bottom metrics */}
+                <div className="flex gap-6 px-8 pb-8">
+                  {[["3x", "Lead Volume"], ["#1", "Rankings"], ["85%", "Bounce Reduction"]].map(([val, label]) => (
+                    <div key={label}>
+                      <div className="text-xl font-black text-gray-900">{val}</div>
+                      <div className="text-gray-500 text-[10px] uppercase tracking-widest font-bold">{label}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </FadeIn>
 
+            {/* Dental Clinic card — dark premium */}
             <FadeIn delay={0.1} direction="right">
-              <div className="aspect-[4/3] rounded-[2.5rem] bg-[#0A1220] border border-white/5 p-10 relative overflow-hidden group">
-                <div className="absolute top-7 left-7 z-10">
-                  <span className="px-3 py-1.5 bg-white text-black text-xs font-bold rounded-full uppercase tracking-widest">Dental Clinic</span>
+              <div className="rounded-[2.5rem] bg-[#070D18] border border-white/8 relative overflow-hidden group cursor-pointer">
+                {/* Ambient glow */}
+                <div className="absolute top-0 right-0 w-60 h-60 bg-[#6C24FA]/15 rounded-full blur-[80px] pointer-events-none" />
+                {/* Top info bar */}
+                <div className="flex items-center justify-between px-8 pt-8 pb-4 relative z-10">
+                  <div>
+                    <span className="block text-xs font-black uppercase tracking-widest text-gray-500 mb-1">Case Study 02</span>
+                    <h3 className="text-2xl font-black text-white">Dental Clinic</h3>
+                  </div>
+                  <div className="flex gap-2">
+                    <span className="px-3 py-1.5 bg-[#FD4F00] text-white text-[10px] font-black rounded-full uppercase tracking-widest">SEO</span>
+                    <span className="px-3 py-1.5 bg-white/10 text-white text-[10px] font-black rounded-full uppercase tracking-widest">Marketing</span>
+                  </div>
                 </div>
-                <div className="absolute top-7 right-7 z-10">
-                  <span className="px-3 py-1.5 bg-white/10 text-white text-xs font-bold rounded-full uppercase tracking-widest">SEO + Marketing</span>
+                {/* Screenshot in dark device frame */}
+                <div className="mx-6 mb-6 rounded-2xl overflow-hidden shadow-2xl border border-white/10 group-hover:border-[#FD4F00]/30 group-hover:shadow-[0_20px_60px_rgba(253,79,0,0.15)] transition-all duration-700 relative z-10">
+                  <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" alt="Dental Clinic" className="w-full object-cover group-hover:scale-[1.03] transition-transform duration-700" />
                 </div>
-                <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" alt="Dental Clinic" className="w-full h-full object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-700" />
+                {/* Bottom metrics */}
+                <div className="flex gap-6 px-8 pb-8 relative z-10">
+                  {[["3x", "Patient Inquiries"], ["Pg.1", "Google Rank"], ["4mo", "Time to Results"]].map(([val, label]) => (
+                    <div key={label}>
+                      <div className="text-xl font-black text-white">{val}</div>
+                      <div className="text-gray-500 text-[10px] uppercase tracking-widest font-bold">{label}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </FadeIn>
           </div>
 
-          {/* View More — using proper pill button style */}
           <FadeIn delay={0.15}>
             <div className="mt-14 flex justify-center">
               <Button href="/portfolio" variant="primary" size="lg" filled>
@@ -639,90 +686,87 @@ export default function Home() {
       </section>
 
       {/* ══════════════════════════════════════════
-          SECTION 7: TESTIMONIALS CAROUSEL
+          SECTION 7: TESTIMONIALS — ALL 5 VISIBLE
       ══════════════════════════════════════════ */}
       <section className="py-32 bg-[#02050A] border-y border-white/5 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            {/* LEFT — rating */}
-            <FadeIn direction="left">
+          {/* Header */}
+          <FadeIn>
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
               <div>
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-white text-xs font-bold uppercase tracking-widest mb-8">Client Reviews</span>
-                <div className="text-[9rem] font-black text-white leading-none tracking-tight mb-6">4.9</div>
-                <div className="flex gap-1.5 text-[#FD4F00] mb-5">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="w-7 h-7 fill-current" />)}
-                </div>
-                <p className="text-gray-400 font-bold uppercase tracking-widest text-sm mb-10">Based on 150+ Verified Reviews</p>
-
-                {/* Dots nav */}
-                <div className="flex items-center gap-4">
-                  <motion.button
-                    whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}
-                    onClick={prevTestimonial}
-                    className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:border-[#FD4F00] hover:text-[#FD4F00] transition-colors"
-                  >
-                    <ChevronLeft className="w-5 h-5" />
-                  </motion.button>
-                  <div className="flex gap-2">
-                    {testimonials.map((_, i) => (
-                      <button key={i} onClick={() => setActiveTestimonial(i)}
-                        className={`h-2 rounded-full transition-all duration-300 ${i === activeTestimonial ? "w-8 bg-[#FD4F00]" : "w-2 bg-white/20"}`}
-                      />
-                    ))}
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-white text-xs font-bold uppercase tracking-widest mb-5">Client Reviews</span>
+                <h2 className="text-5xl font-black text-white leading-tight">What our clients<br/>are saying</h2>
+              </div>
+              <div className="flex items-center gap-5">
+                <div className="text-right">
+                  <div className="text-6xl font-black text-white">4.9</div>
+                  <div className="flex gap-1 justify-end text-[#FD4F00] my-2">
+                    {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-current" />)}
                   </div>
-                  <motion.button
-                    whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}
-                    onClick={nextTestimonial}
-                    className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:border-[#FD4F00] hover:text-[#FD4F00] transition-colors"
-                  >
-                    <ChevronRight className="w-5 h-5" />
-                  </motion.button>
+                  <p className="text-gray-500 text-xs uppercase tracking-widest font-bold">150+ Verified Reviews</p>
                 </div>
               </div>
-            </FadeIn>
+            </div>
+          </FadeIn>
 
-            {/* RIGHT — testimonial card carousel */}
-            <FadeIn direction="right" delay={0.1}>
-              <div className="relative">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={activeTestimonial}
-                    initial={{ opacity: 0, x: 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -50 }}
-                    transition={{ duration: 0.4, ease: "easeInOut" }}
-                    className="relative p-10 rounded-[2.5rem] bg-[#070D18] border border-white/8"
-                  >
-                    {/* Quote icon */}
-                    <div className="absolute -top-7 -left-7 w-14 h-14 bg-gradient-to-br from-[#6C24FA] to-[#4a10c4] rounded-full flex items-center justify-center text-white shadow-[0_0_30px_rgba(108,36,250,0.4)]">
-                      <span className="text-4xl font-serif leading-none" style={{ paddingTop: "12px" }}>"</span>
-                    </div>
-
-                    <p className="text-white text-xl leading-relaxed mb-8 min-h-[140px]">
-                      {testimonials[activeTestimonial].quote}
-                    </p>
-
-                    <div className="flex items-center gap-4">
-                      <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-white/10">
-                        <img src={testimonials[activeTestimonial].avatar} alt={testimonials[activeTestimonial].name} className="w-full h-full object-cover" />
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-white text-base">{testimonials[activeTestimonial].name}</h4>
-                        <span className="text-sm text-gray-500">{testimonials[activeTestimonial].role}</span>
-                      </div>
-                      <div className="ml-auto flex gap-1 text-[#FD4F00]">
-                        {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
-                      </div>
-                    </div>
-
-                    {/* Slide counter */}
-                    <div className="absolute bottom-6 right-8 text-gray-600 text-xs font-bold">
-                      {activeTestimonial + 1} / {testimonials.length}
-                    </div>
-                  </motion.div>
-                </AnimatePresence>
-              </div>
-            </FadeIn>
+          {/* 5 testimonial cards — top row 3, bottom row 2 centered */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+            {testimonials.slice(0, 3).map((t, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                className="relative p-7 rounded-[2rem] bg-[#070D18] border border-white/6 hover:border-[#FD4F00]/30 hover:shadow-[0_0_40px_rgba(253,79,0,0.07)] transition-all duration-500 group"
+              >
+                {/* Stars */}
+                <div className="flex gap-1 text-[#FD4F00] mb-5">
+                  {[...Array(5)].map((_, s) => <Star key={s} className="w-3.5 h-3.5 fill-current" />)}
+                </div>
+                {/* Quote */}
+                <p className="text-gray-300 text-sm leading-relaxed mb-6">&ldquo;{t.quote}&rdquo;</p>
+                {/* Author */}
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full overflow-hidden border border-white/10 shrink-0">
+                    <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
+                  </div>
+                  <div>
+                    <div className="text-white font-bold text-sm">{t.name}</div>
+                    <div className="text-gray-500 text-xs">{t.role}</div>
+                  </div>
+                </div>
+                {/* Accent corner */}
+                <div className="absolute top-6 right-6 text-[#6C24FA]/40 text-4xl font-serif leading-none">&ldquo;</div>
+              </motion.div>
+            ))}
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:max-w-[66%] mx-auto">
+            {testimonials.slice(3).map((t, i) => (
+              <motion.div
+                key={i + 3}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 + i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                className="relative p-7 rounded-[2rem] bg-[#070D18] border border-white/6 hover:border-[#6C24FA]/30 hover:shadow-[0_0_40px_rgba(108,36,250,0.07)] transition-all duration-500 group"
+              >
+                <div className="flex gap-1 text-[#FD4F00] mb-5">
+                  {[...Array(5)].map((_, s) => <Star key={s} className="w-3.5 h-3.5 fill-current" />)}
+                </div>
+                <p className="text-gray-300 text-sm leading-relaxed mb-6">&ldquo;{t.quote}&rdquo;</p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full overflow-hidden border border-white/10 shrink-0">
+                    <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
+                  </div>
+                  <div>
+                    <div className="text-white font-bold text-sm">{t.name}</div>
+                    <div className="text-gray-500 text-xs">{t.role}</div>
+                  </div>
+                </div>
+                <div className="absolute top-6 right-6 text-[#FD4F00]/30 text-4xl font-serif leading-none">&ldquo;</div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -749,21 +793,59 @@ export default function Home() {
       ══════════════════════════════════════════ */}
       <section className="py-28 bg-[#02050A] overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          {/* Image banner with upgraded CTA button */}
+          {/* Image banner with SPINNING RING CTA button */}
           <FadeIn>
-            <div className="w-full h-[340px] rounded-[3rem] overflow-hidden relative mb-20">
+            <div className="w-full h-[360px] rounded-[3rem] overflow-hidden relative mb-20">
               <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1800&q=80" alt="WTechVerce Team" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-black/55" />
 
-              {/* UPGRADED CTA — uses same pill button style, centered */}
+              {/* SPINNING RING CIRCLE BUTTON — same style as badge */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-                <motion.div whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.97 }} transition={{ duration: 0.2 }}>
-                  <Link href="/contact">
-                    <span className="relative inline-flex items-center justify-center gap-3 px-10 py-5 font-bold rounded-full overflow-hidden bg-gradient-to-r from-[#FD4F00] to-[#6C24FA] text-white text-lg shadow-[0_0_60px_rgba(253,79,0,0.5)] hover:shadow-[0_0_80px_rgba(253,79,0,0.7)] transition-shadow duration-300 whitespace-nowrap">
-                      Start Your Project <ArrowRight className="w-5 h-5" />
-                    </span>
-                  </Link>
-                </motion.div>
+                <Link href="/contact">
+                  <div className="relative w-44 h-44 group cursor-pointer">
+                    {/* Outer glow pulse */}
+                    <motion.div
+                      animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.5, 0.2] }}
+                      transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                      className="absolute inset-0 rounded-full bg-[#FD4F00]/40 blur-2xl"
+                    />
+                    {/* Spinning text ring */}
+                    <motion.div
+                      animate={{ rotate: 360 }}
+                      transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+                      className="absolute inset-0"
+                    >
+                      <svg viewBox="0 0 160 160" className="w-full h-full">
+                        <defs>
+                          <path id="cta-ring" d="M 80,80 m -58,0 a 58,58 0 1,1 116,0 a 58,58 0 1,1 -116,0" />
+                        </defs>
+                        <text fill="rgba(255,255,255,0.8)" fontSize="9" letterSpacing="5" fontWeight="800" fontFamily="sans-serif">
+                          <textPath href="#cta-ring">START PROJECT · WTECHVERCE · GET IN TOUCH ·</textPath>
+                        </text>
+                      </svg>
+                    </motion.div>
+                    {/* Counter-rotating dashes */}
+                    <motion.div
+                      animate={{ rotate: -360 }}
+                      transition={{ duration: 7, repeat: Infinity, ease: "linear" }}
+                      className="absolute inset-4"
+                    >
+                      <svg viewBox="0 0 120 120" className="w-full h-full">
+                        <circle cx="60" cy="60" r="48" fill="none" stroke="rgba(253,79,0,0.5)" strokeWidth="1.5" strokeDasharray="8 5" />
+                      </svg>
+                    </motion.div>
+                    {/* Center filled circle */}
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      animate={{ boxShadow: ["0 0 30px rgba(253,79,0,0.5)", "0 0 60px rgba(108,36,250,0.7)", "0 0 30px rgba(253,79,0,0.5)"] }}
+                      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 rounded-full bg-gradient-to-br from-[#FD4F00] to-[#6C24FA] flex flex-col items-center justify-center"
+                    >
+                      <span className="text-white font-black text-xs tracking-widest uppercase text-center leading-snug">Start<br/>Project</span>
+                      <ArrowRight className="w-4 h-4 text-white mt-1" />
+                    </motion.div>
+                  </div>
+                </Link>
               </div>
             </div>
           </FadeIn>
