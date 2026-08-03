@@ -343,82 +343,174 @@ export default function Home() {
       <ImageMarqueeSection />
 
       {/* ══════════════════════════════════════════
-          SECTION 1.7: FOUNDER SECTION
+          SECTION 1.7: FOUNDER SECTION — VIP
       ══════════════════════════════════════════ */}
-      <section className="py-24 bg-[#02050A] relative overflow-hidden">
-        {/* Background noise/texture */}
-        <div className="absolute inset-0 opacity-[0.03]"
-          style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")" }} />
+      <section className="py-28 bg-[#02050A] relative overflow-hidden">
+        {/* Animated background blobs */}
+        <motion.div
+          animate={{ scale: [1, 1.2, 1], opacity: [0.08, 0.15, 0.08] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[600px] h-[600px] bg-[#FD4F00] rounded-full blur-[180px] pointer-events-none"
+        />
+        <motion.div
+          animate={{ scale: [1.2, 1, 1.2], opacity: [0.1, 0.18, 0.1] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-[#6C24FA] rounded-full blur-[180px] pointer-events-none"
+        />
 
-        <div className="w-full px-6 md:px-12 relative z-10">
-          <FadeIn>
-            {/* Board-style card with screws */}
-            <div className="relative rounded-[2.5rem] border border-white/8 overflow-hidden"
-              style={{ background: "linear-gradient(135deg, #0A0F1E 0%, #07091A 100%)" }}>
+        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
 
-              {/* Corner screws */}
-              {["top-5 left-5", "top-5 right-5", "bottom-5 left-5", "bottom-5 right-5"].map((pos, i) => (
-                <div key={i} className={`absolute ${pos} w-5 h-5 rounded-full border-2 border-white/15 flex items-center justify-center`}>
-                  <div className="w-2 h-[1px] bg-white/20 rotate-45" />
-                </div>
-              ))}
+            {/* ── LEFT: Photo Column ── */}
+            <FadeIn direction="left" className="w-full lg:w-[420px] shrink-0">
+              <div className="relative mx-auto w-fit">
+                {/* Rotating gradient ring */}
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  className="absolute -inset-3 rounded-[2.5rem] z-0"
+                  style={{ background: "conic-gradient(from 0deg, #FD4F00, #6C24FA, #FD4F00, #6C24FA, #FD4F00)", padding: "2px" }}
+                >
+                  <div className="w-full h-full rounded-[2.3rem] bg-[#02050A]" />
+                </motion.div>
 
-              {/* Ambient glow */}
-              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#FD4F00]/5 rounded-full blur-[150px] pointer-events-none" />
-              <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#6C24FA]/8 rounded-full blur-[120px] pointer-events-none" />
-
-              <div className="flex flex-col md:flex-row items-end justify-between p-10 md:p-16 gap-10 relative z-10 min-h-[420px]">
-
-                {/* LEFT: founder image */}
-                <div className="shrink-0 relative self-end">
-                  <div className="w-[180px] md:w-[220px] h-[220px] md:h-[280px] rounded-2xl overflow-hidden border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.6)]">
-                    <img src="/waheed.jpg" alt="Waheed Ahmed"
-                      className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-700" />
-                  </div>
-                  {/* Name tag */}
-                  <div className="mt-4 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm inline-block">
-                    <p className="text-white text-sm font-bold">Waheed Ahmed</p>
-                    <p className="text-[#FD4F00] text-[10px] uppercase tracking-widest font-black">Founder & CEO</p>
-                  </div>
-                </div>
-
-                {/* CENTER: bio text */}
-                <div className="flex-1 max-w-lg text-center md:text-left self-center">
-                  <span className="inline-block text-[10px] font-black uppercase tracking-[0.3em] text-white/30 mb-4">About Us</span>
-                  <p className="text-white/70 text-base md:text-lg leading-relaxed">
-                    WTechVerce is built on one belief — that great design and clean code can transform a business. 
-                    As a <span className="text-white font-bold">MERN Stack Developer</span> and digital strategist, 
-                    I founded this agency to help brands grow through <span className="text-[#FD4F00] font-bold">premium web experiences</span>, 
-                    data-driven SEO, and results-focused marketing.
-                  </p>
-                  <div className="mt-8 flex flex-wrap gap-3 justify-center md:justify-start">
-                    {["React.js", "Next.js", "Node.js", "MongoDB", "SEO"].map((tech) => (
-                      <span key={tech} className="px-3 py-1.5 border border-white/10 rounded-full text-white/60 text-xs font-bold uppercase tracking-widest hover:border-[#FD4F00]/50 hover:text-[#FD4F00] transition-colors duration-300">
-                        {tech}
-                      </span>
-                    ))}
+                {/* Photo */}
+                <div className="relative z-10 w-[300px] md:w-[380px] h-[380px] md:h-[480px] rounded-[2rem] overflow-hidden shadow-[0_40px_120px_rgba(253,79,0,0.2)]">
+                  <img
+                    src="/waheed.jpg"
+                    alt="Waheed Ahmed"
+                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
+                  />
+                  {/* Bottom gradient overlay */}
+                  <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(2,5,10,0.9) 0%, transparent 50%)" }} />
+                  {/* Name badge inside photo */}
+                  <div className="absolute bottom-5 left-5 right-5">
+                    <div className="backdrop-blur-xl bg-white/5 border border-white/15 rounded-2xl px-5 py-4">
+                      <p className="text-white text-xl font-black">Waheed Ahmed</p>
+                      <p className="text-[#FD4F00] text-xs uppercase tracking-[0.3em] font-black mt-1">Founder & CEO · WTechVerce</p>
+                    </div>
                   </div>
                 </div>
 
-                {/* RIGHT: giant text */}
-                <div className="shrink-0 self-end text-right">
-                  <p className="text-[5rem] md:text-[8rem] font-black leading-none uppercase tracking-tighter text-white/5 select-none">
-                    FOUND<br />ER
-                  </p>
-                </div>
+                {/* Floating badge — experience */}
+                <motion.div
+                  animate={{ y: [-6, 6, -6] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -top-4 -right-4 z-20 bg-gradient-to-br from-[#FD4F00] to-[#c43b00] text-white rounded-2xl px-4 py-3 shadow-[0_10px_40px_rgba(253,79,0,0.4)]"
+                >
+                  <p className="text-2xl font-black">3+</p>
+                  <p className="text-[10px] uppercase tracking-widest font-bold opacity-80">Years Exp.</p>
+                </motion.div>
 
+                {/* Floating badge — projects */}
+                <motion.div
+                  animate={{ y: [6, -6, 6] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                  className="absolute -bottom-4 -right-6 z-20 bg-gradient-to-br from-[#6C24FA] to-[#4a12d4] text-white rounded-2xl px-4 py-3 shadow-[0_10px_40px_rgba(108,36,250,0.4)]"
+                >
+                  <p className="text-2xl font-black">50+</p>
+                  <p className="text-[10px] uppercase tracking-widest font-bold opacity-80">Projects</p>
+                </motion.div>
               </div>
+            </FadeIn>
 
-              {/* Bottom marquee ticker */}
-              <div className="border-t border-white/5 overflow-hidden py-4">
-                <div className="flex gap-0 w-max" style={{ animation: "marquee-ticker 25s linear infinite" }}>
-                  {Array(8).fill("MERN STACK · WEB DEVELOPMENT · SEO · DIGITAL MARKETING · UI/UX DESIGN ·").map((t, i) => (
-                    <span key={i} className="text-white/20 text-xs font-black uppercase tracking-widest px-6 whitespace-nowrap">{t}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </FadeIn>
+            {/* ── RIGHT: Content Column ── */}
+            <FadeIn direction="right" className="flex-1">
+              {/* Tag */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#FD4F00]/30 bg-[#FD4F00]/10 text-[#FD4F00] text-xs font-black uppercase tracking-widest mb-6">
+                  Meet The Founder
+                </span>
+              </motion.div>
+
+              {/* Headline */}
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-5xl md:text-7xl font-black text-white leading-[0.95] tracking-tighter mb-8"
+              >
+                Building the <br />
+                <span className="text-transparent bg-clip-text"
+                  style={{ backgroundImage: "linear-gradient(135deg, #FD4F00, #6C24FA)" }}>
+                  Digital Future
+                </span><br />
+                of Pakistan.
+              </motion.h2>
+
+              {/* Bio */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-white/60 text-lg leading-relaxed mb-10 max-w-xl"
+              >
+                I'm a <span className="text-white font-bold">MERN Stack Developer</span> and founder of WTechVerce — 
+                a digital agency that builds premium websites, crushes SEO rankings, and creates brands that 
+                <span className="text-[#FD4F00] font-bold"> actually convert</span>. Every pixel we ship is intentional.
+              </motion.p>
+
+              {/* Tech stack pills */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="flex flex-wrap gap-3 mb-12"
+              >
+                {[
+                  { label: "React.js", color: "#61DAFB" },
+                  { label: "Next.js", color: "#ffffff" },
+                  { label: "Node.js", color: "#68A063" },
+                  { label: "MongoDB", color: "#4DB33D" },
+                  { label: "Express.js", color: "#aaaaaa" },
+                  { label: "SEO", color: "#FD4F00" },
+                ].map((tech, i) => (
+                  <motion.span
+                    key={tech.label}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 + i * 0.07 }}
+                    whileHover={{ scale: 1.08, y: -2 }}
+                    className="px-4 py-2 rounded-full border text-xs font-black uppercase tracking-widest cursor-default transition-all duration-300"
+                    style={{ borderColor: `${tech.color}30`, color: tech.color, background: `${tech.color}10` }}
+                  >
+                    {tech.label}
+                  </motion.span>
+                ))}
+              </motion.div>
+
+              {/* Stats row */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="grid grid-cols-3 gap-6 pt-8 border-t border-white/8"
+              >
+                {[
+                  { val: "50+", label: "Projects Delivered" },
+                  { val: "3+", label: "Years Experience" },
+                  { val: "100%", label: "Client Satisfaction" },
+                ].map(({ val, label }) => (
+                  <div key={label}>
+                    <div className="text-3xl md:text-4xl font-black text-white mb-1"
+                      style={{ textShadow: "0 0 30px rgba(253,79,0,0.3)" }}>{val}</div>
+                    <div className="text-white/40 text-[11px] uppercase tracking-widest font-bold">{label}</div>
+                  </div>
+                ))}
+              </motion.div>
+            </FadeIn>
+
+          </div>
         </div>
       </section>
 
