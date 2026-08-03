@@ -48,10 +48,10 @@ export default function Navbar() {
           <Image
             src="/wtech.png"
             alt="WTechVerce"
-            width={200}
-            height={80}
+            width={350}
+            height={120}
             priority
-            className={`object-contain transition-all duration-500 ${isScrolled ? "h-12 w-auto" : "h-20 md:h-24 w-auto"}`}
+            className={`object-contain transition-all duration-500 ${isScrolled ? "h-14 w-auto" : "h-24 md:h-28 w-auto"}`}
           />
         </Link>
 
