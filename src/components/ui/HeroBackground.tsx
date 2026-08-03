@@ -79,7 +79,7 @@ export default function HeroBackground() {
         // Draw particle
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(253, 79, 0, 0.4)"; // WTechVerce Orange
+        ctx.fillStyle = "rgba(253, 79, 0, 0.8)"; // Brighter WTechVerce Orange
         ctx.fill();
 
         // Connect particles
@@ -137,18 +137,18 @@ export default function HeroBackground() {
       {/* Interactive Particle Network */}
       <canvas 
         ref={canvasRef} 
-        className="absolute inset-0 w-full h-full opacity-60"
+        className="absolute inset-0 w-full h-full opacity-100"
       />
 
       {/* Dynamic Mouse Spotlight */}
       <motion.div
-        className="absolute w-[900px] h-[900px] rounded-full opacity-40 mix-blend-screen"
+        className="absolute w-[1000px] h-[1000px] rounded-full opacity-80 mix-blend-screen"
         style={{
           x: spotlightX,
           y: spotlightY,
           translateX: "-50%",
           translateY: "-50%",
-          background: "radial-gradient(circle, rgba(108, 36, 250, 0.15) 0%, rgba(253, 79, 0, 0.05) 40%, rgba(0,0,0,0) 70%)",
+          background: "radial-gradient(circle, rgba(108, 36, 250, 0.3) 0%, rgba(253, 79, 0, 0.15) 40%, rgba(0,0,0,0) 70%)",
           filter: "blur(60px)",
         }}
       />
@@ -157,7 +157,7 @@ export default function HeroBackground() {
       <motion.div
         animate={{
           scale: [1, 1.2, 1],
-          opacity: [0.05, 0.15, 0.05],
+          opacity: [0.15, 0.3, 0.15],
           x: [0, 100, 0],
           y: [0, -100, 0],
         }}
@@ -168,7 +168,7 @@ export default function HeroBackground() {
       <motion.div
         animate={{
           scale: [1, 1.15, 1],
-          opacity: [0.05, 0.15, 0.05],
+          opacity: [0.15, 0.3, 0.15],
           x: [0, -80, 0],
           y: [0, 120, 0],
         }}
@@ -177,7 +177,7 @@ export default function HeroBackground() {
       />
 
       {/* Vignette effect to darken the edges and make text pop */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#070C12_100%)] opacity-90" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#070C12_100%)] opacity-40" />
     </div>
   );
 }
