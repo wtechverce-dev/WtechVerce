@@ -108,38 +108,28 @@ export default function Home() {
       <GSAPScrollAnimations />
 
       {/* ══════════════════════════════════════════
-          HERO — Ultra Premium
+          HERO — Ultra Premium Centered
       ══════════════════════════════════════════ */}
-      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
+      <section className="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden">
         
-        {/* ── Animated gradient orbs ── */}
+        {/* ── Animated gradient orbs (Centered) ── */}
         <motion.div
           animate={{ scale: [1, 1.2, 1], opacity: [0.15, 0.25, 0.15] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-[-10%] left-[-10%] w-[700px] h-[700px] rounded-full bg-[#FD4F00] blur-[200px] pointer-events-none"
+          className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-[#FD4F00] blur-[150px] pointer-events-none"
         />
         <motion.div
           animate={{ scale: [1, 1.15, 1], opacity: [0.1, 0.2, 0.1] }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-          className="absolute bottom-[-10%] right-[-5%] w-[600px] h-[600px] rounded-full bg-[#6C24FA] blur-[200px] pointer-events-none"
+          className="absolute bottom-[10%] left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full bg-[#6C24FA] blur-[150px] pointer-events-none"
         />
 
-        {/* ── 3D Globe — right side ── */}
-        <div className="absolute right-0 top-0 w-full h-full pointer-events-none overflow-hidden">
-          <div className="absolute right-[-5%] top-1/2 -translate-y-1/2 w-[55vw] h-[55vw] max-w-[800px] max-h-[800px] opacity-70">
-            <HeroGlobeScene />
-          </div>
-          {/* fade overlay so globe blends into background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#070C12] via-[#070C12]/70 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#070C12] via-transparent to-[#070C12]/50" />
-        </div>
-
         {/* ── Grid overlay ── */}
-        <div className="absolute inset-0 opacity-[0.025] pointer-events-none"
-          style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.5) 1px,transparent 1px)", backgroundSize: "80px 80px" }} />
+        <div className="absolute inset-0 opacity-[0.035] pointer-events-none"
+          style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.5) 1px,transparent 1px)", backgroundSize: "80px 80px", backgroundPosition: "center center" }} />
 
         {/* ── Main content ── */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full pt-28 pb-20">
+        <div className="relative z-10 max-w-5xl mx-auto px-6 w-full pt-32 pb-24 flex flex-col items-center">
 
           {/* Badge */}
           <motion.div
@@ -150,43 +140,32 @@ export default function Home() {
           >
             <span className="w-2 h-2 rounded-full bg-[#FD4F00] animate-pulse" />
             <span className="text-[#FD4F00] text-sm font-semibold tracking-widest uppercase">
-              <ScrambleText text="Full-Service Digital Marketing Agency" delay={0.5} duration={1.5} />
+              <ScrambleText text="Digital Marketing & Development Agency" delay={0.5} duration={1.5} />
             </span>
           </motion.div>
 
           {/* ── Giant heading ── */}
-          <div className="max-w-4xl mb-8">
+          <div className="mb-8 w-full flex flex-col items-center">
             {/* Line 1 */}
             <div className="overflow-hidden">
               <motion.h1
                 initial={{ y: "110%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="text-[clamp(3.5rem,8.5vw,8.5rem)] font-black leading-[0.92] tracking-[-0.04em] text-white"
+                className="text-[clamp(3.2rem,7vw,7.5rem)] font-black leading-[1.05] tracking-[-0.04em] text-white"
               >
-                We Grow
+                We Build & Grow
               </motion.h1>
             </div>
             {/* Line 2 — gradient */}
-            <div className="overflow-hidden">
+            <div className="overflow-hidden py-2">
               <motion.div
                 initial={{ y: "110%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                className="text-[clamp(3.5rem,8.5vw,8.5rem)] font-black leading-[0.92] tracking-[-0.04em] text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] via-[#ff6a2a] to-[#FD4F00] bg-[length:200%] animate-gradient"
+                className="text-[clamp(3.2rem,7vw,7.5rem)] font-black leading-[1.05] tracking-[-0.04em] text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] via-[#ff6a2a] to-[#FD4F00] bg-[length:200%] animate-gradient"
               >
-                Small Businesses
-              </motion.div>
-            </div>
-            {/* Line 3 — dim */}
-            <div className="overflow-hidden">
-              <motion.div
-                initial={{ y: "110%" }}
-                animate={{ y: 0 }}
-                transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="text-[clamp(3.5rem,8.5vw,8.5rem)] font-black leading-[0.92] tracking-[-0.04em] text-white/15"
-              >
-                Into Brands.
+                Industry Leaders
               </motion.div>
             </div>
           </div>
@@ -196,18 +175,18 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.55 }}
-            className="flex flex-col md:flex-row items-start md:items-center gap-8 max-w-3xl"
+            className="flex flex-col items-center gap-8 max-w-2xl text-center"
           >
-            <p className="text-gray-400 text-lg leading-relaxed max-w-sm">
-              One strategy. Every channel coordinated. Results you can actually measure in revenue — not impressions.
+            <p className="text-gray-400 text-lg md:text-xl leading-relaxed">
+              From high-performance SaaS platforms to revenue-driving marketing campaigns. One partner for your entire digital ecosystem.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
-              <Button href="/contact" variant="primary" size="md" filled>
-                Get Free Audit
+            <div className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto mt-4">
+              <Button href="/contact" variant="primary" size="lg" filled>
+                Start a Project
                 <ArrowRight className="w-5 h-5" />
               </Button>
-              <Button href="/portfolio" variant="outline" size="md">
-                See Results
+              <Button href="/portfolio" variant="outline" size="lg">
+                View Our Work
                 <ArrowUpRight className="w-4 h-4" />
               </Button>
             </div>
@@ -218,9 +197,9 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.9 }}
-            className="flex flex-wrap gap-3 mt-14"
+            className="flex flex-wrap justify-center gap-3 mt-16 max-w-3xl"
           >
-            {["SEO", "PPC", "Content", "Social Media", "Web Design", "Email", "CRO"].map((tag, i) => (
+            {["SEO", "Web Development", "Paid Ads", "SaaS Management", "CRO", "Content", "UI/UX Design"].map((tag, i) => (
               <motion.span
                 key={tag}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -240,10 +219,10 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
-          className="relative z-10 border-t border-white/8 py-4 bg-white/[0.02] backdrop-blur-sm"
+          className="absolute bottom-0 left-0 w-full z-10 border-t border-white/8 py-4 bg-white/[0.02] backdrop-blur-sm"
         >
           <MarqueeTicker
-            items={["SEO", "PAID ADS", "CONTENT MARKETING", "WEB DESIGN", "EMAIL MARKETING", "CRO", "SOCIAL MEDIA", "LOCAL SEO"]}
+            items={["SOCIAL MEDIA", "PAID ADS", "CRO", "WEB DEVELOPMENT", "SAAS PRODUCT MANAGEMENT", "DEVELOPMENT SERVICES", "SEO", "CONTENT MARKETING"]}
             speed={30}
             itemClassName="text-white/40"
           />
