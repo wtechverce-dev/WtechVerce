@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
 import GSAPScrollAnimations from "@/components/ui/GSAPScrollAnimations";
+import HeroBackground from "@/components/ui/HeroBackground";
 import MarqueeTicker from "@/components/ui/MarqueeTicker";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 import ScrambleText from "@/components/ui/ScrambleText";
@@ -112,21 +113,8 @@ export default function Home() {
       ══════════════════════════════════════════ */}
       <section className="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden">
         
-        {/* ── Animated gradient orbs (Centered) ── */}
-        <motion.div
-          animate={{ scale: [1, 1.2, 1], opacity: [0.15, 0.25, 0.15] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-[#FD4F00] blur-[150px] pointer-events-none"
-        />
-        <motion.div
-          animate={{ scale: [1, 1.15, 1], opacity: [0.1, 0.2, 0.1] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-          className="absolute bottom-[10%] left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full bg-[#6C24FA] blur-[150px] pointer-events-none"
-        />
-
-        {/* ── Grid overlay ── */}
-        <div className="absolute inset-0 opacity-[0.035] pointer-events-none"
-          style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.5) 1px,transparent 1px)", backgroundSize: "80px 80px", backgroundPosition: "center center" }} />
+        {/* ── Dynamic Mouse Canvas ── */}
+        <HeroBackground />
 
         {/* ── Main content ── */}
         <div className="relative z-10 max-w-5xl mx-auto px-6 w-full pt-32 pb-24 flex flex-col items-center">
@@ -230,6 +218,17 @@ export default function Home() {
       </section>
 
       {/* ══════════════════════════════════════════
+          TECH STACK MARQUEE
+      ══════════════════════════════════════════ */}
+      <div className="border-b border-white/8 py-8 bg-[#070C12] relative overflow-hidden">
+        <MarqueeTicker
+          items={["REACT.JS", "NEXT.JS", "NODE.JS", "TYPESCRIPT", "AWS", "TAILWIND CSS", "GOOGLE ADS", "META ADS", "AHREFS", "SEMRUSH", "SHOPIFY", "WORDPRESS"]}
+          speed={50}
+          itemClassName="text-white/20 font-bold tracking-widest"
+        />
+      </div>
+
+      {/* ══════════════════════════════════════════
           STATS — 4 Big Numbers
       ══════════════════════════════════════════ */}
       <section className="py-20 border-y border-white/8 bg-white/[0.015] relative overflow-hidden">
@@ -324,6 +323,43 @@ export default function Home() {
       <div className="border-y border-white/8 py-4 overflow-hidden">
         <MarqueeTicker items={["NO LOCK-IN CONTRACTS", "TRANSPARENT REPORTING", "DEDICATED STRATEGIST", "MONTH TO MONTH", "REAL REVENUE RESULTS", "FULL FUNNEL STRATEGY"]} speed={40} direction="right" itemClassName="text-white/25" />
       </div>
+
+      {/* ══════════════════════════════════════════
+          FEATURED PROJECTS
+      ══════════════════════════════════════════ */}
+      <section className="py-28 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+          <div className="mb-14">
+            <span className="text-[#FD4F00] text-xs uppercase tracking-widest font-bold mb-4 block">Selected Work</span>
+            <h2 className="text-4xl md:text-5xl font-black leading-tight">Featured Projects</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {[1, 2].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="group relative rounded-3xl overflow-hidden aspect-[4/3] bg-white/5 border border-white/10 cursor-pointer"
+              >
+                {/* Abstract Placeholder */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#FD4F00]/20 to-[#6C24FA]/20 group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
+                
+                <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+                  <span className="text-[#FD4F00] font-bold text-xs tracking-widest uppercase mb-2 block">
+                    {i === 0 ? "SaaS Platform" : "eCommerce Growth"}
+                  </span>
+                  <h3 className="text-3xl font-black text-white">
+                    {i === 0 ? "CloudScale Analytics" : "Luxe Retail Brand"}
+                  </h3>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ══════════════════════════════════════════
           SERVICES — Locomotive-style rows
@@ -452,6 +488,43 @@ export default function Home() {
               ))}
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════
+          TESTIMONIALS
+      ══════════════════════════════════════════ */}
+      <section className="py-28 border-t border-white/8 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+          <div className="mb-14 text-center">
+            <span className="text-[#6C24FA] text-xs uppercase tracking-widest font-bold mb-4 block">Client Success</span>
+            <h2 className="text-4xl md:text-5xl font-black leading-tight">What Our Clients Say</h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { name: "Sarah J.", role: "Founder, TechFlow", quote: "WTechVerce rebuilt our SaaS platform and doubled our conversion rate in 3 months. Incredibly skilled team." },
+              { name: "Michael R.", role: "CMO, RetailCo", quote: "The transparency in reporting and the coordination between their ads and SEO team is unlike any agency we've used." },
+              { name: "Dr. Allen", role: "Dental Practice Owner", quote: "We don't worry about lead generation anymore. They handle the website and the ads, we just handle the patients." }
+            ].map((test, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="p-8 rounded-2xl border border-white/8 bg-white/[0.02] relative"
+              >
+                <div className="flex gap-1 mb-6 text-[#FD4F00]">
+                  <Star className="w-4 h-4 fill-current" /><Star className="w-4 h-4 fill-current" /><Star className="w-4 h-4 fill-current" /><Star className="w-4 h-4 fill-current" /><Star className="w-4 h-4 fill-current" />
+                </div>
+                <p className="text-gray-300 mb-8 leading-relaxed relative z-10">"{test.quote}"</p>
+                <div>
+                  <h4 className="font-bold text-white">{test.name}</h4>
+                  <span className="text-xs text-gray-500">{test.role}</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
