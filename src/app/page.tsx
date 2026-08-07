@@ -1,3 +1,4 @@
+import Script from "next/script";
 "use client";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import Link from "next/link";
@@ -155,6 +156,28 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#02050A] text-white overflow-x-hidden">
+      <Script id="json-ld-organization" type="application/ld+json" strategy="beforeInteractive">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "WTechVerce",
+          "url": "https://wtechverce.com",
+          "logo": "https://wtechverce.com/wtechvercefavicon.jpeg",
+          "description": "A full-service digital marketing and web development agency driving revenue for modern businesses.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "PK"
+          }
+        })}
+      </Script>
+      <Script id="json-ld-website" type="application/ld+json" strategy="beforeInteractive">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "WTechVerce",
+          "url": "https://wtechverce.com"
+        })}
+      </Script>
       <NoiseTexture />
       <GSAPScrollAnimations />
 
@@ -163,7 +186,7 @@ export default function Home() {
       ══════════════════════════════════════════ */}
       <section className="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden">
         <HeroBackground />
-        <div className="relative z-10 max-w-5xl mx-auto px-6 w-full pt-32 pb-24 flex flex-col items-center">
+        <div className="relative z-10 max-w-5xl mx-auto px-6 w-full pt-48 pb-24 flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-[#FD4F00]/30 bg-[#FD4F00]/10 backdrop-blur-sm mb-10 hover:bg-[#FD4F00]/20 transition-colors"
@@ -175,32 +198,35 @@ export default function Home() {
           </motion.div>
 
           <div className="mb-8 w-full flex flex-col items-center">
+            <h1 className="sr-only">Web Development & Digital Solutions for Modern Businesses</h1>
             <div className="overflow-hidden">
-              <motion.h1
+              <motion.div
                 initial={{ y: "110%" }} animate={{ y: 0 }}
                 transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="text-[clamp(3.2rem,7vw,7.5rem)] font-black leading-[1.05] tracking-[-0.04em] text-white"
+                className="text-[clamp(2.8rem,6vw,6.5rem)] font-black leading-[1.05] tracking-[-0.04em] text-white"
+                aria-hidden="true"
               >
-                We Build & Grow
-              </motion.h1>
+                Web Development &
+              </motion.div>
             </div>
             <div className="overflow-hidden py-2">
               <motion.div
                 initial={{ y: "110%" }} animate={{ y: 0 }}
                 transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                className="text-[clamp(3.2rem,7vw,7.5rem)] font-black leading-[1.05] tracking-[-0.04em] text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] via-[#ff6a2a] to-[#FD4F00] bg-[length:200%] animate-gradient"
+                className="text-[clamp(2.8rem,6vw,6.5rem)] font-black leading-[1.05] tracking-[-0.04em] text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] via-[#ff6a2a] to-[#FD4F00] bg-[length:200%] animate-gradient"
+                aria-hidden="true"
               >
-                Industry Leaders
+                Digital Solutions
               </motion.div>
             </div>
           </div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.55 }}
-            className="flex flex-col items-center gap-8 max-w-2xl text-center"
+            className="flex flex-col items-center gap-8 max-w-3xl text-center"
           >
             <p className="text-gray-400 text-lg md:text-xl leading-relaxed">
-              From high-performance SaaS platforms to revenue-driving marketing campaigns. One partner for your entire digital ecosystem.
+              We are a full-service agency driving revenue for modern businesses. Specializing in <Link href="/services/web-development" className="text-white hover:text-[#FD4F00]">Custom Web Development</Link>, <Link href="/services/wordpress-development" className="text-white hover:text-[#FD4F00]">WordPress</Link>, <Link href="/services/ecommerce-development" className="text-white hover:text-[#FD4F00]">Ecommerce platforms</Link>, <Link href="/services/ui-ux-design" className="text-white hover:text-[#FD4F00]">UI/UX Design</Link>, <Link href="/services/website-redesign" className="text-white hover:text-[#FD4F00]">Website Redesigns</Link>, and data-driven <Link href="/services/seo" className="text-white hover:text-[#FD4F00]">SEO Services</Link>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto mt-4">
               <Button href="/contact" variant="primary" size="lg" filled>
@@ -214,9 +240,9 @@ export default function Home() {
 
           <motion.div
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.9 }}
-            className="flex flex-wrap justify-center gap-3 mt-16 max-w-3xl"
+            className="flex flex-wrap justify-center gap-3 mt-16 max-w-4xl"
           >
-            {["SEO", "Web Development", "Paid Ads", "SaaS Management", "CRO", "Content", "UI/UX Design"].map((tag, i) => (
+            {["Web Development", "WordPress", "Ecommerce", "UI/UX Design", "SEO Services", "Website Redesign", "Paid Ads", "CRO"].map((tag, i) => (
               <motion.span key={tag} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.4, delay: 0.9 + i * 0.07 }} whileHover={{ y: -3, scale: 1.05 }}
                 className="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-white/60 text-sm font-medium backdrop-blur-sm hover:border-[#FD4F00]/50 hover:text-[#FD4F00] hover:bg-[#FD4F00]/10 transition-all cursor-default">
                 {tag}
