@@ -12,62 +12,68 @@ const ParticleSphere = dynamic(() => import("@/components/3d/ParticleSphere"), {
 
 const projects = [
   {
-    title: "LeadStonk.com",
-    category: "B2B Lead Generation",
-    description: "A comprehensive B2B lead generation platform focusing on high-quality B2B leads and automated outreach.",
+    slug: "custom-saas-platform-development",
+    title: "Custom SaaS Platform Development",
+    category: "Web Development",
+    description: "Built a high-performance B2B lead generation platform handling complex data queries, real-time analytics, and automated outreach logic.",
     tags: ["Next.js", "Node.js", "MongoDB", "Stripe"],
-    gradient: "from-[#FF6B00]/30 to-[#8A2BE2]/20",
-    border: "#FF6B00",
+    gradient: "from-[#FD4F00]/30 to-[#6C24FA]/20",
+    border: "#FD4F00",
     image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80",
     featured: true,
   },
   {
-    title: "SmileCare Dental",
-    category: "Dentist Clinic",
-    description: "Modern dental clinic website with online appointment booking and secure patient portal.",
-    tags: ["React", "TailwindCSS", "Firebase"],
-    gradient: "from-[#8A2BE2]/30 to-[#FF6B00]/20",
-    border: "#8A2BE2",
+    slug: "wordpress-business-website-development",
+    title: "WordPress Business Website Development",
+    category: "WordPress & SEO",
+    description: "Developed a lightning-fast, highly secure dental clinic WordPress site with local SEO optimization that tripled organic traffic.",
+    tags: ["WordPress", "Local SEO", "Custom Theme"],
+    gradient: "from-[#6C24FA]/30 to-[#FD4F00]/20",
+    border: "#6C24FA",
     image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80",
     featured: true,
   },
   {
-    title: "GrowthBoost Agency",
-    category: "Marketing Agency",
-    description: "Creative digital marketing agency portfolio highlighting campaign success stories and analytics.",
-    tags: ["Next.js", "Framer Motion", "Sanity CMS"],
+    slug: "ecommerce-website-development",
+    title: "Ecommerce Website Development",
+    category: "Ecommerce Development",
+    description: "A conversion-optimized Shopify storefront integrated with local payment gateways and automated inventory syncing.",
+    tags: ["Shopify", "React", "CRO"],
     gradient: "from-[#FF8833]/20 to-[#6B21A8]/20",
     border: "#FF8833",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
     featured: false,
   },
   {
-    title: "Elite Real Estate",
-    category: "Real Estate",
-    description: "Premium real estate platform with advanced property search and 3D virtual tours.",
+    slug: "real-estate-web-application",
+    title: "Custom Real Estate Web Application",
+    category: "Web Application",
+    description: "Complex property search portal with Mapbox integration, advanced filtering, and CRM capabilities.",
     tags: ["React", "PostgreSQL", "AWS"],
-    gradient: "from-[#6B21A8]/20 to-[#FF6B00]/20",
+    gradient: "from-[#6B21A8]/20 to-[#FD4F00]/20",
     border: "#6B21A8",
     image: "https://images.unsplash.com/photo-1582407947304-fd86f28320be?auto=format&fit=crop&w=800&q=80",
     featured: false,
   },
   {
-    title: "PureFitness Gym",
-    category: "Fitness Center",
-    description: "Fitness center management system with membership subscriptions and class scheduling.",
+    slug: "fitness-gym-management-software",
+    title: "Gym Management Software Development",
+    category: "Software Development",
+    description: "Custom internal tool for class scheduling, automated billing, and member retention tracking.",
     tags: ["Next.js", "TypeScript", "Prisma"],
-    gradient: "from-[#FF6B00]/20 to-[#8A2BE2]/30",
-    border: "#FF6B00",
+    gradient: "from-[#FD4F00]/20 to-[#6C24FA]/30",
+    border: "#FD4F00",
     image: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=800&q=80",
     featured: false,
   },
   {
-    title: "UrbanBites",
-    category: "Restaurant",
-    description: "Restaurant ordering system with digital menu and real-time order tracking.",
-    tags: ["React Native", "Node.js", "Socket.io"],
-    gradient: "from-[#8A2BE2]/20 to-[#FF8833]/20",
-    border: "#8A2BE2",
+    slug: "restaurant-ordering-system",
+    title: "Restaurant Food Ordering System",
+    category: "Web App",
+    description: "Real-time delivery tracking and digital menu system integrated with POS software.",
+    tags: ["Next.js", "Node.js", "Socket.io"],
+    gradient: "from-[#6C24FA]/20 to-[#FF8833]/20",
+    border: "#6C24FA",
     image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80",
     featured: false,
   },
@@ -113,14 +119,14 @@ export default function PortfolioPage() {
       <section className="pb-20 px-6 md:px-12 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
           {projects.filter((p) => p.featured).map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="group relative rounded-3xl overflow-hidden cursor-pointer aspect-[4/3]"
-            >
+            <Link key={index} href={`/portfolio/${project.slug}`}>
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.15 }}
+                className="group relative rounded-3xl overflow-hidden cursor-pointer aspect-[4/3] h-full block"
+              >
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                 style={{ backgroundImage: `url(${project.image})` }}
@@ -152,20 +158,21 @@ export default function PortfolioPage() {
                 </div>
               </div>
             </motion.div>
+            </Link>
           ))}
         </div>
 
         {/* Other Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.filter((p) => !p.featured).map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative bg-[#0a0a0a] border border-white/5 rounded-3xl overflow-hidden hover:border-white/10 transition-all duration-300 cursor-pointer"
-            >
+            <Link key={index} href={`/portfolio/${project.slug}`}>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group relative bg-[#0a0a0a] border border-white/5 rounded-3xl overflow-hidden hover:border-white/10 transition-all duration-300 cursor-pointer h-full block"
+              >
               {/* Image */}
               <div className="h-48 overflow-hidden relative">
                 <div
@@ -189,6 +196,7 @@ export default function PortfolioPage() {
                 </div>
               </div>
             </motion.div>
+            </Link>
           ))}
         </div>
       </section>

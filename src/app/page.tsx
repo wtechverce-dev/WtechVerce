@@ -1,5 +1,5 @@
-import Script from "next/script";
 "use client";
+import Script from "next/script";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useRef, useState, useEffect } from "react";

@@ -14,7 +14,7 @@ const steps = [
     description: "We start with an in-depth discovery session to fully understand your business goals, target audience, technical constraints, and success metrics. No assumptions — only clarity.",
     duration: "1–2 Weeks",
     deliverables: ["Requirements document", "Market analysis", "Competitor audit", "Project roadmap"],
-    color: "#FF6B00",
+    color: "#FD4F00",
   },
   {
     num: "02",
@@ -36,30 +36,48 @@ const steps = [
   },
   {
     num: "04",
+    phase: "SEO & Content",
+    title: "SEO Architecture",
+    description: "Before coding begins, we map out keyword strategies, semantic HTML structures, and internal linking models to ensure your site is built to rank from day one.",
+    duration: "1 Week",
+    deliverables: ["Keyword mapping", "URL structure", "Schema plan", "Content guidelines"],
+    color: "#6B21A8",
+  },
+  {
+    num: "05",
     phase: "Development",
     title: "Precision Engineering",
     description: "Our engineers bring the designs to life with clean, scalable, and thoroughly tested code. We operate in 2-week sprints with continuous deliveries so you see progress constantly.",
     duration: "4–12 Weeks",
     deliverables: ["Working application", "API integration", "CMS setup", "Admin dashboard"],
-    color: "#6B21A8",
+    color: "#16a34a",
   },
   {
-    num: "05",
-    phase: "Testing & QA",
+    num: "06",
+    phase: "QA & Testing",
     title: "Battle-Tested Quality",
     description: "Rigorous testing across devices, browsers, screen sizes, and load scenarios ensures your product is bulletproof before it reaches your users.",
     duration: "1–2 Weeks",
     deliverables: ["Bug-free release", "Performance audit", "Security check", "Mobile QA"],
-    color: "#FF6B00",
+    color: "#FD4F00",
   },
   {
-    num: "06",
+    num: "07",
     phase: "Launch",
-    title: "Smooth Deployment & Growth",
-    description: "We handle deployment to production, configure CDN, monitoring, and analytics. Post-launch, we stay engaged to resolve issues, optimize performance, and support your growth.",
-    duration: "Ongoing",
-    deliverables: ["Live deployment", "Monitoring setup", "Analytics integration", "Support plan"],
+    title: "Smooth Deployment",
+    description: "We handle deployment to production, configure CDN, SSL, and server scaling. We ensure zero downtime and a flawless transition to the live environment.",
+    duration: "1 Week",
+    deliverables: ["Live deployment", "Monitoring setup", "Analytics integration", "Final sign-off"],
     color: "#8A2BE2",
+  },
+  {
+    num: "08",
+    phase: "Growth",
+    title: "Maintenance & Scaling",
+    description: "Post-launch, we stay engaged to resolve issues, optimize performance, implement A/B testing, and support your ongoing business growth.",
+    duration: "Ongoing",
+    deliverables: ["Uptime monitoring", "Security patches", "Feature updates", "Conversion tracking"],
+    color: "#FF8833",
   },
 ];
 
@@ -84,7 +102,7 @@ export default function ProcessPage() {
           <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-6">
             How We{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B00] to-[#8A2BE2]">
-              Deliver
+              Build Websites
             </span>
           </h1>
           <p className="text-lg text-gray-400 leading-relaxed">

@@ -54,13 +54,15 @@ export default function Footer() {
           
           {/* Brand Info (Left) */}
           <div className="md:col-span-5 flex flex-col items-start">
-            <Link href="/" className="mb-6 flex items-center gap-1 group">
-              <span className="text-4xl font-black italic text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] to-[#6C24FA] group-hover:scale-105 transition-transform">W</span>
-              <span className="text-2xl font-bold text-white">tech</span>
-              <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#6C24FA] to-[#FD4F00]">verce</span>
+            <Link href="/" className="mb-6 flex items-center shrink-0">
+              <img
+                src="/wtech.png"
+                alt="WTechVerce"
+                className="h-16 w-auto object-contain hover:scale-105 transition-transform duration-300"
+              />
             </Link>
             <p className="text-white/50 text-base md:text-lg leading-relaxed max-w-sm font-medium">
-              A premium digital agency engineering futuristic web experiences, AI solutions, and conversion-driven brands.
+              A premium digital agency engineering futuristic web experiences, e-commerce solutions, and conversion-driven brands.
             </p>
           </div>
 
@@ -70,10 +72,17 @@ export default function Footer() {
             <div>
               <h4 className="text-white font-black text-sm tracking-[0.2em] uppercase mb-6 opacity-40">Services</h4>
               <ul className="flex flex-col gap-4">
-                {["Web Development", "SaaS Development", "AI Solutions", "UI/UX Design", "SEO Optimization"].map((s) => (
-                  <li key={s}>
-                    <Link href="/services" className="text-white/60 hover:text-white hover:translate-x-1 transition-all inline-block font-medium text-sm">
-                      {s}
+                {[
+                  ["Web Development", "/services/web-development"],
+                  ["WordPress Development", "/services/wordpress-development"],
+                  ["Ecommerce Solutions", "/services/ecommerce-development"],
+                  ["UI/UX Design", "/services/ui-ux-design"],
+                  ["SEO Services", "/services/seo"],
+                  ["Web Development Pakistan", "/web-development-company-pakistan"],
+                ].map(([label, href]) => (
+                  <li key={label}>
+                    <Link href={href} className="text-white/60 hover:text-white hover:translate-x-1 transition-all inline-block font-medium text-sm">
+                      {label}
                     </Link>
                   </li>
                 ))}
@@ -84,7 +93,7 @@ export default function Footer() {
             <div>
               <h4 className="text-white font-black text-sm tracking-[0.2em] uppercase mb-6 opacity-40">Company</h4>
               <ul className="flex flex-col gap-4">
-                {[["Portfolio", "/portfolio"], ["Process", "/process"], ["Contact", "/contact"]].map(([label, href]) => (
+                {[["Services Hub", "/services"], ["Portfolio", "/portfolio"], ["Process", "/process"], ["Contact", "/contact"]].map(([label, href]) => (
                   <li key={label}>
                     <Link href={href as string} className="text-white/60 hover:text-white hover:translate-x-1 transition-all inline-block font-medium text-sm">
                       {label}
