@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
@@ -81,10 +82,12 @@ export function InteractiveServices() {
               y: mousePos.y - 240, // Roughly center vertically
             }}
           >
-            <img
+            <Image
               src={services[hoveredIndex].image}
               alt={services[hoveredIndex].title}
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 300px, 400px"
             />
           </motion.div>
         )}

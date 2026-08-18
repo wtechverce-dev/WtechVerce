@@ -26,6 +26,8 @@ export default function Button({
   disabled = false,
   filled = false,
 }: ButtonProps) {
+  // variant is reserved for future use but intentionally not applied yet
+  void variant;
 
   const sizes = {
     sm: "px-6 py-2.5 text-sm gap-2",

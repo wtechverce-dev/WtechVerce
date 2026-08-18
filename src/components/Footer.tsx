@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Button from "@/components/ui/Button";
 
@@ -32,7 +33,7 @@ export default function Footer() {
             transition={{ delay: 0.1 }}
             className="text-5xl md:text-8xl font-black text-white tracking-tighter leading-[0.9] mb-10"
           >
-            Let's build your <br />
+            Let&apos;s build your <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] via-[#ff7e40] to-[#6C24FA]">
               digital empire.
             </span>
@@ -55,9 +56,11 @@ export default function Footer() {
           {/* Brand Info (Left) */}
           <div className="md:col-span-5 flex flex-col items-start">
             <Link href="/" className="mb-6 flex items-center shrink-0">
-              <img
+              <Image
                 src="/wtech.png"
                 alt="WTechVerce"
+                width={160}
+                height={56}
                 className="h-16 w-auto object-contain hover:scale-105 transition-transform duration-300"
               />
             </Link>

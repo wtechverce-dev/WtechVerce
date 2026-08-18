@@ -48,7 +48,7 @@ export default function Contact() {
       setTimeout(() => {
         setStatus("idle");
       }, 5000);
-    } catch (err) {
+    } catch (_err) {
       setStatus("error");
       setErrorMessage("Something went wrong. Please try again.");
     }
@@ -65,7 +65,7 @@ export default function Contact() {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-black mb-6">
-            Let's Build the <span className="text-gradient-primary">Future</span>
+            Let&apos;s Build the <span className="text-gradient-primary">Future</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Ready to start your next big project? Get in touch with us to discuss your vision.

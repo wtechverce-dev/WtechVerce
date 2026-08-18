@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
-import Link from "next/link";
 import Button from "@/components/ui/Button";
 import { ArrowRight, Sparkles, Shield, Zap, Globe } from "lucide-react";
 

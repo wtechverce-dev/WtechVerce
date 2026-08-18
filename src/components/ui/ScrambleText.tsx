@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
 
 const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&";
 
@@ -60,7 +59,7 @@ export default function ScrambleText({
   }, [text, delay, duration]);
 
   return (
-    // @ts-ignore
+    // @ts-expect-error — Tag type polymorphism needs this
     <Tag ref={ref} className={className}>
       {text}
     </Tag>

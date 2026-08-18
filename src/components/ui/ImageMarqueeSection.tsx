@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
+import Image from "next/image";
 import { motion, useAnimationFrame } from "framer-motion";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
@@ -65,7 +66,7 @@ export function ImageMarqueeSection() {
                 }}
                 className="w-full h-full rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] will-change-transform bg-gray-100"
               >
-                <img src={img} alt="Design Example" className="w-full h-full object-cover" />
+                <Image src={img} alt="Design Example" fill className="object-cover" sizes="(max-width: 768px) 280px, 340px" />
               </div>
             </div>
           ))}
