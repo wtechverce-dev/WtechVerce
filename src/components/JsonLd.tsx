@@ -1,8 +1,6 @@
 "use client";
 
 // JSON-LD Structured Data for WTechVerce
-// Yeh Google ko batata hai ke ye site kya hai — rich search results ke liye zaroori hai
-
 export default function JsonLd() {
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -10,8 +8,7 @@ export default function JsonLd() {
     name: "WTechVerce",
     url: "https://wtechverce.com",
     logo: "https://wtechverce.com/logo.png",
-    description:
-      "WTechVerce is a full-service digital marketing agency for small businesses, SaaS, eCommerce, law firms, and home services.",
+    description: "WTechVerce is a full-service web development and digital marketing agency providing custom software, eCommerce, and marketing solutions.",
     email: "WTechVerse@gmail.com",
     telephone: "+92-313-7102600",
     address: {
@@ -28,14 +25,14 @@ export default function JsonLd() {
       value: "10",
     },
     knowsAbout: [
+      "Web Development",
+      "Software Development",
       "Digital Marketing",
-      "SEO",
-      "Paid Advertising (PPC)",
-      "Social Media Marketing",
-      "Content Marketing",
-      "Web Design",
-      "Conversion Rate Optimization",
-      "Email Marketing",
+      "SEO Services",
+      "Custom Software Development",
+      "WordPress Development",
+      "Ecommerce Development",
+      "UI/UX Design",
     ],
   };
 
@@ -44,8 +41,7 @@ export default function JsonLd() {
     "@type": "WebSite",
     name: "WTechVerce",
     url: "https://wtechverce.com",
-    description:
-      "Digital Marketing Agency for Small Business & Growing Brands — WTechVerce builds strategies that drive real revenue.",
+    description: "WTechVerce | Web Development & Digital Marketing Agency",
     potentialAction: {
       "@type": "SearchAction",
       target: {
@@ -56,151 +52,66 @@ export default function JsonLd() {
     },
   };
 
-  const localBusinessSchema = {
+  const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: "WTechVerce",
     url: "https://wtechverce.com",
     email: "WTechVerse@gmail.com",
     telephone: "+92-313-7102600",
-    description:
-      "Digital marketing agency offering SEO, PPC, Content Marketing, and Web Design services worldwide.",
+    description: "Web development and digital marketing agency offering custom software, SEO, and eCommerce platforms.",
     priceRange: "$$",
     currenciesAccepted: "USD, PKR",
     paymentAccepted: "Bank Transfer, PayPal",
     areaServed: {
       "@type": "Place",
-      name: "United States",
+      name: "Worldwide",
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "WTechVerce Marketing Services",
+      name: "WTechVerce Development Services",
       itemListElement: [
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "SEO",
-            description: "Technical fixes, content strategy, and link building for real rankings.",
-          },
+            name: "Custom Software Development",
+            description: "Scalable business software, internal tools, and complex web applications.",
+          }
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Paid Advertising (PPC)",
-            description: "Google Ads and Meta Ads built around target cost-per-acquisition.",
-          },
+            name: "SaaS Development",
+            description: "Multi-tenant SaaS products with advanced architecture and Stripe integration.",
+          }
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Social Media Marketing",
-            description: "Content and community management that builds brand recognition.",
-          },
+            name: "Web Development",
+            description: "High-performance React, Next.js, and Node.js applications.",
+          }
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Web Design & CRO",
-            description: "Testing and refining pages to turn more visitors into leads and customers.",
-          },
-        },
-      ],
-    },
-  };
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "What does a digital marketing agency do?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "A digital marketing agency plans, builds, and manages your online marketing — SEO, paid ads, content, social media, and web optimization — so you get more qualified leads and customers without building an in-house team."
+            name: "Ecommerce Development",
+            description: "Conversion-optimized stores built on Shopify and WooCommerce.",
+          }
         }
-      },
-      {
-        "@type": "Question",
-        name: "How much does a digital marketing agency cost?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Costs vary by industry, competition, and how many channels you need. Most businesses invest in a monthly retainer scoped to specific deliverables, with pricing set after an audit rather than a flat, generic rate."
-        }
-      },
-      {
-        "@type": "Question",
-        name: "How is a digital marketing agency different from a freelancer?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "An agency gives you a full team — strategist, SEO specialist, ad manager, content writer — instead of one person covering everything. That matters once your marketing needs more than one channel running well at the same time."
-        }
-      },
-      {
-        "@type": "Question",
-        name: "How long does it take to see results?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Paid advertising can show early signals within weeks. SEO and organic growth typically take 3–6 months to build meaningful momentum, since it depends on competition and your starting point."
-        }
-      },
-      {
-        "@type": "Question",
-        name: "Do I need a digital marketing agency if I already have an in-house marketing person?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Often, yes — as a specialist extension, not a replacement. Most in-house marketers are generalists. An agency adds channel-specific expertise (technical SEO, paid media strategy) without the cost of five new hires."
-        }
-      },
-      {
-        "@type": "Question",
-        name: "What industries does WTechVerce work with?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Small and local businesses, SaaS companies, startups, eCommerce brands, law firms, home service businesses like roofing and HVAC, medical and dental clinics, and enterprise teams."
-        }
-      },
-      {
-        "@type": "Question",
-        name: "Is there a contract, and can I cancel anytime?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "We work month-to-month. You stay because results justify it, not because a contract requires it."
-        }
-      }
-    ]
+      ]
+    }
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(websiteSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
     </>
   );
 }

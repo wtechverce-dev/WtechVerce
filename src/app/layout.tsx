@@ -20,67 +20,64 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  // ─── Core SEO ───────────────────────────────────────────────────────────────
+  // 🚀 Core SEO 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
   metadataBase: new URL("https://wtechverce.com"),
   title: {
-    default: "Digital Marketing Agency for Small Business | WTechVerce",
+    default: "WTechVerce | Web Development & Digital Marketing Agency",
     template: "%s | WTechVerce",
   },
   description:
-    "Full-service digital marketing agency for small businesses, SaaS, eCommerce & more. Transparent reporting, no lock-in contracts. Get a free audit.",
+    "WTechVerce is a full-service web development and digital marketing agency providing custom software, eCommerce, and marketing solutions to build and grow your business.",
   keywords: [
-    "digital marketing agency",
-    "digital marketing agency services",
-    "full service digital marketing agency",
-    "top digital marketing agency",
-    "digital marketing agency for small businesses",
-    "digital marketing agency for small business",
-    "agency digital marketing",
-    "small business digital marketing agency",
-    "digital marketing agency united states",
-    "digital marketing agency pricing",
-    "leading digital marketing agency",
-    "digital marketing consulting agency",
+    "web development company",
+    "software development company",
+    "custom software development",
+    "saas development",
+    "ecommerce development",
+    "ui ux design",
+    "website redesign",
+    "seo services",
+    "technology consulting",
     "WTechVerce",
   ],
   authors: [{ name: "WTechVerce", url: "https://wtechverce.com" }],
   creator: "WTechVerce",
   publisher: "WTechVerce",
-  category: "marketing",
+  category: "technology",
 
   // ─── Canonical & Alternates ─────────────────────────────────────────────────
   alternates: {
     canonical: "https://wtechverce.com",
   },
 
-  // ─── Open Graph (Facebook, WhatsApp, LinkedIn previews) ────────────────────
+  // 🚀 Open Graph (Facebook, WhatsApp, LinkedIn previews) 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://wtechverce.com",
     siteName: "WTechVerce",
-    title: "Digital Marketing Agency for Small Business | WTechVerce",
+    title: "WTechVerce | Web Development & Digital Marketing Agency",
     description:
-      "Full-service digital marketing agency for small businesses, SaaS, eCommerce & more. Transparent reporting, no lock-in contracts. Get a free audit.",
+      "WTechVerce is a full-service web development and digital marketing agency providing custom software, eCommerce, and marketing solutions to build and grow your business.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "WTechVerce - Digital Marketing Agency",
+        alt: "WTechVerce - Web & Software Development Company",
         type: "image/png",
       },
     ],
   },
 
-  // ─── Twitter / X Cards ──────────────────────────────────────────────────────
+  // 🚀 Twitter / X Cards 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
   twitter: {
     card: "summary_large_image",
     site: "@wtechverce",
     creator: "@wtechverce",
-    title: "Digital Marketing Agency for Small Business | WTechVerce",
+    title: "WTechVerce | Web Development & Digital Marketing Agency",
     description:
-      "Full-service digital marketing agency for small businesses, SaaS, eCommerce & more. Transparent reporting, no lock-in contracts. Get a free audit.",
+      "WTechVerce is a full-service web development and digital marketing agency providing custom software, eCommerce, and marketing solutions to build and grow your business.",
     images: ["/og-image.png"],
   },
 

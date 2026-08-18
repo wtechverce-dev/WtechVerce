@@ -19,6 +19,22 @@ const CyberCore = dynamic(() => import("@/components/3d/CyberCore"), {
 const allServices = [
   {
     icon: <Code className="w-7 h-7" />,
+    title: "Custom Software Development",
+    slug: "software-development",
+    description: "Enterprise-grade custom software, internal tools, and automation systems tailored to your complex business operations.",
+    features: ["Enterprise Software", "API Integrations", "Database Design", "Cloud Architecture"],
+    color: "#FD4F00",
+  },
+  {
+    icon: <Cloud className="w-7 h-7" />,
+    title: "SaaS Development",
+    slug: "saas-development",
+    description: "Multi-tenant, secure, and highly scalable SaaS products engineered for high growth and subscription revenue.",
+    features: ["Multi-Tenant Logic", "Stripe Billing", "User Management", "MVP to Scale"],
+    color: "#8A2BE2",
+  },
+  {
+    icon: <Code className="w-7 h-7" />,
     title: "Web Development",
     slug: "web-development",
     description: "Custom, high-performance websites and web applications built from scratch to perfectly align with your business goals.",

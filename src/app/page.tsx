@@ -78,10 +78,10 @@ function PillBtn({ href, children, filled = false }: { href: string; children: R
 
 // ─── FAQ ITEM ────────────────────────────────────────────────
 const faqs = [
-  { q: "What does a digital marketing agency do?", a: "A digital marketing agency plans, builds, and manages your online marketing — SEO, paid ads, content, social media, and web optimization — so you get more qualified leads and customers without building an in-house team." },
-  { q: "How much does digital marketing cost?", a: "Costs vary by industry, competition, and how many channels you need. Most businesses invest in a monthly retainer scoped to specific deliverables, with pricing set after an audit rather than a flat, generic rate." },
-  { q: "How long does it take to see results?", a: "Paid advertising can show early signals within weeks. SEO and organic growth typically take 3–6 months to build meaningful momentum." },
-  { q: "Do you offer month-to-month contracts?", a: "Yes. We work month-to-month. You stay because results justify it, not because a contract requires it." },
+  { q: "What does a custom web development project include?", a: "Our custom web development includes full-stack engineering, scalable architecture, responsive UI design, and seamless API integrations tailored to your business." },
+  { q: "How long does custom software development take?", a: "Timelines vary depending on complexity. A standard web application or SaaS MVP typically takes 8–12 weeks to design, develop, and launch." },
+  { q: "What is the difference between a template website and a custom website?", a: "A template website restricts you to pre-built layouts and bloated code, hurting performance. A custom website is engineered from scratch for lightning-fast speeds, unique branding, and unconstrained scalability." },
+  { q: "Can WTechVerce build custom SaaS software?", a: "Yes. We specialize in building secure, multi-tenant SaaS products using modern frameworks like Next.js, Node.js, and integrating complex features like Stripe billing." },
 ];
 
 function FAQItem({ faq, index }: { faq: { q: string; a: string }; index: number }) {
@@ -114,28 +114,16 @@ function FAQItem({ faq, index }: { faq: { q: string; a: string }; index: number 
 // ─── TESTIMONIALS DATA ───────────────────────────────────────
 const testimonials = [
   {
-    quote: "WTechVerce rebuilt our SaaS platform and doubled our conversion rate in 3 months. The transparency in reporting and coordination between their ads and SEO team is unlike any agency we've ever used.",
+    quote: "WTechVerce rebuilt our SaaS platform and doubled our conversion rate in 3 months. The transparency in reporting and coordination is unlike any agency we've ever used.",
     name: "Sarah Jenkins",
     role: "Founder, TechFlow SaaS",
     avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80",
   },
   {
-    quote: "Their SEO work took our dental clinic from page 5 to position 1 for our main keywords in under 4 months. Patient inquiries went up 3x. Best investment we've made in marketing.",
+    quote: "Their SEO work took our dental clinic from page 5 to position 1 for our main keywords in under 4 months. Patient inquiries went up 3x. Best investment we've made.",
     name: "Dr. Khalid Raza",
     role: "Owner, Smile Dental Clinic",
     avatar: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=150&q=80",
-  },
-  {
-    quote: "We hired WTechVerce for Google Ads and web development simultaneously. They delivered both on time, under budget, and our ROAS hit 7x within 6 weeks of launch.",
-    name: "Aisha Morales",
-    role: "CMO, Nexus eCommerce",
-    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80",
-  },
-  {
-    quote: "Finally an agency that gives us plain-language reports. No fluff, no vanity metrics — just real numbers tied to actual revenue. Our retainer pays for itself every single month.",
-    name: "James Thornton",
-    role: "CEO, Atlas Law Group",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80",
   },
   {
     quote: "The local SEO results were immediate. Within 60 days we were ranking in the Google 3-Pack for all our main service areas. Lead volume from organic more than tripled.",
@@ -163,7 +151,7 @@ export default function Home() {
           "name": "WTechVerce",
           "url": "https://wtechverce.com",
           "logo": "https://wtechverce.com/wtechvercefavicon.jpeg",
-          "description": "A full-service digital marketing and web development agency driving revenue for modern businesses.",
+          "description": "A specialized web development and software development company driving digital transformation for modern businesses.",
           "address": {
             "@type": "PostalAddress",
             "addressCountry": "PK"
@@ -193,12 +181,12 @@ export default function Home() {
           >
             <span className="w-2 h-2 rounded-full bg-[#FD4F00] animate-pulse" />
             <span className="text-[#FD4F00] text-sm font-semibold tracking-widest uppercase">
-              <ScrambleText text="Digital Marketing & Development Agency" delay={0.5} duration={1.5} />
+              <ScrambleText text="Development & Marketing Agency" delay={0.5} duration={1.5} />
             </span>
           </motion.div>
 
           <div className="mb-8 w-full flex flex-col items-center">
-            <h1 className="sr-only">Web Development & Digital Solutions for Modern Businesses</h1>
+            <h1 className="sr-only">Web Development & Digital Marketing for Modern Businesses</h1>
             <div className="overflow-hidden">
               <motion.div
                 initial={{ y: "110%" }} animate={{ y: 0 }}
@@ -216,7 +204,7 @@ export default function Home() {
                 className="text-[clamp(2.8rem,6vw,6.5rem)] font-black leading-[1.05] tracking-[-0.04em] text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] via-[#ff6a2a] to-[#FD4F00] bg-[length:200%] animate-gradient"
                 aria-hidden="true"
               >
-                Digital Solutions
+                Digital Marketing
               </motion.div>
             </div>
           </div>
@@ -226,7 +214,7 @@ export default function Home() {
             className="flex flex-col items-center gap-8 max-w-3xl text-center"
           >
             <p className="text-gray-400 text-lg md:text-xl leading-relaxed">
-              We are a full-service agency driving revenue for modern businesses. Specializing in <Link href="/services/web-development" className="text-white hover:text-[#FD4F00]">Custom Web Development</Link>, <Link href="/services/wordpress-development" className="text-white hover:text-[#FD4F00]">WordPress</Link>, <Link href="/services/ecommerce-development" className="text-white hover:text-[#FD4F00]">Ecommerce platforms</Link>, <Link href="/services/ui-ux-design" className="text-white hover:text-[#FD4F00]">UI/UX Design</Link>, <Link href="/services/website-redesign" className="text-white hover:text-[#FD4F00]">Website Redesigns</Link>, and data-driven <Link href="/services/seo" className="text-white hover:text-[#FD4F00]">SEO Services</Link>.
+              We are a full-service agency building and growing digital products. Specializing in <Link href="/services/web-development" className="text-white hover:text-[#FD4F00]">Custom Web Development</Link>, <Link href="/services/seo" className="text-white hover:text-[#FD4F00]">SEO Services</Link>, <Link href="/services/ecommerce-development" className="text-white hover:text-[#FD4F00]">Ecommerce</Link>, <Link href="/services/software-development" className="text-white hover:text-[#FD4F00]">Custom Software</Link>, and <Link href="/services/ui-ux-design" className="text-white hover:text-[#FD4F00]">UI/UX Design</Link>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto mt-4">
               <Button href="/contact" variant="primary" size="lg" filled>
@@ -242,7 +230,7 @@ export default function Home() {
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.9 }}
             className="flex flex-wrap justify-center gap-3 mt-16 max-w-4xl"
           >
-            {["Web Development", "WordPress", "Ecommerce", "UI/UX Design", "SEO Services", "Website Redesign", "Paid Ads", "CRO"].map((tag, i) => (
+            {["Custom Software", "Web Development", "SaaS Development", "WordPress", "Ecommerce", "UI/UX Design", "SEO Services", "Website Redesign"].map((tag, i) => (
               <motion.span key={tag} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.4, delay: 0.9 + i * 0.07 }} whileHover={{ y: -3, scale: 1.05 }}
                 className="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-white/60 text-sm font-medium backdrop-blur-sm hover:border-[#FD4F00]/50 hover:text-[#FD4F00] hover:bg-[#FD4F00]/10 transition-all cursor-default">
                 {tag}
@@ -254,7 +242,7 @@ export default function Home() {
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }}
           className="absolute bottom-0 left-0 w-full z-10 border-t border-white/8 py-4 bg-white/[0.02] backdrop-blur-sm">
           <MarqueeTicker
-            items={["SOCIAL MEDIA", "PAID ADS", "CRO", "WEB DEVELOPMENT", "SAAS PRODUCT MANAGEMENT", "SEO", "CONTENT MARKETING"]}
+            items={["CUSTOM SOFTWARE", "WEB DEVELOPMENT", "SAAS PLATFORMS", "UI/UX DESIGN", "ECOMMERCE", "SEO", "WORDPRESS"]}
             speed={30} itemClassName="text-white/40"
           />
         </motion.div>
@@ -263,7 +251,7 @@ export default function Home() {
       {/* TECH TICKER */}
       <div className="border-y border-white/8 py-7 bg-[#040810]">
         <MarqueeTicker
-          items={["REACT.JS", "NEXT.JS", "NODE.JS", "TYPESCRIPT", "AWS", "TAILWIND CSS", "GOOGLE ADS", "META ADS", "AHREFS", "SEMRUSH", "SHOPIFY", "WORDPRESS"]}
+          items={["REACT.JS", "NEXT.JS", "NODE.JS", "TYPESCRIPT", "AWS", "TAILWIND CSS", "POSTGRESQL", "STRIPE", "MONGODB", "SHOPIFY", "WORDPRESS"]}
           speed={50} itemClassName="text-white/20 font-bold tracking-widest"
         />
       </div>
@@ -345,7 +333,7 @@ export default function Home() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] to-[#ff8c42]">Creative Solutions</span>
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed">
-                A digital marketing agency plans, builds, and runs your online marketing so you don't have to hire, train, and manage an in-house team. Most agencies fall into two traps: single-channel specialists or shallow generalists. We fix the parts that actually cost you money.
+                A true software development partner builds scalable, high-performance web applications so you don't have to hire and manage a massive in-house engineering team. We deliver custom SaaS, robust eCommerce, and flawless web architectures that solve real business bottlenecks.
               </p>
               <div className="flex gap-8 py-6 border-y border-white/6">
                 {[{ val: "150+", label: "Clients Served" }, { val: "$2M+", label: "Revenue Generated" }, { val: "4.9★", label: "Average Rating" }].map((s, i) => (
