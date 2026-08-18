@@ -9,7 +9,7 @@ export default function JsonLd() {
     url: "https://wtechverce.com",
     logo: "https://wtechverce.com/logo.png",
     description: "WTechVerce is a full-service web development and digital marketing agency providing custom software, eCommerce, and marketing solutions.",
-    email: "WTechVerse@gmail.com",
+    email: "wtechverce@gmail.com",
     telephone: "+92-313-7102600",
     address: {
       "@type": "PostalAddress",
@@ -57,7 +57,7 @@ export default function JsonLd() {
     "@type": "ProfessionalService",
     name: "WTechVerce",
     url: "https://wtechverce.com",
-    email: "WTechVerse@gmail.com",
+    email: "wtechverce@gmail.com",
     telephone: "+92-313-7102600",
     description: "Web development and digital marketing agency offering custom software, SEO, and eCommerce platforms.",
     priceRange: "$$",

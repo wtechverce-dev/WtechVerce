@@ -128,8 +128,8 @@ export default function Footer() {
             © {new Date().getFullYear()} WTechVerce. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="mailto:WTechVerse@gmail.com" className="text-white/40 hover:text-white text-xs md:text-sm font-medium transition-colors">
-              WTechVerse@gmail.com
+            <a href="mailto:wtechverce@gmail.com" className="text-white/40 hover:text-white text-xs md:text-sm font-medium transition-colors">
+              wtechverce@gmail.com
             </a>
           </div>
         </div>
