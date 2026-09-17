@@ -14,19 +14,33 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    title: "How Much Does Custom Website Development Cost in 2026?",
+    slug: "custom-website-development-cost",
+    excerpt: "Transparent breakdown of what different types of custom websites actually cost in 2026 — simple sites, web apps, SaaS platforms, and enterprise systems.",
+    date: "Sep 17, 2026",
+    category: "Web Development"
+  },
+  {
+    title: "What Is Custom Software Development? Complete Guide 2026",
+    slug: "what-is-custom-software-development",
+    excerpt: "Learn what custom software development is, how it works, what it costs, and when your business should invest in building custom software.",
+    date: "Sep 17, 2026",
+    category: "Software Development"
+  },
+  {
+    title: "WordPress vs Custom Website: Which Is Better for Your Business?",
+    slug: "wordpress-vs-custom-website",
+    excerpt: "A complete 2026 comparison — speed, SEO, cost, and scalability. Find out which platform is right for your business goals.",
+    date: "Aug 02, 2026",
+    category: "Web Development"
+  },
+  {
     title: "Website Development Cost in Pakistan (2026 Guide)",
     slug: "website-development-cost-pakistan-2026",
     excerpt: "A complete, transparent breakdown of how much it costs to build a custom website, e-commerce store, or SaaS platform in Pakistan in 2026.",
     date: "Aug 07, 2026",
     category: "Guides"
   },
-  {
-    title: "WordPress vs Custom Website: Which is Better for SEO?",
-    slug: "wordpress-vs-custom-website",
-    excerpt: "Stuck between choosing WordPress or a custom React/Next.js build? We break down the pros, cons, and SEO impact of both architectures.",
-    date: "Aug 02, 2026",
-    category: "Technical SEO"
-  }
 ];
 
 export default function BlogHub() {

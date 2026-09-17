@@ -25,6 +25,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/process",
     "/contact",
     "/blog",
+    "/blog/custom-website-development-cost",
+    "/blog/what-is-custom-software-development",
     "/blog/website-development-cost-pakistan-2026",
     "/blog/wordpress-vs-custom-website",
   ];
