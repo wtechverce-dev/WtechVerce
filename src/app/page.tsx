@@ -186,7 +186,7 @@ export default function Home() {
           </motion.div>
 
           <div className="mb-8 w-full flex flex-col items-center">
-            <h1 className="sr-only">Web Development & Digital Marketing for Modern Businesses</h1>
+            <h1 className="sr-only">Next-Gen Custom Web Development &amp; Strategic Digital Marketing Services</h1>
             <div className="overflow-hidden">
               <motion.div
                 initial={{ y: "110%" }} animate={{ y: 0 }}
@@ -214,7 +214,7 @@ export default function Home() {
             className="flex flex-col items-center gap-8 max-w-3xl text-center"
           >
             <p className="text-gray-400 text-lg md:text-xl leading-relaxed">
-              We are a full-service agency building and growing digital products. Specializing in <Link href="/services/web-development" className="text-white hover:text-[#FD4F00]">Custom Web Development</Link>, <Link href="/services/seo" className="text-white hover:text-[#FD4F00]">SEO Services</Link>, <Link href="/services/ecommerce-development" className="text-white hover:text-[#FD4F00]">Ecommerce</Link>, <Link href="/services/software-development" className="text-white hover:text-[#FD4F00]">Custom Software</Link>, and <Link href="/services/ui-ux-design" className="text-white hover:text-[#FD4F00]">UI/UX Design</Link>.
+              We are a premier <Link href="/services/web-development" className="text-white hover:text-[#FD4F00]">custom web development agency</Link> and growth partner, delivering professional <Link href="/services/seo" className="text-white hover:text-[#FD4F00]">digital marketing services for startups</Link>, custom software, and high-converting ecommerce platforms to scale your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto mt-4">
               <Button href="/contact" variant="primary" size="lg" filled>
@@ -329,8 +329,8 @@ export default function Home() {
                 About WTechVerce
               </span>
               <h2 className="text-5xl md:text-6xl font-black leading-[1.05] text-white tracking-[-0.03em]">
-                Empowering business growth with{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] to-[#ff8c42]">Creative Solutions</span>
+                Custom Web Development Solutions{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] to-[#ff8c42]">Crafted for Business Scaling</span>
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed">
                 A true software development partner builds scalable, high-performance web applications so you don't have to hire and manage a massive in-house engineering team. We deliver custom SaaS, robust eCommerce, and flawless web architectures that solve real business bottlenecks.
@@ -369,7 +369,7 @@ export default function Home() {
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#6C24FA]/25 bg-[#6C24FA]/10 text-[#6C24FA] text-xs font-bold uppercase tracking-widest mb-6">
                 Our Expertise
               </span>
-              <h2 className="text-5xl md:text-6xl font-black text-white tracking-[-0.03em]">What we do best</h2>
+              <h2 className="text-5xl md:text-6xl font-black text-white tracking-[-0.03em]">Data-Driven Digital Marketing Services to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6C24FA] to-[#FD4F00]">Accelerate Growth</span></h2>
             </div>
           </FadeIn>
 
@@ -386,18 +386,18 @@ export default function Home() {
                   </motion.div>
                   <h3 className="text-3xl font-black text-white mb-4">SEO & Organic Growth</h3>
                   <p className="text-gray-400 mb-8 leading-relaxed">Rank for the searches your customers actually type — not vanity keywords. High-ROI organic strategies that compound over time.</p>
-                  <PillBtn href="/services"><span className="flex items-center gap-2">Explore <ArrowRight className="w-4 h-4" /></span></PillBtn>
+                  <PillBtn href="/services/seo"><span className="flex items-center gap-2">Explore SEO <ArrowRight className="w-4 h-4" /></span></PillBtn>
                 </div>
               </div>
             </FadeIn>
 
             {/* Web Dev card — with background image */}
             <FadeIn delay={0.1} className="md:col-span-4">
-              <div className="rounded-[2.5rem] relative overflow-hidden flex flex-col justify-end h-full min-h-[340px] group">
+              <a href="/services/web-development" className="block rounded-[2.5rem] relative overflow-hidden flex flex-col justify-end h-full min-h-[340px] group" aria-label="Custom Web Development Services">
                 {/* Background image */}
                 <img
                   src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=700&q=80"
-                  alt="Web Development"
+                  alt="Custom Web Development Services — WTechVerce"
                   className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700"
                 />
                 {/* Gradient overlay */}
@@ -407,10 +407,10 @@ export default function Home() {
                   <motion.div whileHover={{ scale: 1.1 }} className="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center text-white mb-6">
                     <Code className="w-6 h-6" />
                   </motion.div>
-                  <h3 className="text-3xl font-black text-white mb-3">Web Development</h3>
-                  <p className="text-white/80 leading-relaxed text-sm">Fast, secure, mobile-first websites that never bottleneck your sales.</p>
+                  <h3 className="text-3xl font-black text-white mb-3">Custom Web Development</h3>
+                  <p className="text-white/80 leading-relaxed text-sm">Fast, secure, mobile-first custom websites built to scale your business — never a bottleneck to your sales.</p>
                 </div>
-              </div>
+              </a>
             </FadeIn>
 
             {/* Paid Ads image card */}
@@ -480,8 +480,8 @@ export default function Home() {
             <div>
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-white text-xs font-bold uppercase tracking-widest mb-7">Why Choose Us</span>
               <h2 className="text-5xl font-black text-white leading-tight tracking-[-0.03em] mb-10">
-                We fix the parts that are{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] to-[#6C24FA]">costing you money</span>
+                Why Tech Startups and Enterprises Trust{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] to-[#6C24FA]">WTechVerce</span>
               </h2>
               <div className="space-y-6 mb-10">
                 {[

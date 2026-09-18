@@ -23,12 +23,16 @@ export const metadata: Metadata = {
   // 🚀 Core SEO 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
   metadataBase: new URL("https://wtechverce.com"),
   title: {
-    default: "WTechVerce | Web Development & Digital Marketing Agency",
+    default: "Custom Web Development & Digital Marketing Agency | WTechVerce",
     template: "%s | WTechVerce",
   },
   description:
-    "WTechVerce is a full-service web development and digital marketing agency providing custom software, eCommerce, and marketing solutions to build and grow your business.",
+    "WTechVerce is a premier digital marketing and custom web development agency. We deliver high-performance website designs and expert SEO services to scale your business.",
   keywords: [
+    "custom web development agency",
+    "best custom web development agency",
+    "affordable custom website development company",
+    "professional digital marketing services for startups",
     "web development company",
     "software development company",
     "custom software development",
@@ -56,15 +60,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://wtechverce.com",
     siteName: "WTechVerce",
-    title: "WTechVerce | Web Development & Digital Marketing Agency",
+    title: "Custom Web Development & Digital Marketing Agency | WTechVerce",
     description:
-      "WTechVerce is a full-service web development and digital marketing agency providing custom software, eCommerce, and marketing solutions to build and grow your business.",
+      "WTechVerce is a premier digital marketing and custom web development agency. We deliver high-performance website designs and expert SEO services to scale your business.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "WTechVerce - Web & Software Development Company",
+        alt: "WTechVerce - Custom Web Development & Digital Marketing Agency",
         type: "image/png",
       },
     ],
@@ -75,11 +79,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@wtechverce",
     creator: "@wtechverce",
-    title: "WTechVerce | Web Development & Digital Marketing Agency",
+    title: "Custom Web Development & Digital Marketing Agency | WTechVerce",
     description:
-      "WTechVerce is a full-service web development and digital marketing agency providing custom software, eCommerce, and marketing solutions to build and grow your business.",
+      "WTechVerce is a premier digital marketing and custom web development agency. We deliver high-performance website designs and expert SEO services to scale your business.",
     images: ["/og-image.png"],
   },
+
 
   // ─── Robots ─────────────────────────────────────────────────────────────────
   robots: {

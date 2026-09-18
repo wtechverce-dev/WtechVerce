@@ -7,11 +7,11 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 const services = [
-  { title: "Brand Identity", image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" },
-  { title: "Websites", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" },
-  { title: "SEO", image: "https://images.unsplash.com/photo-1572021335469-31706a17aaef?auto=format&fit=crop&w=800&q=80" },
-  { title: "Craft CMS", image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" },
-  { title: "Shopify", image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" },
+  { title: "Brand Identity", href: "/services/ui-ux-design", image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" },
+  { title: "Websites", href: "/services/web-development", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" },
+  { title: "SEO", href: "/services/seo", image: "https://images.unsplash.com/photo-1572021335469-31706a17aaef?auto=format&fit=crop&w=800&q=80" },
+  { title: "Craft CMS", href: "/services/software-development", image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" },
+  { title: "Shopify", href: "/services/ecommerce-development", image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" },
 ];
 
 export function InteractiveServices() {
@@ -45,7 +45,7 @@ export function InteractiveServices() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col relative z-10">
         {services.map((svc, i) => (
-          <Link href="/services" key={i}>
+          <Link href={svc.href} key={i}>
             <div
               className="group border-b border-white/10 py-10 md:py-14 relative"
               onMouseEnter={() => setHoveredIndex(i)}
