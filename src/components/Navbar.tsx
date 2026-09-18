@@ -6,15 +6,17 @@ import Button from "@/components/ui/Button";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, Code, Cloud, Settings, LayoutTemplate, Server, Cpu } from "lucide-react";
+import { Menu, X, ChevronDown, Code, Cloud, Settings, LayoutTemplate, Server, Cpu, Smartphone } from "lucide-react";
 
 const servicesList = [
   { label: "Software Dev", href: "/services/software-development", icon: <Cpu className="w-5 h-5 text-[#FD4F00]" /> },
-  { label: "SaaS Dev", href: "/services/saas-development", icon: <Cloud className="w-5 h-5 text-[#6C24FA]" /> },
   { label: "Web Development", href: "/services/web-development", icon: <Code className="w-5 h-5 text-[#FF8833]" /> },
+  { label: "Mobile Apps", href: "/services/mobile-app-development", icon: <Smartphone className="w-5 h-5 text-[#00B4D8]" /> },
   { label: "Ecommerce Dev", href: "/services/ecommerce-development", icon: <Settings className="w-5 h-5 text-[#6B21A8]" /> },
+  { label: "SaaS Dev", href: "/services/saas-development", icon: <Cloud className="w-5 h-5 text-[#6C24FA]" /> },
   { label: "UI/UX Design", href: "/services/ui-ux-design", icon: <LayoutTemplate className="w-5 h-5 text-[#FD4F00]" /> },
-  { label: "SEO Services", href: "/services/seo", icon: <Server className="w-5 h-5 text-[#4C1D95]" /> },
+  { label: "SEO & Marketing", href: "/services/seo", icon: <Server className="w-5 h-5 text-[#4C1D95]" /> },
+  { label: "WordPress Dev", href: "/services/wordpress-development", icon: <Cloud className="w-5 h-5 text-[#6C24FA]" /> },
 ];
 
 const navLinks = [

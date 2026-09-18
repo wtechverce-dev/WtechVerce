@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { Code, Cloud, Cpu, LayoutTemplate, Settings, Server, ArrowRight } from "lucide-react";
+import { Code, Cloud, Cpu, LayoutTemplate, Settings, Server, ArrowRight, Smartphone } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Button from "@/components/ui/Button";
 
@@ -72,6 +72,14 @@ const allServices = [
     description: "Complete strategic overhauls of outdated websites to improve aesthetics, fix technical debt, and increase ROI.",
     features: ["UX Audit", "Modernization", "Content Migration", "No-Downtime Launch"],
     color: "#FD4F00",
+  },
+  {
+    icon: <Smartphone className="w-7 h-7" />,
+    title: "Mobile App Development",
+    slug: "mobile-app-development",
+    description: "Native iOS & Android and cross-platform mobile apps engineered for fluid performance and high user retention.",
+    features: ["Native iOS & Android", "Cross-Platform Apps", "Mobile Wireframing", "App Store Launch"],
+    color: "#00B4D8",
   },
   {
     icon: <Cpu className="w-7 h-7" />,

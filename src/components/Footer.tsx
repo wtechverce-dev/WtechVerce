@@ -80,6 +80,7 @@ export default function Footer() {
                   ["SaaS Development", "/services/saas-development"],
                   ["Web Development", "/services/web-development"],
                   ["Ecommerce Solutions", "/services/ecommerce-development"],
+                  ["Mobile App Development", "/services/mobile-app-development"],
                   ["UI/UX Design", "/services/ui-ux-design"],
                   ["SEO Services", "/services/seo"],
                 ].map(([label, href]) => (
