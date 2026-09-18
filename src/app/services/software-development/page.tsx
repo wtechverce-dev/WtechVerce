@@ -6,9 +6,9 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Enterprise Software Development Company | WTechVerce",
+  title: "Custom Software Development Services & Enterprise Solutions | WTechVerce",
   description:
-    "WTechVerce is a leading enterprise software development company delivering custom software applications for business. Hire dedicated custom software developers & offshore software development teams.",
+    "Hire dedicated software developers for secure, scalable enterprise solutions. WTechVerce delivers high-performance custom software applications tailored to your business needs.",
   keywords: [
     "enterprise software development company",
     "custom software applications for business",
@@ -16,23 +16,23 @@ export const metadata: Metadata = {
     "offshore software development team",
     "custom software product wireframing",
     "custom software development services",
-    "bespoke software engineering",
+    "enterprise solutions",
   ],
   alternates: {
     canonical: "https://wtechverce.com/services/software-development",
   },
   openGraph: {
-    title: "Enterprise Software Development Company | WTechVerce",
+    title: "Custom Software Development Services & Enterprise Solutions | WTechVerce",
     description:
-      "Empower your organization with custom software applications for business, dedicated custom software developers, and reliable offshore software development teams.",
+      "Hire dedicated software developers for secure, scalable enterprise solutions. WTechVerce delivers high-performance custom software applications tailored to your business needs.",
     url: "https://wtechverce.com/services/software-development",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Enterprise Software Development Company | WTechVerce",
+    title: "Custom Software Development Services & Enterprise Solutions | WTechVerce",
     description:
-      "Enterprise software development company delivering custom software applications for business and dedicated engineering teams.",
+      "Hire dedicated software developers for secure, scalable enterprise solutions. WTechVerce delivers high-performance custom software applications tailored to your business needs.",
   },
 };
 
@@ -98,9 +98,9 @@ export default function SoftwareDevelopmentService() {
             Enterprise Software Development Company
           </div>
           <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
-            Custom Software Applications <br />
+            Custom Software Development Services &amp; <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] to-[#ff8c42]">
-              for Business & Enterprise
+              Enterprise Solutions
             </span>
           </h1>
           <p className="text-xl text-gray-400 leading-relaxed mb-10">

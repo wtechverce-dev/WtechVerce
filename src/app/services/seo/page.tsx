@@ -6,34 +6,32 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Top Results Digital Marketing Agency & SEO Services | WTechVerce",
+  title: "Top-Tier Digital Marketing Agency & Performance Marketing | WTechVerce",
   description:
-    "WTechVerce is a top results digital marketing agency delivering corporate performance marketing solutions, advanced data driven SEO campaigns, search engine marketing traffic growth, and professional off page link building services.",
+    "Scale your organic revenue with advanced data-driven SEO campaigns and full-service performance marketing solutions. Dominate your industry search rankings today.",
   keywords: [
     "top results digital marketing agency",
     "corporate performance marketing solutions",
     "advanced data driven seo campaigns",
     "search engine marketing traffic growth",
     "professional off page link building services",
-    "digital marketing agency",
-    "seo services company",
-    "organic search marketing",
+    "performance marketing agency",
   ],
   alternates: {
     canonical: "https://wtechverce.com/services/seo",
   },
   openGraph: {
-    title: "Top Results Digital Marketing Agency & SEO Services | WTechVerce",
+    title: "Top-Tier Digital Marketing Agency & Performance Marketing | WTechVerce",
     description:
-      "Scale organic revenue with a top results digital marketing agency offering corporate performance marketing solutions and advanced data driven SEO campaigns.",
+      "Scale your organic revenue with advanced data-driven SEO campaigns and full-service performance marketing solutions. Dominate your industry search rankings today.",
     url: "https://wtechverce.com/services/seo",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Top Results Digital Marketing Agency & SEO Services | WTechVerce",
+    title: "Top-Tier Digital Marketing Agency & Performance Marketing | WTechVerce",
     description:
-      "Top results digital marketing agency delivering advanced data driven SEO campaigns and search engine marketing traffic growth.",
+      "Scale your organic revenue with advanced data-driven SEO campaigns and full-service performance marketing solutions. Dominate your industry search rankings today.",
   },
 };
 
@@ -99,9 +97,9 @@ export default function SeoService() {
             Top Results Digital Marketing Agency
           </div>
           <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
-            Advanced Data-Driven <br />
+            Top-Tier Digital Marketing Agency &amp; <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8a4bfa] to-[#c4b5fd]">
-              SEO Campaigns &amp; Marketing
+              Performance Marketing
             </span>
           </h1>
           <p className="text-xl text-gray-400 leading-relaxed mb-10">

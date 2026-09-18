@@ -6,33 +6,32 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Custom Web Development Agency | WTechVerce",
+  title: "Professional Custom Web Development & Responsive Design | WTechVerce",
   description:
-    "WTechVerce is a premier custom web development agency providing professional corporate website design services, responsive web application development, and dedicated frontend and backend web services.",
+    "Scale your digital presence with top-tier custom web development services. High-converting website designs built for speed, security, and ranking growth.",
   keywords: [
     "custom web development agency",
-    "professional corporate website design services",
+    "professional corporate website design",
     "responsive web application development",
     "dedicated frontend and backend web services",
     "bespoke business website development",
     "web development company",
-    "custom web applications",
   ],
   alternates: {
     canonical: "https://wtechverce.com/services/web-development",
   },
   openGraph: {
-    title: "Custom Web Development Agency | WTechVerce",
+    title: "Professional Custom Web Development & Responsive Design | WTechVerce",
     description:
-      "Partner with a custom web development agency delivering professional corporate website design services and responsive web application development.",
+      "Scale your digital presence with top-tier custom web development services. High-converting website designs built for speed, security, and ranking growth.",
     url: "https://wtechverce.com/services/web-development",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Web Development Agency | WTechVerce",
+    title: "Professional Custom Web Development & Responsive Design | WTechVerce",
     description:
-      "Premier custom web development agency delivering responsive web application development and bespoke business website development.",
+      "Scale your digital presence with top-tier custom web development services. High-converting website designs built for speed, security, and ranking growth.",
   },
 };
 
@@ -98,9 +97,9 @@ export default function WebDevelopmentService() {
             Custom Web Development Agency
           </div>
           <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
-            Custom Web Development Agency &amp; <br />
+            Professional Custom Web Development &amp; <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] to-[#ff8c42]">
-              Bespoke Business Websites
+              Responsive Design
             </span>
           </h1>
           <p className="text-xl text-gray-400 leading-relaxed mb-10">

@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   ...seoMetadata,
-  title: "Top Results Digital Marketing Agency | WTechVerce",
+  title: "Top-Tier Digital Marketing Agency & Performance Marketing | WTechVerce",
   description:
-    "WTechVerce is a top results digital marketing agency providing corporate performance marketing solutions, search engine marketing traffic growth, and data-driven campaigns.",
+    "Scale your organic revenue with advanced data-driven SEO campaigns and full-service performance marketing solutions. Dominate your industry search rankings today.",
   alternates: {
     canonical: "https://wtechverce.com/services/digital-marketing",
   },

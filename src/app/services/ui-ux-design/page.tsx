@@ -6,33 +6,32 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Premium UI UX Design Agency | WTechVerce",
+  title: "Premium UI/UX Design Company & Custom Product Interfaces | WTechVerce",
   description:
-    "WTechVerce is a premium UI UX design agency providing custom digital product interface design, software prototype wireframing services, and responsive website layout design.",
+    "Transform your digital products with our premium UI/UX design services. We create high-converting, user-centric interfaces and responsive software wireframes.",
   keywords: [
     "premium ui ux design agency",
     "custom digital product interface design",
-    "software prototype wireframing services",
+    "software prototype wireframing",
     "responsive website layout design",
     "user experience and mobile interface wireframes",
-    "ui ux design services",
-    "product design agency",
+    "ui ux design company",
   ],
   alternates: {
     canonical: "https://wtechverce.com/services/ui-ux-design",
   },
   openGraph: {
-    title: "Premium UI UX Design Agency | WTechVerce",
+    title: "Premium UI/UX Design Company & Custom Product Interfaces | WTechVerce",
     description:
-      "Transform complex ideas into intuitive digital interfaces with our premium UI UX design agency and software prototype wireframing services.",
+      "Transform your digital products with our premium UI/UX design services. We create high-converting, user-centric interfaces and responsive software wireframes.",
     url: "https://wtechverce.com/services/ui-ux-design",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Premium UI UX Design Agency | WTechVerce",
+    title: "Premium UI/UX Design Company & Custom Product Interfaces | WTechVerce",
     description:
-      "Premium UI UX design agency delivering custom digital product interface design and responsive website layout design.",
+      "Transform your digital products with our premium UI/UX design services. We create high-converting, user-centric interfaces and responsive software wireframes.",
   },
 };
 
@@ -98,9 +97,9 @@ export default function UiUxDesignService() {
             Premium UI UX Design Agency
           </div>
           <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
-            Custom Digital Product <br />
+            Premium UI/UX Design Company &amp; <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B21A8] to-[#c87bff]">
-              Interface Design
+              Custom Product Interfaces
             </span>
           </h1>
           <p className="text-xl text-gray-400 leading-relaxed mb-10">

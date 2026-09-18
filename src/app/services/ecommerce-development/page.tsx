@@ -6,33 +6,32 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "High Converting Ecommerce Website Development | WTechVerce",
+  title: "High-Converting eCommerce Website Development | WTechVerce",
   description:
-    "WTechVerce delivers high converting ecommerce website development, custom Shopify Plus development services, and B2B ecommerce application development with secure shopping cart architecture.",
+    "Build a high-converting online store with modern enterprise ecommerce solutions. Secure payment architecture and strategic store optimization services.",
   keywords: [
-    "high converting ecommerce website development",
+    "high converting ecommerce website dev",
     "enterprise online store builders",
-    "custom shopify plus development services",
+    "custom shopify plus development",
     "b2b ecommerce application development",
     "secure shopping cart architecture",
-    "ecommerce development company",
-    "custom online store solutions",
+    "ecommerce website development",
   ],
   alternates: {
     canonical: "https://wtechverce.com/services/ecommerce-development",
   },
   openGraph: {
-    title: "High Converting Ecommerce Website Development | WTechVerce",
+    title: "High-Converting eCommerce Website Development | WTechVerce",
     description:
-      "Transform your store into a sales engine with enterprise online store builders, custom Shopify Plus development, and secure shopping cart architecture.",
+      "Build a high-converting online store with modern enterprise ecommerce solutions. Secure payment architecture and strategic store optimization services.",
     url: "https://wtechverce.com/services/ecommerce-development",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "High Converting Ecommerce Website Development | WTechVerce",
+    title: "High-Converting eCommerce Website Development | WTechVerce",
     description:
-      "Enterprise online store builders delivering custom Shopify Plus development services and secure B2B ecommerce applications.",
+      "Build a high-converting online store with modern enterprise ecommerce solutions. Secure payment architecture and strategic store optimization services.",
   },
 };
 
@@ -50,7 +49,34 @@ export default function EcommerceDevelopmentService() {
             "url": "https://wtechverce.com"
           },
           "description": "High converting ecommerce website development, enterprise online store builders, custom Shopify Plus development services, and B2B ecommerce applications with secure shopping cart architecture.",
-          "areaServed": "Worldwide"
+          "areaServed": "Worldwide",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "High-Converting Ecommerce Development Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Custom Shopify Plus Development"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "B2B Ecommerce Application Development"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Secure Shopping Cart Architecture"
+                }
+              }
+            ]
+          }
         })}
       </Script>
       <Script id="faq-schema" type="application/ld+json" strategy="beforeInteractive">
@@ -98,7 +124,7 @@ export default function EcommerceDevelopmentService() {
             Enterprise Online Store Builders
           </div>
           <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
-            High Converting Ecommerce <br />
+            High-Converting eCommerce <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF8833] to-[#ffb885]">
               Website Development
             </span>

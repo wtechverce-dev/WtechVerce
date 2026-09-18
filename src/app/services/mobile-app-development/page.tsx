@@ -6,34 +6,32 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Native iOS & Android Mobile App Development | WTechVerce",
+  title: "Native iOS & Android Mobile App Development Services | WTechVerce",
   description:
-    "WTechVerce delivers native iOS and Android app development, cross platform mobile app development services, custom mobile application wireframing, and corporate mobile app developers for hire.",
+    "Turn your vision into custom mobile applications. WTechVerce provides native iOS, Android, and cross-platform app development services for corporate brands.",
   keywords: [
     "native ios and android app development",
-    "cross platform mobile app development services",
-    "corporate mobile app developers for hire",
+    "cross platform mobile app development",
+    "corporate mobile app developers",
     "custom mobile application wireframing",
     "hybrid mobile app development solutions",
-    "mobile app development company",
-    "react native development services",
-    "flutter app development",
+    "mobile app development services",
   ],
   alternates: {
     canonical: "https://wtechverce.com/services/mobile-app-development",
   },
   openGraph: {
-    title: "Native iOS & Android Mobile App Development | WTechVerce",
+    title: "Native iOS & Android Mobile App Development Services | WTechVerce",
     description:
-      "Build market-leading mobile experiences with native iOS and Android app development, cross-platform solutions, and custom mobile application wireframing.",
+      "Turn your vision into custom mobile applications. WTechVerce provides native iOS, Android, and cross-platform app development services for corporate brands.",
     url: "https://wtechverce.com/services/mobile-app-development",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Native iOS & Android Mobile App Development | WTechVerce",
+    title: "Native iOS & Android Mobile App Development Services | WTechVerce",
     description:
-      "Native iOS and Android app development, hybrid mobile app development solutions, and corporate mobile app developers for hire.",
+      "Turn your vision into custom mobile applications. WTechVerce provides native iOS, Android, and cross-platform app development services for corporate brands.",
   },
 };
 
@@ -101,7 +99,7 @@ export default function MobileAppDevelopmentService() {
           <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
             Native iOS &amp; Android <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00B4D8] to-[#90E0EF]">
-              App Development
+              Mobile App Development Services
             </span>
           </h1>
           <p className="text-xl text-gray-400 leading-relaxed mb-10">
