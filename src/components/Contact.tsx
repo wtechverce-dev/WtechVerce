@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Button from "@/components/ui/Button";
-import { Send, Mail, MapPin, CheckCircle, AlertCircle } from "lucide-react";
+import { Send, Mail, CheckCircle, AlertCircle } from "lucide-react";
 import { useState } from "react";
 
 export default function Contact() {
@@ -91,17 +91,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm font-medium text-gray-500">Email Us</p>
-                    <a href="mailto:hello@wtechverce.com" className="text-white hover:text-[var(--color-w-purple)] transition-colors">hello@wtechverce.com</a>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[var(--color-w-bg)] flex items-center justify-center text-[var(--color-w-purple)] shadow-[0_0_15px_rgba(107,33,168,0.1)]">
-                    <MapPin className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-gray-500">Location</p>
-                    <p className="text-white">Global Remote</p>
+                    <a href="mailto:wtechverce.io@gmail.com" className="text-white hover:text-[var(--color-w-purple)] transition-colors">wtechverce.io@gmail.com</a>
                   </div>
                 </div>
               </div>

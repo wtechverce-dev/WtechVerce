@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Button from "@/components/ui/Button";
 import { useState } from "react";
-import { Send, Mail, MapPin, Globe, Phone } from "lucide-react";
+import { Send, Mail, Globe } from "lucide-react";
 
 const faqs = [
   { q: "How long does a typical project take?", a: "Most projects take 6–16 weeks depending on scope. We'll give you a precise timeline after the discovery call." },
@@ -108,22 +108,18 @@ export default function ContactPage() {
             <div className="bg-[#0a0a0a] border border-white/5 rounded-3xl p-8">
               <h3 className="text-xl font-bold mb-6">Contact Information</h3>
               <div className="flex flex-col gap-6">
-                {[
-                  { icon: <Mail className="w-5 h-5" />, label: "Email", value: "wtechverce@gmail.com", color: "#FF6B00" },
-                  { icon: <Phone className="w-5 h-5" />, label: "WhatsApp", value: "0313-7102600", color: "#8A2BE2" },
-                  { icon: <MapPin className="w-5 h-5" />, label: "Location", value: "Pakistan · Global Remote", color: "#FF8833" },
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4">
-                    <div className="w-11 h-11 rounded-2xl flex items-center justify-center text-white flex-shrink-0"
-                      style={{ background: `${item.color}20`, border: `1px solid ${item.color}40` }}>
-                      <span style={{ color: item.color }}>{item.icon}</span>
-                    </div>
-                    <div>
-                      <p className="text-xs text-gray-500 mb-0.5">{item.label}</p>
-                      <p className="text-white font-medium text-sm">{item.value}</p>
-                    </div>
+                <a href="mailto:wtechverce.io@gmail.com" className="flex items-center gap-4 group">
+                  <div
+                    className="w-11 h-11 rounded-2xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-105 transition-transform"
+                    style={{ background: "#FF6B0020", border: "1px solid #FF6B0040" }}
+                  >
+                    <span style={{ color: "#FF6B00" }}><Mail className="w-5 h-5" /></span>
                   </div>
-                ))}
+                  <div>
+                    <p className="text-xs text-gray-500 mb-0.5">Email</p>
+                    <p className="text-white font-medium text-sm group-hover:text-[#FF6B00] transition-colors">wtechverce.io@gmail.com</p>
+                  </div>
+                </a>
               </div>
 
               {/* Social Links */}
