@@ -15,7 +15,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services/website-redesign",
     "/services/mobile-app-development",
     "/services/seo",
-    "/services/digital-marketing",
     "/web-development-company-pakistan",
     "/portfolio",
     "/portfolio/custom-saas-platform-development",

@@ -1,38 +1,39 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, CheckCircle, Cpu, Database, Cloud, Shield, Layers, Users, Workflow, Code2 } from "lucide-react";
 import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Custom Software Development Services & Enterprise Solutions | WTechVerce",
+  title: "Custom Software Development Services | WTechVerce",
   description:
-    "Hire dedicated software developers for secure, scalable enterprise solutions. WTechVerce delivers high-performance custom software applications tailored to your business needs.",
+    "Looking for reliable custom software development? WTechVerce builds scalable, high-performance software solutions tailored to your business needs. Contact us today!",
   keywords: [
+    "custom software development",
+    "custom software development services",
     "enterprise software development company",
-    "custom software applications for business",
+    "custom software applications",
     "dedicated custom software developers",
     "offshore software development team",
     "custom software product wireframing",
-    "custom software development services",
-    "enterprise solutions",
   ],
   alternates: {
     canonical: "https://wtechverce.com/services/software-development",
   },
   openGraph: {
-    title: "Custom Software Development Services & Enterprise Solutions | WTechVerce",
+    title: "Custom Software Development Services | WTechVerce",
     description:
-      "Hire dedicated software developers for secure, scalable enterprise solutions. WTechVerce delivers high-performance custom software applications tailored to your business needs.",
+      "Looking for reliable custom software development? WTechVerce builds scalable, high-performance software solutions tailored to your business needs. Contact us today!",
     url: "https://wtechverce.com/services/software-development",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Software Development Services & Enterprise Solutions | WTechVerce",
+    title: "Custom Software Development Services | WTechVerce",
     description:
-      "Hire dedicated software developers for secure, scalable enterprise solutions. WTechVerce delivers high-performance custom software applications tailored to your business needs.",
+      "Looking for reliable custom software development? WTechVerce builds scalable, high-performance software solutions tailored to your business needs. Contact us today!",
   },
 };
 
@@ -43,13 +44,13 @@ export default function SoftwareDevelopmentService() {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
-          "serviceType": "Enterprise Software Development Company",
+          "serviceType": "Custom Software Development Services",
           "provider": {
             "@type": "Organization",
             "name": "WTechVerce",
             "url": "https://wtechverce.com"
           },
-          "description": "Enterprise software development company delivering custom software applications for business, dedicated custom software developers, and offshore software development teams.",
+          "description": "Looking for reliable custom software development? WTechVerce builds scalable, high-performance software solutions tailored to your business needs.",
           "areaServed": "Worldwide"
         })}
       </Script>
@@ -58,6 +59,14 @@ export default function SoftwareDevelopmentService() {
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How long does it take to develop custom software?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The timeline depends on the complexity of the project, but a standard software development lifecycle usually takes between 2 to 6 months."
+              }
+            },
             {
               "@type": "Question",
               "name": "Why partner with an enterprise software development company like WTechVerce?",
@@ -95,45 +104,73 @@ export default function SoftwareDevelopmentService() {
             ← Back to Services
           </Link>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#FD4F00]/30 bg-[#FD4F00]/10 text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-6">
-            Enterprise Software Development Company
+            Enterprise Software Engineering
           </div>
           <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
-            Custom Software Development Services &amp; <br />
+            Custom Software <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] to-[#ff8c42]">
-              Enterprise Solutions
+              Development Services
             </span>
           </h1>
-          <p className="text-xl text-gray-400 leading-relaxed mb-10">
-            Scale your operations with high-performance, resilient software architectures. As a premier enterprise software development company, we provide dedicated custom software developers and offshore software development teams that turn complex operational requirements into competitive advantages.
+          <p className="text-xl text-gray-300 leading-relaxed mb-6">
+            Looking for reliable <strong className="text-white">custom software development</strong>? WTechVerce delivers world-class custom software development services, helping organizations build scalable, high-performance software solutions tailored to their exact business needs.
+          </p>
+          <p className="text-base text-gray-400 leading-relaxed mb-10">
+            As a leading enterprise software development company, our dedicated custom software developers and offshore software engineering teams transform complex business logic, legacy software bottlenecks, and multi-tenant architectures into high-performing commercial assets.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button href="/contact" variant="primary" size="lg" filled>
               Hire Dedicated Software Developers <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <Button href="/portfolio" variant="outline" size="lg">
-              Explore Enterprise Case Studies
+              Explore Software Case Studies
             </Button>
+          </div>
+        </div>
+
+        {/* HERO SHOWCASE IMAGE WITH SEMANTIC ALT */}
+        <div className="relative w-full h-[320px] md:h-[460px] rounded-3xl overflow-hidden border border-white/10 mb-32 group shadow-2xl">
+          <Image
+            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1600&q=80"
+            alt="Custom software development services by WTechVerce team"
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-700"
+            sizes="(max-width: 1200px) 100vw, 1200px"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#02050A] via-[#02050A]/40 to-transparent" />
+          <div className="absolute bottom-8 left-8 right-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <span className="text-xs uppercase tracking-widest text-[#FD4F00] font-bold">Scalable Infrastructure</span>
+              <h3 className="text-xl md:text-2xl font-bold text-white">Engineered for Reliability, Zero Downtime &amp; Compliance</h3>
+            </div>
+            <span className="text-xs text-gray-400 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
+              ISO-Standard Architecture
+            </span>
           </div>
         </div>
 
         {/* INTRODUCTION / WHAT WE OFFER */}
         <div className="grid md:grid-cols-2 gap-16 mb-32">
           <div>
-            <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">Bespoke Engineering</span>
-            <h2 className="text-3xl md:text-4xl font-black mb-6">Custom Software Applications for Business Scaling</h2>
+            <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">High-Value Engineering</span>
+            <h2 className="text-3xl md:text-4xl font-black mb-6">Why Choose Our Software Solutions?</h2>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              When off-the-shelf software fails to address unique corporate workflows, custom software applications for business become indispensable. Our enterprise engineering team builds high-availability microservices, automated data pipelines, and internal management suites that align strictly with your strategic goals.
+              When standard, off-the-shelf software packages fail to support your proprietary operations, custom software applications for business become an essential operational pillar. Our custom software development services solve the specific operational hurdles your company faces daily.
+            </p>
+            <p className="text-gray-400 leading-relaxed mb-6">
+              From enterprise resource automation and secure transaction ledgers to customer self-service portals, our dedicated custom software developers ensure that every feature is engineered to lower operating costs, eliminate manual errors, and scale without software degradation.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              Whether you need to augment your existing in-house technical department with dedicated custom software developers or establish a high-output offshore software development team, WTechVerce delivers dependable results on time and within budget.
+              Furthermore, partnering with our offshore software development team provides continuous DevOps coverage, code reviews, and guaranteed SLA support across US, UK, and European time zones.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-6">
             {[
-              { icon: <Cpu className="w-6 h-6 text-[#FD4F00]" />, title: "Enterprise Architecture", desc: "Distributed microservices, fault-tolerant cloud systems." },
-              { icon: <Workflow className="w-6 h-6 text-[#FD4F00]" />, title: "Product Wireframing", desc: "Custom software product wireframing and clickable UI flows." },
-              { icon: <Users className="w-6 h-6 text-[#FD4F00]" />, title: "Dedicated Developers", desc: "Senior full-stack engineers tailored to your roadmap." },
-              { icon: <Shield className="w-6 h-6 text-[#FD4F00]" />, title: "Enterprise Security", desc: "Role-based access, end-to-end encryption & compliance." },
+              { icon: <Cpu className="w-6 h-6 text-[#FD4F00]" />, title: "Enterprise Architecture", desc: "Microservices, distributed backend architectures, and high-load servers." },
+              { icon: <Workflow className="w-6 h-6 text-[#FD4F00]" />, title: "Product Wireframing", desc: "Custom software product wireframing to test user interactions prior to code." },
+              { icon: <Users className="w-6 h-6 text-[#FD4F00]" />, title: "Dedicated Engineers", desc: "Senior full-stack developers fluent in React, Node.js, Next.js, and Python." },
+              { icon: <Shield className="w-6 h-6 text-[#FD4F00]" />, title: "Enterprise Security", desc: "End-to-end data encryption, role-based access control, and GDPR compliance." },
             ].map((item, i) => (
               <div key={i} className="bg-[#0A0F1A] border border-white/5 p-6 rounded-2xl">
                 <div className="mb-4">{item.icon}</div>
@@ -144,21 +181,21 @@ export default function SoftwareDevelopmentService() {
           </div>
         </div>
 
-        {/* WIREFRAMING & PROCESS */}
+        {/* PROCESS SECTION */}
         <div className="mb-32">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">From Concept to Code</span>
-            <h2 className="text-3xl md:text-4xl font-black mb-4">Custom Software Product Wireframing to Deployment</h2>
+            <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">Agile Methodology</span>
+            <h2 className="text-3xl md:text-4xl font-black mb-4">Our Software Engineering Process</h2>
             <p className="text-gray-400 text-base">
-              Every successful enterprise software project begins with precise planning. We eliminate guesswork with meticulous wireframing and agile sprint cycles.
+              A battle-tested software engineering process guarantees clear milestones, transparent reporting, and rapid time-to-market.
             </p>
           </div>
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { step: "01", title: "Product Wireframing", desc: "Custom software product wireframing to map user journeys, permissions, and database entities." },
-              { step: "02", title: "System Architecture", desc: "Designing robust API schemas, secure cloud infrastructure topology, and database models." },
-              { step: "03", title: "Agile Sprints", desc: "Dedicated custom software developers delivering bi-weekly testable features with automated CI/CD." },
-              { step: "04", title: "Scale & Maintenance", desc: "Seamless enterprise deployment, SLA-backed monitoring, and ongoing feature evolution." },
+              { step: "01", title: "Discovery & Analysis", desc: "We document user personas, analyze business logic, and determine technical system requirements." },
+              { step: "02", title: "Product Wireframing", desc: "Interactive wireframing and clickable UI flows that test user journeys and data schemas." },
+              { step: "03", title: "Agile Sprints", desc: "Bi-weekly sprint deliverables with automated test suites, continuous integration, and demo reviews." },
+              { step: "04", title: "Launch & Evolution", desc: "Zero-downtime cloud deployment, full engineering documentation, and 24/7 post-launch monitoring." },
             ].map((s, i) => (
               <div key={i} className="relative p-8 border border-white/10 rounded-3xl bg-gradient-to-b from-white/[0.02] to-transparent">
                 <div className="text-5xl font-black text-white/5 mb-6">{s.step}</div>
@@ -169,20 +206,20 @@ export default function SoftwareDevelopmentService() {
           </div>
         </div>
 
-        {/* WHY CHOOSE US / OFFSHORE ADVANTAGE */}
+        {/* WHY CHOOSE US CALLOUT */}
         <div className="bg-gradient-to-r from-[#FD4F00]/10 to-transparent border border-[#FD4F00]/20 rounded-[2.5rem] p-10 md:p-16 mb-32">
           <div className="max-w-3xl">
-            <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">Global Delivery Model</span>
-            <h2 className="text-3xl md:text-4xl font-black mb-6">Why Hire Our Offshore Software Development Team?</h2>
+            <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">Competitive Advantage</span>
+            <h3 className="text-3xl font-black mb-6">Scalable Software Engineering Tailored to Your Growth</h3>
             <p className="text-gray-300 mb-8 leading-relaxed">
-              Partnering with our offshore software development team provides top-tier engineering talent at competitive rates, without compromising on code quality, security standards, or communication velocity.
+              Our engineering team builds custom software applications for business that integrate seamlessly with your third-party APIs, legacy databases, and ERPs, saving your company thousands of manual working hours every year.
             </p>
             <ul className="space-y-4">
               {[
-                "Dedicated custom software developers fluent in modern full-stack frameworks (React, Node.js, Next.js, Python, PostgreSQL).",
-                "Proven track record building enterprise software applications for business across US, UK, and international markets.",
-                "Custom software product wireframing that speeds up development cycles and reduces rework by over 40%.",
-                "Transparent project management with real-time Slack/Discord communication and sprint transparency.",
+                "100% bespoke source code ownership with no licensing fees or proprietary platform lock-in.",
+                "Rigorous automated testing and code reviews for bug-free production environments.",
+                "Custom software product wireframing that shortens delivery timelines and eliminates guesswork.",
+                "Senior engineers experienced in enterprise fintech, logistics, healthcare, and ecommerce software.",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-gray-300">
                   <CheckCircle className="w-5 h-5 text-[#FD4F00] shrink-0 mt-0.5" /> <span>{item}</span>
@@ -194,24 +231,33 @@ export default function SoftwareDevelopmentService() {
 
         {/* FAQ */}
         <div className="max-w-3xl mx-auto mb-32">
-          <h2 className="text-3xl font-black mb-10 text-center">Frequently Asked Questions</h2>
+          <div className="text-center mb-12">
+            <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-2 block">Common Questions</span>
+            <h2 className="text-3xl font-black">Frequently Asked Questions</h2>
+          </div>
           <div className="space-y-6">
             <div className="border-b border-white/10 pb-6">
-              <h4 className="text-lg font-bold mb-2">Why should we choose an enterprise software development company like WTechVerce?</h4>
+              <h4 className="text-lg font-bold mb-2">How long does it take to develop custom software?</h4>
               <p className="text-gray-400 leading-relaxed">
-                WTechVerce brings battle-tested engineering standards, ISO-grade data security protocols, and scalable architectures designed for long-term growth. We deliver custom software applications for business that integrate with your ERP, CRM, and cloud ecosystem.
+                The timeline depends on the complexity of the project, but a standard software development lifecycle usually takes between 2 to 6 months from discovery and wireframing through to final deployment.
               </p>
             </div>
             <div className="border-b border-white/10 pb-6">
-              <h4 className="text-lg font-bold mb-2">How do your dedicated custom software developers integrate with our team?</h4>
+              <h4 className="text-lg font-bold mb-2">Why partner with an enterprise software development company like WTechVerce?</h4>
               <p className="text-gray-400 leading-relaxed">
-                Our dedicated developers work in your preferred time zone, participate in daily standups, follow your Git workflows, and utilize your project tracking tools to operate as a seamless extension of your in-house engineering team.
+                As a dedicated enterprise software development company, WTechVerce builds scalable, secure, and compliant custom software applications for business that eliminate operational bottlenecks and integrate seamlessly with your core systems.
               </p>
             </div>
             <div className="border-b border-white/10 pb-6">
-              <h4 className="text-lg font-bold mb-2">What happens during the custom software product wireframing stage?</h4>
+              <h4 className="text-lg font-bold mb-2">Can we hire dedicated custom software developers or an offshore software development team?</h4>
               <p className="text-gray-400 leading-relaxed">
-                During custom software product wireframing, our product architects design structural user blueprints, interaction workflows, and functional prototypes. This guarantees full stakeholder alignment before writing a single line of code.
+                Yes, we provide flexible engagement models allowing you to hire dedicated custom software developers or scale with a full offshore software development team equipped with modern DevOps, QA, and cloud engineering expertise.
+              </p>
+            </div>
+            <div className="border-b border-white/10 pb-6">
+              <h4 className="text-lg font-bold mb-2">What is included in your custom software product wireframing phase?</h4>
+              <p className="text-gray-400 leading-relaxed">
+                Our custom software product wireframing services include interactive user flow mapping, architectural blue-printing, edge-case analysis, and clickable prototypes to validate product logic before writing production code.
               </p>
             </div>
           </div>
@@ -219,12 +265,12 @@ export default function SoftwareDevelopmentService() {
 
         {/* CTA */}
         <div className="text-center">
-          <h2 className="text-4xl font-black mb-6">Ready to Build Enterprise Custom Software?</h2>
+          <h2 className="text-4xl font-black mb-6">Ready to Build Custom Software That Scales?</h2>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-            Speak with an enterprise solutions architect today. Discover how our dedicated developers and offshore engineering teams can accelerate your business roadmap.
+            Contact WTechVerce today to discuss your technical requirements and receive a comprehensive architecture roadmap and quote.
           </p>
           <Button href="/contact" variant="primary" size="lg" filled>
-            Book an Engineering Consultation <ArrowRight className="w-5 h-5 ml-2" />
+            Schedule a Technical Consultation <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
         </div>
       </div>
