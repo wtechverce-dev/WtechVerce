@@ -101,12 +101,12 @@ export default function SoftwareDevelopmentService() {
         {/* HERO */}
         <div className="max-w-4xl mb-20">
           <Link href="/services" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white mb-8 transition-colors">
-            ← Back to Services
+            â† Back to Services
           </Link>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#FD4F00]/30 bg-[#FD4F00]/10 text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-6">
             Enterprise Software Engineering
           </div>
-          <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
+          <h1 data-text-reveal className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
             Custom Software <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] to-[#ff8c42]">
               Development Services
@@ -154,7 +154,7 @@ export default function SoftwareDevelopmentService() {
         <div className="grid md:grid-cols-2 gap-16 mb-32">
           <div>
             <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">High-Value Engineering</span>
-            <h2 className="text-3xl md:text-4xl font-black mb-6">Why Choose Our Software Solutions?</h2>
+            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-6">Why Choose Our Software Solutions?</h2>
             <p className="text-gray-400 mb-6 leading-relaxed">
               When standard, off-the-shelf software packages fail to support your proprietary operations, custom software applications for business become an essential operational pillar. Our custom software development services solve the specific operational hurdles your company faces daily.
             </p>
@@ -185,7 +185,7 @@ export default function SoftwareDevelopmentService() {
         <div className="mb-32">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">Agile Methodology</span>
-            <h2 className="text-3xl md:text-4xl font-black mb-4">Our Software Engineering Process</h2>
+            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-4">Our Software Engineering Process</h2>
             <p className="text-gray-400 text-base">
               A battle-tested software engineering process guarantees clear milestones, transparent reporting, and rapid time-to-market.
             </p>
@@ -233,7 +233,7 @@ export default function SoftwareDevelopmentService() {
         <div className="max-w-3xl mx-auto mb-32">
           <div className="text-center mb-12">
             <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-2 block">Common Questions</span>
-            <h2 className="text-3xl font-black">Frequently Asked Questions</h2>
+            <h2 data-text-reveal className="text-3xl font-black">Frequently Asked Questions</h2>
           </div>
           <div className="space-y-6">
             <div className="border-b border-white/10 pb-6">
@@ -265,7 +265,7 @@ export default function SoftwareDevelopmentService() {
 
         {/* CTA */}
         <div className="text-center">
-          <h2 className="text-4xl font-black mb-6">Ready to Build Custom Software That Scales?</h2>
+          <h2 data-text-reveal className="text-4xl font-black mb-6">Ready to Build Custom Software That Scales?</h2>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
             Contact WTechVerce today to discuss your technical requirements and receive a comprehensive architecture roadmap and quote.
           </p>

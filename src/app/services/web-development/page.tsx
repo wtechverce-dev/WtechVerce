@@ -106,7 +106,7 @@ export default function WebDevelopmentService() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#FD4F00]/30 bg-[#FD4F00]/10 text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-6">
             Bespoke Web Engineering
           </div>
-          <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
+          <h1 data-text-reveal className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
             Custom Web Development and <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] to-[#ff8c42]">
               Website Design
@@ -154,7 +154,7 @@ export default function WebDevelopmentService() {
         <div className="grid md:grid-cols-2 gap-16 mb-32">
           <div>
             <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">Digital Experience</span>
-            <h2 className="text-3xl md:text-4xl font-black mb-6">Responsive Web Solutions for Your Business</h2>
+            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-6">Responsive Web Solutions for Your Business</h2>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Your company website is your primary digital salesperson. Our custom web development services ensure your site communicates credibility, loads instantly across mobile viewports, and channels visitors smoothly toward qualified inquiries and sales.
             </p>
@@ -185,7 +185,7 @@ export default function WebDevelopmentService() {
         <div className="mb-32">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">Modern Architecture</span>
-            <h2 className="text-3xl md:text-4xl font-black mb-4">Modern Web Dev Technologies We Use</h2>
+            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-4">Modern Web Dev Technologies We Use</h2>
             <p className="text-gray-400 text-base">
               We build using industry-standard, high-performance technology stacks engineered for scalability, security, and developer ergonomics.
             </p>
@@ -256,7 +256,7 @@ export default function WebDevelopmentService() {
         <div className="max-w-3xl mx-auto mb-32">
           <div className="text-center mb-12">
             <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-2 block">Common Questions</span>
-            <h2 className="text-3xl font-black">Frequently Asked Questions</h2>
+            <h2 data-text-reveal className="text-3xl font-black">Frequently Asked Questions</h2>
           </div>
           <div className="space-y-6">
             <div className="border-b border-white/10 pb-6">
@@ -288,7 +288,7 @@ export default function WebDevelopmentService() {
 
         {/* CTA */}
         <div className="text-center">
-          <h2 className="text-4xl font-black mb-6">Ready to Build With a Premier Web Development Team?</h2>
+          <h2 data-text-reveal className="text-4xl font-black mb-6">Ready to Build With a Premier Web Development Team?</h2>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
             Discuss your website objectives with our technical leads and receive a comprehensive project scope, timeline, and quote.
           </p>

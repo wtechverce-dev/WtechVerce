@@ -113,7 +113,7 @@ export default function ServicesPage() {
               <span className="text-sm font-medium text-[#8A2BE2]">Our Services</span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-6 leading-[1.05]">
+            <h1 data-text-reveal className="text-4xl md:text-6xl font-black tracking-tight mb-6 leading-[1.05]">
               What We
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B00] to-[#8A2BE2]">
@@ -169,7 +169,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-5xl font-black mb-4">
+            <h2 data-text-reveal className="text-4xl md:text-5xl font-black mb-4">
               Full-Stack{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B00] to-[#8A2BE2]">
                 Capabilities

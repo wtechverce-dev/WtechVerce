@@ -133,7 +133,7 @@ export default function EcommerceDevelopmentService() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#FF8833]/30 bg-[#FF8833]/10 text-[#FF8833] text-xs font-bold uppercase tracking-widest mb-6">
             eCommerce Architecture
           </div>
-          <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
+          <h1 data-text-reveal className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
             eCommerce Website <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF8833] to-[#ffb885]">
               Development Services
@@ -181,7 +181,7 @@ export default function EcommerceDevelopmentService() {
         <div className="grid md:grid-cols-2 gap-16 mb-32">
           <div>
             <span className="text-[#FF8833] text-xs font-bold uppercase tracking-widest mb-3 block">High-Converting Stores</span>
-            <h2 className="text-3xl md:text-4xl font-black mb-6">Scalable Online Store Solutions</h2>
+            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-6">Scalable Online Store Solutions</h2>
             <p className="text-gray-400 mb-6 leading-relaxed">
               In ecommerce, every microsecond of latency and unnecessary checkout step costs your business sales. Our eCommerce website development services approach digital retailing through a scientific conversion framework. We build stores that load in under a second and make product exploration effortless.
             </p>
@@ -212,7 +212,7 @@ export default function EcommerceDevelopmentService() {
         <div className="mb-32">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-[#FF8833] text-xs font-bold uppercase tracking-widest mb-3 block">Complete Functionality</span>
-            <h2 className="text-3xl md:text-4xl font-black mb-4">Powerful eCommerce Features We Integrate</h2>
+            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-4">Powerful eCommerce Features We Integrate</h2>
             <p className="text-gray-400 text-base">
               Every digital storefront we deploy comes equipped with enterprise integrations and high-converting retail mechanics.
             </p>
@@ -282,7 +282,7 @@ export default function EcommerceDevelopmentService() {
         <div className="max-w-3xl mx-auto mb-32">
           <div className="text-center mb-12">
             <span className="text-[#FF8833] text-xs font-bold uppercase tracking-widest mb-2 block">Common Questions</span>
-            <h2 className="text-3xl font-black">Frequently Asked Questions</h2>
+            <h2 data-text-reveal className="text-3xl font-black">Frequently Asked Questions</h2>
           </div>
           <div className="space-y-6">
             <div className="border-b border-white/10 pb-6">
@@ -314,7 +314,7 @@ export default function EcommerceDevelopmentService() {
 
         {/* CTA */}
         <div className="text-center">
-          <h2 className="text-4xl font-black mb-6">Ready to Scale Your eCommerce Revenue?</h2>
+          <h2 data-text-reveal className="text-4xl font-black mb-6">Ready to Scale Your eCommerce Revenue?</h2>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
             Get in touch with WTechVerce's ecommerce engineers to discuss your storefront vision, custom integrations, and growth strategy.
           </p>

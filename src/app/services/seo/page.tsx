@@ -106,7 +106,7 @@ export default function SeoService() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#4C1D95]/40 bg-[#4C1D95]/15 text-[#a78bfa] text-xs font-bold uppercase tracking-widest mb-6">
             Search Engine Dominance
           </div>
-          <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
+          <h1 data-text-reveal className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
             Professional SEO <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8a4bfa] to-[#c4b5fd]">
               Services
@@ -154,7 +154,7 @@ export default function SeoService() {
         <div className="grid md:grid-cols-2 gap-16 mb-32">
           <div>
             <span className="text-[#a78bfa] text-xs font-bold uppercase tracking-widest mb-3 block">Structural Excellence</span>
-            <h2 className="text-3xl md:text-4xl font-black mb-6">Technical and On-Page SEO Optimization</h2>
+            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-6">Technical and On-Page SEO Optimization</h2>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Google algorithms heavily prioritize technical accessibility and topical depth. Our professional SEO services audit your codebase from the ground up, resolving crawl bottlenecks, eliminating duplicate content errors, and building clean semantic HTML hierarchies.
             </p>
@@ -185,7 +185,7 @@ export default function SeoService() {
         <div className="mb-32">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-[#a78bfa] text-xs font-bold uppercase tracking-widest mb-3 block">Organic Growth That Compounds</span>
-            <h2 className="text-3xl md:text-4xl font-black mb-4">Drive Organic Traffic with Expert SEO</h2>
+            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-4">Drive Organic Traffic with Expert SEO</h2>
             <p className="text-gray-400 text-base">
               A comprehensive search strategy combines high-converting commercial keywords with external trust signals.
             </p>
@@ -255,7 +255,7 @@ export default function SeoService() {
         <div className="max-w-3xl mx-auto mb-32">
           <div className="text-center mb-12">
             <span className="text-[#a78bfa] text-xs font-bold uppercase tracking-widest mb-2 block">Common Questions</span>
-            <h2 className="text-3xl font-black">Frequently Asked Questions</h2>
+            <h2 data-text-reveal className="text-3xl font-black">Frequently Asked Questions</h2>
           </div>
           <div className="space-y-6">
             <div className="border-b border-white/10 pb-6">
@@ -281,7 +281,7 @@ export default function SeoService() {
 
         {/* CTA */}
         <div className="text-center">
-          <h2 className="text-4xl font-black mb-6">Ready to Dominate Google Search Results?</h2>
+          <h2 data-text-reveal className="text-4xl font-black mb-6">Ready to Dominate Google Search Results?</h2>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
             Get an in-depth audit of your current organic visibility, competitor backlink profiles, and an actionable roadmap for search dominance.
           </p>

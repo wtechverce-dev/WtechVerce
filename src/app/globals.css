@@ -92,3 +92,54 @@ canvas {
   50% { transform: translateY(-12px); }
 }
 .animate-float { animation: float-y 4s ease-in-out infinite; }
+
+/* ─── TEXT REVEAL ANIMATION SYSTEM ──────────────────────────────────────────
+   BOX-3 scroll-driven clip-path reveal — global, reusable.
+   Works with:
+     1. <TextRevealHeading> React component (client pages)
+     2. data-text-reveal="true" HTML attribute (server-rendered pages)
+   ─────────────────────────────────────────────────────────────────────────── */
+
+/* Wrapper must be relative so the overlay can stack */
+.text-reveal-heading,
+[data-text-reveal] {
+  position: relative;
+  display: block;
+  overflow: visible;
+}
+
+/* Base layer: slightly muted — always visible underneath */
+.text-reveal-base,
+[data-text-reveal] .trh-base {
+  display: block;
+  color: inherit;
+  opacity: 0.22;
+  pointer-events: none;
+  user-select: none;
+  white-space: inherit;
+  word-break: inherit;
+}
+
+/* Reveal overlay: positioned over the base, starts clipped */
+.text-reveal-overlay,
+[data-text-reveal] .trh-overlay {
+  position: absolute;
+  inset: 0;
+  display: block;
+  color: inherit;
+  clip-path: inset(0 100% 0 0);
+  will-change: clip-path;
+  pointer-events: none;
+  user-select: none;
+  white-space: inherit;
+  word-break: inherit;
+}
+
+/* Reduced motion: immediately show final revealed state */
+@media (prefers-reduced-motion: reduce) {
+  .text-reveal-overlay,
+  [data-text-reveal] .trh-overlay {
+    clip-path: inset(0 0% 0 0) !important;
+  }
+}
+

@@ -106,7 +106,7 @@ export default function UiUxDesignService() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#6B21A8]/30 bg-[#6B21A8]/10 text-[#c87bff] text-xs font-bold uppercase tracking-widest mb-6">
             Human-Centric Interface Design
           </div>
-          <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
+          <h1 data-text-reveal className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
             Professional UI/UX <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B21A8] to-[#c87bff]">
               Design Services
@@ -154,7 +154,7 @@ export default function UiUxDesignService() {
         <div className="grid md:grid-cols-2 gap-16 mb-32">
           <div>
             <span className="text-[#c87bff] text-xs font-bold uppercase tracking-widest mb-3 block">Methodical Strategy</span>
-            <h2 className="text-3xl md:text-4xl font-black mb-6">User-Centered Design Architecture</h2>
+            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-6">User-Centered Design Architecture</h2>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Design is more than aesthetics; it is the fundamental bridge between customer intent and business profit. Our professional UI/UX design services approach every screen through extensive user behavior analysis, competitive benchmarking, and cognitive load reduction.
             </p>
@@ -185,7 +185,7 @@ export default function UiUxDesignService() {
         <div className="mb-32">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-[#c87bff] text-xs font-bold uppercase tracking-widest mb-3 block">From Idea to Interactive Reality</span>
-            <h2 className="text-3xl md:text-4xl font-black mb-4">Wireframing and Prototyping</h2>
+            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-4">Wireframing and Prototyping</h2>
             <p className="text-gray-400 text-base">
               Interactive prototypes eliminate ambiguity, align executive stakeholders, and validate complex product interactions before development begins.
             </p>
@@ -233,7 +233,7 @@ export default function UiUxDesignService() {
         <div className="max-w-3xl mx-auto mb-32">
           <div className="text-center mb-12">
             <span className="text-[#c87bff] text-xs font-bold uppercase tracking-widest mb-2 block">Common Questions</span>
-            <h2 className="text-3xl font-black">Frequently Asked Questions</h2>
+            <h2 data-text-reveal className="text-3xl font-black">Frequently Asked Questions</h2>
           </div>
           <div className="space-y-6">
             <div className="border-b border-white/10 pb-6">
@@ -265,7 +265,7 @@ export default function UiUxDesignService() {
 
         {/* CTA */}
         <div className="text-center">
-          <h2 className="text-4xl font-black mb-6">Ready for World-Class UI/UX Design?</h2>
+          <h2 data-text-reveal className="text-4xl font-black mb-6">Ready for World-Class UI/UX Design?</h2>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
             Partner with WTechVerce's design studio to craft intuitive, engaging digital products that delight users and fuel sustainable business growth.
           </p>

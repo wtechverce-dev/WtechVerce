@@ -35,9 +35,9 @@ export default function WebsiteRedesignService() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="max-w-4xl mb-20">
           <Link href="/services" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white mb-8 transition-colors">
-            ← Back to Services
+            â† Back to Services
           </Link>
-          <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
+          <h1 data-text-reveal className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
             Website <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] to-[#ff8c42]">
               Redesign Services
@@ -53,7 +53,7 @@ export default function WebsiteRedesignService() {
 
         <div className="grid md:grid-cols-2 gap-16 mb-32">
           <div>
-            <h2 className="text-3xl font-black mb-6">Modernize Without Losing SEO</h2>
+            <h2 data-text-reveal className="text-3xl font-black mb-6">Modernize Without Losing SEO</h2>
             <p className="text-gray-400 mb-6 leading-relaxed">
               The biggest risk of a redesign is losing your hard-earned Google rankings. We perform meticulous URL mapping and 301 redirect planning to ensure your SEO equity transfers perfectly to the new site.
             </p>

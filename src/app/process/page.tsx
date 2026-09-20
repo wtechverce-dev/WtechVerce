@@ -11,8 +11,8 @@ const steps = [
     num: "01",
     phase: "Discovery",
     title: "Deep Dive Into Your Vision",
-    description: "We start with an in-depth discovery session to fully understand your business goals, target audience, technical constraints, and success metrics. No assumptions — only clarity.",
-    duration: "1–2 Weeks",
+    description: "We start with an in-depth discovery session to fully understand your business goals, target audience, technical constraints, and success metrics. No assumptions â€” only clarity.",
+    duration: "1â€“2 Weeks",
     deliverables: ["Requirements document", "Market analysis", "Competitor audit", "Project roadmap"],
     color: "#FD4F00",
   },
@@ -21,7 +21,7 @@ const steps = [
     phase: "Planning",
     title: "Architecture & Strategy",
     description: "We design the complete technical architecture, database schema, API contracts, and user flows. Every decision is made intentionally to support scale, performance, and maintainability.",
-    duration: "1–2 Weeks",
+    duration: "1â€“2 Weeks",
     deliverables: ["System architecture", "Wireframes", "Tech stack decision", "Sprint plan"],
     color: "#FF8833",
   },
@@ -30,7 +30,7 @@ const steps = [
     phase: "Design",
     title: "World-Class UI/UX",
     description: "Our designers craft visually stunning, user-centric interfaces. We use Figma for high-fidelity prototypes, establish a full design system, and iterate until perfection.",
-    duration: "2–3 Weeks",
+    duration: "2â€“3 Weeks",
     deliverables: ["Design system", "UI screens", "Interactive prototype", "Design handoff"],
     color: "#8A2BE2",
   },
@@ -48,7 +48,7 @@ const steps = [
     phase: "Development",
     title: "Precision Engineering",
     description: "Our engineers bring the designs to life with clean, scalable, and thoroughly tested code. We operate in 2-week sprints with continuous deliveries so you see progress constantly.",
-    duration: "4–12 Weeks",
+    duration: "4â€“12 Weeks",
     deliverables: ["Working application", "API integration", "CMS setup", "Admin dashboard"],
     color: "#16a34a",
   },
@@ -57,7 +57,7 @@ const steps = [
     phase: "QA & Testing",
     title: "Battle-Tested Quality",
     description: "Rigorous testing across devices, browsers, screen sizes, and load scenarios ensures your product is bulletproof before it reaches your users.",
-    duration: "1–2 Weeks",
+    duration: "1â€“2 Weeks",
     deliverables: ["Bug-free release", "Performance audit", "Security check", "Mobile QA"],
     color: "#FD4F00",
   },
@@ -99,7 +99,7 @@ export default function ProcessPage() {
             <span className="w-2 h-2 rounded-full bg-[#8A2BE2] animate-pulse" />
             <span className="text-sm font-medium text-[#8A2BE2]">Our Process</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-6">
+          <h1 data-text-reveal className="text-5xl md:text-7xl font-black tracking-tight mb-6">
             How We{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B00] to-[#8A2BE2]">
               Build Websites
@@ -107,7 +107,7 @@ export default function ProcessPage() {
           </h1>
           <p className="text-lg text-gray-400 leading-relaxed">
             A battle-tested, transparent, and results-driven process that transforms
-            complex ideas into polished digital products — on time, every time.
+            complex ideas into polished digital products â€” on time, every time.
           </p>
         </motion.div>
       </section>
@@ -138,7 +138,7 @@ export default function ProcessPage() {
                     <div className="flex items-start justify-between mb-6">
                       <div>
                         <span className="text-xs font-bold tracking-widest uppercase mb-2 block" style={{ color: step.color }}>
-                          Phase {step.num} · {step.phase}
+                          Phase {step.num} Â· {step.phase}
                         </span>
                         <h3 className="text-2xl font-black text-white">{step.title}</h3>
                       </div>
@@ -185,7 +185,7 @@ export default function ProcessPage() {
           transition={{ duration: 0.8 }}
           className="text-center mt-24"
         >
-          <h2 className="text-3xl md:text-4xl font-black mb-6">
+          <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-6">
             Ready to begin{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B00] to-[#8A2BE2]">
               Phase 01?

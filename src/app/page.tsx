@@ -9,9 +9,11 @@ import MarqueeTicker from "@/components/ui/MarqueeTicker";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 import ScrambleText from "@/components/ui/ScrambleText";
 import Button from "@/components/ui/Button";
+import TextRevealHeading from "@/components/ui/TextRevealHeading";
 import { InteractiveServices } from "@/components/ui/InteractiveServices";
 import { ImageMarqueeSection } from "@/components/ui/ImageMarqueeSection";
 import {
+
   ArrowRight, ArrowUpRight, ChevronDown, ChevronUp,
   Search, Target, Megaphone, Code,
   CheckCircle, Star, ChevronLeft, ChevronRight,
@@ -328,10 +330,10 @@ export default function Home() {
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#FD4F00]/25 bg-[#FD4F00]/8 text-[#FD4F00] text-xs font-bold uppercase tracking-widest">
                 About WTechVerce
               </span>
-              <h2 className="text-5xl md:text-6xl font-black leading-[1.05] text-white tracking-[-0.03em]">
+              <TextRevealHeading as="h2" className="text-5xl md:text-6xl font-black leading-[1.05] text-white tracking-[-0.03em]">
                 Custom Web Development Solutions{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] to-[#ff8c42]">Crafted for Business Scaling</span>
-              </h2>
+              </TextRevealHeading>
               <p className="text-gray-400 text-lg leading-relaxed">
                 A true software development partner builds scalable, high-performance web applications so you don't have to hire and manage a massive in-house engineering team. We deliver custom SaaS, robust eCommerce, and flawless web architectures that solve real business bottlenecks.
               </p>
@@ -369,7 +371,7 @@ export default function Home() {
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#6C24FA]/25 bg-[#6C24FA]/10 text-[#6C24FA] text-xs font-bold uppercase tracking-widest mb-6">
                 Our Expertise
               </span>
-              <h2 className="text-5xl md:text-6xl font-black text-white tracking-[-0.03em]">Data-Driven Digital Marketing Services to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6C24FA] to-[#FD4F00]">Accelerate Growth</span></h2>
+              <TextRevealHeading as="h2" className="text-5xl md:text-6xl font-black text-white tracking-[-0.03em]">Data-Driven Digital Marketing Services to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6C24FA] to-[#FD4F00]">Accelerate Growth</span></TextRevealHeading>
             </div>
           </FadeIn>
 
@@ -479,10 +481,10 @@ export default function Home() {
           <FadeIn direction="right" delay={0.1}>
             <div>
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-white text-xs font-bold uppercase tracking-widest mb-7">Why Choose Us</span>
-              <h2 className="text-5xl font-black text-white leading-tight tracking-[-0.03em] mb-10">
+              <TextRevealHeading as="h2" className="text-5xl font-black text-white leading-tight tracking-[-0.03em] mb-10">
                 Why Tech Startups and Enterprises Trust{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] to-[#6C24FA]">WTechVerce</span>
-              </h2>
+              </TextRevealHeading>
               <div className="space-y-6 mb-10">
                 {[
                   { title: "Transparent Reporting", desc: "Tied to revenue, not vanity metrics. Always in plain language." },
@@ -533,7 +535,7 @@ export default function Home() {
         </div>
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 mb-10 flex justify-between items-end">
-          <FadeIn><h2 className="text-5xl font-black text-white">Portfolio</h2></FadeIn>
+          <FadeIn><TextRevealHeading as="h2" className="text-5xl font-black text-white">Portfolio</TextRevealHeading></FadeIn>
           <PillBtn href="/portfolio"><span className="flex items-center gap-2">View All <ArrowRight className="w-4 h-4" /></span></PillBtn>
         </div>
 
@@ -619,7 +621,7 @@ export default function Home() {
           <FadeIn>
             <div className="text-center mb-16">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#6C24FA]/25 bg-[#6C24FA]/10 text-[#6C24FA] text-xs font-bold uppercase tracking-widest mb-5">Featured Work</span>
-              <h2 className="text-5xl font-black text-white">Case Studies</h2>
+              <TextRevealHeading as="h2" className="text-5xl font-black text-white">Case Studies</TextRevealHeading>
             </div>
           </FadeIn>
 
@@ -733,7 +735,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
               <div>
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-white text-xs font-bold uppercase tracking-widest mb-5">Client Reviews</span>
-                <h2 className="text-5xl font-black text-white leading-tight">What our clients<br/>are saying</h2>
+                <TextRevealHeading as="h2" className="text-5xl font-black text-white leading-tight">What our clients<br/>are saying</TextRevealHeading>
               </div>
               <div className="flex items-center gap-5">
                 <div className="text-right">
@@ -817,7 +819,7 @@ export default function Home() {
           <FadeIn>
             <div className="text-center mb-16">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#FD4F00]/25 bg-[#FD4F00]/8 text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-6">Questions</span>
-              <h2 className="text-5xl font-black text-white">Common Questions</h2>
+              <TextRevealHeading as="h2" className="text-5xl font-black text-white">Common Questions</TextRevealHeading>
             </div>
           </FadeIn>
           <div>
@@ -870,10 +872,10 @@ export default function Home() {
 
           {/* Big heading */}
           <FadeIn delay={0.1}>
-            <h2 className="text-[clamp(3.5rem,9vw,9rem)] font-black text-white leading-[0.95] tracking-[-0.04em] text-center">
+            <TextRevealHeading as="h2" className="text-[clamp(3.5rem,9vw,9rem)] font-black text-white leading-[0.95] tracking-[-0.04em] text-center">
               LET'S WORK<br />
               <span className="text-transparent" style={{ WebkitTextStroke: "2px rgba(255,255,255,0.2)" }}>TOGETHER</span>
-            </h2>
+            </TextRevealHeading>
           </FadeIn>
 
           <FadeIn delay={0.2}>

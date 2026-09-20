@@ -62,7 +62,7 @@ export default function SaaSDevelopmentService() {
           <Link href="/services" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white mb-8 transition-colors">
             ← Back to Services
           </Link>
-          <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
+          <h1 data-text-reveal className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
             SaaS <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] to-[#ff8c42]">
               Product Development
@@ -79,7 +79,7 @@ export default function SaaSDevelopmentService() {
         {/* INTRODUCTION / WHAT WE OFFER */}
         <div className="grid md:grid-cols-2 gap-16 mb-32">
           <div>
-            <h2 className="text-3xl font-black mb-6">Engineered for MRR Growth</h2>
+            <h2 data-text-reveal className="text-3xl font-black mb-6">Engineered for MRR Growth</h2>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Building a SaaS product requires more than just writing code; it demands an architecture that handles thousands of concurrent users, isolates tenant data securely, and monetizes seamlessly.
             </p>
@@ -105,7 +105,7 @@ export default function SaaSDevelopmentService() {
 
         {/* OUR PROCESS */}
         <div className="mb-32">
-          <h2 className="text-3xl md:text-4xl font-black mb-12 text-center">SaaS Development Lifecycle</h2>
+          <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-12 text-center">SaaS Development Lifecycle</h2>
           <div className="grid md:grid-cols-4 gap-8">
             {[
               { step: "01", title: "Product Strategy", desc: "Defining the core MVP features, user journeys, and go-to-market technology strategy." },
@@ -125,7 +125,7 @@ export default function SaaSDevelopmentService() {
         {/* WHY CHOOSE US */}
         <div className="bg-gradient-to-r from-[#FD4F00]/10 to-transparent border border-[#FD4F00]/20 rounded-[2.5rem] p-10 md:p-16 mb-32">
           <div className="max-w-3xl">
-            <h2 className="text-3xl md:text-4xl font-black mb-6">Your SaaS Technical Co-Founders</h2>
+            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-6">Your SaaS Technical Co-Founders</h2>
             <p className="text-gray-300 mb-8 leading-relaxed">
               We act as an extension of your founding team, providing the technical leadership needed to launch and scale successfully.
             </p>
@@ -141,7 +141,7 @@ export default function SaaSDevelopmentService() {
 
         {/* FAQ */}
         <div className="max-w-3xl mx-auto mb-32">
-          <h2 className="text-3xl font-black mb-10 text-center">Frequently Asked Questions</h2>
+          <h2 data-text-reveal className="text-3xl font-black mb-10 text-center">Frequently Asked Questions</h2>
           <div className="space-y-6">
             <div className="border-b border-white/10 pb-6">
               <h4 className="text-lg font-bold mb-2">Can you integrate Stripe for subscription billing?</h4>
@@ -156,7 +156,7 @@ export default function SaaSDevelopmentService() {
 
         {/* CTA */}
         <div className="text-center">
-          <h2 className="text-4xl font-black mb-6">Ready to Launch Your SaaS?</h2>
+          <h2 data-text-reveal className="text-4xl font-black mb-6">Ready to Launch Your SaaS?</h2>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
             Bring us your idea, and we will bring the engineering firepower to make it a reality.
           </p>

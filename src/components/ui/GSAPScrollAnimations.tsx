@@ -87,6 +87,52 @@ export default function GSAPScrollAnimations() {
             scrollTrigger: { trigger: el, start: "top 90%", toggleActions: "play none none none" } });
       });
 
+      // ── 8. TEXT REVEAL — [data-text-reveal] ──────────────────────────────
+      // For server-rendered pages that can't use the <TextRevealHeading> component.
+      // The element's inner HTML is wrapped with base (.trh-base) + overlay (.trh-overlay)
+      // spans, then the clip-path animation is applied via GSAP ScrollTrigger.
+      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      gsap.utils.toArray<HTMLElement>("[data-text-reveal]").forEach((el) => {
+        // Skip if already processed (e.g. hot-reload)
+        if (el.dataset.textRevealDone === "1") return;
+        el.dataset.textRevealDone = "1";
+
+        // Capture original inner HTML
+        const originalHTML = el.innerHTML;
+
+        // Build the dual-layer structure
+        el.innerHTML = `
+          <span class="trh-base" aria-hidden="true">${originalHTML}</span>
+          <span class="trh-overlay" aria-hidden="true">${originalHTML}</span>
+          <span class="sr-only">${el.textContent}</span>
+        `;
+
+        const overlay = el.querySelector<HTMLElement>(".trh-overlay");
+        if (!overlay) return;
+
+        if (prefersReduced) {
+          gsap.set(overlay, { clipPath: "inset(0 0% 0 0)" });
+          return;
+        }
+
+        gsap.fromTo(
+          overlay,
+          { clipPath: "inset(0 100% 0 0)" },
+          {
+            clipPath: "inset(0 0% 0 0)",
+            ease: "none",
+            scrollTrigger: {
+              trigger: el,
+              start: "top bottom",
+              end: "top 55%",
+              scrub: 1,
+            },
+          }
+        );
+      });
+      // ─────────────────────────────────────────────────────────────────────
+
     });
 
     return () => ctx.revert();
@@ -94,3 +140,4 @@ export default function GSAPScrollAnimations() {
 
   return null;
 }
+

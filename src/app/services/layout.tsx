@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import GSAPScrollAnimations from "@/components/ui/GSAPScrollAnimations";
 
 export const metadata: Metadata = {
   title: "Web Development, SaaS & AI Services",
@@ -47,5 +48,12 @@ export default function ServicesLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      {/* Global GSAP scanner — fires text-reveal on [data-text-reveal] elements */}
+      <GSAPScrollAnimations />
+      {children}
+    </>
+  );
 }
+

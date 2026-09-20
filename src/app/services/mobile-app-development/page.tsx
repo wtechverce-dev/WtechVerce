@@ -106,7 +106,7 @@ export default function MobileAppDevelopmentService() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#00B4D8]/30 bg-[#00B4D8]/10 text-[#00B4D8] text-xs font-bold uppercase tracking-widest mb-6">
             Mobile App Engineering
           </div>
-          <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
+          <h1 data-text-reveal className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
             Mobile App <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00B4D8] to-[#90E0EF]">
               Development Services
@@ -154,7 +154,7 @@ export default function MobileAppDevelopmentService() {
         <div className="grid md:grid-cols-2 gap-16 mb-32">
           <div>
             <span className="text-[#00B4D8] text-xs font-bold uppercase tracking-widest mb-3 block">High-Performance Mobile</span>
-            <h2 className="text-3xl md:text-4xl font-black mb-6">Android and iOS App Development</h2>
+            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-6">Android and iOS App Development</h2>
             <p className="text-gray-400 mb-6 leading-relaxed">
               In an era where over 60% of digital traffic flows through smartphones, having a responsive, lag-free mobile application is crucial for enterprise success. Our mobile app development services bridge technical complexity with human-centric ergonomics.
             </p>
@@ -185,7 +185,7 @@ export default function MobileAppDevelopmentService() {
         <div className="mb-32">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-[#00B4D8] text-xs font-bold uppercase tracking-widest mb-3 block">From Wireframe to App Store</span>
-            <h2 className="text-3xl md:text-4xl font-black mb-4">Our Mobile Application Development Process</h2>
+            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-4">Our Mobile Application Development Process</h2>
             <p className="text-gray-400 text-base">
               A structured, step-by-step engineering roadmap ensures bug-free builds and seamless App Store and Google Play approvals.
             </p>
@@ -233,7 +233,7 @@ export default function MobileAppDevelopmentService() {
         <div className="max-w-3xl mx-auto mb-32">
           <div className="text-center mb-12">
             <span className="text-[#00B4D8] text-xs font-bold uppercase tracking-widest mb-2 block">Common Questions</span>
-            <h2 className="text-3xl font-black">Frequently Asked Questions</h2>
+            <h2 data-text-reveal className="text-3xl font-black">Frequently Asked Questions</h2>
           </div>
           <div className="space-y-6">
             <div className="border-b border-white/10 pb-6">
@@ -265,7 +265,7 @@ export default function MobileAppDevelopmentService() {
 
         {/* CTA */}
         <div className="text-center">
-          <h2 className="text-4xl font-black mb-6">Ready to Build a Standout Mobile App?</h2>
+          <h2 data-text-reveal className="text-4xl font-black mb-6">Ready to Build a Standout Mobile App?</h2>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
             Discuss your mobile application concept with our senior mobile architects and receive a detailed roadmap and feasibility audit.
           </p>

@@ -60,16 +60,16 @@ export default function WordPressDevelopmentService() {
         {/* HERO */}
         <div className="max-w-4xl mb-20">
           <Link href="/services" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white mb-8 transition-colors">
-            ← Back to Services
+            â† Back to Services
           </Link>
-          <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
+          <h1 data-text-reveal className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
             Professional <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6C24FA] to-[#b785fc]">
               WordPress Development
             </span>
           </h1>
           <p className="text-xl text-gray-400 leading-relaxed mb-10">
-            Harness the power of the world’s most popular CMS. We build custom, bloat-free WordPress websites that are easy to manage, lightning-fast, and completely secure against vulnerabilities.
+            Harness the power of the worldâ€™s most popular CMS. We build custom, bloat-free WordPress websites that are easy to manage, lightning-fast, and completely secure against vulnerabilities.
           </p>
           <Button href="/contact" variant="primary" size="lg" filled>
             Start Your WP Project <ArrowRight className="w-5 h-5 ml-2" />
@@ -79,7 +79,7 @@ export default function WordPressDevelopmentService() {
         {/* INTRODUCTION / WHAT WE OFFER */}
         <div className="grid md:grid-cols-2 gap-16 mb-32">
           <div>
-            <h2 className="text-3xl font-black mb-6">Beyond Basic Templates</h2>
+            <h2 data-text-reveal className="text-3xl font-black mb-6">Beyond Basic Templates</h2>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Anyone can install a WordPress theme. We engineer scalable platforms. By removing unnecessary plugins and writing clean, custom code, we ensure your WordPress site doesn't suffer from the classic "slow WP" syndrome.
             </p>
@@ -105,7 +105,7 @@ export default function WordPressDevelopmentService() {
 
         {/* OUR PROCESS */}
         <div className="mb-32">
-          <h2 className="text-3xl md:text-4xl font-black mb-12 text-center">Our WordPress Workflow</h2>
+          <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-12 text-center">Our WordPress Workflow</h2>
           <div className="grid md:grid-cols-4 gap-8">
             {[
               { step: "01", title: "Information Architecture", desc: "Structuring taxonomies, post types, and data fields for seamless backend management." },
@@ -124,7 +124,7 @@ export default function WordPressDevelopmentService() {
 
         {/* FAQ */}
         <div className="max-w-3xl mx-auto mb-32">
-          <h2 className="text-3xl font-black mb-10 text-center">Frequently Asked Questions</h2>
+          <h2 data-text-reveal className="text-3xl font-black mb-10 text-center">Frequently Asked Questions</h2>
           <div className="space-y-6">
             <div className="border-b border-white/10 pb-6">
               <h4 className="text-lg font-bold mb-2">Do you use pre-made templates or build from scratch?</h4>
@@ -139,7 +139,7 @@ export default function WordPressDevelopmentService() {
 
         {/* CTA */}
         <div className="text-center">
-          <h2 className="text-4xl font-black mb-6">Scale with WordPress</h2>
+          <h2 data-text-reveal className="text-4xl font-black mb-6">Scale with WordPress</h2>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
             Get a powerful, easy-to-manage CMS without the technical headaches. Let's build a WP site that works for you.
           </p>

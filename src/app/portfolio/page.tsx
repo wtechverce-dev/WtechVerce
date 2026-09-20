@@ -102,7 +102,7 @@ export default function PortfolioPage() {
             <span className="w-2 h-2 rounded-full bg-[#FF6B00] animate-pulse" />
             <span className="text-sm font-medium text-[#FF6B00]">Our Portfolio</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-6">
+          <h1 data-text-reveal className="text-5xl md:text-7xl font-black tracking-tight mb-6">
             Work That{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B00] to-[#8A2BE2]">
               Speaks
@@ -209,7 +209,7 @@ export default function PortfolioPage() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-5xl font-black mb-6">
+          <h2 data-text-reveal className="text-4xl md:text-5xl font-black mb-6">
             Ready to build{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B00] to-[#8A2BE2]">
               something amazing?
