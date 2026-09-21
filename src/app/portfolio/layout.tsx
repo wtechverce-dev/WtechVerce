@@ -16,9 +16,12 @@ export const metadata: Metadata = {
     "software development case studies",
     "startup website portfolio",
   ],
+  // ✅ This canonical applies to the /portfolio listing page.
+  // Each portfolio detail page sets its own canonical via generateMetadata in [slug]/page.tsx
   alternates: {
     canonical: "https://wtechverce.com/portfolio",
   },
+
   openGraph: {
     title: "Our Portfolio | WTechVerce",
     description:

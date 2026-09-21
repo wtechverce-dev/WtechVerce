@@ -107,7 +107,15 @@ const projects = [
   }
 ];
 
+
+// ✅ SEO FIX: Pre-render all portfolio pages as static HTML at build time.
+// Without this, Next.js renders them on demand (dynamic) — Google struggles to index them.
+export function generateStaticParams() {
+  return projects.map((p) => ({ slug: p.slug }));
+}
+
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+
   const project = projects.find((p) => p.slug === params.slug);
   
   if (!project) {
