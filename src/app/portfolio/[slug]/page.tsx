@@ -109,14 +109,17 @@ const projects = [
 
 
 // ✅ SEO FIX: Pre-render all portfolio pages as static HTML at build time.
-// Without this, Next.js renders them on demand (dynamic) — Google struggles to index them.
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+type Props = {
+  params: Promise<{ slug: string }>;
+};
 
-  const project = projects.find((p) => p.slug === params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
   
   if (!project) {
     return { title: "Project Not Found" };
@@ -131,12 +134,14 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const project = projects.find((p) => p.slug === params.slug);
+export default async function ProjectPage({ params }: Props) {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
     notFound();
   }
+
 
   return (
     <main className="min-h-screen bg-[#02050A] text-white overflow-x-hidden pt-32 pb-24">
