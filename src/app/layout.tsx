@@ -101,10 +101,15 @@ export const metadata: Metadata = {
     },
   },
 
-  // ─── Verification (fill in after Google/Bing Search Console setup) ──────────
-  verification: {
-    google: "REPLACE_WITH_GOOGLE_SEARCH_CONSOLE_TOKEN",
-  },
+  // ─── Verification (Uses environment variable if provided) ──────────
+  ...(process.env.NEXT_PUBLIC_GSC_VERIFICATION
+    ? {
+        verification: {
+          google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
+        },
+      }
+    : {}),
+
 
   // ─── App Metadata ────────────────────────────────────────────────────────────
   applicationName: "WTechVerce",

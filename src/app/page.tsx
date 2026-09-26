@@ -261,8 +261,11 @@ export default function Home() {
       {/* ══════════════════════════════════════════
           SECTION 1: ABOUT — Image Collage + Content
       ══════════════════════════════════════════ */}
-      <section className="py-28 bg-[#02050A] relative overflow-hidden">
-        <div className="absolute -top-40 right-0 w-[600px] h-[600px] bg-[#FD4F00]/5 rounded-full blur-[120px] pointer-events-none" />
+      <section id="about" className="py-28 bg-[#02050A] relative overflow-hidden">
+        <div
+          className="absolute -top-40 right-0 w-[600px] h-[600px] bg-[#FD4F00]/5 rounded-full blur-[120px] pointer-events-none"
+          style={{ willChange: "transform", transform: "translate3d(0, 0, 0)" }}
+        />
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-20 items-center">
           {/* LEFT: image collage */}
@@ -273,15 +276,28 @@ export default function Home() {
                 viewport={{ once: true }} transition={{ duration: 0.8 }}
                 className="absolute top-0 left-0 w-[58%] h-[52%] rounded-[1.75rem] overflow-hidden border border-white/8 shadow-2xl"
               >
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=700&q=80" alt="WTechVerce team" className="w-full h-full object-cover" />
+                <img
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=700&q=80"
+                  alt="WTechVerce team"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover"
+                />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.15 }}
                 className="absolute bottom-0 right-0 w-[62%] h-[57%] rounded-[1.75rem] overflow-hidden border border-white/8 shadow-2xl z-10"
               >
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=700&q=80" alt="WTechVerce meeting" className="w-full h-full object-cover" />
+                <img
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=700&q=80"
+                  alt="WTechVerce meeting"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover"
+                />
               </motion.div>
+
 
               {/* ANIMATED SPINNING BADGE */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
@@ -380,7 +396,14 @@ export default function Home() {
             <FadeIn delay={0.05} className="md:col-span-8">
               <div className="p-10 rounded-[2.5rem] bg-[#070D18] border border-white/5 relative overflow-hidden group h-full min-h-[340px] hover:border-[#FD4F00]/20 transition-colors duration-500">
                 <div className="absolute right-0 bottom-0 w-1/2 h-full opacity-30 group-hover:opacity-50 transition-opacity duration-500">
-                  <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="SEO" className="w-full h-full object-cover" style={{ maskImage: "linear-gradient(to left, black, transparent)" }} />
+                  <img
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80"
+                    alt="SEO Strategy"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover"
+                    style={{ maskImage: "linear-gradient(to left, black, transparent)" }}
+                  />
                 </div>
                 <div className="relative z-10 max-w-sm">
                   <motion.div whileHover={{ scale: 1.1 }} className="w-14 h-14 rounded-2xl bg-[#FD4F00] flex items-center justify-center text-white mb-8 shadow-[0_0_30px_rgba(253,79,0,0.4)]">
@@ -400,6 +423,8 @@ export default function Home() {
                 <img
                   src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=700&q=80"
                   alt="Custom Web Development Services — WTechVerce"
+                  loading="lazy"
+                  decoding="async"
                   className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700"
                 />
                 {/* Gradient overlay */}
@@ -418,7 +443,13 @@ export default function Home() {
             {/* Paid Ads image card */}
             <FadeIn delay={0.15} className="md:col-span-4">
               <div className="rounded-[2.5rem] bg-[#070D18] border border-white/5 relative overflow-hidden h-[360px] group hover:border-[#FD4F00]/20 transition-colors duration-500">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Paid Ads" className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700" />
+                <img
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80"
+                  alt="Paid Ads"
+                  loading="lazy"
+                  decoding="async"
+                  className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#070D18] via-[#070D18]/60 to-transparent" />
                 <div className="absolute bottom-8 left-8 right-8">
                   <h3 className="text-2xl font-black text-white mb-2">Paid Advertising</h3>
@@ -427,6 +458,7 @@ export default function Home() {
               </div>
             </FadeIn>
 
+
             {/* Content & Social — with background image */}
             <FadeIn delay={0.2} className="md:col-span-8">
               <div className="rounded-[2.5rem] relative overflow-hidden h-[360px] group hover:border-[#FD4F00]/20 transition-colors duration-500">
@@ -434,6 +466,8 @@ export default function Home() {
                 <img
                   src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&fit=crop&w=1000&q=80"
                   alt="Content & Social Media"
+                  loading="lazy"
+                  decoding="async"
                   className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700"
                 />
                 {/* Overlay */}
@@ -458,12 +492,21 @@ export default function Home() {
           SECTION 3: WHY CHOOSE US
       ══════════════════════════════════════════ */}
       <section className="py-32 bg-[#02050A] relative overflow-hidden">
-        <div className="absolute right-0 top-0 w-[800px] h-[600px] bg-[#6C24FA]/8 rounded-full blur-[150px] pointer-events-none" />
+        <div
+          className="absolute right-0 top-0 w-[800px] h-[600px] bg-[#6C24FA]/8 rounded-full blur-[150px] pointer-events-none"
+          style={{ willChange: "transform", transform: "translate3d(0, 0, 0)" }}
+        />
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-20 items-center relative z-10">
           <FadeIn direction="left">
             <div className="relative">
               <div className="rounded-[2.5rem] overflow-hidden border border-white/8">
-                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=900&q=80" alt="Why WTechVerce" className="w-full h-auto object-cover" />
+                <img
+                  src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=900&q=80"
+                  alt="Why WTechVerce"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-auto object-cover"
+                />
               </div>
               <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}
                 className="absolute -right-8 top-16 bg-[#0A0F1A] border border-white/10 px-6 py-5 rounded-2xl shadow-2xl animate-float">
@@ -522,7 +565,14 @@ export default function Home() {
       ══════════════════════════════════════════ */}
       <section className="bg-[#040810] overflow-hidden pt-20">
         <div className="mb-16 overflow-hidden">
-          <div className="flex gap-0 w-max" style={{ animation: "marquee-ticker 30s linear infinite" }}>
+          <div
+            className="flex gap-0 w-max"
+            style={{
+              animation: "marquee-ticker 30s linear infinite",
+              willChange: "transform",
+              transform: "translate3d(0, 0, 0)",
+            }}
+          >
             {Array(6).fill("SKILL & WORKING AREA").map((t, i) => (
               <span key={i} className="flex items-center whitespace-nowrap pr-16">
                 <span className="text-[clamp(4rem,10vw,9rem)] font-black leading-none uppercase tracking-tight text-transparent" style={{ WebkitTextStroke: "1.5px rgba(255,255,255,0.18)", display: "inline-block" }}>
@@ -533,6 +583,7 @@ export default function Home() {
             ))}
           </div>
         </div>
+
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 mb-10 flex justify-between items-end">
           <FadeIn><TextRevealHeading as="h2" className="text-5xl font-black text-white">Portfolio</TextRevealHeading></FadeIn>
@@ -549,7 +600,13 @@ export default function Home() {
             <motion.div key={i} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.1 }}
               className="min-w-[340px] md:min-w-[460px] snap-center group cursor-pointer shrink-0">
               <div className="rounded-[2rem] overflow-hidden border border-white/5 bg-[#0A0F1A] aspect-[4/3] relative mb-5">
-                <img src={item.img} alt={item.title} className="w-full h-full object-cover opacity-60 group-hover:opacity-90 group-hover:scale-105 transition-all duration-700" />
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover opacity-60 group-hover:opacity-90 group-hover:scale-105 transition-all duration-700"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F1A] via-transparent to-transparent opacity-70" />
                 <div className="absolute top-5 left-5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest" style={{ background: item.color + "22", color: item.color, border: `1px solid ${item.color}44` }}>
                   {item.cat}
@@ -640,8 +697,13 @@ export default function Home() {
                 <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-[#6C24FA]/25 rounded-full blur-[100px] pointer-events-none" />
                 {/* Full-bleed image top half */}
                 <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
-                  <img src="/projects/leadstonk.png" alt="Leadstonk"
-                    className="w-full h-full object-cover object-top opacity-25 group-hover:opacity-35 group-hover:scale-105 transition-all duration-700" />
+                  <img
+                    src="/projects/leadstonk.png"
+                    alt="Leadstonk"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover object-top opacity-25 group-hover:opacity-35 group-hover:scale-105 transition-all duration-700"
+                  />
                   {/* Gradient overlay */}
                   <div className="absolute inset-0" style={{ background: "linear-gradient(to top, #0d0d1a 40%, transparent 100%)" }} />
                 </div>
@@ -682,10 +744,16 @@ export default function Home() {
                 <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-[#FD4F00]/15 rounded-full blur-[80px] pointer-events-none" />
                 {/* Full-bleed image */}
                 <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
-                  <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" alt="Dental Clinic"
-                    className="w-full h-full object-cover opacity-30 group-hover:opacity-45 group-hover:scale-105 transition-all duration-700" />
+                  <img
+                    src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80"
+                    alt="Dental Clinic"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover opacity-30 group-hover:opacity-45 group-hover:scale-105 transition-all duration-700"
+                  />
                   <div className="absolute inset-0" style={{ background: "linear-gradient(to top, #070D18 40%, transparent 100%)" }} />
                 </div>
+
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col justify-between p-8 z-10">
                   {/* Top badges */}
@@ -769,7 +837,7 @@ export default function Home() {
                 {/* Author */}
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full overflow-hidden border border-white/10 shrink-0">
-                    <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
+                    <img src={t.avatar} alt={t.name} loading="lazy" decoding="async" className="w-full h-full object-cover" />
                   </div>
                   <div>
                     <div className="text-white font-bold text-sm">{t.name}</div>
@@ -797,7 +865,7 @@ export default function Home() {
                 <p className="text-gray-300 text-sm leading-relaxed mb-6">&ldquo;{t.quote}&rdquo;</p>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full overflow-hidden border border-white/10 shrink-0">
-                    <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
+                    <img src={t.avatar} alt={t.name} loading="lazy" decoding="async" className="w-full h-full object-cover" />
                   </div>
                   <div>
                     <div className="text-white font-bold text-sm">{t.name}</div>
@@ -836,8 +904,15 @@ export default function Home() {
           {/* Image banner with SPINNING RING CTA button */}
           <FadeIn>
             <div className="w-full h-[360px] rounded-[3rem] overflow-hidden relative mb-20">
-              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1800&q=80" alt="WTechVerce Team" className="w-full h-full object-cover" />
+              <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1800&q=80"
+                alt="WTechVerce Team"
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover"
+              />
               <div className="absolute inset-0 bg-black/55" />
+
 
               {/* SPINNING RING CIRCLE BUTTON */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">

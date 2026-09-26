@@ -34,8 +34,11 @@ export default function MarqueeTicker({
         className="flex gap-0 w-max"
         style={{
           animation: `marquee-ticker ${speed}s linear infinite ${direction === "right" ? "reverse" : "normal"}`,
+          willChange: "transform",
+          transform: "translate3d(0, 0, 0)",
         }}
       >
+
         {allItems.map((item, i) => (
           <span key={i} className={`flex items-center gap-4 px-6 whitespace-nowrap text-sm font-semibold tracking-widest uppercase ${itemClassName}`}>
             <span className="text-[#FD4F00] text-lg">{separator}</span>

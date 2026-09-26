@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
-import { motion, useAnimationFrame } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
@@ -19,33 +19,71 @@ const images = [
 const marqueeItems = [...images, ...images, ...images];
 
 export function ImageMarqueeSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const [isInView, setIsInView] = useState(false);
 
-  useAnimationFrame(() => {
-    if (typeof window === "undefined") return;
-    const centerX = window.innerWidth / 2;
+  // Only animate when section is in view to eliminate layout thrashing
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
 
-    cardsRef.current.forEach((card) => {
-      if (!card) return;
-      const rect = card.parentElement!.getBoundingClientRect();
-      const cardCenter = rect.left + rect.width / 2;
-      const distance = cardCenter - centerX;
-      
-      // Normalize distance (-1 at left edge of screen, 1 at right edge)
-      const normalized = distance / (window.innerWidth / 2.2);
-      
-      // Rotation: e.g. -40deg on left edge, 40deg on right edge
-      const rotate = normalized * 40; 
-      
-      // Y Offset: deeper parabola shape for a much stronger arch
-      const y = Math.pow(normalized, 2) * 280;
-      
-      card.style.transform = `translateY(${y}px) rotate(${rotate}deg)`;
-    });
-  });
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { rootMargin: "200px 0px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    let animId: number;
+
+    const updateArch = () => {
+      const track = trackRef.current;
+      if (!track || typeof window === "undefined") {
+        animId = requestAnimationFrame(updateArch);
+        return;
+      }
+
+      const centerX = window.innerWidth / 2;
+      const divisor = window.innerWidth / 2.2;
+
+      // 1 single layout read for the moving track
+      const trackLeft = track.getBoundingClientRect().left;
+      const cardWidth = window.innerWidth < 768 ? 280 : 340;
+      const gap = 48; // gap-12 = 48px
+
+      cardsRef.current.forEach((card, i) => {
+        if (!card) return;
+        // Calculate position mathematically from trackLeft + index offset
+        const cardCenter = trackLeft + i * (cardWidth + gap) + cardWidth / 2;
+        const distance = cardCenter - centerX;
+
+        const normalized = distance / divisor;
+        const rotate = Math.max(-40, Math.min(40, normalized * 40));
+        const y = Math.min(280, Math.pow(normalized, 2) * 280);
+
+        card.style.transform = `translate3d(0, ${y}px, 0) rotate(${rotate}deg)`;
+      });
+
+      animId = requestAnimationFrame(updateArch);
+    };
+
+    animId = requestAnimationFrame(updateArch);
+    return () => cancelAnimationFrame(animId);
+  }, [isInView]);
 
   return (
-    <section className="py-32 bg-[#02050A] overflow-hidden flex flex-col items-center border-y border-white/5">
+    <section
+      ref={sectionRef}
+      className="py-32 bg-[#02050A] overflow-hidden flex flex-col items-center border-y border-white/5 relative z-10"
+    >
       <div className="max-w-4xl mx-auto px-6 text-center mb-10 relative z-10">
         <h2 className="text-5xl md:text-[6rem] font-medium tracking-tighter text-white leading-[1]">
           Good design <br /> makes life better.
@@ -54,9 +92,11 @@ export function ImageMarqueeSection() {
 
       <div className="w-full relative h-[600px] md:h-[700px] overflow-hidden flex items-center -mt-12">
         <motion.div
+          ref={trackRef}
           animate={{ x: ["0%", "-33.333333%"] }}
           transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
           className="flex gap-12 w-max px-4 absolute"
+          style={{ willChange: "transform" }}
         >
           {marqueeItems.map((img, i) => (
             <div key={i} className="shrink-0 w-[280px] h-[320px] md:w-[340px] md:h-[400px]">
@@ -64,9 +104,17 @@ export function ImageMarqueeSection() {
                 ref={(el) => {
                   cardsRef.current[i] = el;
                 }}
-                className="w-full h-full rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] will-change-transform bg-gray-100"
+                className="w-full h-full rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] bg-white/5 border border-white/10"
+                style={{ willChange: "transform" }}
               >
-                <Image src={img} alt="Design Example" fill className="object-cover" sizes="(max-width: 768px) 280px, 340px" />
+                <Image
+                  src={img}
+                  alt="WTechVerce Design Excellence"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 280px, 340px"
+                  loading="lazy"
+                />
               </div>
             </div>
           ))}
@@ -74,7 +122,7 @@ export function ImageMarqueeSection() {
       </div>
 
       <div className="flex justify-center z-10 mt-8 relative">
-        <Link href="/about">
+        <Link href="/#about">
           <button className="flex items-center gap-2 bg-gradient-to-br from-[#FD4F00] to-[#6C24FA] text-white px-8 py-4 rounded-full font-bold transition-all hover:scale-105 active:scale-95 shadow-[0_10px_30px_rgba(253,79,0,0.3)]">
             <span className="text-lg">Learn about us</span> <ArrowUpRight className="w-5 h-5 stroke-[3]" />
           </button>

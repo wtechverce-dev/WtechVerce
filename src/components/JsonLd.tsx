@@ -42,15 +42,8 @@ export default function JsonLd() {
     name: "WTechVerce",
     url: "https://wtechverce.com",
     description: "WTechVerce | Web Development & Digital Marketing Agency",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: "https://wtechverce.com/?q={search_term_string}",
-      },
-      "query-input": "required name=search_term_string",
-    },
   };
+
 
   const serviceSchema = {
     "@context": "https://schema.org",

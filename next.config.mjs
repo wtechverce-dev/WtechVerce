@@ -23,8 +23,14 @@ const nextConfig = {
         destination: '/services/seo',
         permanent: true,
       },
+      {
+        source: '/about',
+        destination: '/#about',
+        permanent: true,
+      },
     ];
   },
+
 };
 
 export default nextConfig;

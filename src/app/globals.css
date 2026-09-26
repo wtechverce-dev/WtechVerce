@@ -12,8 +12,25 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+/* Lenis smooth scroll core styles - prevents scroll hijacking and wheel fighting */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
 }
 
 .animate-gradient {
@@ -26,6 +43,7 @@ html {
   50% { background-position: 100% center; }
   100% { background-position: 0% center; }
 }
+
 
 body {
   background: #050505;
@@ -66,14 +84,15 @@ canvas {
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-33.333333%); }
+  0% { transform: translate3d(0%, 0, 0); }
+  100% { transform: translate3d(-33.333333%, 0, 0); }
 }
 
 @keyframes marquee-ticker {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-33.333333%); }
+  0% { transform: translate3d(0%, 0, 0); }
+  100% { transform: translate3d(-33.333333%, 0, 0); }
 }
+
 
 /* Hide scrollbar for carousel */
 .no-scrollbar::-webkit-scrollbar { display: none; }
