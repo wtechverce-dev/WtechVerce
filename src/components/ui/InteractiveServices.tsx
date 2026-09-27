@@ -18,26 +18,32 @@ export function InteractiveServices() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isHoveringSection, setIsHoveringSection] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    // Detect touch device — disable custom cursor + floating image on mobile
+    setIsTouchDevice("ontouchstart" in window || navigator.maxTouchPoints > 0);
+  }, []);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePos({ x: e.clientX, y: e.clientY });
     };
 
-    if (isHoveringSection) {
+    if (isHoveringSection && !isTouchDevice) {
       window.addEventListener("mousemove", handleMouseMove);
     }
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, [isHoveringSection]);
+  }, [isHoveringSection, isTouchDevice]);
 
   return (
     <section
       ref={sectionRef}
-      className="py-32 bg-[#070D18] relative overflow-hidden cursor-none"
-      onMouseEnter={() => setIsHoveringSection(true)}
+      className={`py-20 md:py-32 bg-[#070D18] relative overflow-hidden ${!isTouchDevice ? "cursor-none" : ""}`}
+      onMouseEnter={() => !isTouchDevice && setIsHoveringSection(true)}
       onMouseLeave={() => {
         setIsHoveringSection(false);
         setHoveredIndex(null);
@@ -47,16 +53,16 @@ export function InteractiveServices() {
         {services.map((svc, i) => (
           <Link href={svc.href} key={i}>
             <div
-              className="group border-b border-white/10 py-10 md:py-14 relative"
+              className="group border-b border-white/10 py-8 md:py-14 relative"
               onMouseEnter={() => setHoveredIndex(i)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <motion.div
-                animate={{ x: hoveredIndex === i ? 40 : 0 }}
+                animate={{ x: hoveredIndex === i && !isTouchDevice ? 40 : 0 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
               >
                 <h3
-                  className={`text-5xl md:text-[7rem] font-black tracking-tighter transition-colors duration-300 ${
+                  className={`text-4xl sm:text-5xl md:text-[7rem] font-black tracking-tighter transition-colors duration-300 ${
                     hoveredIndex === i ? "text-white" : "text-white/10"
                   }`}
                 >
@@ -68,53 +74,57 @@ export function InteractiveServices() {
         ))}
       </div>
 
-      {/* Floating Image Reveal (Behind Cursor) */}
-      <AnimatePresence>
-        {hoveredIndex !== null && isHoveringSection && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
-            animate={{ opacity: 1, scale: 1, rotate: 0 }}
-            exit={{ opacity: 0, scale: 0.8, rotate: 5 }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-            className="fixed top-0 left-0 w-[300px] h-[380px] md:w-[400px] md:h-[480px] pointer-events-none rounded-[2rem] overflow-hidden shadow-2xl z-40 border-4 border-[#333333]"
-            style={{
-              x: mousePos.x - 200, // Roughly center horizontally
-              y: mousePos.y - 240, // Roughly center vertically
-            }}
-          >
-            <Image
-              src={services[hoveredIndex].image}
-              alt={services[hoveredIndex].title}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 300px, 400px"
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Floating Image Reveal (Desktop/hover only) */}
+      {!isTouchDevice && (
+        <AnimatePresence>
+          {hoveredIndex !== null && isHoveringSection && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              exit={{ opacity: 0, scale: 0.8, rotate: 5 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              className="fixed top-0 left-0 w-[300px] h-[380px] md:w-[400px] md:h-[480px] pointer-events-none rounded-[2rem] overflow-hidden shadow-2xl z-40 border-4 border-[#333333]"
+              style={{
+                x: mousePos.x - 200,
+                y: mousePos.y - 240,
+              }}
+            >
+              <Image
+                src={services[hoveredIndex].image}
+                alt={services[hoveredIndex].title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 300px, 400px"
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      )}
 
-      {/* Custom Lime Green Cursor */}
-      <AnimatePresence>
-        {isHoveringSection && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed top-0 left-0 pointer-events-none z-50 flex items-center justify-center"
-            style={{
-              x: mousePos.x,
-              y: mousePos.y,
-              translateX: "-50%",
-              translateY: "-50%",
-            }}
-          >
-            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-gradient-to-br from-[#FD4F00] to-[#6C24FA] flex items-center justify-center shadow-2xl">
-              <ArrowUpRight className="w-8 h-8 md:w-10 md:h-10 text-white stroke-[3]" />
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Custom Cursor (Desktop only) */}
+      {!isTouchDevice && (
+        <AnimatePresence>
+          {isHoveringSection && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed top-0 left-0 pointer-events-none z-50 flex items-center justify-center"
+              style={{
+                x: mousePos.x,
+                y: mousePos.y,
+                translateX: "-50%",
+                translateY: "-50%",
+              }}
+            >
+              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-gradient-to-br from-[#FD4F00] to-[#6C24FA] flex items-center justify-center shadow-2xl">
+                <ArrowUpRight className="w-8 h-8 md:w-10 md:h-10 text-white stroke-[3]" />
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      )}
     </section>
   );
 }

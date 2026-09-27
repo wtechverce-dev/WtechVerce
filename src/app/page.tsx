@@ -461,7 +461,7 @@ export default function Home() {
 
             {/* Content & Social — with background image */}
             <FadeIn delay={0.2} className="md:col-span-8">
-              <div className="rounded-[2.5rem] relative overflow-hidden h-[360px] group hover:border-[#FD4F00]/20 transition-colors duration-500">
+              <div className="rounded-[2.5rem] relative overflow-hidden min-h-[300px] md:h-[360px] group hover:border-[#FD4F00]/20 transition-colors duration-500">
                 {/* Background image */}
                 <img
                   src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&fit=crop&w=1000&q=80"
@@ -473,13 +473,13 @@ export default function Home() {
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#070D18] via-[#070D18]/80 to-transparent" />
                 {/* Content */}
-                <div className="relative z-10 p-10 h-full flex items-center gap-8">
-                  <motion.div whileHover={{ scale: 1.1 }} className="w-16 h-16 rounded-2xl bg-[#FD4F00]/20 flex items-center justify-center text-[#FD4F00] shrink-0">
+                <div className="relative z-10 p-7 md:p-10 h-full flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-8">
+                  <motion.div whileHover={{ scale: 1.1 }} className="w-14 h-14 rounded-2xl bg-[#FD4F00]/20 flex items-center justify-center text-[#FD4F00] shrink-0">
                     <Megaphone className="w-7 h-7" />
                   </motion.div>
                   <div>
-                    <h3 className="text-3xl font-black text-white mb-4">Content & Social Media</h3>
-                    <p className="text-gray-300 text-lg leading-relaxed">Content that builds brand recognition and feeds your funnel. Blog posts and guides that answer real buyer questions.</p>
+                    <h3 className="text-2xl md:text-3xl font-black text-white mb-3">Content & Social Media</h3>
+                    <p className="text-gray-300 text-base md:text-lg leading-relaxed">Content that builds brand recognition and feeds your funnel. Blog posts and guides that answer real buyer questions.</p>
                   </div>
                 </div>
               </div>
@@ -585,9 +585,11 @@ export default function Home() {
         </div>
 
 
-        <div className="max-w-7xl mx-auto px-6 md:px-12 mb-10 flex justify-between items-end">
-          <FadeIn><TextRevealHeading as="h2" className="text-5xl font-black text-white">Portfolio</TextRevealHeading></FadeIn>
-          <PillBtn href="/portfolio"><span className="flex items-center gap-2">View All <ArrowRight className="w-4 h-4" /></span></PillBtn>
+        <div className="max-w-7xl mx-auto px-6 md:px-12 mb-10 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
+          <FadeIn><TextRevealHeading as="h2" className="text-4xl sm:text-5xl font-black text-white">Portfolio</TextRevealHeading></FadeIn>
+          <div className="shrink-0">
+            <PillBtn href="/portfolio"><span className="flex items-center gap-2">View All <ArrowRight className="w-4 h-4" /></span></PillBtn>
+          </div>
         </div>
 
         <div className="flex gap-6 px-6 md:px-12 pb-20 overflow-x-auto snap-x snap-mandatory no-scrollbar">
@@ -947,10 +949,12 @@ export default function Home() {
 
           {/* Big heading */}
           <FadeIn delay={0.1}>
-            <TextRevealHeading as="h2" className="text-[clamp(3.5rem,9vw,9rem)] font-black text-white leading-[0.95] tracking-[-0.04em] text-center">
-              LET'S WORK<br />
-              <span className="text-transparent" style={{ WebkitTextStroke: "2px rgba(255,255,255,0.2)" }}>TOGETHER</span>
-            </TextRevealHeading>
+            <div className="overflow-hidden">
+              <TextRevealHeading as="h2" className="text-[clamp(2.5rem,8vw,9rem)] font-black text-white leading-[0.95] tracking-[-0.04em] text-center">
+                LET'S WORK<br />
+                <span className="text-transparent" style={{ WebkitTextStroke: "2px rgba(255,255,255,0.2)" }}>TOGETHER</span>
+              </TextRevealHeading>
+            </div>
           </FadeIn>
 
           <FadeIn delay={0.2}>
