@@ -177,44 +177,23 @@ export default function Home() {
       <section className="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden">
         <HeroBackground />
         <div className="relative z-10 max-w-5xl mx-auto px-6 w-full pt-48 pb-24 flex flex-col items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-[#FD4F00]/30 bg-[#FD4F00]/10 backdrop-blur-sm mb-10 hover:bg-[#FD4F00]/20 transition-colors"
-          >
+          <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-[#FD4F00]/30 bg-[#FD4F00]/10 backdrop-blur-sm mb-10 hover:bg-[#FD4F00]/20 transition-colors">
             <span className="w-2 h-2 rounded-full bg-[#FD4F00] animate-pulse" />
             <span className="text-[#FD4F00] text-sm font-semibold tracking-widest uppercase">
-              <ScrambleText text="Development & Marketing Agency" delay={0.5} duration={1.5} />
+              <ScrambleText text="Development & Marketing Agency" delay={0.2} duration={1} />
             </span>
-          </motion.div>
-
-          <div className="mb-8 w-full flex flex-col items-center">
-            <h1 className="sr-only">Next-Gen Custom Web Development &amp; Strategic Digital Marketing Services</h1>
-            <div className="overflow-hidden">
-              <motion.div
-                initial={{ y: "110%" }} animate={{ y: 0 }}
-                transition={{ duration: 0.5, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
-                className="text-[clamp(2.8rem,6vw,6.5rem)] font-black leading-[1.05] tracking-[-0.04em] text-white"
-                aria-hidden="true"
-              >
-                Web Development &
-              </motion.div>
-            </div>
-            <div className="overflow-hidden py-2">
-              <motion.div
-                initial={{ y: "110%" }} animate={{ y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="text-[clamp(2.8rem,6vw,6.5rem)] font-black leading-[1.05] tracking-[-0.04em] text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] via-[#ff6a2a] to-[#FD4F00] bg-[length:200%] animate-gradient"
-                aria-hidden="true"
-              >
-                Digital Marketing
-              </motion.div>
-            </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-col items-center gap-8 max-w-3xl text-center"
-          >
+          <div className="mb-8 w-full flex flex-col items-center">
+            <h1 className="text-[clamp(2.8rem,6vw,6.5rem)] font-black leading-[1.05] tracking-[-0.04em] text-center">
+              <span className="block text-white">Web Development &amp;</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] via-[#ff6a2a] to-[#FD4F00] bg-[length:200%] animate-gradient">
+                Digital Marketing
+              </span>
+            </h1>
+          </div>
+
+          <div className="flex flex-col items-center gap-8 max-w-3xl text-center">
             <p className="text-gray-400 text-lg md:text-xl leading-relaxed">
               We are a premier <Link href="/services/web-development" className="text-white hover:text-[#FD4F00]">custom web development agency</Link> and growth partner, delivering professional <Link href="/services/seo" className="text-white hover:text-[#FD4F00]">digital marketing services for startups</Link>, custom software, and high-converting ecommerce platforms to scale your business.
             </p>
@@ -226,28 +205,26 @@ export default function Home() {
                 View Our Work <ArrowUpRight className="w-4 h-4" />
               </Button>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.9 }}
-            className="flex flex-wrap justify-center gap-3 mt-16 max-w-4xl"
-          >
-            {["Custom Software", "Web Development", "SaaS Development", "WordPress", "Ecommerce", "UI/UX Design", "SEO Services", "Website Redesign"].map((tag, i) => (
-              <motion.span key={tag} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.4, delay: 0.9 + i * 0.07 }} whileHover={{ y: -3, scale: 1.05 }}
-                className="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-white/60 text-sm font-medium backdrop-blur-sm hover:border-[#FD4F00]/50 hover:text-[#FD4F00] hover:bg-[#FD4F00]/10 transition-all cursor-default">
+          <div className="flex flex-wrap justify-center gap-3 mt-16 max-w-4xl">
+            {["Custom Software", "Web Development", "SaaS Development", "WordPress", "Ecommerce", "UI/UX Design", "SEO Services", "Website Redesign"].map((tag) => (
+              <span
+                key={tag}
+                className="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-white/60 text-sm font-medium backdrop-blur-sm hover:border-[#FD4F00]/50 hover:text-[#FD4F00] hover:bg-[#FD4F00]/10 transition-all cursor-default"
+              >
                 {tag}
-              </motion.span>
+              </span>
             ))}
-          </motion.div>
+          </div>
         </div>
 
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }}
-          className="absolute bottom-0 left-0 w-full z-10 border-t border-white/8 py-4 bg-white/[0.02] backdrop-blur-sm">
+        <div className="absolute bottom-0 left-0 w-full z-10 border-t border-white/8 py-4 bg-white/[0.02] backdrop-blur-sm">
           <MarqueeTicker
             items={["CUSTOM SOFTWARE", "WEB DEVELOPMENT", "SAAS PLATFORMS", "UI/UX DESIGN", "ECOMMERCE", "SEO", "WORDPRESS"]}
             speed={30} itemClassName="text-white/40"
           />
-        </motion.div>
+        </div>
       </section>
 
       {/* TECH TICKER */}
