@@ -41,6 +41,8 @@ export function ImageMarqueeSection() {
 
   useEffect(() => {
     if (!isInView) return;
+    // On mobile, skip continuous JS card transform recalculation to save CPU
+    if (typeof window !== "undefined" && window.innerWidth < 768) return;
 
     let animId: number;
 

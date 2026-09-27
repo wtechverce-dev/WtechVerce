@@ -192,7 +192,7 @@ export default function Home() {
             <div className="overflow-hidden">
               <motion.div
                 initial={{ y: "110%" }} animate={{ y: 0 }}
-                transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 0.5, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
                 className="text-[clamp(2.8rem,6vw,6.5rem)] font-black leading-[1.05] tracking-[-0.04em] text-white"
                 aria-hidden="true"
               >
@@ -202,7 +202,7 @@ export default function Home() {
             <div className="overflow-hidden py-2">
               <motion.div
                 initial={{ y: "110%" }} animate={{ y: 0 }}
-                transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                 className="text-[clamp(2.8rem,6vw,6.5rem)] font-black leading-[1.05] tracking-[-0.04em] text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] via-[#ff6a2a] to-[#FD4F00] bg-[length:200%] animate-gradient"
                 aria-hidden="true"
               >
@@ -212,7 +212,7 @@ export default function Home() {
           </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.55 }}
+            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-col items-center gap-8 max-w-3xl text-center"
           >
             <p className="text-gray-400 text-lg md:text-xl leading-relaxed">
@@ -302,12 +302,8 @@ export default function Home() {
               {/* ANIMATED SPINNING BADGE */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
                 <div className="relative w-40 h-40 rounded-full bg-gradient-to-br from-[#FD4F00] to-[#6C24FA] flex items-center justify-center shadow-[0_0_40px_rgba(253,79,0,0.4)]">
-                  {/* Spinning text inside the colored circle */}
-                  <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                    className="absolute inset-0"
-                  >
+                  {/* Spinning text inside the colored circle - pure GPU CSS */}
+                  <div className="absolute inset-0 animate-[spin_20s_linear_infinite]">
                     <svg viewBox="0 0 160 160" className="w-full h-full" style={{ transform: "rotate(-90deg)" }}>
                       <defs>
                         <path id="badge-text" d="M 80,80 m -62,0 a 62,62 0 1,1 124,0 a 62,62 0 1,1 -124,0" />
@@ -316,7 +312,7 @@ export default function Home() {
                         <textPath href="#badge-text">WTECHVERCE • IT SOLUTION • WTECHVERCE • IT SOLUTION • </textPath>
                       </text>
                     </svg>
-                  </motion.div>
+                  </div>
                   
                   {/* Inner white circle with logo */}
                   <div className="relative z-10 w-24 h-24 bg-white rounded-full flex items-center justify-center overflow-hidden p-3 shadow-lg">
@@ -921,12 +917,8 @@ export default function Home() {
                 <Link href="/contact">
                   <div className="relative w-44 h-44 rounded-full bg-gradient-to-br from-[#FD4F00] to-[#6C24FA] flex items-center justify-center shadow-[0_0_60px_rgba(253,79,0,0.5)] group hover:scale-105 transition-transform duration-300 cursor-pointer">
                     
-                    {/* Spinning text */}
-                    <motion.div
-                      animate={{ rotate: 360 }}
-                      transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                      className="absolute inset-0"
-                    >
+                    {/* Spinning text - pure GPU CSS */}
+                    <div className="absolute inset-0 animate-[spin_20s_linear_infinite]">
                       <svg viewBox="0 0 176 176" className="w-full h-full" style={{ transform: "rotate(-90deg)" }}>
                         <defs>
                           <path id="cta-text" d="M 88,88 m -70,0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0" />
@@ -935,7 +927,7 @@ export default function Home() {
                           <textPath href="#cta-text">START PROJECT • WTECHVERCE • GET IN TOUCH • WTECHVERCE • </textPath>
                         </text>
                       </svg>
-                    </motion.div>
+                    </div>
 
                     {/* Inner white circle with logo */}
                     <div className="relative z-10 w-28 h-28 bg-white rounded-full flex items-center justify-center shadow-lg overflow-hidden p-4">

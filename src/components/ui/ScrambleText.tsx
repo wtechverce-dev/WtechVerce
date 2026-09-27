@@ -25,6 +25,12 @@ export default function ScrambleText({
     const el = ref.current;
     if (!el) return;
 
+    // Skip scramble animation on mobile to save CPU & avoid delaying First Contentful Paint
+    if (typeof window !== "undefined" && window.innerWidth < 768) {
+      el.textContent = text;
+      return;
+    }
+
     const letters = text.split("");
     const totalFrames = Math.round(duration * 60);
     const revealAt = (i: number) =>

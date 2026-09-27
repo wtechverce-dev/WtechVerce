@@ -137,12 +137,12 @@ export default function RootLayout({
         <meta name="theme-color" content="#050505" />
         <meta name="color-scheme" content="dark" />
         <JsonLd />
-        {/* Google Analytics */}
+        {/* Google Analytics - load on browser idle to protect initial mobile performance */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-EGLJGCFRP6"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
