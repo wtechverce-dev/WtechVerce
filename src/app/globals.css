@@ -33,9 +33,11 @@ html.lenis, html.lenis body {
   pointer-events: none;
 }
 
-.animate-gradient {
-  animation: gradient-shift 4s ease infinite;
-  background-size: 200% auto;
+@media (min-width: 768px) {
+  .animate-gradient {
+    animation: gradient-shift 6s ease infinite;
+    background-size: 200% auto;
+  }
 }
 
 @keyframes gradient-shift {
@@ -98,19 +100,19 @@ canvas {
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-/* Slow spin for badge */
+/* Slow spin for badge - GPU composited */
 @keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from { transform: rotate3d(0, 0, 1, 0deg); }
+  to { transform: rotate3d(0, 0, 1, 360deg); }
 }
-.animate-spin-slow { animation: spin-slow 12s linear infinite; }
+.animate-spin-slow { animation: spin-slow 12s linear infinite; will-change: transform; }
 
-/* Float animation */
+/* Float animation - GPU composited */
 @keyframes float-y {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
+  0%, 100% { transform: translate3d(0, 0px, 0); }
+  50% { transform: translate3d(0, -12px, 0); }
 }
-.animate-float { animation: float-y 4s ease-in-out infinite; }
+.animate-float { animation: float-y 4s ease-in-out infinite; will-change: transform; }
 
 /* ─── TEXT REVEAL ANIMATION SYSTEM ──────────────────────────────────────────
    BOX-3 scroll-driven clip-path reveal — global, reusable.

@@ -59,6 +59,7 @@ export default function Navbar() {
             width={400}
             height={140}
             priority
+            sizes="(max-width: 768px) 180px, 320px"
             className={`object-contain transition-all duration-500 ${isScrolled ? "h-16 w-auto" : "h-28 md:h-32 w-auto"}`}
           />
         </Link>
