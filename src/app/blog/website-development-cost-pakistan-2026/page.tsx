@@ -22,13 +22,26 @@ export default function BlogPostCost() {
           "@type": "Article",
           "headline": "Website Development Cost in Pakistan (2026 Guide)",
           "description": "A complete, transparent guide on the cost of building a custom website, e-commerce store, or SaaS platform in Pakistan in 2026.",
+          "image": "https://wtechverce.com/og-image.png",
+          "datePublished": "2026-08-07",
+          "dateModified": "2026-10-08",
           "author": {
             "@type": "Organization",
-            "name": "WTechVerce"
+            "name": "WTechVerce",
+            "url": "https://wtechverce.com"
           },
           "publisher": {
             "@type": "Organization",
-            "name": "WTechVerce"
+            "name": "WTechVerce",
+            "url": "https://wtechverce.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://wtechverce.com/wtech.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://wtechverce.com/blog/website-development-cost-pakistan-2026"
           }
         })}
       </Script>

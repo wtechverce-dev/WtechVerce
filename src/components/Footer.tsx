@@ -65,7 +65,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-white/50 text-base md:text-lg leading-relaxed max-w-sm font-medium">
-              A premium digital agency engineering futuristic web experiences, e-commerce solutions, and conversion-driven brands.
+              A web and software development company building custom applications, scalable SaaS platforms, and high-performance digital products for global businesses.
             </p>
           </div>
 
@@ -97,7 +97,7 @@ export default function Footer() {
             <div>
               <h4 className="text-white font-black text-sm tracking-[0.2em] uppercase mb-6 opacity-40">Company</h4>
               <ul className="flex flex-col gap-4">
-                {[["Services Hub", "/services"], ["Portfolio", "/portfolio"], ["Process", "/process"], ["Contact", "/contact"]].map(([label, href]) => (
+                {[["Services Hub", "/services"], ["Portfolio", "/portfolio"], ["Process", "/process"], ["Blog", "/blog"], ["Contact", "/contact"]].map(([label, href]) => (
                   <li key={label}>
                     <Link href={href as string} className="text-white/60 hover:text-white hover:translate-x-1 transition-all inline-block font-medium text-sm">
                       {label}

@@ -1,20 +1,18 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Start Your Project Today",
+  title: "Contact Us — Hire Web & Software Developers | WTechVerce",
   description:
-    "Ready to build something great? Contact WTechVerce to discuss your web development, SaaS, or AI project. We respond within 24 hours. Let's build together.",
+    "Ready to build custom software, a SaaS product, or a high-performance web app? Contact WTechVerce. We serve clients across the US, UK, and worldwide. Free consultation.",
   keywords: [
-    "contact web development agency",
-    "hire web developers",
-    "start a web project",
-    "get a website quote",
-    "SaaS development inquiry",
-    "AI development contact",
+    "hire custom software developers",
+    "hire web developers US UK",
+    "contact web development company",
+    "offshore software development team",
+    "custom software development quote",
+    "SaaS development consultation",
     "WTechVerce contact",
-    "web agency Pakistan",
-    "hire full stack team",
-    "digital agency quote",
+    "hire full stack engineering team",
   ],
   alternates: {
     canonical: "https://wtechverce.com/contact",

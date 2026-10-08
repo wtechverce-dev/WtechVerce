@@ -2,43 +2,43 @@ import type { Metadata } from "next";
 import GSAPScrollAnimations from "@/components/ui/GSAPScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "Web Development, SaaS & AI Services",
+  title: "Web & Software Development Services | WTechVerce",
   description:
-    "WTechVerce offers premium Web Development, SaaS Platform Building, AI Integration, Custom Software, and UI/UX Design services. Get expert developers to scale your business.",
+    "WTechVerce offers custom software development, web application engineering, SaaS platform development, eCommerce solutions, and UI/UX design for global businesses.",
   keywords: [
+    "custom software development services",
     "web development services",
     "SaaS development company",
-    "AI solutions agency",
+    "custom web application development",
     "UI UX design services",
-    "custom software development",
-    "Next.js development agency",
-    "mobile app development",
-    "hire full stack developers",
-    "React developers for hire",
-    "Node.js backend development",
+    "enterprise software development",
+    "Next.js development company",
+    "hire software developers",
+    "React development agency",
+    "offshore development team",
   ],
   alternates: {
     canonical: "https://wtechverce.com/services",
   },
   openGraph: {
-    title: "Our Services | WTechVerce",
+    title: "Web & Software Development Services | WTechVerce",
     description:
-      "Explore WTechVerce's full range of digital services — from Web Apps and SaaS to AI-powered solutions and UI/UX Design.",
+      "Explore WTechVerce's full range of engineering services — from custom software and SaaS platforms to full-stack web applications and UI/UX design.",
     url: "https://wtechverce.com/services",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "WTechVerce Services - Web, SaaS, AI, Design",
+        alt: "WTechVerce - Web & Software Development Services",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Our Services | WTechVerce",
+    title: "Web & Software Development Services | WTechVerce",
     description:
-      "From Web Development to AI Solutions — WTechVerce delivers premium digital services for startups and enterprises.",
+      "Explore WTechVerce's full range of engineering services — from custom software and SaaS platforms to full-stack web applications and UI/UX design.",
     images: ["/og-image.png"],
   },
 };

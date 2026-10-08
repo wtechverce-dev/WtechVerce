@@ -22,10 +22,12 @@ export default function BlogCustomWebCost() {
           "@type": "Article",
           "headline": "How Much Does Custom Website Development Cost in 2026?",
           "description": "Transparent breakdown of custom website development costs in 2026 — real price ranges for different website types.",
+          "image": "https://wtechverce.com/og-image.png",
           "datePublished": "2026-09-17",
-          "dateModified": "2026-09-17",
-          "author": { "@type": "Organization", "name": "WTechVerce" },
-          "publisher": { "@type": "Organization", "name": "WTechVerce", "url": "https://wtechverce.com" }
+          "dateModified": "2026-10-08",
+          "author": { "@type": "Organization", "name": "WTechVerce", "url": "https://wtechverce.com" },
+          "publisher": { "@type": "Organization", "name": "WTechVerce", "url": "https://wtechverce.com", "logo": { "@type": "ImageObject", "url": "https://wtechverce.com/wtech.png" } },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://wtechverce.com/blog/custom-website-development-cost" }
         })}
       </Script>
       <Script id="faq-schema" type="application/ld+json" strategy="beforeInteractive">
@@ -165,7 +167,7 @@ export default function BlogCustomWebCost() {
           <p>Yes — if you need performance, scalability, and custom features. A custom site built on Next.js will consistently outperform a WordPress site in speed, SEO, and reliability, which translates to more traffic and more leads over time.</p>
 
           <h3>How long does custom website development take?</h3>
-          <p>A simple business website takes 2–4 weeks. A web application takes 6–12 weeks. A full SaaS platform MVP typically takes 10–20 weeks. See our <Link href="/blog/how-long-does-website-development-take">complete guide on website development timelines</Link>.</p>
+          <p>A simple business website takes 2–4 weeks. A web application takes 6–12 weeks. A full SaaS platform MVP typically takes 10–20 weeks. Explore our <Link href="/process">development process and delivery milestones</Link>.</p>
         </div>
 
         {/* Related Articles */}
@@ -174,7 +176,7 @@ export default function BlogCustomWebCost() {
           <div className="grid sm:grid-cols-2 gap-4">
             {[
               { title: "WordPress vs Custom Website: Which Is Better?", href: "/blog/wordpress-vs-custom-website" },
-              { title: "What Is Custom Web Development?", href: "/blog/what-is-custom-web-development" },
+              { title: "What Is Custom Software Development? Complete Guide", href: "/blog/what-is-custom-software-development" },
             ].map((link) => (
               <Link key={link.href} href={link.href} className="bg-[#0A0F1A] border border-white/5 hover:border-white/20 rounded-xl p-4 flex items-center gap-3 transition-all group">
                 <ArrowRight className="w-4 h-4 text-[#FD4F00] shrink-0 group-hover:translate-x-1 transition-transform" />

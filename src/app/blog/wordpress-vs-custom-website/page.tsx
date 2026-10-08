@@ -22,10 +22,12 @@ export default function BlogPostWpVsCustom() {
           "@type": "Article",
           "headline": "WordPress vs Custom Website: Which Is Better for Your Business?",
           "description": "WordPress vs custom website — complete 2026 comparison covering speed, SEO, cost, and scalability to help you decide.",
+          "image": "https://wtechverce.com/og-image.png",
           "datePublished": "2026-08-02",
-          "dateModified": "2026-09-17",
-          "author": { "@type": "Organization", "name": "WTechVerce" },
-          "publisher": { "@type": "Organization", "name": "WTechVerce", "url": "https://wtechverce.com" }
+          "dateModified": "2026-10-08",
+          "author": { "@type": "Organization", "name": "WTechVerce", "url": "https://wtechverce.com" },
+          "publisher": { "@type": "Organization", "name": "WTechVerce", "url": "https://wtechverce.com", "logo": { "@type": "ImageObject", "url": "https://wtechverce.com/wtech.png" } },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://wtechverce.com/blog/wordpress-vs-custom-website" }
         })}
       </Script>
       <Script id="faq-schema" type="application/ld+json" strategy="beforeInteractive">
@@ -204,7 +206,7 @@ export default function BlogPostWpVsCustom() {
           <div className="grid sm:grid-cols-2 gap-4">
             {[
               { title: "How Much Does Custom Website Development Cost?", href: "/blog/custom-website-development-cost" },
-              { title: "Custom Web Development for Small Businesses", href: "/blog/custom-web-development-small-business" },
+              { title: "What Is Custom Software Development? Complete Guide", href: "/blog/what-is-custom-software-development" },
             ].map((link) => (
               <Link key={link.href} href={link.href} className="bg-[#0A0F1A] border border-white/5 hover:border-white/20 rounded-xl p-4 flex items-center gap-3 transition-all group">
                 <ArrowRight className="w-4 h-4 text-[#FD4F00] shrink-0 group-hover:translate-x-1 transition-transform" />
