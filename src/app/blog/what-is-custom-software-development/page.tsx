@@ -22,10 +22,12 @@ export default function BlogWhatIsCustomSoftware() {
           "@type": "Article",
           "headline": "What Is Custom Software Development? Complete Guide 2026",
           "description": "Learn what custom software development is, how it works, what it costs, and when your business needs it.",
+          "image": "https://wtechverce.com/og-image.png",
           "datePublished": "2026-09-17",
-          "dateModified": "2026-09-17",
-          "author": { "@type": "Organization", "name": "WTechVerce" },
-          "publisher": { "@type": "Organization", "name": "WTechVerce", "url": "https://wtechverce.com" }
+          "dateModified": "2026-10-08",
+          "author": { "@type": "Organization", "name": "WTechVerce", "url": "https://wtechverce.com" },
+          "publisher": { "@type": "Organization", "name": "WTechVerce", "url": "https://wtechverce.com", "logo": { "@type": "ImageObject", "url": "https://wtechverce.com/wtech.png" } },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://wtechverce.com/blog/what-is-custom-software-development" }
         })}
       </Script>
       <Script id="faq-schema" type="application/ld+json" strategy="beforeInteractive">
@@ -202,7 +204,7 @@ export default function BlogWhatIsCustomSoftware() {
             </div>
           </div>
           <p>
-            Read our full guide on <Link href="/blog/custom-software-development-cost">custom software development costs</Link> for a detailed breakdown.
+            Read our full guide on <Link href="/blog/custom-website-development-cost">custom website development costs</Link> for a detailed breakdown.
           </p>
 
           <h2>Frequently Asked Questions</h2>
@@ -222,8 +224,8 @@ export default function BlogWhatIsCustomSoftware() {
           <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Related Guides</h3>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
-              { title: "Custom Software vs Off-the-Shelf: Which Is Better?", href: "/blog/custom-software-vs-off-the-shelf" },
-              { title: "When Does Your Business Need Custom Software?", href: "/blog/when-does-business-need-custom-software" },
+              { title: "WordPress vs Custom Website: Which Is Right For You?", href: "/blog/wordpress-vs-custom-website" },
+              { title: "Custom Software Development Services by WTechVerce", href: "/services/software-development" },
             ].map((link) => (
               <Link key={link.href} href={link.href} className="bg-[#0A0F1A] border border-white/5 hover:border-white/20 rounded-xl p-4 flex items-center gap-3 transition-all group">
                 <ArrowRight className="w-4 h-4 text-[#FD4F00] shrink-0 group-hover:translate-x-1 transition-transform" />

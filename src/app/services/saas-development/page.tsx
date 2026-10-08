@@ -6,10 +6,30 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "SaaS Development Services | WTechVerce",
-  description: "End-to-end SaaS development company. We build multi-tenant, secure, and highly scalable SaaS products with subscription billing integration.",
+  title: "SaaS Development Company | Build Your SaaS Product | WTechVerce",
+  description: "WTechVerce is a SaaS development company building multi-tenant, subscription-based software products. From MVP to enterprise-grade SaaS — we handle architecture, billing, and scaling.",
+  keywords: [
+    "saas development company",
+    "saas product development",
+    "saas mvp development",
+    "custom saas development services",
+    "multi-tenant saas development",
+    "saas software development agency",
+    "saas startup development",
+  ],
   alternates: {
     canonical: "https://wtechverce.com/services/saas-development",
+  },
+  openGraph: {
+    title: "SaaS Development Company | Build Your SaaS Product | WTechVerce",
+    description: "WTechVerce is a SaaS development company building multi-tenant, subscription-based software products. From MVP to enterprise-grade SaaS — we handle architecture, billing, and scaling.",
+    url: "https://wtechverce.com/services/saas-development",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SaaS Development Company | Build Your SaaS Product | WTechVerce",
+    description: "WTechVerce is a SaaS development company building multi-tenant, subscription-based software products. From MVP to enterprise-grade SaaS — we handle architecture, billing, and scaling.",
   },
 };
 

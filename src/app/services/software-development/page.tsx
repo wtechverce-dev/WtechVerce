@@ -7,9 +7,9 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Custom Software Development Services | WTechVerce",
+  title: "Custom Software Development Company | WTechVerce",
   description:
-    "Looking for reliable custom software development? WTechVerce builds scalable, high-performance software solutions tailored to your business needs. Contact us today!",
+    "WTechVerce is a custom software development company delivering scalable business software, enterprise applications, and automation tools. Hire dedicated developers for your project.",
   keywords: [
     "custom software development",
     "custom software development services",
@@ -23,17 +23,17 @@ export const metadata: Metadata = {
     canonical: "https://wtechverce.com/services/software-development",
   },
   openGraph: {
-    title: "Custom Software Development Services | WTechVerce",
+    title: "Custom Software Development Company | WTechVerce",
     description:
-      "Looking for reliable custom software development? WTechVerce builds scalable, high-performance software solutions tailored to your business needs. Contact us today!",
+      "WTechVerce is a custom software development company delivering scalable business software, enterprise applications, and automation tools. Hire dedicated developers for your project.",
     url: "https://wtechverce.com/services/software-development",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Software Development Services | WTechVerce",
+    title: "Custom Software Development Company | WTechVerce",
     description:
-      "Looking for reliable custom software development? WTechVerce builds scalable, high-performance software solutions tailored to your business needs. Contact us today!",
+      "WTechVerce is a custom software development company delivering scalable business software, enterprise applications, and automation tools. Hire dedicated developers for your project.",
   },
 };
 
