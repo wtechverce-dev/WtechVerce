@@ -1,5 +1,4 @@
 "use client";
-import Script from "next/script";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
@@ -146,28 +145,6 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#02050A] text-white overflow-x-hidden">
-      <Script id="json-ld-organization" type="application/ld+json" strategy="beforeInteractive">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "WTechVerce",
-          "url": "https://wtechverce.com",
-          "logo": "https://wtechverce.com/wtechvercefavicon.jpeg",
-          "description": "A specialized web development and software development company driving digital transformation for modern businesses.",
-          "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "PK"
-          }
-        })}
-      </Script>
-      <Script id="json-ld-website" type="application/ld+json" strategy="beforeInteractive">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          "name": "WTechVerce",
-          "url": "https://wtechverce.com"
-        })}
-      </Script>
       <NoiseTexture />
       <GSAPScrollAnimations />
 
@@ -180,22 +157,22 @@ export default function Home() {
           <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-[#FD4F00]/30 bg-[#FD4F00]/10 backdrop-blur-sm mb-10 hover:bg-[#FD4F00]/20 transition-colors">
             <span className="w-2 h-2 rounded-full bg-[#FD4F00] animate-pulse" />
             <span className="text-[#FD4F00] text-sm font-semibold tracking-widest uppercase">
-              <ScrambleText text="Development & Marketing Agency" delay={0.2} duration={1} />
+              <ScrambleText text="Web & Software Development" delay={0.2} duration={1} />
             </span>
           </div>
 
           <div className="mb-8 w-full flex flex-col items-center">
             <h1 className="text-[clamp(2.8rem,6vw,6.5rem)] font-black leading-[1.05] tracking-[-0.04em] text-center">
-              <span className="block text-white">Web Development &amp;</span>
+              <span className="block text-white">Web & Software</span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] via-[#ff6a2a] to-[#FD4F00] bg-[length:200%] animate-gradient">
-                Digital Marketing
+                Development Company
               </span>
             </h1>
           </div>
 
           <div className="flex flex-col items-center gap-8 max-w-3xl text-center">
             <p className="text-gray-400 text-lg md:text-xl leading-relaxed">
-              We are a premier <Link href="/services/web-development" className="text-white hover:text-[#FD4F00]">custom web development agency</Link> and growth partner, delivering professional <Link href="/services/seo" className="text-white hover:text-[#FD4F00]">digital marketing services for startups</Link>, custom software, and high-converting ecommerce platforms to scale your business.
+              We build <Link href="/services/software-development" className="text-white hover:text-[#FD4F00]">custom software</Link> and <Link href="/services/web-development" className="text-white hover:text-[#FD4F00]">high-performance web applications</Link> for startups and growing businesses — from SaaS products to eCommerce platforms and enterprise tools.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto mt-4">
               <Button href="/contact" variant="primary" size="lg" filled>

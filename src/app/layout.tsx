@@ -21,11 +21,11 @@ export const metadata: Metadata = {
   // 🚀 Core SEO 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
   metadataBase: new URL("https://wtechverce.com"),
   title: {
-    default: "Custom Web Development & Digital Marketing Agency | WTechVerce",
+    default: "Web & Software Development Company | WTechVerce",
     template: "%s | WTechVerce",
   },
   description:
-    "WTechVerce is a premier digital marketing and custom web development agency. We deliver high-performance website designs and expert SEO services to scale your business.",
+    "WTechVerce is a web and software development company building custom software, SaaS products, and high-performance web applications for businesses in the US, UK, and worldwide.",
   keywords: [
     "custom web development agency",
     "best custom web development agency",
@@ -58,15 +58,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://wtechverce.com",
     siteName: "WTechVerce",
-    title: "Custom Web Development & Digital Marketing Agency | WTechVerce",
+    title: "Web & Software Development Company | WTechVerce",
     description:
-      "WTechVerce is a premier digital marketing and custom web development agency. We deliver high-performance website designs and expert SEO services to scale your business.",
+      "WTechVerce is a web and software development company building custom software, SaaS products, and high-performance web applications for businesses in the US, UK, and worldwide.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "WTechVerce - Custom Web Development & Digital Marketing Agency",
+        alt: "WTechVerce - Web & Software Development Company",
         type: "image/png",
       },
     ],
@@ -77,9 +77,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@wtechverce",
     creator: "@wtechverce",
-    title: "Custom Web Development & Digital Marketing Agency | WTechVerce",
+    title: "Web & Software Development Company | WTechVerce",
     description:
-      "WTechVerce is a premier digital marketing and custom web development agency. We deliver high-performance website designs and expert SEO services to scale your business.",
+      "WTechVerce is a web and software development company building custom software, SaaS products, and high-performance web applications for businesses in the US, UK, and worldwide.",
     images: ["/og-image.png"],
   },
 
