@@ -46,7 +46,12 @@ export default function SaaSDevelopmentService() {
             "name": "WTechVerce"
           },
           "description": "Custom SaaS product development including multi-tenant architecture, billing integrations, and MVP creation.",
-          "areaServed": "Worldwide"
+          "areaServed": [
+            { "@type": "Country", "name": "United States" },
+            { "@type": "Country", "name": "United Kingdom" },
+            { "@type": "Country", "name": "Canada" },
+            { "@type": "Country", "name": "Australia" }
+          ]
         })}
       </Script>
       <Script id="faq-schema" type="application/ld+json" strategy="beforeInteractive">

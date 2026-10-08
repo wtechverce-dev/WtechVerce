@@ -51,7 +51,12 @@ export default function MobileAppDevelopmentService() {
             "url": "https://wtechverce.com"
           },
           "description": "Turn your ideas into successful mobile applications. We offer end-to-end mobile app development services for iOS and Android with seamless user experiences.",
-          "areaServed": "Worldwide"
+          "areaServed": [
+            { "@type": "Country", "name": "United States" },
+            { "@type": "Country", "name": "United Kingdom" },
+            { "@type": "Country", "name": "Canada" },
+            { "@type": "Country", "name": "Australia" }
+          ]
         })}
       </Script>
       <Script id="faq-schema" type="application/ld+json" strategy="beforeInteractive">

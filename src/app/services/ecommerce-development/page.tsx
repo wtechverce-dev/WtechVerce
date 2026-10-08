@@ -51,7 +51,12 @@ export default function EcommerceDevelopmentService() {
             "url": "https://wtechverce.com"
           },
           "description": "Grow your online business with our top-notch eCommerce website development services. We create secure, user-friendly, and high-converting online stores.",
-          "areaServed": "Worldwide",
+          "areaServed": [
+            { "@type": "Country", "name": "United States" },
+            { "@type": "Country", "name": "United Kingdom" },
+            { "@type": "Country", "name": "Canada" },
+            { "@type": "Country", "name": "Australia" }
+          ],
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "High-Converting eCommerce Website Development",

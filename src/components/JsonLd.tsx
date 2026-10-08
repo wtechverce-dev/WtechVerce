@@ -59,10 +59,12 @@ export default function JsonLd() {
     priceRange: "$$",
     currenciesAccepted: "USD, PKR",
     paymentAccepted: "Bank Transfer, PayPal",
-    areaServed: {
-      "@type": "Place",
-      name: "Worldwide",
-    },
+    areaServed: [
+      { "@type": "Country", "name": "United States" },
+      { "@type": "Country", "name": "United Kingdom" },
+      { "@type": "Country", "name": "Canada" },
+      { "@type": "Country", "name": "Australia" },
+    ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "WTechVerce Development Services",

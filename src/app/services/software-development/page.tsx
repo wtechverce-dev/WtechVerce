@@ -51,7 +51,12 @@ export default function SoftwareDevelopmentService() {
             "url": "https://wtechverce.com"
           },
           "description": "Looking for reliable custom software development? WTechVerce builds scalable, high-performance software solutions tailored to your business needs.",
-          "areaServed": "Worldwide"
+          "areaServed": [
+            { "@type": "Country", "name": "United States" },
+            { "@type": "Country", "name": "United Kingdom" },
+            { "@type": "Country", "name": "Canada" },
+            { "@type": "Country", "name": "Australia" }
+          ]
         })}
       </Script>
       <Script id="faq-schema" type="application/ld+json" strategy="beforeInteractive">

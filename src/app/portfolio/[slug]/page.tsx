@@ -126,11 +126,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${project.title} | WTechVerce Portfolio`,
+    title: `${project.title} — Case Study | WTechVerce`,
     description: project.description,
     alternates: {
       canonical: `https://wtechverce.com/portfolio/${project.slug}`,
-    }
+    },
+    openGraph: {
+      title: `${project.title} — Case Study | WTechVerce`,
+      description: project.description,
+      url: `https://wtechverce.com/portfolio/${project.slug}`,
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} — Case Study | WTechVerce`,
+      description: project.description,
+    },
   };
 }
 
@@ -151,13 +162,26 @@ export default async function ProjectPage({ params }: Props) {
           "@type": "Article",
           "headline": project.title,
           "description": project.description,
+          "image": "https://wtechverce.com/og-image.png",
+          "datePublished": "2026-09-17",
+          "dateModified": "2026-10-08",
           "author": {
             "@type": "Organization",
-            "name": "WTechVerce"
+            "name": "WTechVerce",
+            "url": "https://wtechverce.com"
           },
           "publisher": {
             "@type": "Organization",
-            "name": "WTechVerce"
+            "name": "WTechVerce",
+            "url": "https://wtechverce.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://wtechverce.com/wtech.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": `https://wtechverce.com/portfolio/${project.slug}`
           }
         })}
       </Script>

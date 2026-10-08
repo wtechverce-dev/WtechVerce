@@ -51,7 +51,12 @@ export default function SeoService() {
             "url": "https://wtechverce.com"
           },
           "description": "Boost your online visibility and drive organic traffic with our expert SEO services. We optimize your website to rank higher on Google search results.",
-          "areaServed": "Worldwide"
+          "areaServed": [
+            { "@type": "Country", "name": "United States" },
+            { "@type": "Country", "name": "United Kingdom" },
+            { "@type": "Country", "name": "Canada" },
+            { "@type": "Country", "name": "Australia" }
+          ]
         })}
       </Script>
       <Script id="faq-schema" type="application/ld+json" strategy="beforeInteractive">

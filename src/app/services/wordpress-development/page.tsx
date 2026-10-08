@@ -26,7 +26,12 @@ export default function WordPressDevelopmentService() {
             "name": "WTechVerce"
           },
           "description": "Custom WordPress development, including theme building, plugin integration, headless architecture, and advanced optimization.",
-          "areaServed": "Worldwide"
+          "areaServed": [
+            { "@type": "Country", "name": "United States" },
+            { "@type": "Country", "name": "United Kingdom" },
+            { "@type": "Country", "name": "Canada" },
+            { "@type": "Country", "name": "Australia" }
+          ]
         })}
       </Script>
       <Script id="faq-schema" type="application/ld+json" strategy="beforeInteractive">

@@ -26,7 +26,12 @@ export default function WebsiteRedesignService() {
             "name": "WTechVerce"
           },
           "description": "Strategic website overhauls to modernize aesthetics, improve performance, and boost conversions.",
-          "areaServed": "Worldwide"
+          "areaServed": [
+            { "@type": "Country", "name": "United States" },
+            { "@type": "Country", "name": "United Kingdom" },
+            { "@type": "Country", "name": "Canada" },
+            { "@type": "Country", "name": "Australia" }
+          ]
         })}
       </Script>
 
