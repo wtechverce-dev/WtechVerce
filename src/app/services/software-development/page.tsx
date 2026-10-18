@@ -235,6 +235,58 @@ export default function SoftwareDevelopmentService() {
         </div>
 
         
+        
+        {/* FLEXIBLE ENGAGEMENT MODELS */}
+        <div className="mb-32">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">Flexible Collaboration</span>
+            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-4">How to Hire Our Software Engineering Team</h2>
+            <p className="text-gray-400 text-base">
+              Whether you need to augment your existing in-house team or outsource full-cycle software delivery, we offer flexible engagement models tailored to your operating velocity.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Dedicated Developer Pods",
+                badge: "Staff Augmentation",
+                desc: "Hire dedicated senior full-stack engineers who integrate directly into your daily standups, Jira boards, and GitHub repos. Full time-zone alignment with US and UK teams.",
+                points: ["Direct developer communication", "Flexible month-to-month contracts", "Pre-vetted in Next.js, Node, Python"],
+              },
+              {
+                title: "End-to-End Turnkey Delivery",
+                badge: "Fixed-Scope or Milestone",
+                desc: "We take total ownership of your software product lifecycle — from discovery and UI/UX wireframing to production cloud deployment and post-launch SLAs.",
+                points: ["Milestone-based delivery", "Zero scope ambiguity", "Complete architecture documentation"],
+              },
+              {
+                title: "MVP Sprints for Startups",
+                badge: "Rapid 8–12 Weeks",
+                desc: "Engineered specifically for bootstrapped or venture-backed founders who need a production-ready, multi-tenant SaaS MVP to onboard pilot customers quickly.",
+                points: ["Stripe subscription logic included", "Scalable cloud infrastructure", "Investor-ready source code"],
+              },
+            ].map((model, i) => (
+              <div key={i} className="p-8 border border-white/10 rounded-3xl bg-[#0A0F1A] flex flex-col justify-between hover:border-[#FD4F00]/30 transition-colors">
+                <div>
+                  <span className="text-xs uppercase tracking-widest text-[#FD4F00] font-bold block mb-2">{model.badge}</span>
+                  <h3 className="text-2xl font-bold text-white mb-4">{model.title}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed mb-6">{model.desc}</p>
+                  <ul className="space-y-2 mb-8">
+                    {model.points.map((pt, idx) => (
+                      <li key={idx} className="flex items-center gap-2 text-xs text-gray-300">
+                        <CheckCircle className="w-3.5 h-3.5 text-[#FD4F00] shrink-0" /> {pt}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <Button href="/contact" variant="outline" size="sm" className="w-full justify-center">
+                  Inquire About This Model
+                </Button>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* RELEVANT SOFTWARE CASE STUDIES */}
         <div className="mb-32">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
