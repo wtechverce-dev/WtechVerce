@@ -7,7 +7,7 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Custom Software Development Company | WTechVerce",
+  title: "Custom Software Development Company",
   description:
     "WTechVerce is a custom software development company delivering scalable business software, enterprise applications, and automation tools. Hire dedicated developers for your project.",
   keywords: [

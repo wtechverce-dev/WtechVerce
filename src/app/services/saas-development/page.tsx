@@ -6,7 +6,7 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "SaaS Development Company | Build Your SaaS Product | WTechVerce",
+  title: "SaaS Development Company | Build Your SaaS Product",
   description: "WTechVerce is a SaaS development company building multi-tenant, subscription-based software products. From MVP to enterprise-grade SaaS — we handle architecture, billing, and scaling.",
   keywords: [
     "saas development company",

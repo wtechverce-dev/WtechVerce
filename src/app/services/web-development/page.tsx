@@ -7,7 +7,7 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Custom Web Development & Website Design Services | WTechVerce",
+  title: "Custom Web Development & Website Design Services",
   description:
     "Get modern, fast, and fully responsive websites with our professional web development services. Let us build a powerful website that drives business results.",
   keywords: [

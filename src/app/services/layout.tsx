@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import GSAPScrollAnimations from "@/components/ui/GSAPScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "Web & Software Development Services | WTechVerce",
+  title: "Web & Software Development Services",
   description:
     "WTechVerce offers custom software development, web application engineering, SaaS platform development, eCommerce solutions, and UI/UX design for global businesses.",
   keywords: [

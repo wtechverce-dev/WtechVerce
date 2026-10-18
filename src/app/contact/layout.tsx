@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Hire Web & Software Developers | WTechVerce",
+  title: "Contact Us — Hire Web & Software Developers",
   description:
     "Ready to build custom software, a SaaS product, or a high-performance web app? Contact WTechVerce. We serve clients across the US, UK, and worldwide. Free consultation.",
   keywords: [

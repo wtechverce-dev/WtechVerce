@@ -6,7 +6,7 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Website Development Cost in Pakistan (2026) | WTechVerce",
+  title: "Website Development Cost in Pakistan (2026)",
   description: "A complete, transparent guide on the cost of building a custom website, e-commerce store, or SaaS platform in Pakistan in 2026. Avoid hidden fees.",
   alternates: {
     canonical: "https://wtechverce.com/blog/website-development-cost-pakistan-2026",

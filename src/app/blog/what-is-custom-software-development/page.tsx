@@ -6,7 +6,7 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "What Is Custom Software Development? Guide, Process & Costs (2026) | WTechVerce",
+  title: "What Is Custom Software Development? Guide, Process & Costs (2026)",
   description: "What is custom software development? Learn the exact definition, engineering process, realistic 2026 costs, and when your business should build custom software.",
   keywords: [
     "what is custom software development",
