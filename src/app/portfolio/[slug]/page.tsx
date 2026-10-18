@@ -11,6 +11,10 @@ import Script from "next/script";
 const projects = [
   {
     slug: "custom-saas-platform-development",
+    serviceHref: "/services/saas-development",
+    serviceTitle: "SaaS Product Development",
+    guideHref: "/blog/what-is-custom-software-development",
+    guideTitle: "Guide to Custom Software & SaaS Architecture",
     title: "Custom SaaS Platform Development",
     category: "Web Development",
     description: "Built a high-performance B2B lead generation platform handling complex data queries, real-time analytics, and automated outreach logic.",
@@ -27,6 +31,10 @@ const projects = [
   },
   {
     slug: "wordpress-business-website-development",
+    serviceHref: "/services/wordpress-development",
+    serviceTitle: "WordPress & Local SEO Development",
+    guideHref: "/blog/wordpress-vs-custom-website",
+    guideTitle: "WordPress vs Custom Website Comparison",
     title: "WordPress Business Website Development",
     category: "WordPress & SEO",
     description: "Developed a lightning-fast, highly secure dental clinic WordPress site with local SEO optimization that tripled organic traffic.",
@@ -43,6 +51,10 @@ const projects = [
   },
   {
     slug: "ecommerce-website-development",
+    serviceHref: "/services/ecommerce-development",
+    serviceTitle: "eCommerce Store Development",
+    guideHref: "/blog/custom-website-development-cost",
+    guideTitle: "eCommerce & Website Cost Guide 2026",
     title: "Ecommerce Website Development",
     category: "Ecommerce Development",
     description: "A conversion-optimized Shopify storefront integrated with local payment gateways and automated inventory syncing.",
@@ -59,6 +71,10 @@ const projects = [
   },
   {
     slug: "real-estate-web-application",
+    serviceHref: "/services/web-development",
+    serviceTitle: "Custom Web Application Development",
+    guideHref: "/blog/custom-website-development-cost",
+    guideTitle: "Web Application Cost Breakdown",
     title: "Custom Real Estate Web Application",
     category: "Web Application",
     description: "Complex property search portal with Mapbox integration, advanced filtering, and CRM capabilities.",
@@ -75,6 +91,10 @@ const projects = [
   },
   {
     slug: "fitness-gym-management-software",
+    serviceHref: "/services/software-development",
+    serviceTitle: "Custom Software Development",
+    guideHref: "/blog/what-is-custom-software-development",
+    guideTitle: "Complete Guide to Custom Software Engineering",
     title: "Gym Management Software Development",
     category: "Software Development",
     description: "Custom internal tool for class scheduling, automated billing, and member retention tracking.",
@@ -91,6 +111,10 @@ const projects = [
   },
   {
     slug: "restaurant-ordering-system",
+    serviceHref: "/services/web-development",
+    serviceTitle: "Web & Real-Time App Development",
+    guideHref: "/blog/what-is-custom-software-development",
+    guideTitle: "Custom Software & Web API Guide",
     title: "Restaurant Food Ordering System",
     category: "Web App",
     description: "Real-time delivery tracking and digital menu system integrated with POS software.",
@@ -250,6 +274,27 @@ export default async function ProjectPage({ params }: Props) {
             </div>
           </section>
         </div>
+
+        
+          {/* RELATED SERVICE & EDUCATIONAL GUIDE */}
+          <div className="p-8 border border-white/10 rounded-3xl bg-[#0A0F1A] grid sm:grid-cols-2 gap-6 items-center">
+            <div>
+              <span className="text-xs uppercase tracking-widest text-[#FD4F00] font-bold block mb-1">Core Service Deployed</span>
+              <p className="text-white font-bold text-lg mb-2">{project.serviceTitle}</p>
+              <Link href={project.serviceHref} className="inline-flex items-center gap-1.5 text-sm text-[#FD4F00] hover:underline font-medium">
+                Explore This Service <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+            {project.guideHref && (
+              <div className="sm:border-l sm:border-white/10 sm:pl-6">
+                <span className="text-xs uppercase tracking-widest text-[#6C24FA] font-bold block mb-1">Related Architecture Guide</span>
+                <p className="text-gray-300 font-bold text-base mb-2">{project.guideTitle}</p>
+                <Link href={project.guideHref} className="inline-flex items-center gap-1.5 text-sm text-[#c29dfd] hover:underline font-medium">
+                  Read Technical Guide <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            )}
+          </div>
 
         <div className="mt-24 text-center p-12 border border-white/10 rounded-[3rem] bg-gradient-to-b from-white/5 to-transparent">
           <h2 className="text-3xl font-black mb-6">Want similar results?</h2>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, CheckCircle, Code, Monitor, Smartphone, Zap, Server, Globe2, Layout, Layers, Shield } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle, Code, Monitor, Smartphone, Zap, Server, Globe2, Layout, Layers, Shield } from "lucide-react";
 import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
@@ -106,7 +106,7 @@ export default function WebDevelopmentService() {
         {/* HERO */}
         <div className="max-w-4xl mb-20">
           <Link href="/services" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white mb-8 transition-colors">
-            ← Back to Services
+            <ArrowLeft className="w-4 h-4" /> Back to Services
           </Link>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#FD4F00]/30 bg-[#FD4F00]/10 text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-6">
             Bespoke Web Engineering
@@ -254,6 +254,68 @@ export default function WebDevelopmentService() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+
+        
+        {/* RELEVANT WEB DEVELOPMENT CASE STUDIES */}
+        <div className="mb-32">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div>
+              <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">Proven Work</span>
+              <h2 data-text-reveal className="text-3xl md:text-4xl font-black">Featured Web Engineering Projects</h2>
+            </div>
+            <Link href="/portfolio" className="inline-flex items-center gap-2 text-sm text-[#FD4F00] font-bold hover:underline mt-4 md:mt-0">
+              View All Case Studies <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Link href="/portfolio/real-estate-web-application" className="group bg-[#0A0F1A] border border-white/5 hover:border-[#6C24FA]/40 rounded-3xl p-8 transition-all">
+              <span className="text-xs uppercase tracking-widest text-[#6C24FA] font-bold block mb-3">Interactive Web Application</span>
+              <h3 className="text-2xl font-bold text-white group-hover:text-[#c29dfd] transition-colors mb-4">
+                Custom Real Estate Search &amp; Discovery Portal
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                Engineered an interactive Mapbox-powered property search engine serving 50,000+ monthly active users with sub-second geospatial search filters.
+              </p>
+              <span className="inline-flex items-center gap-2 text-xs font-bold text-white group-hover:translate-x-1 transition-transform">
+                Explore Case Study <ArrowRight className="w-4 h-4 text-[#6C24FA]" />
+              </span>
+            </Link>
+
+            <Link href="/portfolio/ecommerce-website-development" className="group bg-[#0A0F1A] border border-white/5 hover:border-[#FD4F00]/40 rounded-3xl p-8 transition-all">
+              <span className="text-xs uppercase tracking-widest text-[#FD4F00] font-bold block mb-3">Headless eCommerce</span>
+              <h3 className="text-2xl font-bold text-white group-hover:text-[#FD4F00] transition-colors mb-4">
+                High-Conversion D2C Storefront Architecture
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                Delivered a headless React storefront integrated with automated inventory sync and custom checkout gateways, resulting in a 2.5x conversion rate boost.
+              </p>
+              <span className="inline-flex items-center gap-2 text-xs font-bold text-white group-hover:translate-x-1 transition-transform">
+                Explore Case Study <ArrowRight className="w-4 h-4 text-[#FD4F00]" />
+              </span>
+            </Link>
+          </div>
+        </div>
+
+        {/* EDUCATIONAL RESOURCE BRIDGE (TOPICAL CLUSTER) */}
+        <div className="bg-[#0A0F1A] border border-white/10 rounded-3xl p-8 md:p-12 mb-32 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="max-w-2xl">
+            <span className="text-xs uppercase tracking-widest text-[#FD4F00] font-bold block mb-2">Cost &amp; Strategy Analysis</span>
+            <h3 className="text-2xl md:text-3xl font-black text-white mb-3">
+              How Much Does Custom Web Development Cost in 2026?
+            </h3>
+            <p className="text-gray-400 text-sm md:text-base leading-relaxed">
+              Compare honest price ranges for simple websites, custom web applications, and enterprise platforms in our comprehensive 2026 cost guide.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+            <Button href="/blog/custom-website-development-cost" variant="outline" size="md">
+              Read Cost Guide <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+            <Button href="/blog/wordpress-vs-custom-website" variant="outline" size="md">
+              WordPress vs Custom
+            </Button>
           </div>
         </div>
 

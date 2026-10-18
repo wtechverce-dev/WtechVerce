@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, CheckCircle, Cpu, Database, Cloud, Shield, Layers, Users, Workflow, Code2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle, Cpu, Database, Cloud, Shield, Layers, Users, Workflow, Code2, Terminal, ExternalLink } from "lucide-react";
 import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
@@ -106,7 +106,7 @@ export default function SoftwareDevelopmentService() {
         {/* HERO */}
         <div className="max-w-4xl mb-20">
           <Link href="/services" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white mb-8 transition-colors">
-            â† Back to Services
+            <ArrowLeft className="w-4 h-4" /> Back to Services
           </Link>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#FD4F00]/30 bg-[#FD4F00]/10 text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-6">
             Enterprise Software Engineering
@@ -232,6 +232,63 @@ export default function SoftwareDevelopmentService() {
               ))}
             </ul>
           </div>
+        </div>
+
+        
+        {/* RELEVANT SOFTWARE CASE STUDIES */}
+        <div className="mb-32">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div>
+              <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">Real-World Execution</span>
+              <h2 data-text-reveal className="text-3xl md:text-4xl font-black">Featured Software Case Studies</h2>
+            </div>
+            <Link href="/portfolio" className="inline-flex items-center gap-2 text-sm text-[#FD4F00] font-bold hover:underline mt-4 md:mt-0">
+              Explore All Case Studies <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Link href="/portfolio/custom-saas-platform-development" className="group bg-[#0A0F1A] border border-white/5 hover:border-[#FD4F00]/40 rounded-3xl p-8 transition-all">
+              <span className="text-xs uppercase tracking-widest text-[#FD4F00] font-bold block mb-3">SaaS Engineering</span>
+              <h3 className="text-2xl font-bold text-white group-hover:text-[#FD4F00] transition-colors mb-4">
+                Custom B2B SaaS Platform Development
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                Engineered a scalable microservices architecture handling millions of real-time queries with sub-second response times, automated billing, and intuitive analytics.
+              </p>
+              <span className="inline-flex items-center gap-2 text-xs font-bold text-white group-hover:translate-x-1 transition-transform">
+                Read Full Case Study <ArrowRight className="w-4 h-4 text-[#FD4F00]" />
+              </span>
+            </Link>
+
+            <Link href="/portfolio/fitness-gym-management-software" className="group bg-[#0A0F1A] border border-white/5 hover:border-[#6C24FA]/40 rounded-3xl p-8 transition-all">
+              <span className="text-xs uppercase tracking-widest text-[#6C24FA] font-bold block mb-3">Internal Operations Tool</span>
+              <h3 className="text-2xl font-bold text-white group-hover:text-[#c29dfd] transition-colors mb-4">
+                Custom Gym Management Software
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                Replaced five fragmented subscription tools with one unified internal portal for scheduling, recurring billing, and automated staff workflows.
+              </p>
+              <span className="inline-flex items-center gap-2 text-xs font-bold text-white group-hover:translate-x-1 transition-transform">
+                Read Full Case Study <ArrowRight className="w-4 h-4 text-[#6C24FA]" />
+              </span>
+            </Link>
+          </div>
+        </div>
+
+        {/* EDUCATIONAL RESOURCE BRIDGE (TOPICAL CLUSTER) */}
+        <div className="bg-[#0A0F1A] border border-white/10 rounded-3xl p-8 md:p-12 mb-32 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="max-w-2xl">
+            <span className="text-xs uppercase tracking-widest text-[#6C24FA] font-bold block mb-2">Authoritative Guide</span>
+            <h3 className="text-2xl md:text-3xl font-black text-white mb-3">
+              Want to Learn How Custom Software Works?
+            </h3>
+            <p className="text-gray-400 text-sm md:text-base leading-relaxed">
+              Read our comprehensive architectural breakdown on custom software engineering, comparison matrices against off-the-shelf software, and 2026 pricing benchmarks.
+            </p>
+          </div>
+          <Button href="/blog/what-is-custom-software-development" variant="outline" size="md" className="shrink-0">
+            Read Complete Guide <ArrowRight className="w-4 h-4 ml-2" />
+          </Button>
         </div>
 
         {/* FAQ */}

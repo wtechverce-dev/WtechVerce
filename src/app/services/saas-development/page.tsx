@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
-import { ArrowRight, CheckCircle, Layers, Users, CreditCard, Lock, Infinity } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle, Layers, Users, CreditCard, Lock, Infinity } from "lucide-react";
 import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
@@ -85,7 +85,7 @@ export default function SaaSDevelopmentService() {
         {/* HERO */}
         <div className="max-w-4xl mb-20">
           <Link href="/services" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white mb-8 transition-colors">
-            ← Back to Services
+            <ArrowLeft className="w-4 h-4" /> Back to Services
           </Link>
           <h1 data-text-reveal className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
             SaaS <br />
@@ -161,6 +161,49 @@ export default function SaaSDevelopmentService() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+
+        
+        {/* RELEVANT SAAS CASE STUDY */}
+        <div className="mb-32">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div>
+              <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">Proven Execution</span>
+              <h2 data-text-reveal className="text-3xl md:text-4xl font-black">Featured SaaS Case Study</h2>
+            </div>
+            <Link href="/portfolio" className="inline-flex items-center gap-2 text-sm text-[#FD4F00] font-bold hover:underline mt-4 md:mt-0">
+              Explore All Case Studies <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Link href="/portfolio/custom-saas-platform-development" className="group bg-[#0A0F1A] border border-white/5 hover:border-[#FD4F00]/40 rounded-3xl p-8 transition-all">
+              <span className="text-xs uppercase tracking-widest text-[#FD4F00] font-bold block mb-3">High-Throughput SaaS</span>
+              <h3 className="text-2xl font-bold text-white group-hover:text-[#FD4F00] transition-colors mb-4">
+                B2B Lead Generation SaaS Platform ($50k MRR)
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                Engineered a distributed microservices platform processing millions of real-time queries with automated multi-tier Stripe subscription billing and 0% downtime.
+              </p>
+              <span className="inline-flex items-center gap-2 text-xs font-bold text-white group-hover:translate-x-1 transition-transform">
+                Read Full Case Study <ArrowRight className="w-4 h-4 text-[#FD4F00]" />
+              </span>
+            </Link>
+
+            <div className="bg-[#0A0F1A] border border-white/10 rounded-3xl p-8 flex flex-col justify-between">
+              <div>
+                <span className="text-xs uppercase tracking-widest text-[#6C24FA] font-bold block mb-3">Architecture Knowledge</span>
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  What Is Custom Software &amp; SaaS Engineering?
+                </h3>
+                <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                  Learn how custom software architecture differs from off-the-shelf software, how multi-tenant databases scale, and realistic 2026 development cost benchmarks.
+                </p>
+              </div>
+              <Link href="/blog/what-is-custom-software-development" className="inline-flex items-center gap-2 text-xs font-bold text-[#6C24FA] hover:text-white transition-colors">
+                Read Architectural Guide <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </div>
 
