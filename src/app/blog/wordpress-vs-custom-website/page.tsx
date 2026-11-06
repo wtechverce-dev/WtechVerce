@@ -6,8 +6,8 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "WordPress vs Custom Website: Which Is Better for Your Business?",
-  description: "WordPress vs custom website — complete 2026 comparison. Speed, SEO, cost, scalability. Find out which is right for your business goals.",
+  title: "WordPress vs Custom Website: 2026 Comparison",
+  description: "WordPress vs custom website: compare performance, SEO capabilities, total costs, and long-term scalability to choose the right engineering path.",
   alternates: {
     canonical: "https://wtechverce.com/blog/wordpress-vs-custom-website",
   },

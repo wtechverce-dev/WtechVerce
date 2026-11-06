@@ -7,9 +7,9 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Custom Mobile App Development Services (iOS & Android)",
+  title: "Custom Mobile App Development Services",
   description:
-    "Looking for a custom mobile application development company? WTechVerce delivers native iOS, custom Android, and cross-platform Flutter and React Native apps.",
+    "WTechVerce provides custom mobile app development services for iOS and Android. High-performance React Native, Flutter, and scalable apps.",
   keywords: [
     "custom mobile app development services",
     "custom mobile application development company",
@@ -28,17 +28,17 @@ export const metadata: Metadata = {
     canonical: "https://wtechverce.com/services/mobile-app-development",
   },
   openGraph: {
-    title: "Custom Mobile App Development Services (iOS & Android) | WTechVerce",
+    title: "Custom Mobile App Development Services | WTechVerce",
     description:
-      "Looking for a custom mobile application development company? WTechVerce delivers native iOS, custom Android, and cross-platform Flutter and React Native apps.",
+      "WTechVerce provides custom mobile app development services for iOS and Android. High-performance React Native, Flutter, and scalable apps.",
     url: "https://wtechverce.com/services/mobile-app-development",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Mobile App Development Services (iOS & Android) | WTechVerce",
+    title: "Custom Mobile App Development Services | WTechVerce",
     description:
-      "Looking for a custom mobile application development company? WTechVerce delivers native iOS, custom Android, and cross-platform Flutter and React Native apps.",
+      "WTechVerce provides custom mobile app development services for iOS and Android. High-performance React Native, Flutter, and scalable apps.",
   },
 };
 

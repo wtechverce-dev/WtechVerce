@@ -4,21 +4,21 @@ import { ArrowRight, BookOpen } from "lucide-react";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Web & Software Development Blog | Insights & Guides",
-  description: "Expert insights on custom software development, web applications, SaaS products, and eCommerce — written by the engineering team at WTechVerce.",
+  title: "Web & Software Development Blog & Insights",
+  description: "Actionable insights on custom software engineering, modern web apps, SaaS products, and eCommerce systems written by WTechVerce team.",
   alternates: {
     canonical: "https://wtechverce.com/blog",
   },
   openGraph: {
-    title: "Web & Software Development Blog | Insights & Guides",
-    description: "Expert insights on custom software development, web applications, SaaS products, and eCommerce — written by the engineering team at WTechVerce.",
+    title: "Web & Software Development Blog & Insights | WTechVerce",
+    description: "Actionable insights on custom software engineering, modern web apps, SaaS products, and eCommerce systems written by WTechVerce team.",
     url: "https://wtechverce.com/blog",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web & Software Development Blog | Insights & Guides",
-    description: "Expert insights on custom software development, web applications, SaaS products, and eCommerce — written by the engineering team at WTechVerce.",
+    title: "Web & Software Development Blog & Insights | WTechVerce",
+    description: "Actionable insights on custom software engineering, modern web apps, SaaS products, and eCommerce systems written by WTechVerce team.",
   },
 };
 

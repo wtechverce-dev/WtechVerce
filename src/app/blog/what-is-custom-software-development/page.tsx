@@ -6,8 +6,8 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "What Is Custom Software Development? Guide, Process & Costs (2026)",
-  description: "What is custom software development? Learn the exact definition, engineering process, realistic 2026 costs, and when your business should build custom software.",
+  title: "What Is Custom Software Development? Guide",
+  description: "Complete 2026 guide to custom software development. Discover the engineering process, business benefits, realistic costs, and tech stacks.",
   keywords: [
     "what is custom software development",
     "custom software development",
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
     canonical: "https://wtechverce.com/blog/what-is-custom-software-development",
   },
   openGraph: {
-    title: "What Is Custom Software Development? Guide, Process & Costs (2026) | WTechVerce",
-    description: "What is custom software development? Learn the exact definition, engineering process, realistic 2026 costs, and when your business should build custom software.",
+    title: "What Is Custom Software Development? Guide | WTechVerce",
+    description: "Complete 2026 guide to custom software development. Discover the engineering process, business benefits, realistic costs, and tech stacks.",
     url: "https://wtechverce.com/blog/what-is-custom-software-development",
     type: "article",
     images: [
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "What Is Custom Software Development? Guide, Process & Costs (2026) | WTechVerce",
-    description: "What is custom software development? Learn the exact definition, engineering process, realistic 2026 costs, and when your business should build custom software.",
+    title: "What Is Custom Software Development? Guide | WTechVerce",
+    description: "Complete 2026 guide to custom software development. Discover the engineering process, business benefits, realistic costs, and tech stacks.",
     images: ["/og-image.png"],
   },
 };

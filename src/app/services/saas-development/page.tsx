@@ -6,8 +6,8 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Custom SaaS Development Services | SaaS Software Company",
-  description: "WTechVerce provides custom SaaS development services and SaaS software development — from multi-tenant cloud architectures to MVP launches and subscription engines.",
+  title: "Custom SaaS Development Company & Platforms",
+  description: "Build scalable SaaS apps with WTechVerce. From multi-tenant cloud architecture to MVP development and subscription engines built for scale.",
   keywords: [
     "custom saas development",
     "saas software development",
@@ -25,15 +25,15 @@ export const metadata: Metadata = {
     canonical: "https://wtechverce.com/services/saas-development",
   },
   openGraph: {
-    title: "Custom SaaS Development Services | SaaS Software Company | WTechVerce",
-    description: "WTechVerce provides custom SaaS development services and SaaS software development — from multi-tenant cloud architectures to MVP launches and subscription engines.",
+    title: "Custom SaaS Development Company & Platforms | WTechVerce",
+    description: "Build scalable SaaS apps with WTechVerce. From multi-tenant cloud architecture to MVP development and subscription engines built for scale.",
     url: "https://wtechverce.com/services/saas-development",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom SaaS Development Services | SaaS Software Company | WTechVerce",
-    description: "WTechVerce provides custom SaaS development services and SaaS software development — from multi-tenant cloud architectures to MVP launches and subscription engines.",
+    title: "Custom SaaS Development Company & Platforms | WTechVerce",
+    description: "Build scalable SaaS apps with WTechVerce. From multi-tenant cloud architecture to MVP development and subscription engines built for scale.",
   },
 };
 

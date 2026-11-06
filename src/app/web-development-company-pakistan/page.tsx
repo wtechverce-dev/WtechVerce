@@ -6,8 +6,8 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Top Web Development Company in Pakistan | Custom Web & Software",
-  description: "WTechVerce is the leading web development company in Pakistan. We build custom websites, e-commerce stores, and software solutions for global and local businesses.",
+  title: "Top Web Development Company in Pakistan",
+  description: "WTechVerce is a leading web development company in Pakistan. We build custom websites, online stores, and software for global businesses.",
   alternates: {
     canonical: "https://wtechverce.com/web-development-company-pakistan",
   },

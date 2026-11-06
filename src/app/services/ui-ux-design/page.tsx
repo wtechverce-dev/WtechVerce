@@ -7,9 +7,9 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Professional UI/UX Design & Product Interface Services",
+  title: "UI/UX Design Services for Web & Mobile Apps",
   description:
-    "Enhance your digital product with modern UI/UX design services. We focus on creating clean, intuitive, and engaging interfaces that your users will love.",
+    "Modern UI/UX design services by WTechVerce. We craft clean, intuitive web and mobile interfaces, Figma design systems, and user journeys.",
   keywords: [
     "UI/UX Design Services",
     "professional ui/ux design services",
@@ -23,17 +23,17 @@ export const metadata: Metadata = {
     canonical: "https://wtechverce.com/services/ui-ux-design",
   },
   openGraph: {
-    title: "Professional UI/UX Design & Product Interface Services",
+    title: "UI/UX Design Services for Web & Mobile Apps | WTechVerce",
     description:
-      "Enhance your digital product with modern UI/UX design services. We focus on creating clean, intuitive, and engaging interfaces that your users will love.",
+      "Modern UI/UX design services by WTechVerce. We craft clean, intuitive web and mobile interfaces, Figma design systems, and user journeys.",
     url: "https://wtechverce.com/services/ui-ux-design",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Professional UI/UX Design & Product Interface Services",
+    title: "UI/UX Design Services for Web & Mobile Apps | WTechVerce",
     description:
-      "Enhance your digital product with modern UI/UX design services. We focus on creating clean, intuitive, and engaging interfaces that your users will love.",
+      "Modern UI/UX design services by WTechVerce. We craft clean, intuitive web and mobile interfaces, Figma design systems, and user journeys.",
   },
 };
 

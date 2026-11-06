@@ -21,11 +21,11 @@ export const metadata: Metadata = {
   // 🚀 Core SEO 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
   metadataBase: new URL("https://wtechverce.com"),
   title: {
-    default: "Web & Software Development Company | WTechVerce",
+    default: "Custom Web & Software Development Company | WTechVerce",
     template: "%s | WTechVerce",
   },
   description:
-    "WTechVerce is a web and software development company building custom software, SaaS products, and high-performance web applications for businesses in the US, UK, and worldwide.",
+    "WTechVerce is a software development company building custom web applications, mobile apps, and scalable SaaS platforms for global brands.",
   keywords: [
     "custom web development agency",
     "custom mobile app development services",
@@ -58,9 +58,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://wtechverce.com",
     siteName: "WTechVerce",
-    title: "Web & Software Development Company | WTechVerce",
+    title: "Custom Web & Software Development Company | WTechVerce",
     description:
-      "WTechVerce is a web and software development company building custom software, SaaS products, and high-performance web applications for businesses in the US, UK, and worldwide.",
+    "WTechVerce is a software development company building custom web applications, mobile apps, and scalable SaaS platforms for global brands.",
     images: [
       {
         url: "/og-image.png",
@@ -77,9 +77,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@wtechverce",
     creator: "@wtechverce",
-    title: "Web & Software Development Company | WTechVerce",
+    title: "Custom Web & Software Development Company | WTechVerce",
     description:
-      "WTechVerce is a web and software development company building custom software, SaaS products, and high-performance web applications for businesses in the US, UK, and worldwide.",
+    "WTechVerce is a software development company building custom web applications, mobile apps, and scalable SaaS platforms for global brands.",
     images: ["/og-image.png"],
   },
 

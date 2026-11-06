@@ -6,8 +6,8 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "WordPress Development Services | Custom WP Company",
-  description: "WTechVerce delivers professional WordPress development services. As a custom WordPress development company, we engineer bespoke themes, secure plugins, and headless CMS.",
+  title: "Custom WordPress Web Development Services",
+  description: "WTechVerce provides custom WordPress development. We build fast, secure themes, custom plugins, and modern headless CMS web tools.",
   keywords: [
     "wordpress development services",
     "custom wordpress development",
@@ -22,15 +22,15 @@ export const metadata: Metadata = {
     canonical: "https://wtechverce.com/services/wordpress-development",
   },
   openGraph: {
-    title: "WordPress Development Services | Custom WP Company | WTechVerce",
-    description: "WTechVerce delivers professional WordPress development services. As a custom WordPress development company, we engineer bespoke themes, secure plugins, and headless CMS.",
+    title: "Custom WordPress Web Development Services | WTechVerce",
+    description: "WTechVerce provides custom WordPress development. We build fast, secure themes, custom plugins, and modern headless CMS web tools.",
     url: "https://wtechverce.com/services/wordpress-development",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "WordPress Development Services | Custom WP Company | WTechVerce",
-    description: "WTechVerce delivers professional WordPress development services. As a custom WordPress development company, we engineer bespoke themes, secure plugins, and headless CMS.",
+    title: "Custom WordPress Web Development Services | WTechVerce",
+    description: "WTechVerce provides custom WordPress development. We build fast, secure themes, custom plugins, and modern headless CMS web tools.",
   },
 };
 

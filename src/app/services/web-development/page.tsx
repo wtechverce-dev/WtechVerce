@@ -7,9 +7,9 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Custom Web Development Services & Web App Engineering",
+  title: "Custom Web Development Services & Web Apps",
   description:
-    "WTechVerce is a custom web development services company and web application development agency building responsive, high-performance websites for US businesses.",
+    "WTechVerce provides custom web development services and bespoke web apps. Fast Next.js, React, and full-stack solutions built for scale.",
   keywords: [
     "custom web development services",
     "website development company",
@@ -29,17 +29,17 @@ export const metadata: Metadata = {
     canonical: "https://wtechverce.com/services/web-development",
   },
   openGraph: {
-    title: "Custom Web Development Services & Web App Engineering | WTechVerce",
+    title: "Custom Web Development Services & Web Apps | WTechVerce",
     description:
-      "WTechVerce is a custom web development services company and web application development agency building responsive, high-performance websites for US businesses.",
+      "WTechVerce provides custom web development services and bespoke web apps. Fast Next.js, React, and full-stack solutions built for scale.",
     url: "https://wtechverce.com/services/web-development",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Web Development Services & Web App Engineering | WTechVerce",
+    title: "Custom Web Development Services & Web Apps | WTechVerce",
     description:
-      "WTechVerce is a custom web development services company and web application development agency building responsive, high-performance websites for US businesses.",
+      "WTechVerce provides custom web development services and bespoke web apps. Fast Next.js, React, and full-stack solutions built for scale.",
   },
 };
 

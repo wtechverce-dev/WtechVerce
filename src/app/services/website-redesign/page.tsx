@@ -6,8 +6,8 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Strategic Website Redesign & Modernization Services",
-  description: "Strategic website redesign services to improve UX, fix technical debt, and increase conversions without losing your existing SEO rankings.",
+  title: "Strategic Website Redesign & Modernization",
+  description: "Modernize your website with strategic redesign services. Fix technical debt, enhance conversions, and preserve your existing SEO rankings.",
   alternates: {
     canonical: "https://wtechverce.com/services/website-redesign",
   },

@@ -6,8 +6,8 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "How Much Does Custom Website Development Cost in 2026?",
-  description: "Transparent breakdown of custom website development costs in 2026. Basic sites, web apps, SaaS, ecommerce — real price ranges with what affects the cost.",
+  title: "Custom Website Development Cost in 2026 Guide",
+  description: "Transparent guide to custom website development costs in 2026. Explore pricing factors, tech stacks, and realistic estimates for web apps.",
   alternates: {
     canonical: "https://wtechverce.com/blog/custom-website-development-cost",
   },

@@ -7,9 +7,9 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Custom Software Development Company | Enterprise Solutions",
+  title: "Custom Software Development Services & Apps",
   description:
-    "WTechVerce is a custom software development company building scalable business software, enterprise applications, and automation tools for US startups and enterprises.",
+    "Scale your business with custom software development services by WTechVerce. We engineer robust business tools and cloud platforms.",
   keywords: [
     "custom software development company",
     "enterprise software development company",
@@ -27,17 +27,17 @@ export const metadata: Metadata = {
     canonical: "https://wtechverce.com/services/software-development",
   },
   openGraph: {
-    title: "Custom Software Development Company | Enterprise Solutions | WTechVerce",
+    title: "Custom Software Development Services & Apps | WTechVerce",
     description:
-      "WTechVerce is a custom software development company building scalable business software, enterprise applications, and automation tools for US startups and enterprises.",
+      "Scale your business with custom software development services by WTechVerce. We engineer robust business tools and cloud platforms.",
     url: "https://wtechverce.com/services/software-development",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Software Development Company | Enterprise Solutions | WTechVerce",
+    title: "Custom Software Development Services & Apps | WTechVerce",
     description:
-      "WTechVerce is a custom software development company building scalable business software, enterprise applications, and automation tools for US startups and enterprises.",
+      "Scale your business with custom software development services by WTechVerce. We engineer robust business tools and cloud platforms.",
   },
 };
 

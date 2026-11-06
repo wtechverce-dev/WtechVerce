@@ -7,9 +7,9 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "eCommerce Software & Web Development Company | Custom Stores & Shopify",
+  title: "Custom eCommerce Web Development Services",
   description:
-    "WTechVerce is an eCommerce software development company. We deliver custom Shopify, WooCommerce, and headless eCommerce development services engineered for speed and conversion.",
+    "Scale online sales with custom eCommerce development. High-converting Shopify stores, bespoke WooCommerce, and headless commerce.",
   keywords: [
     "ecommerce software development company",
     "ecommerce web development company",
@@ -23,17 +23,17 @@ export const metadata: Metadata = {
     canonical: "https://wtechverce.com/services/ecommerce-development",
   },
   openGraph: {
-    title: "eCommerce Software & Web Development Company | Custom Stores & Shopify | WTechVerce",
+    title: "Custom eCommerce Web Development Services | WTechVerce",
     description:
-      "WTechVerce is an eCommerce software development company. We deliver custom Shopify, WooCommerce, and headless eCommerce development services engineered for speed and conversion.",
+      "Scale online sales with custom eCommerce development. High-converting Shopify stores, bespoke WooCommerce, and headless commerce.",
     url: "https://wtechverce.com/services/ecommerce-development",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "eCommerce Software & Web Development Company | Custom Stores & Shopify | WTechVerce",
+    title: "Custom eCommerce Web Development Services | WTechVerce",
     description:
-      "WTechVerce is an eCommerce software development company. We deliver custom Shopify, WooCommerce, and headless eCommerce development services engineered for speed and conversion.",
+      "Scale online sales with custom eCommerce development. High-converting Shopify stores, bespoke WooCommerce, and headless commerce.",
   },
 };
 
