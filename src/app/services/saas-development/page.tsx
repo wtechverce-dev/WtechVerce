@@ -6,30 +6,34 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "SaaS Development Company | Build Your SaaS Product",
-  description: "WTechVerce is a SaaS development company building multi-tenant, subscription-based software products. From MVP to enterprise-grade SaaS — we handle architecture, billing, and scaling.",
+  title: "Custom SaaS Development Services | SaaS Software Company",
+  description: "WTechVerce provides custom SaaS development services and SaaS software development — from multi-tenant cloud architectures to MVP launches and subscription engines.",
   keywords: [
-    "saas development company",
-    "saas product development",
+    "custom saas development",
+    "saas software development",
+    "saas development services",
+    "saas product development company",
+    "saas application development",
+    "saas platform development",
+    "scalable saas architecture",
     "saas mvp development",
-    "custom saas development services",
+    "custom saas solutions",
     "multi-tenant saas development",
-    "saas software development agency",
     "saas startup development",
   ],
   alternates: {
     canonical: "https://wtechverce.com/services/saas-development",
   },
   openGraph: {
-    title: "SaaS Development Company | Build Your SaaS Product | WTechVerce",
-    description: "WTechVerce is a SaaS development company building multi-tenant, subscription-based software products. From MVP to enterprise-grade SaaS — we handle architecture, billing, and scaling.",
+    title: "Custom SaaS Development Services | SaaS Software Company | WTechVerce",
+    description: "WTechVerce provides custom SaaS development services and SaaS software development — from multi-tenant cloud architectures to MVP launches and subscription engines.",
     url: "https://wtechverce.com/services/saas-development",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SaaS Development Company | Build Your SaaS Product | WTechVerce",
-    description: "WTechVerce is a SaaS development company building multi-tenant, subscription-based software products. From MVP to enterprise-grade SaaS — we handle architecture, billing, and scaling.",
+    title: "Custom SaaS Development Services | SaaS Software Company | WTechVerce",
+    description: "WTechVerce provides custom SaaS development services and SaaS software development — from multi-tenant cloud architectures to MVP launches and subscription engines.",
   },
 };
 
@@ -40,12 +44,12 @@ export default function SaaSDevelopmentService() {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
-          "serviceType": "SaaS Development",
+          "serviceType": "Custom SaaS Development Services",
           "provider": {
             "@type": "Organization",
             "name": "WTechVerce"
           },
-          "description": "Custom SaaS product development including multi-tenant architecture, billing integrations, and MVP creation.",
+          "description": "Custom SaaS development services and SaaS software development, including multi-tenant cloud architecture, billing integrations, and MVP creation.",
           "areaServed": [
             { "@type": "Country", "name": "United States" },
             { "@type": "Country", "name": "United Kingdom" },
@@ -87,14 +91,20 @@ export default function SaaSDevelopmentService() {
           <Link href="/services" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4" /> Back to Services
           </Link>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#FD4F00]/30 bg-[#FD4F00]/10 text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-6">
+            Cloud Product Engineering
+          </div>
           <h1 data-text-reveal className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
-            SaaS <br />
+            Custom SaaS Development <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] to-[#ff8c42]">
-              Product Development
+              Services &amp; Architecture
             </span>
           </h1>
-          <p className="text-xl text-gray-400 leading-relaxed mb-10">
-            Turn your vision into a scalable, revenue-generating software product. We build secure, multi-tenant SaaS platforms engineered for high growth, seamless user onboarding, and recurring revenue.
+          <p className="text-xl text-gray-300 leading-relaxed mb-6">
+            Turn your software vision into a scalable, revenue-generating product with our end-to-end <strong className="text-white">custom SaaS development services</strong>. As a specialized <strong className="text-white">SaaS software development company</strong>, we engineer secure multi-tenant cloud platforms, automated billing integrations, and intuitive dashboards designed for high retention.
+          </p>
+          <p className="text-base text-gray-400 leading-relaxed mb-10">
+            From initial SaaS MVP development and user journey mapping to enterprise-grade cloud scaling, our full-stack engineering team builds custom SaaS solutions with Next.js, Node.js, PostgreSQL, and Stripe.
           </p>
           <Button href="/contact" variant="primary" size="lg" filled>
             Start Your SaaS MVP <ArrowRight className="w-5 h-5 ml-2" />
@@ -180,10 +190,10 @@ export default function SaaSDevelopmentService() {
             <Link href="/portfolio/custom-saas-platform-development" className="group bg-[#0A0F1A] border border-white/5 hover:border-[#FD4F00]/40 rounded-3xl p-8 transition-all">
               <span className="text-xs uppercase tracking-widest text-[#FD4F00] font-bold block mb-3">High-Throughput SaaS</span>
               <h3 className="text-2xl font-bold text-white group-hover:text-[#FD4F00] transition-colors mb-4">
-                B2B Lead Generation SaaS Platform ($50k MRR)
+                B2B Lead Generation SaaS Platform
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                Engineered a distributed microservices platform processing millions of real-time queries with automated multi-tier Stripe subscription billing and 0% downtime.
+                Engineered a distributed microservices backend with Node.js and Next.js, integrating automated multi-tier Stripe subscription billing, secure authentication, and interactive lead analytics dashboards.
               </p>
               <span className="inline-flex items-center gap-2 text-xs font-bold text-white group-hover:translate-x-1 transition-transform">
                 Read Full Case Study <ArrowRight className="w-4 h-4 text-[#FD4F00]" />
@@ -192,16 +202,16 @@ export default function SaaSDevelopmentService() {
 
             <div className="bg-[#0A0F1A] border border-white/10 rounded-3xl p-8 flex flex-col justify-between">
               <div>
-                <span className="text-xs uppercase tracking-widest text-[#6C24FA] font-bold block mb-3">Architecture Knowledge</span>
+                <span className="text-xs uppercase tracking-widest text-[#6C24FA] font-bold block mb-3">Engineering Knowledge</span>
                 <h3 className="text-2xl font-bold text-white mb-4">
-                  What Is Custom Software &amp; SaaS Engineering?
+                  What Is Custom Software Development? Guide, Process &amp; Costs (2026)
                 </h3>
                 <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                  Learn how custom software architecture differs from off-the-shelf software, how multi-tenant databases scale, and realistic 2026 development cost benchmarks.
+                  Learn what custom software development is, how the engineering process works, the difference between custom and off-the-shelf software, and realistic 2026 cost benchmarks — including SaaS MVP development.
                 </p>
               </div>
               <Link href="/blog/what-is-custom-software-development" className="inline-flex items-center gap-2 text-xs font-bold text-[#6C24FA] hover:text-white transition-colors">
-                Read Architectural Guide <ArrowRight className="w-4 h-4" />
+                Read the Full Guide <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>

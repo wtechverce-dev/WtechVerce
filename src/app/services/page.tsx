@@ -189,15 +189,15 @@ export default function ServicesPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -8, scale: 1.02 }}
-                className="group relative bg-[#0a0a0a] border border-white/5 rounded-3xl p-8 overflow-hidden hover:border-white/10 transition-all duration-300 cursor-default"
+                className="group relative bg-[#0a0a0a] border border-white/5 rounded-3xl p-8 overflow-hidden hover:border-white/20 transition-all duration-300"
               >
-                {/* Glow on hover */}
-                <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"
-                  style={{ background: `radial-gradient(circle at top left, ${service.color}15, transparent 60%)` }}
-                />
+                <Link href={`/services/${service.slug}`} className="block h-full relative z-10" aria-label={service.title}>
+                  {/* Glow on hover */}
+                  <div
+                    className="absolute inset-0 -m-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl pointer-events-none"
+                    style={{ background: `radial-gradient(circle at top left, ${service.color}15, transparent 60%)` }}
+                  />
 
-                <div className="relative z-10">
                   {/* Icon */}
                   <div
                     className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 text-white"
@@ -206,11 +206,11 @@ export default function ServicesPage() {
                     {service.icon}
                   </div>
 
-                  <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-[#FD4F00] transition-colors">{service.title}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed mb-6">{service.description}</p>
 
                   {/* Features list */}
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid grid-cols-2 gap-2 mb-6">
                     {service.features.map((feat, i) => (
                       <div key={i} className="flex items-center gap-2 text-xs text-gray-500">
                         <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: service.color }} />
@@ -218,7 +218,11 @@ export default function ServicesPage() {
                       </div>
                     ))}
                   </div>
-                </div>
+
+                  <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white group-hover:text-[#FD4F00] transition-colors">
+                    Explore Service <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </Link>
               </motion.div>
             ))}
           </div>

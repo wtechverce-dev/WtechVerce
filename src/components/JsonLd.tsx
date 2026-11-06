@@ -8,7 +8,7 @@ export default function JsonLd() {
     name: "WTechVerce",
     url: "https://wtechverce.com",
     logo: "https://wtechverce.com/wtech.png",
-    description: "WTechVerce is a web and software development company specializing in custom software, SaaS products, web applications, and eCommerce platforms for businesses in the US, UK, and worldwide.",
+    description: "WTechVerce is a web and software development company specializing in custom software, SaaS products, web applications, and mobile apps for businesses in the US, UK, and worldwide.",
     email: "wtechverce.io@gmail.com",
     telephone: "+92-313-7102600",
     address: {
@@ -32,9 +32,9 @@ export default function JsonLd() {
       "Web Development",
       "SaaS Development",
       "Software Engineering",
+      "Mobile App Development",
       "Ecommerce Development",
       "UI/UX Design",
-      "Mobile App Development",
       "WordPress Development",
     ],
   };
@@ -47,7 +47,6 @@ export default function JsonLd() {
     description: "WTechVerce | Web & Software Development Company",
   };
 
-
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
@@ -55,7 +54,7 @@ export default function JsonLd() {
     url: "https://wtechverce.com",
     email: "wtechverce.io@gmail.com",
     telephone: "+92-313-7102600",
-    description: "Web and software development company offering custom software engineering, SaaS development, web applications, and eCommerce platforms.",
+    description: "Web and software development company offering custom software engineering, SaaS development, mobile app development, and high-performance web applications.",
     priceRange: "$$",
     currenciesAccepted: "USD, PKR",
     paymentAccepted: "Bank Transfer, PayPal",
@@ -81,16 +80,24 @@ export default function JsonLd() {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "SaaS Development",
-            description: "Multi-tenant SaaS products with advanced architecture and Stripe integration.",
+            name: "Web Development",
+            description: "High-performance React, Next.js, and Node.js applications.",
           }
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Web Development",
-            description: "High-performance React, Next.js, and Node.js applications.",
+            name: "Mobile App Development",
+            description: "Native iOS, Android, and cross-platform Flutter and React Native mobile applications.",
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "SaaS Development",
+            description: "Multi-tenant SaaS products with advanced architecture and Stripe integration.",
           }
         },
         {

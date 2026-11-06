@@ -24,9 +24,9 @@ const projects = [
     challenge: "Handling concurrent real-time queries and integrating complex third-party APIs without slowing down the primary user interface.",
     solution: "We engineered a microservices architecture using Node.js for the backend and Next.js (React) for a lightning-fast, server-rendered frontend.",
     results: [
-      "400% increase in processing speed",
-      "Zero downtime during peak traffic",
-      "Successful launch generating $50k MRR in month one"
+      "Engineered a distributed Node.js microservices architecture with Redis caching",
+      "Integrated multi-tier Stripe subscription billing and automated user provisioning",
+      "Deployed production web application with interactive lead analytics dashboard"
     ]
   },
   {
@@ -37,16 +37,16 @@ const projects = [
     guideTitle: "WordPress vs Custom Website Comparison",
     title: "WordPress Business Website Development",
     category: "WordPress & SEO",
-    description: "Developed a lightning-fast, highly secure dental clinic WordPress site with local SEO optimization that tripled organic traffic.",
+    description: "Developed a fast, secure dental clinic WordPress site with local SEO optimization and improved online appointment flow.",
     tags: ["WordPress", "Local SEO", "Custom Theme"],
     gradient: "from-[#6C24FA]/30 to-[#FD4F00]/20",
-    clientGoal: "The clinic wanted to dominate local search results while providing a seamless online appointment booking experience for patients.",
-    challenge: "The old site was built on a bloated theme, causing 10+ second load times and high bounce rates, severely hurting local SEO.",
-    solution: "We built a custom, lightweight WordPress theme from scratch, optimized Core Web Vitals, and implemented aggressive local schema markup.",
+    clientGoal: "The clinic wanted to improve local search rankings while providing a seamless online appointment booking experience for patients.",
+    challenge: "The old site was built on a bloated theme, causing slow load times and high bounce rates, severely hurting local SEO.",
+    solution: "We built a custom, lightweight WordPress theme from scratch, optimized Core Web Vitals, and implemented local schema markup.",
     results: [
-      "Load time reduced from 12s to 1.2s",
-      "310% increase in local organic traffic",
-      "45% increase in online appointment bookings"
+      "Built a custom, lightweight WordPress theme with zero page-builder overhead",
+      "Implemented local clinic schema markup and structured metadata",
+      "Integrated direct patient appointment request and consultation flows"
     ]
   },
   {
@@ -64,9 +64,9 @@ const projects = [
     challenge: "Extremely high mobile bounce rate and complex local payment gateway requirements not supported natively by Shopify.",
     solution: "We developed a headless Shopify architecture using React to deliver sub-second mobile page loads and built custom payment integrations via Shopify APIs.",
     results: [
-      "2.5x increase in mobile conversion rate",
-      "Significant reduction in cart abandonment",
-      "Automated fulfillment saving 20 hours/week"
+      "Delivered a headless React storefront integrated with Shopify eCommerce APIs",
+      "Integrated regional payment gateways and automated inventory synchronization",
+      "Engineered a mobile-first responsive catalog with accelerated checkout flow"
     ]
   },
   {
@@ -80,13 +80,13 @@ const projects = [
     description: "Complex property search portal with Mapbox integration, advanced filtering, and CRM capabilities.",
     tags: ["React", "PostgreSQL", "AWS"],
     gradient: "from-[#6B21A8]/20 to-[#FD4F00]/20",
-    clientGoal: "Create a Zillow-like experience for a regional luxury real estate market with advanced map-based searching.",
+    clientGoal: "Create a property search experience for a regional luxury real estate market with advanced map-based searching.",
     challenge: "Rendering thousands of property pins on a map interactively without crashing the browser.",
     solution: "Implemented Mapbox GL with dynamic clustering and a highly optimized PostgreSQL database backend to serve geo-spatial queries instantly.",
     results: [
-      "Smooth 60fps map interactions",
-      "50,000+ active monthly users",
-      "Featured by regional real estate boards"
+      "Implemented Mapbox GL interface with dynamic property cluster rendering",
+      "Designed PostgreSQL spatial database schema for geo-location radius queries",
+      "Integrated custom property filter criteria with direct agent CRM inquiry routing"
     ]
   },
   {
@@ -104,9 +104,9 @@ const projects = [
     challenge: "Migrating highly sensitive recurring billing data safely while minimizing disruptions to daily gym operations.",
     solution: "Built a secure, PCI-compliant web application utilizing Stripe for billing and a unified dashboard for all administrative tasks.",
     results: [
-      "$2,000/month saved on software subscriptions",
-      "100% successful data migration",
-      "Significant improvement in staff efficiency"
+      "Unified member management, attendance, and class scheduling into a single Next.js portal",
+      "Migrated legacy member records and integrated automated Stripe recurring billing",
+      "Deployed role-based administrative permissions for trainers, staff, and management"
     ]
   },
   {
@@ -124,9 +124,9 @@ const projects = [
     challenge: "Achieving real-time driver tracking and immediate kitchen notifications during peak weekend rushes.",
     solution: "Leveraged WebSockets (Socket.io) for instantaneous two-way communication between the customer app, kitchen display, and driver app.",
     results: [
-      "Eliminated 30% commission fees to third parties",
-      "Average order processing time reduced by 4 minutes",
-      "Highly rated user experience"
+      "Built an in-house online ordering web application independent of third-party platforms",
+      "Engineered real-time kitchen order dispatch and delivery status updates via WebSockets",
+      "Integrated responsive digital menu configuration with POS receipt workflows"
     ]
   }
 ];
@@ -299,7 +299,7 @@ export default async function ProjectPage({ params }: Props) {
         <div className="mt-24 text-center p-12 border border-white/10 rounded-[3rem] bg-gradient-to-b from-white/5 to-transparent">
           <h2 className="text-3xl font-black mb-6">Want similar results?</h2>
           <p className="text-gray-400 mb-8 max-w-lg mx-auto">
-            Let's discuss how we can engineer a custom solution for your specific business challenges.
+            Let&apos;s discuss how we can engineer a custom solution for your specific business challenges.
           </p>
           <Button href="/contact" variant="primary" size="lg" filled>
             Start Your Project <ArrowRight className="w-5 h-5 ml-2" />

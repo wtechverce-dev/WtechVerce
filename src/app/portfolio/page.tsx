@@ -26,7 +26,7 @@ const projects = [
     slug: "wordpress-business-website-development",
     title: "WordPress Business Website Development",
     category: "WordPress & SEO",
-    description: "Developed a lightning-fast, highly secure dental clinic WordPress site with local SEO optimization that tripled organic traffic.",
+    description: "Developed a fast, secure dental clinic WordPress site with local SEO optimization and improved online appointment flow.",
     tags: ["WordPress", "Local SEO", "Custom Theme"],
     gradient: "from-[#6C24FA]/30 to-[#FD4F00]/20",
     border: "#6C24FA",

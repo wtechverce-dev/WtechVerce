@@ -7,11 +7,11 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 const services = [
-  { title: "Brand Identity", href: "/services/ui-ux-design", image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" },
-  { title: "Websites", href: "/services/web-development", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" },
-  { title: "SEO", href: "/services/seo", image: "https://images.unsplash.com/photo-1572021335469-31706a17aaef?auto=format&fit=crop&w=800&q=80" },
-  { title: "Craft CMS", href: "/services/software-development", image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" },
-  { title: "Shopify", href: "/services/ecommerce-development", image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" },
+  { title: "Custom Software", href: "/services/software-development", image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" },
+  { title: "Web Development", href: "/services/web-development", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" },
+  { title: "Mobile Apps", href: "/services/mobile-app-development", image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80" },
+  { title: "SaaS Platforms", href: "/services/saas-development", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" },
+  { title: "eCommerce", href: "/services/ecommerce-development", image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" },
 ];
 
 export function InteractiveServices() {

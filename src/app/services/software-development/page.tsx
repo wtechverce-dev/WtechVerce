@@ -7,33 +7,37 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Custom Software Development Company",
+  title: "Custom Software Development Company | Enterprise Solutions",
   description:
-    "WTechVerce is a custom software development company delivering scalable business software, enterprise applications, and automation tools. Hire dedicated developers for your project.",
+    "WTechVerce is a custom software development company building scalable business software, enterprise applications, and automation tools for US startups and enterprises.",
   keywords: [
-    "custom software development",
-    "custom software development services",
+    "custom software development company",
     "enterprise software development company",
-    "custom software applications",
+    "enterprise software development",
+    "custom enterprise software development",
+    "custom business software",
+    "software application development",
+    "software development for small business",
+    "custom software development services usa",
+    "custom software development for startups",
+    "mvp software development agency",
     "dedicated custom software developers",
-    "offshore software development team",
-    "custom software product wireframing",
   ],
   alternates: {
     canonical: "https://wtechverce.com/services/software-development",
   },
   openGraph: {
-    title: "Custom Software Development Company | WTechVerce",
+    title: "Custom Software Development Company | Enterprise Solutions | WTechVerce",
     description:
-      "WTechVerce is a custom software development company delivering scalable business software, enterprise applications, and automation tools. Hire dedicated developers for your project.",
+      "WTechVerce is a custom software development company building scalable business software, enterprise applications, and automation tools for US startups and enterprises.",
     url: "https://wtechverce.com/services/software-development",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Software Development Company | WTechVerce",
+    title: "Custom Software Development Company | Enterprise Solutions | WTechVerce",
     description:
-      "WTechVerce is a custom software development company delivering scalable business software, enterprise applications, and automation tools. Hire dedicated developers for your project.",
+      "WTechVerce is a custom software development company building scalable business software, enterprise applications, and automation tools for US startups and enterprises.",
   },
 };
 
@@ -121,7 +125,7 @@ export default function SoftwareDevelopmentService() {
             Looking for reliable <strong className="text-white">custom software development</strong>? WTechVerce delivers world-class custom software development services, helping organizations build scalable, high-performance software solutions tailored to their exact business needs.
           </p>
           <p className="text-base text-gray-400 leading-relaxed mb-10">
-            As a leading enterprise software development company, our dedicated custom software developers and offshore software engineering teams transform complex business logic, legacy software bottlenecks, and multi-tenant architectures into high-performing commercial assets.
+            As a dedicated enterprise software development company, our dedicated custom software developers and offshore software engineering teams transform complex business logic, legacy software bottlenecks, and multi-tenant architectures into high-performing commercial assets.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button href="/contact" variant="primary" size="lg" filled>
@@ -305,7 +309,7 @@ export default function SoftwareDevelopmentService() {
                 Custom B2B SaaS Platform Development
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                Engineered a scalable microservices architecture handling millions of real-time queries with sub-second response times, automated billing, and intuitive analytics.
+                Engineered a scalable microservices architecture with Node.js and Next.js, featuring automated Stripe billing, secure user authentication, and interactive analytics dashboards.
               </p>
               <span className="inline-flex items-center gap-2 text-xs font-bold text-white group-hover:translate-x-1 transition-transform">
                 Read Full Case Study <ArrowRight className="w-4 h-4 text-[#FD4F00]" />

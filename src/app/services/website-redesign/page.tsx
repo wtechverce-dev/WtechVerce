@@ -6,7 +6,7 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Website Redesign Services | WTechVerce",
+  title: "Strategic Website Redesign & Modernization Services",
   description: "Strategic website redesign services to improve UX, fix technical debt, and increase conversions without losing your existing SEO rankings.",
   alternates: {
     canonical: "https://wtechverce.com/services/website-redesign",
@@ -40,7 +40,7 @@ export default function WebsiteRedesignService() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="max-w-4xl mb-20">
           <Link href="/services" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white mb-8 transition-colors">
-            â† Back to Services
+            ← Back to Services
           </Link>
           <h1 data-text-reveal className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
             Website <br />

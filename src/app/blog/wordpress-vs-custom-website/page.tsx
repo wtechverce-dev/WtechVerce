@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
-import { ArrowLeft, ArrowRight, CheckCircle, XCircle } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle } from "lucide-react";
 import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 

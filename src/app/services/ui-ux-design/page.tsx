@@ -7,7 +7,7 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Professional UI/UX Design Services | WTechVerce",
+  title: "Professional UI/UX Design & Product Interface Services",
   description:
     "Enhance your digital product with modern UI/UX design services. We focus on creating clean, intuitive, and engaging interfaces that your users will love.",
   keywords: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     canonical: "https://wtechverce.com/services/ui-ux-design",
   },
   openGraph: {
-    title: "Professional UI/UX Design Services | WTechVerce",
+    title: "Professional UI/UX Design & Product Interface Services",
     description:
       "Enhance your digital product with modern UI/UX design services. We focus on creating clean, intuitive, and engaging interfaces that your users will love.",
     url: "https://wtechverce.com/services/ui-ux-design",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Professional UI/UX Design Services | WTechVerce",
+    title: "Professional UI/UX Design & Product Interface Services",
     description:
       "Enhance your digital product with modern UI/UX design services. We focus on creating clean, intuitive, and engaging interfaces that your users will love.",
   },
