@@ -7,33 +7,38 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Mobile App Development Services (iOS & Android) | WTechVerce",
+  title: "Custom Mobile App Development Services (iOS & Android)",
   description:
-    "Turn your ideas into successful mobile applications. We offer end-to-end mobile app development services for iOS and Android with seamless user experiences.",
+    "Looking for a custom mobile application development company? WTechVerce delivers native iOS, custom Android, and cross-platform Flutter and React Native apps.",
   keywords: [
-    "Mobile App Development Services",
-    "native ios and android app development",
-    "cross platform mobile app development",
-    "corporate mobile app developers",
-    "custom mobile application wireframing",
-    "hybrid mobile app development solutions",
-    "mobile app development company",
+    "custom mobile app development services",
+    "custom mobile application development company",
+    "ios app development services",
+    "custom ios app development",
+    "custom android app development",
+    "cross platform app development company",
+    "cross platform app development services",
+    "react native mobile app development company",
+    "flutter mobile app development services",
+    "native mobile app development services",
+    "custom web and mobile app development",
+    "mobile application development services company",
   ],
   alternates: {
     canonical: "https://wtechverce.com/services/mobile-app-development",
   },
   openGraph: {
-    title: "Mobile App Development Services (iOS & Android) | WTechVerce",
+    title: "Custom Mobile App Development Services (iOS & Android) | WTechVerce",
     description:
-      "Turn your ideas into successful mobile applications. We offer end-to-end mobile app development services for iOS and Android with seamless user experiences.",
+      "Looking for a custom mobile application development company? WTechVerce delivers native iOS, custom Android, and cross-platform Flutter and React Native apps.",
     url: "https://wtechverce.com/services/mobile-app-development",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mobile App Development Services (iOS & Android) | WTechVerce",
+    title: "Custom Mobile App Development Services (iOS & Android) | WTechVerce",
     description:
-      "Turn your ideas into successful mobile applications. We offer end-to-end mobile app development services for iOS and Android with seamless user experiences.",
+      "Looking for a custom mobile application development company? WTechVerce delivers native iOS, custom Android, and cross-platform Flutter and React Native apps.",
   },
 };
 
@@ -231,6 +236,67 @@ export default function MobileAppDevelopmentService() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+
+        {/* RELEVANT MOBILE & WEB APP CASE STUDIES */}
+        <div className="mb-32">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div>
+              <span className="text-[#00B4D8] text-xs font-bold uppercase tracking-widest mb-3 block">Real-World Deployments</span>
+              <h2 data-text-reveal className="text-3xl md:text-4xl font-black">Featured Mobile &amp; Web Applications</h2>
+            </div>
+            <Link href="/portfolio" className="inline-flex items-center gap-2 text-sm text-[#00B4D8] font-bold hover:underline mt-4 md:mt-0">
+              Explore All Case Studies <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Link href="/portfolio/restaurant-ordering-system" className="group bg-[#0A0F1A] border border-white/5 hover:border-[#00B4D8]/40 rounded-3xl p-8 transition-all">
+              <span className="text-xs uppercase tracking-widest text-[#00B4D8] font-bold block mb-3">Real-Time Mobile App</span>
+              <h3 className="text-2xl font-bold text-white group-hover:text-[#00B4D8] transition-colors mb-4">
+                Restaurant Food Ordering &amp; Live Tracking System
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                Engineered real-time driver tracking and customer mobile ordering via WebSockets and React Native, cutting 30% third-party marketplace fees.
+              </p>
+              <span className="inline-flex items-center gap-2 text-xs font-bold text-white group-hover:translate-x-1 transition-transform">
+                Read Case Study <ArrowRight className="w-4 h-4 text-[#00B4D8]" />
+              </span>
+            </Link>
+
+            <Link href="/portfolio/fitness-gym-management-software" className="group bg-[#0A0F1A] border border-white/5 hover:border-[#6C24FA]/40 rounded-3xl p-8 transition-all">
+              <span className="text-xs uppercase tracking-widest text-[#6C24FA] font-bold block mb-3">Custom Member Portal</span>
+              <h3 className="text-2xl font-bold text-white group-hover:text-[#6C24FA] transition-colors mb-4">
+                Mobile-Friendly Gym Management Software
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                Unified scheduling, recurring Stripe billing, and member check-ins across mobile and tablet devices with zero downtime.
+              </p>
+              <span className="inline-flex items-center gap-2 text-xs font-bold text-white group-hover:translate-x-1 transition-transform">
+                Read Case Study <ArrowRight className="w-4 h-4 text-[#6C24FA]" />
+              </span>
+            </Link>
+          </div>
+        </div>
+
+        {/* CLOUD BACKEND & WEB APP INTEGRATION BRIDGE */}
+        <div className="bg-[#0A0F1A] border border-white/10 rounded-3xl p-8 md:p-12 mb-32 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="max-w-2xl">
+            <span className="text-xs uppercase tracking-widest text-[#00B4D8] font-bold block mb-2">Full-Stack Synergy</span>
+            <h3 className="text-2xl md:text-3xl font-black text-white mb-3">
+              Need a Custom Web Dashboard or Cloud Backend for Your App?
+            </h3>
+            <p className="text-gray-400 text-sm md:text-base leading-relaxed">
+              We engineer custom APIs, microservices, and web admin dashboards that sync seamlessly with your iOS and Android mobile applications.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+            <Button href="/services/software-development" variant="outline" size="md">
+              Software Development <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+            <Button href="/services/web-development" variant="outline" size="md">
+              Web Development
+            </Button>
           </div>
         </div>
 

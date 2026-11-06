@@ -7,33 +7,39 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Custom Web Development & Website Design Services",
+  title: "Custom Web Development Services & Web App Engineering",
   description:
-    "Get modern, fast, and fully responsive websites with our professional web development services. Let us build a powerful website that drives business results.",
+    "WTechVerce is a custom web development services company and web application development agency building responsive, high-performance websites for US businesses.",
   keywords: [
-    "Custom Web Development",
-    "custom web development agency",
-    "professional corporate website design",
-    "responsive web application development",
-    "dedicated frontend and backend web services",
-    "bespoke business website development",
-    "website design services",
+    "custom web development services",
+    "website development company",
+    "web development agency",
+    "web application development company",
+    "custom website development services",
+    "website design and development services",
+    "custom web app development",
+    "custom web portal development",
+    "responsive web development company",
+    "bespoke web application development",
+    "custom python web development company",
+    "web portal development company",
+    "custom web application development services",
   ],
   alternates: {
     canonical: "https://wtechverce.com/services/web-development",
   },
   openGraph: {
-    title: "Custom Web Development & Website Design Services | WTechVerce",
+    title: "Custom Web Development Services & Web App Engineering | WTechVerce",
     description:
-      "Get modern, fast, and fully responsive websites with our professional web development services. Let us build a powerful website that drives business results.",
+      "WTechVerce is a custom web development services company and web application development agency building responsive, high-performance websites for US businesses.",
     url: "https://wtechverce.com/services/web-development",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Web Development & Website Design Services | WTechVerce",
+    title: "Custom Web Development Services & Web App Engineering | WTechVerce",
     description:
-      "Get modern, fast, and fully responsive websites with our professional web development services. Let us build a powerful website that drives business results.",
+      "WTechVerce is a custom web development services company and web application development agency building responsive, high-performance websites for US businesses.",
   },
 };
 
@@ -276,7 +282,7 @@ export default function WebDevelopmentService() {
                 Custom Real Estate Search &amp; Discovery Portal
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                Engineered an interactive Mapbox-powered property search engine serving 50,000+ monthly active users with sub-second geospatial search filters.
+                Engineered an interactive Mapbox GL property search portal with dynamic pin clustering, PostgreSQL geospatial queries, and direct agent CRM integration.
               </p>
               <span className="inline-flex items-center gap-2 text-xs font-bold text-white group-hover:translate-x-1 transition-transform">
                 Explore Case Study <ArrowRight className="w-4 h-4 text-[#6C24FA]" />
@@ -289,7 +295,7 @@ export default function WebDevelopmentService() {
                 High-Conversion D2C Storefront Architecture
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                Delivered a headless React storefront integrated with automated inventory sync and custom checkout gateways, resulting in a 2.5x conversion rate boost.
+                Delivered a headless React storefront integrated with Shopify APIs, automated inventory sync, regional payment gateways, and a responsive mobile checkout flow.
               </p>
               <span className="inline-flex items-center gap-2 text-xs font-bold text-white group-hover:translate-x-1 transition-transform">
                 Explore Case Study <ArrowRight className="w-4 h-4 text-[#FD4F00]" />

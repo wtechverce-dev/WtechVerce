@@ -1,24 +1,23 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, BookOpen } from "lucide-react";
-import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Web & Software Development Blog | WTechVerce",
+  title: "Web & Software Development Blog | Insights & Guides",
   description: "Expert insights on custom software development, web applications, SaaS products, and eCommerce — written by the engineering team at WTechVerce.",
   alternates: {
     canonical: "https://wtechverce.com/blog",
   },
   openGraph: {
-    title: "Web & Software Development Blog | WTechVerce",
+    title: "Web & Software Development Blog | Insights & Guides",
     description: "Expert insights on custom software development, web applications, SaaS products, and eCommerce — written by the engineering team at WTechVerce.",
     url: "https://wtechverce.com/blog",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web & Software Development Blog | WTechVerce",
+    title: "Web & Software Development Blog | Insights & Guides",
     description: "Expert insights on custom software development, web applications, SaaS products, and eCommerce — written by the engineering team at WTechVerce.",
   },
 };

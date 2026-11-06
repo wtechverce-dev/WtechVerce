@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
-import { ArrowLeft, ArrowRight, CheckCircle, XCircle, Cpu, Shield, Layers, Workflow, Code2, DollarSign, Clock, HelpCircle, Sparkles } from "lucide-react";
+import { ArrowLeft, ArrowRight, Cpu, Shield, Layers, Workflow, Code2, DollarSign, Clock, HelpCircle, Sparkles } from "lucide-react";
 import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 

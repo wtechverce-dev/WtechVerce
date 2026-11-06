@@ -7,7 +7,7 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Professional SEO Services to Rank Your Website | WTechVerce",
+  title: "Professional Technical SEO & Web Performance Services",
   description:
     "Boost your online visibility and drive organic traffic with our expert SEO services. We optimize your website to rank higher on Google search results.",
   keywords: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     canonical: "https://wtechverce.com/services/seo",
   },
   openGraph: {
-    title: "Professional SEO Services to Rank Your Website | WTechVerce",
+    title: "Professional Technical SEO & Web Performance Services",
     description:
       "Boost your online visibility and drive organic traffic with our expert SEO services. We optimize your website to rank higher on Google search results.",
     url: "https://wtechverce.com/services/seo",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Professional SEO Services to Rank Your Website | WTechVerce",
+    title: "Professional Technical SEO & Web Performance Services",
     description:
       "Boost your online visibility and drive organic traffic with our expert SEO services. We optimize your website to rank higher on Google search results.",
   },

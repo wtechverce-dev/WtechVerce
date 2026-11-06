@@ -1,13 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Navbar from "@/components/Navbar";
+
 import Button from "@/components/ui/Button";
 import { useState } from "react";
 import { Send, Mail, Globe } from "lucide-react";
 
 const faqs = [
-  { q: "How long does a typical project take?", a: "Most projects take 6â€“16 weeks depending on scope. We'll give you a precise timeline after the discovery call." },
+  { q: "How long does a typical project take?", a: "Most projects take 6–16 weeks depending on scope. We'll give you a precise timeline after the discovery call." },
   { q: "What is your pricing model?", a: "We offer fixed-price projects and retainer-based engagements. Pricing depends on complexity, team size, and timeline." },
   { q: "Do you provide post-launch support?", a: "Yes, we offer dedicated maintenance plans, performance monitoring, and priority support for all our clients." },
   { q: "Can you work with our existing tech stack?", a: "Absolutely. We are full-stack experts and can integrate with or extend your existing infrastructure." },
@@ -219,8 +219,8 @@ export default function ContactPage() {
                 <select id="budget" value={formData.budget} onChange={handleChange} className="bg-[#050505] border border-white/8 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#FF6B00]/50 transition-colors appearance-none cursor-pointer" disabled={status === 'loading'}>
                   <option value="">Select budget range...</option>
                   <option>Under $5,000</option>
-                  <option>$5,000 â€“ $15,000</option>
-                  <option>$15,000 â€“ $50,000</option>
+                  <option>$5,000 - $15,000</option>
+                  <option>$15,000 - $50,000</option>
                   <option>$50,000+</option>
                 </select>
               </div>

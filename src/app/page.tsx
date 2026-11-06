@@ -14,8 +14,9 @@ import { ImageMarqueeSection } from "@/components/ui/ImageMarqueeSection";
 import {
 
   ArrowRight, ArrowUpRight, ChevronDown, ChevronUp,
-  Search, Target, Megaphone, Code,
+  Search, Target, Code,
   CheckCircle, Star, ChevronLeft, ChevronRight,
+  Cpu, Smartphone, Cloud,
 } from "lucide-react";
 
 // ─── COUNTER ────────────────────────────────────────────────
@@ -185,7 +186,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-3 mt-16 max-w-4xl">
-            {["Custom Software", "Web Development", "SaaS Development", "WordPress", "Ecommerce", "UI/UX Design", "SEO Services", "Website Redesign"].map((tag) => (
+            {["Custom Software", "Web Development", "Mobile App Development", "SaaS Development", "WordPress", "Ecommerce", "UI/UX Design", "Website Redesign"].map((tag) => (
               <span
                 key={tag}
                 className="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-white/60 text-sm font-medium backdrop-blur-sm hover:border-[#FD4F00]/50 hover:text-[#FD4F00] hover:bg-[#FD4F00]/10 transition-all cursor-default"
@@ -198,7 +199,7 @@ export default function Home() {
 
         <div className="absolute bottom-0 left-0 w-full z-10 border-t border-white/8 py-4 bg-white/[0.02] backdrop-blur-sm">
           <MarqueeTicker
-            items={["CUSTOM SOFTWARE", "WEB DEVELOPMENT", "SAAS PLATFORMS", "UI/UX DESIGN", "ECOMMERCE", "SEO", "WORDPRESS"]}
+            items={["CUSTOM SOFTWARE", "WEB DEVELOPMENT", "MOBILE APPS", "SAAS PLATFORMS", "UI/UX DESIGN", "ECOMMERCE", "WORDPRESS"]}
             speed={30} itemClassName="text-white/40"
           />
         </div>
@@ -337,7 +338,7 @@ export default function Home() {
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#6C24FA]/25 bg-[#6C24FA]/10 text-[#6C24FA] text-xs font-bold uppercase tracking-widest mb-6">
                 Our Expertise
               </span>
-              <TextRevealHeading as="h2" className="text-5xl md:text-6xl font-black text-white tracking-[-0.03em]">Data-Driven Digital Marketing Services to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6C24FA] to-[#FD4F00]">Accelerate Growth</span></TextRevealHeading>
+              <TextRevealHeading as="h2" className="text-5xl md:text-6xl font-black text-white tracking-[-0.03em]">Custom Web &amp; Software Development Services to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6C24FA] to-[#FD4F00]">Accelerate Growth</span></TextRevealHeading>
             </div>
           </FadeIn>
 
@@ -348,7 +349,7 @@ export default function Home() {
                 <div className="absolute right-0 bottom-0 w-1/2 h-full opacity-30 group-hover:opacity-50 transition-opacity duration-500">
                   <img
                     src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80"
-                    alt="SEO Strategy"
+                    alt="Custom Software Development"
                     loading="lazy"
                     decoding="async"
                     className="w-full h-full object-cover"
@@ -357,11 +358,11 @@ export default function Home() {
                 </div>
                 <div className="relative z-10 max-w-sm">
                   <motion.div whileHover={{ scale: 1.1 }} className="w-14 h-14 rounded-2xl bg-[#FD4F00] flex items-center justify-center text-white mb-8 shadow-[0_0_30px_rgba(253,79,0,0.4)]">
-                    <Search className="w-6 h-6" />
+                    <Cpu className="w-6 h-6" />
                   </motion.div>
-                  <h3 className="text-3xl font-black text-white mb-4">SEO & Organic Growth</h3>
-                  <p className="text-gray-400 mb-8 leading-relaxed">Rank for the searches your customers actually type — not vanity keywords. High-ROI organic strategies that compound over time.</p>
-                  <PillBtn href="/services/seo"><span className="flex items-center gap-2">Explore SEO <ArrowRight className="w-4 h-4" /></span></PillBtn>
+                  <h3 className="text-3xl font-black text-white mb-4">Custom Software Development</h3>
+                  <p className="text-gray-400 mb-8 leading-relaxed">Enterprise software systems, internal business automation tools, and resilient microservices built to scale without technical debt.</p>
+                  <PillBtn href="/services/software-development"><span className="flex items-center gap-2">Explore Software Dev <ArrowRight className="w-4 h-4" /></span></PillBtn>
                 </div>
               </div>
             </FadeIn>
@@ -390,46 +391,54 @@ export default function Home() {
               </a>
             </FadeIn>
 
-            {/* Paid Ads image card */}
+            {/* Mobile App Development image card */}
             <FadeIn delay={0.15} className="md:col-span-4">
-              <div className="rounded-[2.5rem] bg-[#070D18] border border-white/5 relative overflow-hidden h-[360px] group hover:border-[#FD4F00]/20 transition-colors duration-500">
+              <a href="/services/mobile-app-development" className="block rounded-[2.5rem] bg-[#070D18] border border-white/5 relative overflow-hidden h-[360px] group hover:border-[#00B4D8]/30 transition-colors duration-500" aria-label="Custom Mobile App Development Services">
                 <img
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80"
-                  alt="Paid Ads"
+                  src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80"
+                  alt="Custom Mobile App Development Services"
                   loading="lazy"
                   decoding="async"
                   className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#070D18] via-[#070D18]/60 to-transparent" />
                 <div className="absolute bottom-8 left-8 right-8">
-                  <h3 className="text-2xl font-black text-white mb-2">Paid Advertising</h3>
-                  <p className="text-gray-400 text-sm">Google Ads & Meta Ads built around your target CPA.</p>
+                  <div className="w-10 h-10 rounded-xl bg-[#00B4D8]/20 flex items-center justify-center text-[#00B4D8] mb-3">
+                    <Smartphone className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-2xl font-black text-white mb-2">Mobile App Development</h3>
+                  <p className="text-gray-400 text-sm">Native iOS, Android, and cross-platform apps built with React Native and Flutter.</p>
                 </div>
-              </div>
+              </a>
             </FadeIn>
 
 
-            {/* Content & Social — with background image */}
+            {/* SaaS Product Development — with background image */}
             <FadeIn delay={0.2} className="md:col-span-8">
-              <div className="rounded-[2.5rem] relative overflow-hidden min-h-[300px] md:h-[360px] group hover:border-[#FD4F00]/20 transition-colors duration-500">
+              <div className="rounded-[2.5rem] relative overflow-hidden min-h-[300px] md:h-[360px] group border border-white/5 hover:border-[#6C24FA]/30 transition-colors duration-500">
                 {/* Background image */}
                 <img
-                  src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&fit=crop&w=1000&q=80"
-                  alt="Content & Social Media"
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80"
+                  alt="SaaS Product Development"
                   loading="lazy"
                   decoding="async"
-                  className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700"
+                  className="absolute inset-0 w-full h-full object-cover opacity-35 group-hover:opacity-55 group-hover:scale-105 transition-all duration-700"
                 />
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#070D18] via-[#070D18]/80 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#070D18] via-[#070D18]/85 to-transparent" />
                 {/* Content */}
-                <div className="relative z-10 p-7 md:p-10 h-full flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-8">
-                  <motion.div whileHover={{ scale: 1.1 }} className="w-14 h-14 rounded-2xl bg-[#FD4F00]/20 flex items-center justify-center text-[#FD4F00] shrink-0">
-                    <Megaphone className="w-7 h-7" />
-                  </motion.div>
-                  <div>
-                    <h3 className="text-2xl md:text-3xl font-black text-white mb-3">Content & Social Media</h3>
-                    <p className="text-gray-300 text-base md:text-lg leading-relaxed">Content that builds brand recognition and feeds your funnel. Blog posts and guides that answer real buyer questions.</p>
+                <div className="relative z-10 p-7 md:p-10 h-full flex flex-col justify-between">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-8">
+                    <motion.div whileHover={{ scale: 1.1 }} className="w-14 h-14 rounded-2xl bg-[#6C24FA]/20 flex items-center justify-center text-[#6C24FA] shrink-0">
+                      <Cloud className="w-7 h-7" />
+                    </motion.div>
+                    <div>
+                      <h3 className="text-2xl md:text-3xl font-black text-white mb-2">SaaS Product Development</h3>
+                      <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-xl">From multi-tenant databases and Stripe billing to rapid MVP sprints — we engineer subscription products built to scale revenue.</p>
+                    </div>
+                  </div>
+                  <div className="mt-6 sm:mt-0">
+                    <PillBtn href="/services/saas-development"><span className="flex items-center gap-2">Explore SaaS Dev <ArrowRight className="w-4 h-4" /></span></PillBtn>
                   </div>
                 </div>
               </div>
@@ -480,10 +489,10 @@ export default function Home() {
               </TextRevealHeading>
               <div className="space-y-6 mb-10">
                 {[
-                  { title: "Transparent Reporting", desc: "Tied to revenue, not vanity metrics. Always in plain language." },
-                  { title: "No Lock-In Contracts", desc: "Month-to-month. You stay because of results, not paperwork." },
-                  { title: "Dedicated Strategist", desc: "A real point of contact who knows your business inside-out." },
-                  { title: "Full-Funnel Approach", desc: "We manage SEO, Ads, Content, and Dev in sync — not in silos." },
+                  { title: "Engineering Excellence", desc: "Hand-crafted codebases built with Next.js, React, Node.js, and TypeScript — zero bloated templates." },
+                  { title: "Flexible Engagement Models", desc: "Dedicated developer pods, turnkey sprint delivery, or MVP launches tailored to your roadmap." },
+                  { title: "Dedicated Technical Leads", desc: "Direct collaboration with senior engineers who understand your system architecture inside-out." },
+                  { title: "Built for Production Scale", desc: "Engineered from day one for 99.9% uptime, enterprise security, and sub-second performance." },
                 ].map((item, i) => (
                   <motion.div key={i} initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }} className="flex gap-4 items-start">
                     <div className="mt-1 w-6 h-6 rounded-full bg-[#6C24FA]/20 flex items-center justify-center text-[#6C24FA] shrink-0">
@@ -497,8 +506,8 @@ export default function Home() {
                 ))}
               </div>
               <div className="p-8 rounded-3xl bg-[#0A0F1A]/80 backdrop-blur-xl border border-[#FD4F00]/25 shadow-[0_0_50px_rgba(253,79,0,0.08)]">
-                <p className="text-white text-base leading-relaxed italic mb-3">"Our last agency just sent reports we didn't understand."</p>
-                <span className="text-[#FD4F00] font-bold text-sm not-italic">— We report in plain language, tied to ROI.</span>
+                <p className="text-white text-base leading-relaxed italic mb-3">"Our previous agency built bloated code we couldn't scale or maintain."</p>
+                <span className="text-[#FD4F00] font-bold text-sm not-italic">— We engineer clean, documented software architectures built for enterprise scale.</span>
               </div>
             </div>
           </FadeIn>
@@ -588,10 +597,10 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-5">
           {[
-            { num: "01", title: "Audit & Discovery", desc: "We audit your site, rankings, ads, and competitors to find real gaps and opportunities.", icon: <Search className="w-6 h-6" />, color: "#FD4F00" },
-            { num: "02", title: "Strategy Roadmap", desc: "You receive a detailed written plan: which channels, why them, and exact KPIs to track.", icon: <Target className="w-6 h-6" />, color: "#6C24FA" },
-            { num: "03", title: "Execution", desc: "Our specialists build, launch, and manage every deliverable to the exact plan.", icon: <Megaphone className="w-6 h-6" />, color: "#FD4F00" },
-            { num: "04", title: "Report & Optimize", desc: "Monthly reports tied to real revenue metrics, with continuous A/B testing and refinement.", icon: <Star className="w-6 h-6" />, color: "#6C24FA" },
+            { num: "01", title: "Architecture Discovery", desc: "We analyze business logic, user flows, database models, and technical requirements to define a risk-free engineering scope.", icon: <Search className="w-6 h-6" />, color: "#FD4F00" },
+            { num: "02", title: "System Blueprint", desc: "Detailed system architecture, schema design, API specifications, and sprint milestones before writing a line of code.", icon: <Target className="w-6 h-6" />, color: "#6C24FA" },
+            { num: "03", title: "Agile Development", desc: "Our engineers build your software in transparent bi-weekly sprints with continuous integration and code review.", icon: <Code className="w-6 h-6" />, color: "#FD4F00" },
+            { num: "04", title: "QA & Deployment", desc: "Automated regression testing, load testing, security audits, and zero-downtime cloud production deployment.", icon: <Star className="w-6 h-6" />, color: "#6C24FA" },
           ].map((step, i) => (
             <motion.div key={i}
               initial={{ opacity: 0, y: 60 }}
@@ -763,7 +772,7 @@ export default function Home() {
                   <div className="flex gap-1 justify-end text-[#FD4F00] my-2">
                     {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-current" />)}
                   </div>
-                  <p className="text-gray-500 text-xs uppercase tracking-widest font-bold">150+ Verified Reviews</p>
+                  <p className="text-gray-500 text-xs uppercase tracking-widest font-bold">150+ Client Reviews</p>
                 </div>
               </div>
             </div>
@@ -906,7 +915,7 @@ export default function Home() {
           <FadeIn delay={0.2}>
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/contact" variant="primary" size="lg" filled>
-                Get a Free Audit <ArrowRight className="w-5 h-5" />
+                Schedule a Consultation <ArrowRight className="w-5 h-5" />
               </Button>
               <Button href="/portfolio" variant="outline" size="lg">
                 View Our Work <ArrowUpRight className="w-5 h-5" />
