@@ -7,39 +7,51 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Custom Web Development Services & Web Apps",
+  title: "Website Development Company & Web Agency",
   description:
-    "WTechVerce provides custom web development services and bespoke web apps. Fast Next.js, React, and full-stack solutions built for scale.",
+    "WTechVerce is a website development company providing custom web development services, bespoke web applications, and responsive portals.",
   keywords: [
-    "custom web development services",
     "website development company",
     "web development agency",
+    "custom web development",
     "web application development company",
+    "custom web development services",
+    "custom web application development services",
     "custom website development services",
     "website design and development services",
-    "custom web app development",
-    "custom web portal development",
-    "responsive web development company",
-    "bespoke web application development",
-    "custom python web development company",
+    "website development for small business",
+    "white label web development services",
     "web portal development company",
-    "custom web application development services",
+    "custom web portal development",
+    "react js application development company",
+    "custom python web development company",
+    "laravel website development company",
+    "php website development services",
+    "custom web application development cost",
+    "white label web development agency",
+    "web development and seo company",
+    "responsive web development company",
+    "bespoke web application development company",
+    "customized web application development",
+    "bespoke web application development",
+    "affordable web development services",
+    "custom web app development",
   ],
   alternates: {
     canonical: "https://wtechverce.com/services/web-development",
   },
   openGraph: {
-    title: "Custom Web Development Services & Web Apps | WTechVerce",
+    title: "Website Development Company & Web Agency | WTechVerce",
     description:
-      "WTechVerce provides custom web development services and bespoke web apps. Fast Next.js, React, and full-stack solutions built for scale.",
+      "WTechVerce is a website development company providing custom web development services, bespoke web applications, and responsive portals.",
     url: "https://wtechverce.com/services/web-development",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Web Development Services & Web Apps | WTechVerce",
+    title: "Website Development Company & Web Agency | WTechVerce",
     description:
-      "WTechVerce provides custom web development services and bespoke web apps. Fast Next.js, React, and full-stack solutions built for scale.",
+      "WTechVerce is a website development company providing custom web development services, bespoke web applications, and responsive portals.",
   },
 };
 
@@ -50,13 +62,13 @@ export default function WebDevelopmentService() {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
-          "serviceType": "Custom Web Development and Website Design Services",
+          "serviceType": "Website Development Company & Custom Web Application Services",
           "provider": {
             "@type": "Organization",
             "name": "WTechVerce",
             "url": "https://wtechverce.com"
           },
-          "description": "Get modern, fast, and fully responsive websites with our professional web development services. Let us build a powerful website that drives business results.",
+          "description": "WTechVerce is a professional website development company and web development agency engineering custom web applications, responsive corporate websites, and secure digital portals.",
           "areaServed": [
             { "@type": "Country", "name": "United States" },
             { "@type": "Country", "name": "United Kingdom" },
@@ -72,34 +84,42 @@ export default function WebDevelopmentService() {
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "Will my website be mobile-friendly and fast?",
+              "name": "Why hire a custom website development company instead of using a pre-made template?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, every website we build is completely responsive on all devices and optimized for high-speed performance."
+                "text": "We focus on performance optimization, Core Web Vitals, efficient code, and caching strategies to deliver fast, responsive websites. Actual performance depends on the project architecture, hosting environment, and user network conditions."
               }
             },
             {
               "@type": "Question",
-              "name": "Why hire a custom web development agency instead of using pre-made templates?",
+              "name": "What factors influence custom web application development cost?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "A custom web development agency crafts tailor-made codebases using Next.js and React that deliver sub-second loading speeds, superior search engine indexation, bespoke business logic, and uncompromising enterprise security that generic templates cannot provide."
+                "text": "Custom web application development cost depends on scope complexity, custom API integrations, user authentication tiers, database architecture, and real-time features. We provide transparent, milestone-based estimates before development begins."
               }
             },
             {
               "@type": "Question",
-              "name": "What is included in your professional corporate website design services?",
+              "name": "Do you provide white label web development services for agency partners?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Our professional corporate website design services include stakeholder discovery, responsive UI/UX design, interactive prototyping, conversion-focused layout architecture, and enterprise CMS integration."
+                "text": "Yes, our white label web development services support digital agencies, marketing firms, and consultancies needing dedicated frontend and backend engineering capacity under complete confidentiality and strict NDA terms."
               }
             },
             {
               "@type": "Question",
-              "name": "Do you provide dedicated frontend and backend web services?",
+              "name": "Can you build customized web portals and internal business dashboards?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, we offer dedicated frontend and backend web services. Our frontend specialists excel in React, Next.js, and Tailwind CSS, while our backend engineers build high-performance APIs and microservices using Node.js, Express, and PostgreSQL."
+                "text": "Yes, as a web portal development company we design and build secure client portals, vendor management systems, interactive dashboards, and cloud web applications tailored to your business operations."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does WTechVerce collaborate with clients across US timezones?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We maintain daily communication overlap with US timezones via Slack, weekly sprint video standups, and transparent Jira or GitHub project tracking, delivering seamless remote collaboration from concept to deployment."
               }
             }
           ]
@@ -115,19 +135,19 @@ export default function WebDevelopmentService() {
             <ArrowLeft className="w-4 h-4" /> Back to Services
           </Link>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#FD4F00]/30 bg-[#FD4F00]/10 text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-6">
-            Bespoke Web Engineering
+            Bespoke Web Development Agency
           </div>
           <h1 data-text-reveal className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
-            Custom Web Development and <br />
+            Website Development Company & <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD4F00] to-[#ff8c42]">
-              Website Design
+              Custom Web Applications
             </span>
           </h1>
           <p className="text-xl text-gray-300 leading-relaxed mb-6">
-            Get modern, fast, and fully responsive websites with our professional <strong className="text-white">custom web development</strong> services. Let us build a powerful website that drives business results and positions your brand at the forefront of your industry.
+            WTechVerce is a full-service <strong className="text-white">website development company</strong> and bespoke <strong className="text-white">web development agency</strong>. We engineer high-performance web applications, modern corporate websites, and secure business portals designed to convert visitors into measurable revenue.
           </p>
           <p className="text-base text-gray-400 leading-relaxed mb-10">
-            As a leading custom web development agency, we engineer professional corporate website design services, responsive web application development, and dedicated frontend and backend web services designed to scale without technical debt.
+            From responsive web application development and custom web portal development to dedicated frontend and backend engineering, we deliver scalable codebases using Next.js, React, Node.js, and Python—built without technical debt.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button href="/contact" variant="primary" size="lg" filled>
@@ -143,7 +163,7 @@ export default function WebDevelopmentService() {
         <div className="relative w-full h-[320px] md:h-[460px] rounded-3xl overflow-hidden border border-white/10 mb-32 group shadow-2xl">
           <Image
             src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80"
-            alt="Custom web development and responsive website design"
+            alt="Custom web development services and responsive website development company interface"
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-700"
             sizes="(max-width: 1200px) 100vw, 1200px"
@@ -152,8 +172,8 @@ export default function WebDevelopmentService() {
           <div className="absolute inset-0 bg-gradient-to-t from-[#02050A] via-[#02050A]/40 to-transparent" />
           <div className="absolute bottom-8 left-8 right-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
-              <span className="text-xs uppercase tracking-widest text-[#FD4F00] font-bold">Ultra-Fast Loading</span>
-              <h3 className="text-xl md:text-2xl font-bold text-white">Sub-Second Speed, Perfect Core Web Vitals &amp; Top Google Rankings</h3>
+              <span className="text-xs uppercase tracking-widest text-[#FD4F00] font-bold">Engineered for Performance</span>
+              <h3 className="text-xl md:text-2xl font-bold text-white">Full-Stack Web Engineering Built for Scale, Speed &amp; Conversions</h3>
             </div>
             <span className="text-xs text-gray-400 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
               Next.js 16 &amp; React 19
@@ -164,24 +184,24 @@ export default function WebDevelopmentService() {
         {/* INTRODUCTION / VALUE PROPOSITION */}
         <div className="grid md:grid-cols-2 gap-16 mb-32">
           <div>
-            <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">Digital Experience</span>
-            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-6">Responsive Web Solutions for Your Business</h2>
+            <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">Digital Engineering</span>
+            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-6">Custom Web Development Services for Growing Businesses</h2>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Your company website is your primary digital salesperson. Our custom web development services ensure your site communicates credibility, loads instantly across mobile viewports, and channels visitors smoothly toward qualified inquiries and sales.
+              Your website is your primary digital storefront and sales engine. Our <strong className="text-white">custom web development services</strong> ensure your digital platform communicates authority, loads instantly across mobile and desktop screens, and guides visitors smoothly into qualified sales conversations.
             </p>
             <p className="text-gray-400 leading-relaxed mb-6">
-              We reject bloated website builders that compromise security and crawlability. Instead, our professional corporate website design services utilize clean, hand-coded architectures that give you unmatched autonomy, lightning-fast interactivity, and built-in technical SEO dominance.
+              We reject rigid, slow templates that restrict your growth and create security liabilities. Instead, our <strong className="text-white">website design and development services</strong> utilize clean, hand-crafted architectures that provide complete operational control, modular scalability, and built-in search engine optimization.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              Whether you need bespoke business website development for corporate branding or responsive web application development for complex user dashboards, our dedicated frontend and backend web services deliver exceptional craftsmanship.
+              Whether you need <strong className="text-white">website development for small business</strong> to establish market presence, bespoke corporate portal development, or complex cloud web applications, our dedicated engineering team delivers reliable craftsmanship tailored to your commercial objectives.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-6">
             {[
-              { icon: <Layout className="w-6 h-6 text-[#FD4F00]" />, title: "Corporate Design", desc: "Professional corporate website design services with custom brand identity." },
-              { icon: <Globe2 className="w-6 h-6 text-[#FD4F00]" />, title: "Responsive Web Apps", desc: "Responsive web application development optimized across all mobile viewports." },
-              { icon: <Server className="w-6 h-6 text-[#FD4F00]" />, title: "Dedicated Engineering", desc: "Dedicated frontend and backend web services with Next.js, React, and Node.js." },
-              { icon: <Zap className="w-6 h-6 text-[#FD4F00]" />, title: "Bespoke Development", desc: "Bespoke business website development tailored specifically to your roadmap." },
+              { icon: <Layout className="w-6 h-6 text-[#FD4F00]" />, title: "Custom Web Applications", desc: "Bespoke web application development built with React and Next.js for high interactivity." },
+              { icon: <Globe2 className="w-6 h-6 text-[#FD4F00]" />, title: "Web Portals & Dashboards", desc: "Custom web portal development for client management, vendor access, and internal operations." },
+              { icon: <Server className="w-6 h-6 text-[#FD4F00]" />, title: "Full-Stack Web Services", desc: "Dedicated frontend and backend web development services with robust REST and GraphQL APIs." },
+              { icon: <Zap className="w-6 h-6 text-[#FD4F00]" />, title: "White Label Engineering", desc: "White label web development services for marketing agencies needing reliable technical capacity." },
             ].map((item, i) => (
               <div key={i} className="bg-[#0A0F1A] border border-white/5 p-6 rounded-2xl">
                 <div className="mb-4">{item.icon}</div>
@@ -195,65 +215,65 @@ export default function WebDevelopmentService() {
         {/* TECH STACK SECTION */}
         <div className="mb-32">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">Modern Architecture</span>
-            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-4">Modern Web Dev Technologies We Use</h2>
+            <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">Full-Stack Matrix</span>
+            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-4">Modern Web Development Technologies We Leverage</h2>
             <p className="text-gray-400 text-base">
-              We build using industry-standard, high-performance technology stacks engineered for scalability, security, and developer ergonomics.
+              As an agile web development agency, we engineer platforms using proven, high-performance technology stacks built for enterprise scalability and maintainable growth.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-8 border border-white/10 rounded-3xl bg-gradient-to-b from-white/[0.02] to-transparent">
               <h3 className="text-2xl font-bold mb-4 text-white">Frontend Frameworks</h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                Responsive web application development powered by React, Next.js, TypeScript, and Tailwind CSS for fluid animations and instant client-side transitions.
+                Specialized React JS application development and Next.js architectures using TypeScript and Tailwind CSS for fluid interactivity and instant server-rendered page loads.
               </p>
               <ul className="space-y-2 text-sm text-gray-300">
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FD4F00]" /> Server-Side Rendering (SSR) &amp; Static Generation</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FD4F00]" /> 100/100 Google Lighthouse Core Web Vitals</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FD4F00]" /> Accessible WCAG 2.1 AA UI standards</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FD4F00]" /> Next.js App Router &amp; Server Components</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FD4F00]" /> React 19 &amp; TypeScript type safety</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FD4F00]" /> Core Web Vitals optimization &amp; mobile responsiveness</li>
               </ul>
             </div>
             <div className="p-8 border border-[#FD4F00]/30 rounded-3xl bg-[#FD4F00]/5 relative">
               <div className="absolute -top-3 right-6 px-3 py-1 bg-[#FD4F00] text-white text-xs font-black uppercase rounded-full tracking-wider">Enterprise Performance</div>
-              <h3 className="text-2xl font-bold mb-4 text-white">Backend &amp; Cloud Systems</h3>
+              <h3 className="text-2xl font-bold mb-4 text-white">Backend &amp; API Systems</h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                Dedicated frontend and backend web services with high-throughput REST and GraphQL APIs, resilient microservices, and database clustering.
+                Robust backend engineering using Node.js, Python, Laravel, and PHP website development services to construct secure, high-throughput microservices.
               </p>
               <ul className="space-y-2 text-sm text-gray-300">
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FD4F00]" /> Node.js, Express, Nest.js &amp; Python APIs</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FD4F00]" /> PostgreSQL, MongoDB, Redis caching layers</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FD4F00]" /> Vercel, AWS, Cloudflare Edge security integration</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FD4F00]" /> Node.js, Express &amp; custom Python web development</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FD4F00]" /> Laravel website development &amp; RESTful API design</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FD4F00]" /> PostgreSQL, MongoDB &amp; Redis caching infrastructure</li>
               </ul>
             </div>
             <div className="p-8 border border-white/10 rounded-3xl bg-gradient-to-b from-white/[0.02] to-transparent">
-              <h3 className="text-2xl font-bold mb-4 text-white">Content Systems &amp; Headless</h3>
+              <h3 className="text-2xl font-bold mb-4 text-white">Content Systems &amp; Portals</h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                Bespoke business website development empowering non-technical team members to publish content effortlessly without touching source code.
+                Custom web portal development and headless CMS architectures empowering business teams to manage content, user tiers, and integrations effortlessly.
               </p>
               <ul className="space-y-2 text-sm text-gray-300">
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FD4F00]" /> Sanity, Strapi, Contentful headless CMS</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FD4F00]" /> Custom WordPress headless configurations</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FD4F00]" /> Granular permissions &amp; automated editorial pipelines</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FD4F00]" /> Custom client and vendor portal dashboards</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FD4F00]" /> Headless Sanity, Strapi &amp; decoupled WordPress setups</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FD4F00]" /> Legacy CMS migration (including Drupal and Java integrations)</li>
               </ul>
             </div>
           </div>
         </div>
 
-        {/* WHY CHOOSE US */}
+        {/* WHY CHOOSE US / AGENCY PARTNERSHIPS */}
         <div className="bg-gradient-to-r from-[#FD4F00]/10 to-transparent border border-[#FD4F00]/20 rounded-[2.5rem] p-10 md:p-16 mb-32">
           <div className="max-w-3xl">
-            <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">Why Choose WTechVerce</span>
-            <h3 className="text-3xl font-black mb-6">A Premier Custom Web Development Agency Focused on Revenue</h3>
+            <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">Why Partner With Us</span>
+            <h2 className="text-3xl md:text-4xl font-black mb-6">A Premier Custom Web Development Agency Focused on Real Business Results</h2>
             <p className="text-gray-300 mb-8 leading-relaxed">
-              We eliminate technical roadblocks before they affect your traffic, ensuring your digital presence remains fast, maintainable, and adaptable as your market evolves.
+              We collaborate with growing businesses, enterprise teams, and creative agencies across North America and Europe. Whether serving clients in tech hubs like New York, Chicago, Denver, or Austin, our agile development methodology guarantees transparent milestone delivery, clean codebases, and direct communication.
             </p>
             <ul className="space-y-4">
               {[
-                "Recognized custom web development agency with proven global delivery across US, UK, and European clients.",
-                "Professional corporate website design services focused on stakeholder trust and high conversion rates.",
-                "Responsive web application development built with React and Next.js for sub-second load times.",
-                "Dedicated frontend and backend web services providing end-to-end architecture from design to DevOps.",
-                "Bespoke business website development tailored specifically around your competitive advantages.",
+                "Recognized custom website development company with proven global delivery across US, UK, and international clients.",
+                "Professional website design and development services focused on stakeholder trust, brand credibility, and measurable conversion rates.",
+                "Responsive web application development built with React and Next.js for instant client-side performance.",
+                "Dedicated frontend and backend web development services providing complete support from initial discovery to production deployment.",
+                "White label web development agency partnerships providing reliable overflow engineering capacity under strict confidentiality.",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-gray-300">
                   <CheckCircle className="w-5 h-5 text-[#FD4F00] shrink-0 mt-0.5" /> <span>{item}</span>
@@ -263,7 +283,6 @@ export default function WebDevelopmentService() {
           </div>
         </div>
 
-        
         {/* RELEVANT WEB DEVELOPMENT CASE STUDIES */}
         <div className="mb-32">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
@@ -309,10 +328,10 @@ export default function WebDevelopmentService() {
           <div className="max-w-2xl">
             <span className="text-xs uppercase tracking-widest text-[#FD4F00] font-bold block mb-2">Cost &amp; Strategy Analysis</span>
             <h3 className="text-2xl md:text-3xl font-black text-white mb-3">
-              How Much Does Custom Web Development Cost in 2026?
+              How Much Does Custom Web Application Development Cost in 2026?
             </h3>
             <p className="text-gray-400 text-sm md:text-base leading-relaxed">
-              Compare honest price ranges for simple websites, custom web applications, and enterprise platforms in our comprehensive 2026 cost guide.
+              Explore transparent price ranges for simple websites, custom web applications, and enterprise digital platforms in our comprehensive 2026 cost guide.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
@@ -329,31 +348,37 @@ export default function WebDevelopmentService() {
         <div className="max-w-3xl mx-auto mb-32">
           <div className="text-center mb-12">
             <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-2 block">Common Questions</span>
-            <h2 data-text-reveal className="text-3xl font-black">Frequently Asked Questions</h2>
+            <h2 data-text-reveal className="text-3xl font-black">Frequently Asked Questions About Web Development</h2>
           </div>
           <div className="space-y-6">
             <div className="border-b border-white/10 pb-6">
-              <h4 className="text-lg font-bold mb-2">Will my website be mobile-friendly and fast?</h4>
+              <h4 className="text-lg font-bold mb-2">Why hire a custom website development company instead of using a pre-made template?</h4>
               <p className="text-gray-400 leading-relaxed">
-                Yes, every website we build is completely responsive on all devices and optimized for high-speed performance, achieving top scores on Google PageSpeed Insights and Core Web Vitals.
+                We focus on performance optimization, Core Web Vitals, efficient code, and caching strategies to deliver fast, responsive websites. Actual performance depends on the project architecture, hosting environment, and user network conditions.
               </p>
             </div>
             <div className="border-b border-white/10 pb-6">
-              <h4 className="text-lg font-bold mb-2">What sets WTechVerce apart as a custom web development agency?</h4>
+              <h4 className="text-lg font-bold mb-2">What factors influence custom web application development cost?</h4>
               <p className="text-gray-400 leading-relaxed">
-                Unlike agencies that rely on slow WordPress templates, we specialize in bespoke business website development using modern technologies like Next.js, React, and Node.js. This guarantees extreme performance, bulletproof security, and top SEO rankings.
+                Custom web application development cost depends on scope complexity, custom API integrations, user authentication tiers, database architecture, and real-time features. We provide transparent, milestone-based estimates before development begins.
               </p>
             </div>
             <div className="border-b border-white/10 pb-6">
-              <h4 className="text-lg font-bold mb-2">How do your professional corporate website design services work?</h4>
+              <h4 className="text-lg font-bold mb-2">Do you provide white label web development services for agency partners?</h4>
               <p className="text-gray-400 leading-relaxed">
-                We begin with a strategic brand discovery session, create interactive Figma wireframes, review interactive feedback, and then develop the production site with responsive web application development principles.
+                Yes, our white label web development services support digital agencies, marketing firms, and consultancies needing dedicated frontend and backend engineering capacity under complete confidentiality and strict NDA terms.
               </p>
             </div>
             <div className="border-b border-white/10 pb-6">
-              <h4 className="text-lg font-bold mb-2">Can we hire dedicated frontend and backend web services for an existing project?</h4>
+              <h4 className="text-lg font-bold mb-2">Can you build customized web portals and internal business dashboards?</h4>
               <p className="text-gray-400 leading-relaxed">
-                Yes, our dedicated frontend and backend web services can integrate directly into your active repositories to audit code, refactor legacy systems, implement new features, and boost speed metrics.
+                Yes, as a web portal development company we design and build secure client portals, vendor management systems, interactive dashboards, and cloud web applications tailored to your business operations.
+              </p>
+            </div>
+            <div className="border-b border-white/10 pb-6">
+              <h4 className="text-lg font-bold mb-2">How does WTechVerce collaborate with clients across US timezones?</h4>
+              <p className="text-gray-400 leading-relaxed">
+                We maintain daily communication overlap with US timezones via Slack, weekly sprint video standups, and transparent Jira or GitHub project tracking, delivering seamless remote collaboration from concept to deployment.
               </p>
             </div>
           </div>
@@ -361,7 +386,7 @@ export default function WebDevelopmentService() {
 
         {/* CTA */}
         <div className="text-center">
-          <h2 data-text-reveal className="text-4xl font-black mb-6">Ready to Build With a Premier Web Development Team?</h2>
+          <h2 data-text-reveal className="text-4xl font-black mb-6">Ready to Build With a Premier Web Development Agency?</h2>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
             Discuss your website objectives with our technical leads and receive a comprehensive project scope, timeline, and quote.
           </p>

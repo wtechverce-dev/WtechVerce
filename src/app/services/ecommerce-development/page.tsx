@@ -2,38 +2,40 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, CheckCircle, ShoppingCart, CreditCard, BarChart, Smartphone, ShieldCheck, Store, Layers, Zap, RefreshCw } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle, ShoppingCart, CreditCard, BarChart, Smartphone, ShieldCheck, Store, Layers, Zap, RefreshCw, Code2 } from "lucide-react";
 import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Custom eCommerce Web Development Services",
+  title: "eCommerce Web Development Company & Apps",
   description:
-    "Scale online sales with custom eCommerce development. High-converting Shopify stores, bespoke WooCommerce, and headless commerce.",
+    "WTechVerce is an ecommerce web development company. We engineer custom Shopify Plus stores, WooCommerce, and B2B online portals.",
   keywords: [
-    "ecommerce software development company",
     "ecommerce web development company",
+    "shopify app development services",
+    "ecommerce software development company",
+    "shopify plus development company",
+    "b2b ecommerce development services",
+    "shopify plus web development company",
     "ecommerce website design and development services",
-    "woocommerce website development company",
     "custom ecommerce development services",
     "headless ecommerce architecture",
-    "shopify store development services",
   ],
   alternates: {
     canonical: "https://wtechverce.com/services/ecommerce-development",
   },
   openGraph: {
-    title: "Custom eCommerce Web Development Services | WTechVerce",
+    title: "eCommerce Web Development Company & Apps | WTechVerce",
     description:
-      "Scale online sales with custom eCommerce development. High-converting Shopify stores, bespoke WooCommerce, and headless commerce.",
+      "WTechVerce is an ecommerce web development company. We engineer custom Shopify Plus stores, WooCommerce, and B2B online portals.",
     url: "https://wtechverce.com/services/ecommerce-development",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom eCommerce Web Development Services | WTechVerce",
+    title: "eCommerce Web Development Company & Apps | WTechVerce",
     description:
-      "Scale online sales with custom eCommerce development. High-converting Shopify stores, bespoke WooCommerce, and headless commerce.",
+      "WTechVerce is an ecommerce web development company. We engineer custom Shopify Plus stores, WooCommerce, and B2B online portals.",
   },
 };
 
@@ -44,46 +46,19 @@ export default function EcommerceDevelopmentService() {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
-          "serviceType": "eCommerce Software & Web Development Services",
+          "serviceType": "eCommerce Web Development Company & Online Store Solutions",
           "provider": {
             "@type": "Organization",
             "name": "WTechVerce",
             "url": "https://wtechverce.com"
           },
-          "description": "Full-cycle eCommerce software development company providing custom Shopify store development, WooCommerce platforms, and custom online store solutions.",
+          "description": "WTechVerce is a full-cycle eCommerce web development company delivering custom Shopify Plus storefronts, B2B eCommerce portals, and scalable WooCommerce platforms.",
           "areaServed": [
             { "@type": "Country", "name": "United States" },
             { "@type": "Country", "name": "United Kingdom" },
             { "@type": "Country", "name": "Canada" },
             { "@type": "Country", "name": "Australia" }
-          ],
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "High-Converting eCommerce Software Development",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Custom Shopify Store Development Services"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Custom eCommerce Web Application Development"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Secure Shopping Cart Architecture & Checkout Optimization"
-                }
-              }
-            ]
-          }
+          ]
         })}
       </Script>
       <Script id="faq-schema" type="application/ld+json" strategy="beforeInteractive">
@@ -93,34 +68,34 @@ export default function EcommerceDevelopmentService() {
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "Which eCommerce platforms do you specialize in?",
+              "name": "Which eCommerce platforms does your ecommerce web development company specialize in?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "We specialize in building secure online stores using WooCommerce, Shopify, Magento, and custom-coded eCommerce solutions."
+                "text": "We engineer high-converting digital storefronts across Shopify, Shopify Plus, WooCommerce, and custom headless eCommerce architectures using Next.js and React."
               }
             },
             {
               "@type": "Question",
-              "name": "What makes high converting ecommerce website development different from standard web design?",
+              "name": "Do you provide custom Shopify app development services?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "High converting ecommerce website development optimizes every touchpoint—from mobile site velocity and intuitive filtering to frictionless one-click checkouts and secure shopping cart architecture—to maximize average order value (AOV) and conversion rate."
+                "text": "Yes, we construct custom private and public Shopify apps to synchronize inventory, integrate proprietary ERP and CRM tools, and extend Shopify checkout functionality."
               }
             },
             {
               "@type": "Question",
-              "name": "Do you provide custom Shopify development services?",
+              "name": "What features are included in your B2B ecommerce development services?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, we build custom Shopify stores with tailored Liquid themes, responsive mobile checkout flows, regional payment gateway integrations, and third-party app connections."
+                "text": "Our B2B eCommerce solutions include wholesale customer registration, tiered volume pricing, customer-specific product catalogs, net payment terms, bulk order forms, and automated invoicing."
               }
             },
             {
               "@type": "Question",
-              "name": "Can you build custom eCommerce web applications?",
+              "name": "How do you optimize online store checkout funnels to reduce cart abandonment?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, we engineer custom eCommerce web applications with features including customer account portals, structured product catalogs, REST and GraphQL API integrations, and secure payment processing."
+                "text": "We implement frictionless single-page checkouts, auto-fill address validation, native mobile wallet support (Apple Pay, Google Pay), and transparent shipping cost calculators to ensure maximum conversion rates."
               }
             }
           ]
@@ -133,22 +108,22 @@ export default function EcommerceDevelopmentService() {
         {/* HERO */}
         <div className="max-w-4xl mb-20">
           <Link href="/services" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white mb-8 transition-colors">
-            ← Back to Services
+            <ArrowLeft className="w-4 h-4" /> Back to Services
           </Link>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#FF8833]/30 bg-[#FF8833]/10 text-[#FF8833] text-xs font-bold uppercase tracking-widest mb-6">
-            eCommerce Architecture
+            eCommerce Engineering &amp; Architecture
           </div>
           <h1 data-text-reveal className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
-            eCommerce Software &amp; <br />
+            eCommerce Web <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF8833] to-[#ffb885]">
-              Web Development Services
+              Development Company
             </span>
           </h1>
           <p className="text-xl text-gray-300 leading-relaxed mb-6">
-            Grow your online business with our dedicated <strong className="text-white">eCommerce software development company</strong>. We build secure, user-friendly, and high-converting online stores with custom Shopify themes, WooCommerce platforms, and headless architectures tailored to scale sales and streamline inventory operations.
+            Accelerate your online sales with a dedicated <strong className="text-white">ecommerce web development company</strong>. We build secure, high-converting digital storefronts, bespoke Shopify Plus solutions, and robust B2B platforms engineered to maximize transaction velocity and customer lifetime value.
           </p>
           <p className="text-base text-gray-400 leading-relaxed mb-10">
-            As a full-cycle eCommerce software development company, we engineer custom Shopify storefronts, WooCommerce online stores, and bespoke eCommerce web applications backed by a secure shopping cart architecture that turns traffic into repeatable revenue.
+            As a full-cycle <strong className="text-white">ecommerce software development company</strong>, our engineers build tailored Shopify storefronts, enterprise WooCommerce platforms, and custom eCommerce web applications backed by secure shopping cart architecture that scales seamlessly during peak traffic spikes.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button href="/contact" variant="primary" size="lg" filled>
@@ -164,7 +139,7 @@ export default function EcommerceDevelopmentService() {
         <div className="relative w-full h-[320px] md:h-[460px] rounded-3xl overflow-hidden border border-white/10 mb-32 group shadow-2xl">
           <Image
             src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1600&q=80"
-            alt="Professional ecommerce website development setup"
+            alt="Ecommerce web development company dashboard and custom online store architecture"
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-700"
             sizes="(max-width: 1200px) 100vw, 1200px"
@@ -174,9 +149,8 @@ export default function EcommerceDevelopmentService() {
           <div className="absolute bottom-8 left-8 right-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
               <span className="text-xs uppercase tracking-widest text-[#FF8833] font-bold">Conversion Rate Optimization</span>
-              <h3 className="text-xl md:text-2xl font-bold text-white">Engineered for Fast Checkouts, Low Abandonment &amp; High AOV</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-white">Engineered for Rapid Checkouts, Low Abandonment &amp; High Average Order Value</h3>
             </div>
-
           </div>
         </div>
 
@@ -184,23 +158,23 @@ export default function EcommerceDevelopmentService() {
         <div className="grid md:grid-cols-2 gap-16 mb-32">
           <div>
             <span className="text-[#FF8833] text-xs font-bold uppercase tracking-widest mb-3 block">High-Converting Stores</span>
-            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-6">Scalable Online Store Solutions</h2>
+            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-6">Scalable Online Store Solutions for Retail &amp; B2B Brands</h2>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              In ecommerce, every microsecond of latency and unnecessary checkout step costs your business sales. Our eCommerce website development services approach digital retailing through a scientific conversion framework. We build stores that load in under a second and make product exploration effortless.
+              In online retail, every millisecond of page load latency and friction in the checkout funnel directly erodes gross margins. Our <strong className="text-white">ecommerce website design and development services</strong> approach digital commerce through a rigorous engineering framework, building storefronts that load instantly and make product discovery effortless.
             </p>
             <p className="text-gray-400 leading-relaxed mb-6">
-              Whether you are an ambitious direct-to-consumer brand requiring custom Shopify development or a growing business needing bespoke headless eCommerce application architecture, our solutions adapt smoothly to high traffic surges during seasonal promotions and product drops.
+              As an enterprise <strong className="text-white">shopify plus development company</strong>, we construct customized shopping experiences, tailored Liquid themes, and headless React storefronts that handle sudden promotional traffic surges without checkout slowdowns or cart errors.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              We engineer secure shopping cart architecture that protects customer payment data, supports multiple payment gateways and currencies, and integrates with your existing inventory and business management systems.
+              Furthermore, our <strong className="text-white">b2b ecommerce development services</strong> provide dedicated wholesale portals with tier-based pricing matrices, bulk order workflows, and automated ERP inventory synchronization.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-6">
             {[
-              { icon: <Store className="w-6 h-6 text-[#FF8833]" />, title: "Shopify Development", desc: "Custom Liquid themes, storefront setup, and third-party app integrations." },
-              { icon: <ShieldCheck className="w-6 h-6 text-[#FF8833]" />, title: "Secure Cart System", desc: "Encrypted checkout architecture with multiple payment gateway options." },
-              { icon: <Layers className="w-6 h-6 text-[#FF8833]" />, title: "Custom Store Architecture", desc: "Headless React frontends, regional payment gateways, and tailored checkout flows." },
-              { icon: <BarChart className="w-6 h-6 text-[#FF8833]" />, title: "CRO Optimized", desc: "Data-backed layouts designed to increase average cart size." },
+              { icon: <Store className="w-6 h-6 text-[#FF8833]" />, title: "Shopify Plus Development", desc: "Enterprise Shopify Plus development with custom Liquid themes and checkout extensibility." },
+              { icon: <Code2 className="w-6 h-6 text-[#FF8833]" />, title: "Custom Shopify Apps", desc: "Shopify app development services connecting proprietary ERP, CRM, and fulfillment tools." },
+              { icon: <Layers className="w-6 h-6 text-[#FF8833]" />, title: "B2B eCommerce Portals", desc: "B2B ecommerce development services with custom pricing tiers, bulk orders, and invoicing." },
+              { icon: <ShieldCheck className="w-6 h-6 text-[#FF8833]" />, title: "Secure Cart Architecture", desc: "Encrypted payment gateways, multi-currency support, and fraud-prevention workflows." },
             ].map((item, i) => (
               <div key={i} className="bg-[#0A0F1A] border border-white/5 p-6 rounded-2xl">
                 <div className="mb-4">{item.icon}</div>
@@ -214,22 +188,22 @@ export default function EcommerceDevelopmentService() {
         {/* FEATURES GRID */}
         <div className="mb-32">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-[#FF8833] text-xs font-bold uppercase tracking-widest mb-3 block">Complete Functionality</span>
-            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-4">Powerful eCommerce Features We Integrate</h2>
+            <span className="text-[#FF8833] text-xs font-bold uppercase tracking-widest mb-3 block">Complete Commerce Mechanics</span>
+            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-4">Enterprise Features Built Into Every Digital Storefront</h2>
             <p className="text-gray-400 text-base">
-              Every digital storefront we deploy comes equipped with enterprise integrations and high-converting retail mechanics.
+              Every eCommerce platform we deploy comes equipped with enterprise integrations and high-converting retail mechanics.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-8 border border-white/10 rounded-3xl bg-gradient-to-b from-white/[0.02] to-transparent">
               <h3 className="text-2xl font-bold mb-4 text-white">Seamless Payment Integrations</h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                Connect global and regional payment gateways effortlessly to cater to customers across North America, Europe, and Asia.
+                Connect global and regional payment gateways effortlessly to cater to customers across North America, Europe, and international markets.
               </p>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF8833]" /> Stripe, PayPal, Apple Pay, Google Pay</li>
                 <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF8833]" /> Klarna, Afterpay Buy Now Pay Later (BNPL)</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF8833]" /> Automated multi-jurisdiction tax collection</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF8833]" /> Multi-currency checkout and automated sales tax</li>
               </ul>
             </div>
             <div className="p-8 border border-[#FF8833]/30 rounded-3xl bg-[#FF8833]/5 relative">
@@ -239,20 +213,20 @@ export default function EcommerceDevelopmentService() {
                 Single-page and accelerated checkout funnels that eliminate cart abandonment and simplify repeat customer re-orders.
               </p>
               <ul className="space-y-2 text-sm text-gray-300">
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF8833]" /> Auto-fill address &amp; postal code verification</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF8833]" /> Dynamic in-cart cross-sells and upsells</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF8833]" /> Guest checkout with instant account creation</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF8833]" /> Auto-fill address and zip code verification</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF8833]" /> Dynamic in-cart upsells and post-purchase offers</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF8833]" /> One-click guest checkout with instant account creation</li>
               </ul>
             </div>
             <div className="p-8 border border-white/10 rounded-3xl bg-gradient-to-b from-white/[0.02] to-transparent">
-              <h3 className="text-2xl font-bold mb-4 text-white">Inventory &amp; System Integration</h3>
+              <h3 className="text-2xl font-bold mb-4 text-white">Inventory &amp; ERP Integration</h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                Real-time stock synchronization with third-party business tools, logistics providers, and retail management systems.
+                Real-time stock synchronization with third-party business tools, 3PL logistics providers, and retail management systems.
               </p>
               <ul className="space-y-2 text-sm text-gray-300">
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF8833]" /> QuickBooks, Xero, and business tool integrations</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF8833]" /> Real-time 3PL inventory and order dispatch sync</li>
                 <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF8833]" /> Automated low-stock alerts &amp; backorder logic</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF8833]" /> Custom inventory and fulfillment workflows</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF8833]" /> Custom B2B catalog views and custom invoice generation</li>
               </ul>
             </div>
           </div>
@@ -261,17 +235,17 @@ export default function EcommerceDevelopmentService() {
         {/* WHY CHOOSE US */}
         <div className="bg-gradient-to-r from-[#FF8833]/10 to-transparent border border-[#FF8833]/20 rounded-[2.5rem] p-10 md:p-16 mb-32">
           <div className="max-w-3xl">
-            <span className="text-[#FF8833] text-xs font-bold uppercase tracking-widest mb-3 block">Why Partner With WTechVerce</span>
-            <h3 className="text-3xl font-black mb-6">Proven eCommerce Architecture Built for Maximum Return on Ad Spend</h3>
+            <span className="text-[#FF8833] text-xs font-bold uppercase tracking-widest mb-3 block">Why Partner With Us</span>
+            <h2 className="text-3xl md:text-4xl font-black mb-6">eCommerce Architecture Built for Return on Investment</h2>
             <p className="text-gray-300 mb-8 leading-relaxed">
-              We design every online store from the perspective of both customer experience and merchant administration, making day-to-day operations simple and profitable.
+              We design every online store from the perspective of both customer conversion and merchant administration, making day-to-day catalog management simple and scalable.
             </p>
             <ul className="space-y-4">
               {[
-                "Engineered for high converting ecommerce website performance, responsive mobile navigation, and fast catalog rendering.",
-                "Custom Shopify stores with tailored themes, checkout flows, and payment integrations.",
-                "Custom eCommerce web applications with catalog management, API integrations, and secure payment processing.",
-                "Rigorous shopping cart architecture that protects transaction data and supports industry-standard payment gateways.",
+                "High-performance store engineering with fast catalog rendering and Core Web Vitals optimization.",
+                "Custom Shopify Plus development with custom Liquid sections and checkout extensibility.",
+                "B2B eCommerce development services including wholesale portals, tier pricing, and ERP integration.",
+                "Rigorous shopping cart architecture protecting customer transaction data with zero vendor lock-in.",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-gray-300">
                   <CheckCircle className="w-5 h-5 text-[#FF8833] shrink-0 mt-0.5" /> <span>{item}</span>
@@ -281,35 +255,75 @@ export default function EcommerceDevelopmentService() {
           </div>
         </div>
 
+        {/* RELEVANT ECOMMERCE CASE STUDY */}
+        <div className="mb-32">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div>
+              <span className="text-[#FF8833] text-xs font-bold uppercase tracking-widest mb-3 block">Proven Execution</span>
+              <h2 data-text-reveal className="text-3xl md:text-4xl font-black">Featured eCommerce Projects</h2>
+            </div>
+            <Link href="/portfolio" className="inline-flex items-center gap-2 text-sm text-[#FF8833] font-bold hover:underline mt-4 md:mt-0">
+              View All Case Studies <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Link href="/portfolio/ecommerce-website-development" className="group bg-[#0A0F1A] border border-white/5 hover:border-[#FF8833]/40 rounded-3xl p-8 transition-all">
+              <span className="text-xs uppercase tracking-widest text-[#FF8833] font-bold block mb-3">Headless eCommerce</span>
+              <h3 className="text-2xl font-bold text-white group-hover:text-[#FF8833] transition-colors mb-4">
+                High-Conversion D2C Storefront Architecture
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                Delivered a headless React storefront integrated with Shopify APIs, automated inventory sync, regional payment gateways, and a responsive mobile checkout flow.
+              </p>
+              <span className="inline-flex items-center gap-2 text-xs font-bold text-white group-hover:translate-x-1 transition-transform">
+                Explore Case Study <ArrowRight className="w-4 h-4 text-[#FF8833]" />
+              </span>
+            </Link>
+
+            <Link href="/portfolio/restaurant-ordering-system" className="group bg-[#0A0F1A] border border-white/5 hover:border-[#00B4D8]/40 rounded-3xl p-8 transition-all">
+              <span className="text-xs uppercase tracking-widest text-[#00B4D8] font-bold block mb-3">Online Ordering &amp; Payments</span>
+              <h3 className="text-2xl font-bold text-white group-hover:text-[#00B4D8] transition-colors mb-4">
+                Restaurant Food Ordering &amp; Live Checkout System
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                Engineered real-time mobile ordering, digital payment processing, and dispatch tracking that saved 30% in third-party marketplace commissions.
+              </p>
+              <span className="inline-flex items-center gap-2 text-xs font-bold text-white group-hover:translate-x-1 transition-transform">
+                Explore Case Study <ArrowRight className="w-4 h-4 text-[#00B4D8]" />
+              </span>
+            </Link>
+          </div>
+        </div>
+
         {/* FAQ */}
         <div className="max-w-3xl mx-auto mb-32">
           <div className="text-center mb-12">
             <span className="text-[#FF8833] text-xs font-bold uppercase tracking-widest mb-2 block">Common Questions</span>
-            <h2 data-text-reveal className="text-3xl font-black">Frequently Asked Questions</h2>
+            <h2 data-text-reveal className="text-3xl font-black">Frequently Asked Questions About eCommerce Development</h2>
           </div>
           <div className="space-y-6">
             <div className="border-b border-white/10 pb-6">
-              <h4 className="text-lg font-bold mb-2">Which eCommerce platforms do you specialize in?</h4>
+              <h4 className="text-lg font-bold mb-2">Which eCommerce platforms does your ecommerce web development company specialize in?</h4>
               <p className="text-gray-400 leading-relaxed">
-                We specialize in building secure online stores using WooCommerce, Shopify, Magento, and custom-coded eCommerce solutions tailored to your catalog scale and operational needs.
+                We engineer high-converting digital storefronts across Shopify, Shopify Plus, WooCommerce, and custom headless eCommerce architectures using Next.js and React.
               </p>
             </div>
             <div className="border-b border-white/10 pb-6">
-              <h4 className="text-lg font-bold mb-2">What makes high converting ecommerce website development different from standard web design?</h4>
+              <h4 className="text-lg font-bold mb-2">Do you provide custom Shopify app development services?</h4>
               <p className="text-gray-400 leading-relaxed">
-                High converting ecommerce website development optimizes every touchpoint—from mobile site velocity and intuitive filtering to frictionless one-click checkouts and secure shopping cart architecture—to maximize average order value (AOV) and conversion rate.
+                Yes, we construct custom private and public Shopify apps to synchronize inventory, integrate proprietary ERP and CRM tools, and extend Shopify checkout functionality.
               </p>
             </div>
             <div className="border-b border-white/10 pb-6">
-              <h4 className="text-lg font-bold mb-2">Do you provide custom Shopify development services?</h4>
+              <h4 className="text-lg font-bold mb-2">What features are included in your B2B ecommerce development services?</h4>
               <p className="text-gray-400 leading-relaxed">
-                Yes, we build custom Shopify stores with tailored Liquid themes, responsive mobile checkout flows, regional payment gateway integrations, and third-party app connections engineered specifically for your business requirements.
+                Our B2B eCommerce solutions include wholesale customer registration, tiered volume pricing, customer-specific product catalogs, net payment terms, bulk order forms, and automated invoicing.
               </p>
             </div>
             <div className="border-b border-white/10 pb-6">
-              <h4 className="text-lg font-bold mb-2">Can you build custom eCommerce web applications?</h4>
+              <h4 className="text-lg font-bold mb-2">How do you optimize online store checkout funnels to reduce cart abandonment?</h4>
               <p className="text-gray-400 leading-relaxed">
-                Yes, we develop custom eCommerce web applications with features including customer portals, structured product catalogs, REST and GraphQL API integrations, and secure checkout processing to streamline online sales.
+                We implement frictionless single-page checkouts, auto-fill address validation, native mobile wallet support (Apple Pay, Google Pay), and transparent shipping cost calculators to ensure maximum conversion rates.
               </p>
             </div>
           </div>

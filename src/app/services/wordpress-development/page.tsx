@@ -1,36 +1,43 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, CheckCircle, Database, Layout, Shield, Zap } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle, Database, Layout, Shield, Zap, ShoppingCart, Code2, Layers } from "lucide-react";
 import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
   title: "Custom WordPress Web Development Services",
-  description: "WTechVerce provides custom WordPress development. We build fast, secure themes, custom plugins, and modern headless CMS web tools.",
+  description:
+    "WTechVerce provides custom WordPress development. We build fast, secure themes, custom plugins, and modern headless CMS web tools.",
   keywords: [
     "wordpress development services",
+    "why wordpress website development",
     "custom wordpress development",
+    "wordpress web development agency",
     "wordpress website development company",
     "custom wordpress development company",
     "custom wordpress website development",
+    "woocommerce website development company",
     "wordpress cms development services",
-    "headless wordpress development",
-    "custom wordpress theme development",
+    "custom wordpress plugin development company",
+    "custom wordpress web development",
+    "wordpress plugin development services",
   ],
   alternates: {
     canonical: "https://wtechverce.com/services/wordpress-development",
   },
   openGraph: {
     title: "Custom WordPress Web Development Services | WTechVerce",
-    description: "WTechVerce provides custom WordPress development. We build fast, secure themes, custom plugins, and modern headless CMS web tools.",
+    description:
+      "WTechVerce provides custom WordPress development. We build fast, secure themes, custom plugins, and modern headless CMS web tools.",
     url: "https://wtechverce.com/services/wordpress-development",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Custom WordPress Web Development Services | WTechVerce",
-    description: "WTechVerce provides custom WordPress development. We build fast, secure themes, custom plugins, and modern headless CMS web tools.",
+    description:
+      "WTechVerce provides custom WordPress development. We build fast, secure themes, custom plugins, and modern headless CMS web tools.",
   },
 };
 
@@ -41,12 +48,13 @@ export default function WordPressDevelopmentService() {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
-          "serviceType": "WordPress Development Services",
+          "serviceType": "Custom WordPress Development Services & Enterprise CMS Solutions",
           "provider": {
             "@type": "Organization",
-            "name": "WTechVerce"
+            "name": "WTechVerce",
+            "url": "https://wtechverce.com"
           },
-          "description": "Professional WordPress development services, custom WordPress website development, custom plugin integration, headless architecture, and advanced performance optimization.",
+          "description": "WTechVerce is a custom WordPress development company providing professional WordPress development services, custom themes, plugin engineering, and WooCommerce platforms.",
           "areaServed": [
             { "@type": "Country", "name": "United States" },
             { "@type": "Country", "name": "United Kingdom" },
@@ -62,26 +70,34 @@ export default function WordPressDevelopmentService() {
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "Why choose WordPress website development for your business?",
+              "name": "Why choose custom WordPress website development instead of pre-made templates?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "WordPress powers over 40% of the web due to its unmatched CMS flexibility, cost-effectiveness, and ease of content management. When engineered by a custom WordPress development company without bloated plugins, custom WordPress website development offers enterprise-grade security, sub-second loading speed, and scalable technical SEO."
+                "text": "Pre-made templates carry heavy code bloat, unneeded dependencies, and severe security vulnerabilities. As a custom WordPress development company, we engineer lightweight bespoke themes and modular plugins that load in sub-seconds and deliver peak SEO crawlability."
               }
             },
             {
               "@type": "Question",
-              "name": "Do you use pre-made templates or build from scratch?",
+              "name": "Do you provide custom WordPress plugin development services?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "We specialize in custom WordPress themes built from scratch to ensure maximum performance, security, and alignment with your brand."
+                "text": "Yes, our custom WordPress plugin development company creates secure, object-oriented plugins tailored to your specific business logic, third-party API synchronizations, and internal database workflows."
               }
             },
             {
               "@type": "Question",
-              "name": "Can you migrate an existing site to WordPress?",
+              "name": "Can you engineer custom WooCommerce online stores?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, we handle complex content migrations from platforms like Webflow, Wix, Squarespace, and custom CMS platforms to WordPress with zero SEO impact."
+                "text": "Yes, as a WooCommerce website development company we build high-converting eCommerce storefronts featuring custom checkout funnels, inventory synchronization, and regional payment gateway integrations."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do you migrate existing corporate websites to WordPress without losing SEO rankings?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We execute comprehensive URL mapping, 301 redirect architectures, metadata preservation, and database migration from platforms like Webflow, Wix, or legacy CMSs with zero organic traffic loss."
               }
             }
           ]
@@ -94,10 +110,10 @@ export default function WordPressDevelopmentService() {
         {/* HERO */}
         <div className="max-w-4xl mb-20">
           <Link href="/services" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white mb-8 transition-colors">
-            ← Back to Services
+            <ArrowLeft className="w-4 h-4" /> Back to Services
           </Link>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#6C24FA]/30 bg-[#6C24FA]/10 text-[#6C24FA] text-xs font-bold uppercase tracking-widest mb-6">
-            Custom WP Engineering
+            Custom WordPress Development Company
           </div>
           <h1 data-text-reveal className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
             WordPress Development <br />
@@ -105,36 +121,48 @@ export default function WordPressDevelopmentService() {
               Services &amp; Custom CMS
             </span>
           </h1>
-          <p className="text-xl text-gray-400 leading-relaxed mb-10">
-            Harness the power of WordPress without the bloat. As a custom WordPress development company, we deliver enterprise-grade WordPress development services — engineering custom themes, tailored plugin integrations, headless architectures, and high-performance business websites that load in under a second.
+          <p className="text-xl text-gray-300 leading-relaxed mb-6">
+            Harness the power and autonomy of WordPress without the drag of bloated page builders. As a premier <strong className="text-white">wordpress web development agency</strong> and <strong className="text-white">wordpress website development company</strong>, we deliver enterprise-grade <strong className="text-white">wordpress development services</strong> engineered for performance, security, and search visibility.
           </p>
-          <Button href="/contact" variant="primary" size="lg" filled>
-            Start Your WP Project <ArrowRight className="w-5 h-5 ml-2" />
-          </Button>
+          <p className="text-base text-gray-400 leading-relaxed mb-10">
+            From bespoke WordPress theme development and custom plugin engineering to enterprise WooCommerce stores and decoupled headless architectures, our engineers craft clean PHP and React solutions that make content management effortless.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <Button href="/contact" variant="primary" size="lg" filled>
+              Start Your WordPress Project <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+            <Button href="/portfolio" variant="outline" size="lg">
+              View WordPress Case Studies
+            </Button>
+          </div>
         </div>
 
-        {/* INTRODUCTION / WHAT WE OFFER */}
+        {/* INTRODUCTION / VALUE PROPOSITION */}
         <div className="grid md:grid-cols-2 gap-16 mb-32">
           <div>
-            <h2 data-text-reveal className="text-3xl font-black mb-6">Beyond Basic Templates</h2>
+            <span className="text-[#6C24FA] text-xs font-bold uppercase tracking-widest mb-3 block">Bespoke CMS Engineering</span>
+            <h2 data-text-reveal className="text-3xl font-black mb-6">Why Businesses Choose Custom WordPress Development</h2>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Anyone can install an off-the-shelf WordPress theme. As a custom WordPress development company, we engineer high-performance platforms. By eliminating unnecessary plugins and writing clean PHP and JavaScript, we ensure your custom WordPress website development never suffers from slow load times or vulnerability exploits.
+              Anyone can install an off-the-shelf commercial theme, but generic setups quickly bog down under heavy traffic and create severe security liabilities. As a dedicated <strong className="text-white">custom wordpress development company</strong>, we engineer lightweight platforms with zero unnecessary dependencies.
+            </p>
+            <p className="text-gray-400 leading-relaxed mb-6">
+              By writing clean, semantic template files and native Gutenberg blocks, our <strong className="text-white">custom wordpress website development</strong> gives non-technical marketing teams intuitive editorial control while ensuring page loads remain under a second on mobile viewports.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              From corporate portals and high-traffic publishing platforms to headless architectures paired with Next.js, our WordPress CMS development services empower marketing teams with intuitive content management while delivering developer-grade speed and reliability.
+              From high-traffic corporate blogs and membership directories to global enterprise stores, our <strong className="text-white">wordpress cms development services</strong> combine robust backend data schemas with modern frontend performance.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-6">
             {[
-              { icon: <Layout className="w-6 h-6 text-[#6C24FA]" />, title: "Custom Themes", desc: "Pixel-perfect custom WordPress theme development." },
-              { icon: <Zap className="w-6 h-6 text-[#6C24FA]" />, title: "Headless CMS", desc: "Next.js frontend & WordPress CMS development." },
-              { icon: <Shield className="w-6 h-6 text-[#6C24FA]" />, title: "Custom Plugin Integration", desc: "Tailored plugins, API sync, & security hardening." },
-              { icon: <Database className="w-6 h-6 text-[#6C24FA]" />, title: "Enterprise Migrations", desc: "Zero-data-loss transfers & database optimization." },
+              { icon: <Layout className="w-6 h-6 text-[#6C24FA]" />, title: "Custom Themes", desc: "Bespoke custom WordPress theme development using ACF Pro and native Gutenberg blocks." },
+              { icon: <Code2 className="w-6 h-6 text-[#6C24FA]" />, title: "Custom Plugins", desc: "Custom wordpress plugin development services for proprietary APIs and third-party sync." },
+              { icon: <ShoppingCart className="w-6 h-6 text-[#6C24FA]" />, title: "WooCommerce Stores", desc: "Enterprise WooCommerce website development with high-converting custom checkout flows." },
+              { icon: <Zap className="w-6 h-6 text-[#6C24FA]" />, title: "Headless WordPress", desc: "Decoupled WordPress CMS development with high-speed Next.js frontend rendering." },
             ].map((item, i) => (
               <div key={i} className="bg-[#0A0F1A] border border-white/5 p-6 rounded-2xl hover:border-[#6C24FA]/30 transition-colors">
                 <div className="mb-4">{item.icon}</div>
                 <h4 className="text-white font-bold mb-2">{item.title}</h4>
-                <p className="text-gray-500 text-sm">{item.desc}</p>
+                <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -142,13 +170,16 @@ export default function WordPressDevelopmentService() {
 
         {/* OUR PROCESS */}
         <div className="mb-32">
-          <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-12 text-center">Our WordPress Workflow</h2>
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="text-[#6C24FA] text-xs font-bold uppercase tracking-widest mb-3 block">Proven Methodology</span>
+            <h2 data-text-reveal className="text-3xl md:text-4xl font-black">Our WordPress Engineering &amp; QA Workflow</h2>
+          </div>
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { step: "01", title: "Information Architecture", desc: "Structuring taxonomies, post types, and data fields for seamless backend management." },
-              { step: "02", title: "Custom Theme Dev", desc: "Building a lean, lightweight theme tailored strictly to your design requirements." },
-              { step: "03", title: "Content Integration", desc: "Migrating existing data and setting up intuitive Gutenberg blocks or ACF layouts." },
-              { step: "04", title: "Optimization & Launch", desc: "Caching, image optimization, security configuration, and going live." },
+              { step: "01", title: "Information Architecture", desc: "Structuring custom post types, taxonomies, and custom fields for intuitive content editing." },
+              { step: "02", title: "Custom Theme Coding", desc: "Building a lightweight, semantic theme strictly tailored around your Figma UI design." },
+              { step: "03", title: "Plugin & API Integration", desc: "Developing custom plugins, connecting CRM workflows, and securing payment gateway endpoints." },
+              { step: "04", title: "Optimization & Launch", desc: "Object caching, database query optimization, security hardening, and zero-downtime deployment." },
             ].map((s, i) => (
               <div key={i} className="relative p-8 border border-white/10 rounded-3xl bg-[#07091A]">
                 <div className="text-5xl font-black text-white/5 mb-6">{s.step}</div>
@@ -177,7 +208,7 @@ export default function WordPressDevelopmentService() {
                 Dental Clinic WordPress Website Rebuild
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                Replaced a legacy third-party theme with a hand-coded custom WordPress theme, clean Gutenberg block architecture, local SEO schema markup, and integrated patient appointment request flows.
+                Replaced a bloated third-party theme with a hand-coded custom WordPress theme, clean Gutenberg block architecture, local SEO schema markup, and integrated patient appointment booking workflows.
               </p>
               <span className="inline-flex items-center gap-2 text-xs font-bold text-white group-hover:translate-x-1 transition-transform">
                 Read Full Case Study <ArrowRight className="w-4 h-4 text-[#6C24FA]" />
@@ -186,12 +217,12 @@ export default function WordPressDevelopmentService() {
 
             <div className="bg-[#0A0F1A] border border-white/10 rounded-3xl p-8 flex flex-col justify-between">
               <div>
-                <span className="text-xs uppercase tracking-widest text-[#FD4F00] font-bold block mb-3">Decision Matrix</span>
+                <span className="text-xs uppercase tracking-widest text-[#FD4F00] font-bold block mb-3">Architectural Comparison</span>
                 <h3 className="text-2xl font-bold text-white mb-4">
                   WordPress vs Custom Website: Which Fits Your Goals?
                 </h3>
                 <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                  Understand the trade-offs between custom WordPress development and bespoke Next.js web applications regarding performance, budget, and long-term scalability.
+                  Understand the strategic trade-offs between custom WordPress development and bespoke Next.js web applications regarding performance, budget, and long-term scalability.
                 </p>
               </div>
               <Button href="/blog/wordpress-vs-custom-website" variant="outline" size="md">
@@ -203,28 +234,43 @@ export default function WordPressDevelopmentService() {
 
         {/* FAQ */}
         <div className="max-w-3xl mx-auto mb-32">
-          <h2 data-text-reveal className="text-3xl font-black mb-10 text-center">Frequently Asked Questions</h2>
+          <div className="text-center mb-10">
+            <span className="text-[#6C24FA] text-xs font-bold uppercase tracking-widest mb-2 block">Common Questions</span>
+            <h2 data-text-reveal className="text-3xl font-black">Frequently Asked Questions About WordPress CMS</h2>
+          </div>
           <div className="space-y-6">
             <div className="border-b border-white/10 pb-6">
-              <h4 className="text-lg font-bold mb-2">Why choose WordPress website development for your business?</h4>
-              <p className="text-gray-400">WordPress powers over 40% of the web due to its unmatched CMS flexibility, cost-effectiveness, and ease of content management. When engineered by a custom WordPress development company without bloated plugins, custom WordPress website development offers enterprise-grade security, sub-second loading speed, and scalable technical SEO.</p>
+              <h4 className="text-lg font-bold mb-2">Why choose custom WordPress website development instead of pre-made templates?</h4>
+              <p className="text-gray-400 leading-relaxed">
+                Pre-made templates carry heavy code bloat, unneeded dependencies, and severe security vulnerabilities. As a custom WordPress development company, we engineer lightweight bespoke themes and modular plugins that load in sub-seconds and deliver peak SEO crawlability.
+              </p>
             </div>
             <div className="border-b border-white/10 pb-6">
-              <h4 className="text-lg font-bold mb-2">Do you use pre-made templates or build from scratch?</h4>
-              <p className="text-gray-400">We specialize in custom WordPress themes built from scratch to ensure maximum performance, security, and alignment with your brand.</p>
+              <h4 className="text-lg font-bold mb-2">Do you provide custom WordPress plugin development services?</h4>
+              <p className="text-gray-400 leading-relaxed">
+                Yes, our custom WordPress plugin development company creates secure, object-oriented plugins tailored to your specific business logic, third-party API synchronizations, and internal database workflows.
+              </p>
             </div>
             <div className="border-b border-white/10 pb-6">
-              <h4 className="text-lg font-bold mb-2">Can you migrate an existing site to WordPress?</h4>
-              <p className="text-gray-400">Yes, we handle complex content migrations from platforms like Webflow, Wix, Squarespace, and custom CMS platforms to WordPress with zero SEO impact.</p>
+              <h4 className="text-lg font-bold mb-2">Can you engineer custom WooCommerce online stores?</h4>
+              <p className="text-gray-400 leading-relaxed">
+                Yes, as a WooCommerce website development company we build high-converting eCommerce storefronts featuring custom checkout funnels, inventory synchronization, and regional payment gateway integrations.
+              </p>
+            </div>
+            <div className="border-b border-white/10 pb-6">
+              <h4 className="text-lg font-bold mb-2">How do you migrate existing corporate websites to WordPress without losing SEO rankings?</h4>
+              <p className="text-gray-400 leading-relaxed">
+                We execute comprehensive URL mapping, 301 redirect architectures, metadata preservation, and database migration from platforms like Webflow, Wix, or legacy CMSs with zero organic traffic loss.
+              </p>
             </div>
           </div>
         </div>
 
         {/* CTA */}
         <div className="text-center">
-          <h2 data-text-reveal className="text-4xl font-black mb-6">Scale with WordPress</h2>
+          <h2 data-text-reveal className="text-4xl font-black mb-6">Scale With a Custom WordPress Solution</h2>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-            Get a powerful, easy-to-manage CMS without the technical headaches. Let&apos;s build a WP site that works for you.
+            Get an enterprise CMS engineered for speed, clean editing, and long-term search engine visibility. Let us build a WordPress platform tailored to your brand.
           </p>
           <Button href="/contact" variant="primary" size="lg" filled>
             Start Your Project <ArrowRight className="w-5 h-5 ml-2" />

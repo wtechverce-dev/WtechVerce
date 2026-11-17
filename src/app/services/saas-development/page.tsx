@@ -1,39 +1,40 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, CheckCircle, Layers, Users, CreditCard, Lock, Infinity } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle, Layers, Users, CreditCard, Lock, Cloud, Shield, Server, Zap } from "lucide-react";
 import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Custom SaaS Development Company & Platforms",
-  description: "Build scalable SaaS apps with WTechVerce. From multi-tenant cloud architecture to MVP development and subscription engines built for scale.",
+  title: "Custom SaaS Development Services & Platforms",
+  description:
+    "Scale your product with our SaaS development services. WTechVerce engineers multi-tenant cloud software, billing engines, and rapid MVPs.",
   keywords: [
-    "custom saas development",
-    "saas software development",
     "saas development services",
     "saas product development company",
-    "saas application development",
-    "saas platform development",
-    "scalable saas architecture",
-    "saas mvp development",
-    "custom saas solutions",
+    "custom saas development",
+    "saas software development",
+    "cloud application development company",
+    "cloud based application development company",
     "multi-tenant saas development",
-    "saas startup development",
+    "saas mvp development",
+    "saas platform architecture",
   ],
   alternates: {
     canonical: "https://wtechverce.com/services/saas-development",
   },
   openGraph: {
-    title: "Custom SaaS Development Company & Platforms | WTechVerce",
-    description: "Build scalable SaaS apps with WTechVerce. From multi-tenant cloud architecture to MVP development and subscription engines built for scale.",
+    title: "Custom SaaS Development Services & Platforms | WTechVerce",
+    description:
+      "Scale your product with our SaaS development services. WTechVerce engineers multi-tenant cloud software, billing engines, and rapid MVPs.",
     url: "https://wtechverce.com/services/saas-development",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom SaaS Development Company & Platforms | WTechVerce",
-    description: "Build scalable SaaS apps with WTechVerce. From multi-tenant cloud architecture to MVP development and subscription engines built for scale.",
+    title: "Custom SaaS Development Services & Platforms | WTechVerce",
+    description:
+      "Scale your product with our SaaS development services. WTechVerce engineers multi-tenant cloud software, billing engines, and rapid MVPs.",
   },
 };
 
@@ -44,12 +45,13 @@ export default function SaaSDevelopmentService() {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
-          "serviceType": "Custom SaaS Development Services",
+          "serviceType": "SaaS Development Services & Cloud Product Engineering",
           "provider": {
             "@type": "Organization",
-            "name": "WTechVerce"
+            "name": "WTechVerce",
+            "url": "https://wtechverce.com"
           },
-          "description": "Custom SaaS development services and SaaS software development, including multi-tenant cloud architecture, billing integrations, and MVP creation.",
+          "description": "WTechVerce is a SaaS product development company delivering custom SaaS development services, multi-tenant cloud architecture, and automated subscription billing engines.",
           "areaServed": [
             { "@type": "Country", "name": "United States" },
             { "@type": "Country", "name": "United Kingdom" },
@@ -65,18 +67,34 @@ export default function SaaSDevelopmentService() {
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "Can you integrate Stripe for subscription billing?",
+              "name": "What is included in your custom SaaS development services?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, we specialize in implementing Stripe billing, supporting complex metered billing, tiering, and prorations for SaaS platforms."
+                "text": "Our custom SaaS development services encompass product discovery, user dashboard design, multi-tenant database partitioning, automated subscription billing (Stripe, LemonSqueezy), role-based access control, and scalable cloud infrastructure deployment."
               }
             },
             {
               "@type": "Question",
-              "name": "What is the typical timeline for a SaaS MVP?",
+              "name": "How do you ensure data isolation in multi-tenant SaaS software development?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "A standard SaaS Minimum Viable Product (MVP) takes approximately 8 to 12 weeks from initial concept to launch, depending on the complexity of the core features."
+                "text": "We implement rigorous multi-tenant data isolation patterns—such as row-level security (RLS) in PostgreSQL or separate schema/database partitioning—ensuring that tenant records remain strictly segregated and encrypted."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you integrate Stripe for complex SaaS subscription billing?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we specialize in implementing Stripe billing systems, supporting multi-tier subscriptions, metered usage-based billing, seat add-ons, localized tax calculations, and prorated plan upgrades."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the typical timeline for an MVP with a SaaS product development company?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A standard SaaS Minimum Viable Product (MVP) typically takes 8 to 12 weeks from initial architectural scoping to production launch, providing founders with an investor-ready, pilot-tested product."
               }
             }
           ]
@@ -101,38 +119,47 @@ export default function SaaSDevelopmentService() {
             </span>
           </h1>
           <p className="text-xl text-gray-300 leading-relaxed mb-6">
-            Turn your software vision into a scalable, revenue-generating product with our end-to-end <strong className="text-white">custom SaaS development services</strong>. As a specialized <strong className="text-white">SaaS software development company</strong>, we engineer secure multi-tenant cloud platforms, automated billing integrations, and intuitive dashboards designed for high retention.
+            Transform your software vision into a scalable, recurring revenue platform with our end-to-end <strong className="text-white">saas development services</strong>. As a specialized <strong className="text-white">saas product development company</strong>, we engineer secure multi-tenant cloud platforms, automated billing engines, and intuitive dashboards designed for high retention.
           </p>
           <p className="text-base text-gray-400 leading-relaxed mb-10">
-            From initial SaaS MVP development and user journey mapping to enterprise-grade cloud scaling, our full-stack engineering team builds custom SaaS solutions with Next.js, Node.js, PostgreSQL, and Stripe.
+            From initial SaaS MVP engineering and tenant architecture scoping to enterprise cloud scaling, our full-stack engineers construct custom SaaS solutions with Next.js, Node.js, Python, PostgreSQL, and Stripe.
           </p>
-          <Button href="/contact" variant="primary" size="lg" filled>
-            Start Your SaaS MVP <ArrowRight className="w-5 h-5 ml-2" />
-          </Button>
+          <div className="flex flex-wrap gap-4">
+            <Button href="/contact" variant="primary" size="lg" filled>
+              Start Your SaaS Project <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+            <Button href="/portfolio" variant="outline" size="lg">
+              Explore SaaS Case Studies
+            </Button>
+          </div>
         </div>
 
         {/* INTRODUCTION / WHAT WE OFFER */}
         <div className="grid md:grid-cols-2 gap-16 mb-32">
           <div>
-            <h2 data-text-reveal className="text-3xl font-black mb-6">Engineered for MRR Growth</h2>
+            <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">Cloud Architecture</span>
+            <h2 data-text-reveal className="text-3xl font-black mb-6">Engineered for Monthly Recurring Revenue (MRR) Growth</h2>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Building a SaaS product requires more than just writing code; it demands an architecture that handles thousands of concurrent users, isolates tenant data securely, and monetizes seamlessly.
+              Engineering a software-as-a-service platform requires far more than basic CRUD development. It demands an enterprise cloud architecture capable of handling thousands of concurrent users, isolating tenant datasets with zero leakage risk, and automating billing cycles flawlessly.
+            </p>
+            <p className="text-gray-400 leading-relaxed mb-6">
+              As a dedicated <strong className="text-white">cloud application development company</strong>, we construct scalable SaaS ecosystems that support complex user tiers, self-service customer onboarding, and high-throughput background processing.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              From the initial Minimum Viable Product (MVP) to full-scale enterprise features, we provide end-to-end SaaS development using modern JavaScript frameworks (Next.js, React, Node.js) that investors and users love.
+              Whether you are an early-stage founder building an MVP or a scaling enterprise migrating a legacy tool to the cloud, our <strong className="text-white">custom saas development</strong> engineers deliver clean, modular codebases built for high valuation and investor confidence.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-6">
             {[
-              { icon: <Layers className="w-6 h-6 text-[#FD4F00]" />, title: "Multi-Tenant Architecture", desc: "Secure data isolation" },
-              { icon: <CreditCard className="w-6 h-6 text-[#FD4F00]" />, title: "Billing & Subscriptions", desc: "Stripe & Braintree" },
-              { icon: <Users className="w-6 h-6 text-[#FD4F00]" />, title: "User Management", desc: "Auth0 & NextAuth" },
-              { icon: <Lock className="w-6 h-6 text-[#FD4F00]" />, title: "Security & Compliance", desc: "Role-based access" },
+              { icon: <Layers className="w-6 h-6 text-[#FD4F00]" />, title: "Multi-Tenant Cloud", desc: "Rigorous tenant data isolation with Row-Level Security (RLS) in PostgreSQL." },
+              { icon: <CreditCard className="w-6 h-6 text-[#FD4F00]" />, title: "Automated Subscriptions", desc: "Turnkey Stripe and LemonSqueezy integration with metered usage and tiered billing." },
+              { icon: <Users className="w-6 h-6 text-[#FD4F00]" />, title: "RBAC & User Access", desc: "Granular role-based permissions, team workspaces, and SSO authentication." },
+              { icon: <Server className="w-6 h-6 text-[#FD4F00]" />, title: "Cloud Infrastructure", desc: "Serverless and containerized deployments on AWS, GCP, and Vercel Edge." },
             ].map((item, i) => (
               <div key={i} className="bg-[#0A0F1A] border border-white/5 p-6 rounded-2xl">
                 <div className="mb-4">{item.icon}</div>
                 <h4 className="text-white font-bold mb-2">{item.title}</h4>
-                <p className="text-gray-500 text-sm">{item.desc}</p>
+                <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -140,13 +167,16 @@ export default function SaaSDevelopmentService() {
 
         {/* OUR PROCESS */}
         <div className="mb-32">
-          <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-12 text-center">SaaS Development Lifecycle</h2>
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">Agile SaaS Lifecycle</span>
+            <h2 data-text-reveal className="text-3xl md:text-4xl font-black">The SaaS Development Roadmap: From MVP to Enterprise Scale</h2>
+          </div>
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { step: "01", title: "Product Strategy", desc: "Defining the core MVP features, user journeys, and go-to-market technology strategy." },
-              { step: "02", title: "UI/UX & Prototyping", desc: "Designing intuitive SaaS dashboards that reduce churn and improve onboarding." },
-              { step: "03", title: "Full-Stack Engineering", desc: "Building the front-end, API, and integrating subscription billing logic." },
-              { step: "04", title: "Launch & Iterate", desc: "Deploying to production and iterating based on real user feedback and analytics." },
+              { step: "01", title: "Product Strategy", desc: "Defining core MVP feature boundaries, database schema relationships, and monetization architectures." },
+              { step: "02", title: "UI/UX Dashboards", desc: "Prototyping intuitive SaaS user interfaces that minimize user churn and accelerate self-onboarding." },
+              { step: "03", title: "Full-Stack Sprints", desc: "Engineering frontend React dashboards, secure REST/GraphQL APIs, and subscription webhook handlers." },
+              { step: "04", title: "Deploy & Scale", desc: "Automated CI/CD deployment, server health telemetry, and ongoing feature iteration based on real metrics." },
             ].map((s, i) => (
               <div key={i} className="relative p-8 border border-white/10 rounded-3xl bg-gradient-to-b from-white/[0.02] to-transparent">
                 <div className="text-5xl font-black text-white/5 mb-6">{s.step}</div>
@@ -160,21 +190,26 @@ export default function SaaSDevelopmentService() {
         {/* WHY CHOOSE US */}
         <div className="bg-gradient-to-r from-[#FD4F00]/10 to-transparent border border-[#FD4F00]/20 rounded-[2.5rem] p-10 md:p-16 mb-32">
           <div className="max-w-3xl">
+            <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">Technical Leadership</span>
             <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-6">Your SaaS Technical Co-Founders</h2>
             <p className="text-gray-300 mb-8 leading-relaxed">
-              We act as an extension of your founding team, providing the technical leadership needed to launch and scale successfully.
+              We operate as a direct extension of your product founding team, supplying the senior architectural leadership and execution speed required to build a competitive market footprint.
             </p>
             <ul className="space-y-4">
-              {["Fast time-to-market for MVP launches.", "Scalable serverless and microservice architectures.", "Expertise in complex Stripe billing models.", "Beautiful, intuitive UI that users love."].map((item, i) => (
+              {[
+                "Rapid time-to-market with production-ready SaaS MVP delivery in 8–12 weeks.",
+                "Scalable serverless and microservices architecture engineered to handle sudden user growth.",
+                "Expertise in complex Stripe subscription models, webhooks, and metered billing algorithms.",
+                "100% intellectual property ownership with zero licensing fees or vendor lock-in.",
+              ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3 text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-[#FD4F00] shrink-0" /> {item}
+                  <CheckCircle className="w-5 h-5 text-[#FD4F00] shrink-0 mt-0.5" /> <span>{item}</span>
                 </li>
               ))}
             </ul>
           </div>
         </div>
 
-        
         {/* RELEVANT SAAS CASE STUDY */}
         <div className="mb-32">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
@@ -219,24 +254,43 @@ export default function SaaSDevelopmentService() {
 
         {/* FAQ */}
         <div className="max-w-3xl mx-auto mb-32">
-          <h2 data-text-reveal className="text-3xl font-black mb-10 text-center">Frequently Asked Questions</h2>
+          <div className="text-center mb-10">
+            <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-2 block">Common Questions</span>
+            <h2 data-text-reveal className="text-3xl font-black">Frequently Asked Questions About SaaS Engineering</h2>
+          </div>
           <div className="space-y-6">
             <div className="border-b border-white/10 pb-6">
-              <h4 className="text-lg font-bold mb-2">Can you integrate Stripe for subscription billing?</h4>
-              <p className="text-gray-400">Yes, we specialize in implementing Stripe billing, supporting complex metered billing, tiering, and prorations for SaaS platforms.</p>
+              <h4 className="text-lg font-bold mb-2">What is included in your custom SaaS development services?</h4>
+              <p className="text-gray-400 leading-relaxed">
+                Our custom SaaS development services encompass product discovery, user dashboard design, multi-tenant database partitioning, automated subscription billing (Stripe, LemonSqueezy), role-based access control, and scalable cloud infrastructure deployment.
+              </p>
             </div>
             <div className="border-b border-white/10 pb-6">
-              <h4 className="text-lg font-bold mb-2">What is the typical timeline for a SaaS MVP?</h4>
-              <p className="text-gray-400">A standard SaaS Minimum Viable Product (MVP) takes approximately 8 to 12 weeks from initial concept to launch, depending on the complexity of the core features.</p>
+              <h4 className="text-lg font-bold mb-2">How do you ensure data isolation in multi-tenant SaaS software development?</h4>
+              <p className="text-gray-400 leading-relaxed">
+                We implement rigorous multi-tenant data isolation patterns—such as row-level security (RLS) in PostgreSQL or separate schema/database partitioning—ensuring that tenant records remain strictly segregated and encrypted.
+              </p>
+            </div>
+            <div className="border-b border-white/10 pb-6">
+              <h4 className="text-lg font-bold mb-2">Can you integrate Stripe for complex SaaS subscription billing?</h4>
+              <p className="text-gray-400 leading-relaxed">
+                Yes, we specialize in implementing Stripe billing systems, supporting multi-tier subscriptions, metered usage-based billing, seat add-ons, localized tax calculations, and prorated plan upgrades.
+              </p>
+            </div>
+            <div className="border-b border-white/10 pb-6">
+              <h4 className="text-lg font-bold mb-2">What is the typical timeline for an MVP with a SaaS product development company?</h4>
+              <p className="text-gray-400 leading-relaxed">
+                A standard SaaS Minimum Viable Product (MVP) typically takes 8 to 12 weeks from initial architectural scoping to production launch, providing founders with an investor-ready, pilot-tested product.
+              </p>
             </div>
           </div>
         </div>
 
         {/* CTA */}
         <div className="text-center">
-          <h2 data-text-reveal className="text-4xl font-black mb-6">Ready to Launch Your SaaS?</h2>
+          <h2 data-text-reveal className="text-4xl font-black mb-6">Ready to Launch Your SaaS Product?</h2>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-            Bring us your idea, and we will bring the engineering firepower to make it a reality.
+            Bring us your product vision, and our senior cloud architects will deliver the technical execution to make it a market reality.
           </p>
           <Button href="/contact" variant="primary" size="lg" filled>
             Discuss Your SaaS Idea <ArrowRight className="w-5 h-5 ml-2" />
