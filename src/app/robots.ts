@@ -10,13 +10,12 @@ export default function robots(): MetadataRoute.Robots {
           "/admin",
           "/api/",
           "/login",
-          "/*?q=",        // Block junk ?q={search_term_string} URLs
-          "/*?*q=",       // Block any variation
+          "/*?q=",
+          "/*?*q=",
         ],
       },
     ],
     sitemap: "https://wtechverce.com/sitemap.xml",
-    host: "https://wtechverce.com",
   };
 }
 
