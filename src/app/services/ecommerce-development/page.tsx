@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, ArrowRight, CheckCircle, ShoppingCart, CreditCard, BarChart, Smartphone, ShieldCheck, Store, Layers, Zap, RefreshCw, Code2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle, ShoppingCart, CreditCard, BarChart, Smartphone, ShieldCheck, Store, Layers, Zap, RefreshCw, Code2, Check, Clock, TrendingUp, DollarSign } from "lucide-react";
 import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
@@ -42,6 +42,7 @@ export const metadata: Metadata = {
 export default function EcommerceDevelopmentService() {
   return (
     <main className="min-h-screen bg-[#02050A] text-white overflow-x-hidden pt-32 pb-24">
+      {/* STRUCTURED DATA: SERVICE SCHEMA */}
       <Script id="service-schema" type="application/ld+json" strategy="beforeInteractive">
         {JSON.stringify({
           "@context": "https://schema.org",
@@ -52,7 +53,7 @@ export default function EcommerceDevelopmentService() {
             "name": "WTechVerce",
             "url": "https://wtechverce.com"
           },
-          "description": "WTechVerce is a full-cycle eCommerce web development company delivering custom Shopify Plus storefronts, B2B eCommerce portals, and scalable WooCommerce platforms.",
+          "description": "WTechVerce is a full-cycle eCommerce web development company delivering custom Shopify Plus storefronts, B2B eCommerce portals, custom eCommerce development services, and scalable WooCommerce platforms.",
           "areaServed": [
             { "@type": "Country", "name": "United States" },
             { "@type": "Country", "name": "United Kingdom" },
@@ -61,6 +62,8 @@ export default function EcommerceDevelopmentService() {
           ]
         })}
       </Script>
+
+      {/* STRUCTURED DATA: FAQ SCHEMA */}
       <Script id="faq-schema" type="application/ld+json" strategy="beforeInteractive">
         {JSON.stringify({
           "@context": "https://schema.org",
@@ -71,31 +74,39 @@ export default function EcommerceDevelopmentService() {
               "name": "Which eCommerce platforms does your ecommerce web development company specialize in?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "We engineer high-converting digital storefronts across Shopify, Shopify Plus, WooCommerce, and custom headless eCommerce architectures using Next.js and React."
+                "text": "Our ecommerce web development company specializes in high-converting storefronts built on Shopify, Shopify Plus, WooCommerce, and custom headless eCommerce architecture utilizing Next.js and modern React frontends."
               }
             },
             {
               "@type": "Question",
-              "name": "Do you provide custom Shopify app development services?",
+              "name": "What makes WTechVerce a premier shopify plus web development company?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, we construct custom private and public Shopify apps to synchronize inventory, integrate proprietary ERP and CRM tools, and extend Shopify checkout functionality."
+                "text": "As a specialized shopify plus web development company, we construct bespoke Liquid themes, implement checkout extensibility, build private apps, and integrate high-throughput ERP and 3PL logistics networks that withstand extreme flash-sale traffic spikes."
               }
             },
             {
               "@type": "Question",
-              "name": "What features are included in your B2B ecommerce development services?",
+              "name": "Do you offer custom ecommerce development services for businesses with unique requirements?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Our B2B eCommerce solutions include wholesale customer registration, tiered volume pricing, customer-specific product catalogs, net payment terms, bulk order forms, and automated invoicing."
+                "text": "Yes, our custom ecommerce development services cater to brands requiring bespoke product customizers, complex recurring subscriptions, multi-vendor marketplaces, and multi-warehouse routing rules that standard platforms cannot accommodate."
               }
             },
             {
               "@type": "Question",
-              "name": "How do you optimize online store checkout funnels to reduce cart abandonment?",
+              "name": "What capabilities are included in your B2B ecommerce development services?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "We implement frictionless single-page checkouts, auto-fill address validation, native mobile wallet support (Apple Pay, Google Pay), and transparent shipping cost calculators to ensure maximum conversion rates."
+                "text": "Our B2B ecommerce development services encompass wholesale buyer registration, customer-specific pricing tiers, volume discounts, net 30/60 payment terms, bulk CSV ordering, and automated invoice synchronization with enterprise accounting software."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does headless ecommerce architecture improve online conversion rates?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A headless ecommerce architecture decouples the frontend user experience from backend commerce engines. By leveraging Next.js at the edge, page transitions become instant, reducing cart abandonment and drastically improving Core Web Vitals and organic search rankings."
               }
             }
           ]
@@ -105,7 +116,7 @@ export default function EcommerceDevelopmentService() {
       <NoiseTexture />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        {/* HERO */}
+        {/* HERO SECTION */}
         <div className="max-w-4xl mb-20">
           <Link href="/services" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4" /> Back to Services
@@ -120,10 +131,10 @@ export default function EcommerceDevelopmentService() {
             </span>
           </h1>
           <p className="text-xl text-gray-300 leading-relaxed mb-6">
-            Accelerate your online sales with a dedicated <strong className="text-white">ecommerce web development company</strong>. We build secure, high-converting digital storefronts, bespoke Shopify Plus solutions, and robust B2B platforms engineered to maximize transaction velocity and customer lifetime value.
+            Accelerate your gross merchandise value (GMV) with an industry-leading <strong className="text-white">ecommerce web development company</strong>. We engineer high-converting digital storefronts, bespoke Shopify Plus solutions, and robust B2B platforms designed to maximize checkout velocity and customer lifetime value.
           </p>
           <p className="text-base text-gray-400 leading-relaxed mb-10">
-            As a full-cycle <strong className="text-white">ecommerce software development company</strong>, our engineers build tailored Shopify storefronts, enterprise WooCommerce platforms, and custom eCommerce web applications backed by secure shopping cart architecture that scales seamlessly during peak traffic spikes.
+            As a full-cycle <strong className="text-white">ecommerce software development company</strong> and recognized <strong className="text-white">shopify plus web development company</strong>, our engineers construct tailored digital commerce experiences, enterprise WooCommerce platforms, and custom headless storefronts backed by bulletproof shopping cart architecture.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button href="/contact" variant="primary" size="lg" filled>
@@ -151,30 +162,33 @@ export default function EcommerceDevelopmentService() {
               <span className="text-xs uppercase tracking-widest text-[#FF8833] font-bold">Conversion Rate Optimization</span>
               <h3 className="text-xl md:text-2xl font-bold text-white">Engineered for Rapid Checkouts, Low Abandonment &amp; High Average Order Value</h3>
             </div>
+            <span className="text-xs text-gray-400 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
+              Shopify Plus · Headless Next.js · WooCommerce · B2B
+            </span>
           </div>
         </div>
 
-        {/* INTRODUCTION / VALUE PROPOSITION */}
+        {/* SEARCH INTENT: PROBLEM TO SOLUTION FRAMING */}
         <div className="grid md:grid-cols-2 gap-16 mb-32">
           <div>
-            <span className="text-[#FF8833] text-xs font-bold uppercase tracking-widest mb-3 block">High-Converting Stores</span>
-            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-6">Scalable Online Store Solutions for Retail &amp; B2B Brands</h2>
+            <span className="text-[#FF8833] text-xs font-bold uppercase tracking-widest mb-3 block">High-Converting Commerce</span>
+            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-6">Why Generic Store Templates Destroy Checkout Conversion Rates</h2>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              In online retail, every millisecond of page load latency and friction in the checkout funnel directly erodes gross margins. Our <strong className="text-white">ecommerce website design and development services</strong> approach digital commerce through a rigorous engineering framework, building storefronts that load instantly and make product discovery effortless.
+              In online retail, every 100 milliseconds of page latency directly erodes checkout completion. Off-the-shelf marketplace themes suffer from 40+ unoptimized scripts, slow collection filtering, and rigid checkout funnels that frustrate shoppers. Our <strong className="text-white">ecommerce website design and development services</strong> approach digital retail through performance-first engineering.
             </p>
             <p className="text-gray-400 leading-relaxed mb-6">
-              As an enterprise <strong className="text-white">shopify plus development company</strong>, we construct customized shopping experiences, tailored Liquid themes, and headless React storefronts that handle sudden promotional traffic surges without checkout slowdowns or cart errors.
+              As a dedicated <strong className="text-white">shopify plus development company</strong>, we construct customized shopping experiences, tailored Liquid themes, and modern <strong className="text-white">headless ecommerce architecture</strong> setups that handle heavy promotional traffic surges without checkout crashes or inventory desynchronization.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              Furthermore, our <strong className="text-white">b2b ecommerce development services</strong> provide dedicated wholesale portals with tier-based pricing matrices, bulk order workflows, and automated ERP inventory synchronization.
+              Furthermore, through our tailored <strong className="text-white">custom ecommerce development services</strong> and enterprise <strong className="text-white">b2b ecommerce development services</strong>, we provide dedicated wholesale portals featuring tier-based pricing matrices, bulk order workflows, and automated ERP inventory synchronization.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-6">
             {[
-              { icon: <Store className="w-6 h-6 text-[#FF8833]" />, title: "Shopify Plus Development", desc: "Enterprise Shopify Plus development with custom Liquid themes and checkout extensibility." },
-              { icon: <Code2 className="w-6 h-6 text-[#FF8833]" />, title: "Custom Shopify Apps", desc: "Shopify app development services connecting proprietary ERP, CRM, and fulfillment tools." },
-              { icon: <Layers className="w-6 h-6 text-[#FF8833]" />, title: "B2B eCommerce Portals", desc: "B2B ecommerce development services with custom pricing tiers, bulk orders, and invoicing." },
-              { icon: <ShieldCheck className="w-6 h-6 text-[#FF8833]" />, title: "Secure Cart Architecture", desc: "Encrypted payment gateways, multi-currency support, and fraud-prevention workflows." },
+              { icon: <Store className="w-6 h-6 text-[#FF8833]" />, title: "Shopify Plus Stores", desc: "Enterprise Shopify Plus development with custom Liquid sections and checkout extensibility." },
+              { icon: <Code2 className="w-6 h-6 text-[#FF8833]" />, title: "Shopify Apps", desc: "Specialized shopify app development services connecting proprietary ERP, CRM, and fulfillment tools." },
+              { icon: <Layers className="w-6 h-6 text-[#FF8833]" />, title: "B2B Wholesale Portals", desc: "Enterprise B2B wholesale portals featuring custom pricing tiers, bulk orders, and invoicing." },
+              { icon: <ShieldCheck className="w-6 h-6 text-[#FF8833]" />, title: "Secure Checkout", desc: "Encrypted payment gateways, multi-currency support, and fraud-prevention workflows." },
             ].map((item, i) => (
               <div key={i} className="bg-[#0A0F1A] border border-white/5 p-6 rounded-2xl">
                 <div className="mb-4">{item.icon}</div>
@@ -185,7 +199,56 @@ export default function EcommerceDevelopmentService() {
           </div>
         </div>
 
-        {/* FEATURES GRID */}
+        {/* COMPARISON MATRIX: HEADLESS & SHOPIFY PLUS VS MONOLITHIC & GENERIC */}
+        <div className="mb-32">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-[#FF8833] text-xs font-bold uppercase tracking-widest mb-3 block">Platform Decision Matrix</span>
+            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-4">Headless &amp; Shopify Plus vs. Standard Off-The-Shelf Stores</h2>
+            <p className="text-gray-400 text-base">
+              Evaluate how modern high-performance commerce stacks compare against generic pre-made commercial storefronts.
+            </p>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse border border-white/10 rounded-2xl bg-[#0A0F1A]">
+              <thead>
+                <tr className="border-b border-white/10 bg-white/[0.02]">
+                  <th className="p-4 md:p-6 text-sm font-bold uppercase tracking-wider text-gray-400">Commerce Metric</th>
+                  <th className="p-4 md:p-6 text-sm font-bold uppercase tracking-wider text-[#FF8833]">Headless Next.js + Shopify</th>
+                  <th className="p-4 md:p-6 text-sm font-bold uppercase tracking-wider text-gray-400">Shopify Plus (Custom Liquid)</th>
+                  <th className="p-4 md:p-6 text-sm font-bold uppercase tracking-wider text-gray-500">Standard Pre-Made Theme</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-white/5 text-sm text-gray-300">
+                <tr>
+                  <td className="p-4 md:p-6 font-semibold text-white">Page Speed &amp; Core Web Vitals</td>
+                  <td className="p-4 md:p-6 text-[#FF8833]">Optimized Core Web Vitals; instant client-side routing; 95+ PageSpeed.</td>
+                  <td className="p-4 md:p-6 text-gray-300">Fast 1.5–2s load times; clean asset trees and optimized images.</td>
+                  <td className="p-4 md:p-6 text-gray-500">Sluggish 3.5–6s loads with 30+ plugin script bottlenecks.</td>
+                </tr>
+                <tr>
+                  <td className="p-4 md:p-6 font-semibold text-white">Checkout Customization</td>
+                  <td className="p-4 md:p-6 text-[#FF8833]">Complete UI freedom; custom 1-click checkout and bespoke upsells.</td>
+                  <td className="p-4 md:p-6 text-gray-300">Checkout Extensibility; customized blocks and localized shipping rules.</td>
+                  <td className="p-4 md:p-6 text-gray-500">Locked checkout interface; zero brand customization possible.</td>
+                </tr>
+                <tr>
+                  <td className="p-4 md:p-6 font-semibold text-white">B2B &amp; Wholesale Capabilities</td>
+                  <td className="p-4 md:p-6 text-[#FF8833]">Complex tiered pricing, net payment terms, and custom buyer portals.</td>
+                  <td className="p-4 md:p-6 text-gray-300">Native Shopify B2B company profiles, price lists, and catalogs.</td>
+                  <td className="p-4 md:p-6 text-gray-500">Requires brittle third-party apps that slow down collection pages.</td>
+                </tr>
+                <tr>
+                  <td className="p-4 md:p-6 font-semibold text-white">Scalability Under Flash Sales</td>
+                  <td className="p-4 md:p-6 text-[#FF8833]">Unlimited edge concurrency via global CDNs; zero server crashes.</td>
+                  <td className="p-4 md:p-6 text-gray-300">High-volume infrastructure backed by Shopify&apos;s global cloud.</td>
+                  <td className="p-4 md:p-6 text-gray-500">Prone to database lockups and cart timeouts during traffic surges.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* CORE COMMERCE CAPABILITIES */}
         <div className="mb-32">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-[#FF8833] text-xs font-bold uppercase tracking-widest mb-3 block">Complete Commerce Mechanics</span>
@@ -305,25 +368,31 @@ export default function EcommerceDevelopmentService() {
             <div className="border-b border-white/10 pb-6">
               <h4 className="text-lg font-bold mb-2">Which eCommerce platforms does your ecommerce web development company specialize in?</h4>
               <p className="text-gray-400 leading-relaxed">
-                We engineer high-converting digital storefronts across Shopify, Shopify Plus, WooCommerce, and custom headless eCommerce architectures using Next.js and React.
+                Our ecommerce web development company specializes in high-converting storefronts built on Shopify, Shopify Plus, WooCommerce, and custom headless eCommerce architecture utilizing Next.js and modern React frontends.
               </p>
             </div>
             <div className="border-b border-white/10 pb-6">
-              <h4 className="text-lg font-bold mb-2">Do you provide custom Shopify app development services?</h4>
+              <h4 className="text-lg font-bold mb-2">What makes WTechVerce a premier shopify plus web development company?</h4>
               <p className="text-gray-400 leading-relaxed">
-                Yes, we construct custom private and public Shopify apps to synchronize inventory, integrate proprietary ERP and CRM tools, and extend Shopify checkout functionality.
+                As a specialized shopify plus web development company, we construct bespoke Liquid themes, implement checkout extensibility, build private apps, and integrate high-throughput ERP and 3PL logistics networks that withstand extreme flash-sale traffic spikes.
               </p>
             </div>
             <div className="border-b border-white/10 pb-6">
-              <h4 className="text-lg font-bold mb-2">What features are included in your B2B ecommerce development services?</h4>
+              <h4 className="text-lg font-bold mb-2">Do you offer custom ecommerce development services for businesses with unique requirements?</h4>
               <p className="text-gray-400 leading-relaxed">
-                Our B2B eCommerce solutions include wholesale customer registration, tiered volume pricing, customer-specific product catalogs, net payment terms, bulk order forms, and automated invoicing.
+                Yes, our custom ecommerce development services cater to brands requiring bespoke product customizers, complex recurring subscriptions, multi-vendor marketplaces, and multi-warehouse routing rules that standard platforms cannot accommodate.
               </p>
             </div>
             <div className="border-b border-white/10 pb-6">
-              <h4 className="text-lg font-bold mb-2">How do you optimize online store checkout funnels to reduce cart abandonment?</h4>
+              <h4 className="text-lg font-bold mb-2">What capabilities are included in your B2B ecommerce development services?</h4>
               <p className="text-gray-400 leading-relaxed">
-                We implement frictionless single-page checkouts, auto-fill address validation, native mobile wallet support (Apple Pay, Google Pay), and transparent shipping cost calculators to ensure maximum conversion rates.
+                Our B2B ecommerce development services encompass wholesale buyer registration, customer-specific pricing tiers, volume discounts, net 30/60 payment terms, bulk CSV ordering, and automated invoice synchronization with enterprise accounting software.
+              </p>
+            </div>
+            <div className="border-b border-white/10 pb-6">
+              <h4 className="text-lg font-bold mb-2">How does headless ecommerce architecture improve online conversion rates?</h4>
+              <p className="text-gray-400 leading-relaxed">
+                A headless ecommerce architecture decouples the frontend user experience from backend commerce engines. By leveraging Next.js at the edge, page transitions become instant, reducing cart abandonment and drastically improving Core Web Vitals and organic search rankings.
               </p>
             </div>
           </div>

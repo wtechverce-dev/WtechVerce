@@ -6,8 +6,8 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "Custom Website Development Cost in 2026 Guide",
-  description: "Transparent guide to custom website development costs in 2026. Explore pricing factors, tech stacks, and realistic estimates for web apps.",
+  title: { absolute: "How Much Does Custom Website Development Cost in 2026? Guide" },
+  description: "How much does it cost to build a custom website in 2026? Explore transparent price ranges, build timelines, tech stacks, and key cost factors.",
   alternates: {
     canonical: "https://wtechverce.com/blog/custom-website-development-cost",
   },
@@ -24,7 +24,7 @@ export default function BlogCustomWebCost() {
           "description": "Transparent breakdown of custom website development costs in 2026 — real price ranges for different website types.",
           "image": "https://wtechverce.com/og-image.png",
           "datePublished": "2026-09-17",
-          "dateModified": "2026-10-08",
+          "dateModified": "2026-11-25",
           "author": { "@type": "Organization", "name": "WTechVerce", "url": "https://wtechverce.com" },
           "publisher": { "@type": "Organization", "name": "WTechVerce", "url": "https://wtechverce.com", "logo": { "@type": "ImageObject", "url": "https://wtechverce.com/wtech.png" } },
           "mainEntityOfPage": { "@type": "WebPage", "@id": "https://wtechverce.com/blog/custom-website-development-cost" }
@@ -63,7 +63,7 @@ export default function BlogCustomWebCost() {
 
         <div className="mb-6">
           <span className="text-sm font-bold tracking-wider uppercase text-[#FD4F00]">Web Development</span>
-          <span className="text-sm text-gray-500 ml-4">Sep 17, 2026</span>
+          <span className="text-sm text-gray-500 ml-4">Updated: Nov 25, 2026</span>
         </div>
 
         <h1 className="text-4xl md:text-5xl font-black mb-8 leading-tight">

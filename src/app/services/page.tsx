@@ -122,13 +122,13 @@ export default function ServicesPage() {
             </h1>
 
             <p className="text-lg text-gray-400 mb-8 leading-relaxed max-w-lg">
-              From futuristic web applications to enterprise AI systems — every project
+              From modern web applications and multi-tenant SaaS products to custom software systems — every project
               is crafted with meticulous attention to detail, cutting-edge technology,
               and a relentless focus on results.
             </p>
 
             <div className="flex flex-col gap-3">
-              {["99.9% Uptime Guaranteed", "Enterprise-Grade Security", "Scalable Architecture", "Dedicated Support Team"].map((item, i) => (
+              {["High-Availability Cloud Architecture", "Enterprise-Grade Security", "Scalable Modular Codebases", "Dedicated Engineering Team"].map((item, i) => (
                 <div key={i} className="flex items-center gap-3 text-gray-300 text-sm">
                   <div className="w-5 h-5 rounded-full bg-gradient-to-r from-[#FF6B00] to-[#8A2BE2] flex items-center justify-center flex-shrink-0">
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none">

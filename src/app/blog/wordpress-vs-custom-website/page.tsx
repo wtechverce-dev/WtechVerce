@@ -6,8 +6,8 @@ import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
 export const metadata: Metadata = {
-  title: "WordPress vs Custom Website: 2026 Comparison",
-  description: "WordPress vs custom website: compare performance, SEO capabilities, total costs, and long-term scalability to choose the right engineering path.",
+  title: { absolute: "WordPress vs Custom Website: Which Is Better in 2026? Guide" },
+  description: "WordPress vs custom website: compare speed, Core Web Vitals, SEO rankings, security, and 2026 costs to pick the right business stack.",
   alternates: {
     canonical: "https://wtechverce.com/blog/wordpress-vs-custom-website",
   },
@@ -24,7 +24,7 @@ export default function BlogPostWpVsCustom() {
           "description": "WordPress vs custom website — complete 2026 comparison covering speed, SEO, cost, and scalability to help you decide.",
           "image": "https://wtechverce.com/og-image.png",
           "datePublished": "2026-08-02",
-          "dateModified": "2026-10-08",
+          "dateModified": "2026-11-25",
           "author": { "@type": "Organization", "name": "WTechVerce", "url": "https://wtechverce.com" },
           "publisher": { "@type": "Organization", "name": "WTechVerce", "url": "https://wtechverce.com", "logo": { "@type": "ImageObject", "url": "https://wtechverce.com/wtech.png" } },
           "mainEntityOfPage": { "@type": "WebPage", "@id": "https://wtechverce.com/blog/wordpress-vs-custom-website" }

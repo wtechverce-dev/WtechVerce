@@ -164,7 +164,7 @@ export default function SeoService() {
               Google algorithms heavily prioritize technical accessibility and topical depth. Our professional SEO services audit your codebase from the ground up, resolving crawl bottlenecks, eliminating duplicate content errors, and building clean semantic HTML hierarchies.
             </p>
             <p className="text-gray-400 leading-relaxed mb-6">
-              We implement comprehensive Schema.org JSON-LD structured data graphs, optimize Core Web Vitals to achieve sub-second render times, and formulate keyword-rich internal linking strategies that distribute PageRank effectively across every key money page.
+              We implement comprehensive Schema.org JSON-LD structured data graphs, optimize Core Web Vitals (LCP, INP, and CLS) for rapid page rendering, and formulate keyword-rich internal linking strategies that distribute authority effectively across every key service page.
             </p>
             <p className="text-gray-400 leading-relaxed">
               Every page is crafted around commercial search intent, aligning metadata, headers, and body content to satisfy both Google's search algorithms and the exact questions your buyers are asking.

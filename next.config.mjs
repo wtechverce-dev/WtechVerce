@@ -20,6 +20,17 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.wtechverce.com',
+          },
+        ],
+        destination: 'https://wtechverce.com/:path*',
+        permanent: true,
+      },
+      {
         source: '/services/digital-marketing',
         destination: '/services/seo',
         permanent: true,

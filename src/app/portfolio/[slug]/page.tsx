@@ -62,7 +62,7 @@ const projects = [
     gradient: "from-[#FF8833]/20 to-[#6B21A8]/20",
     clientGoal: "A direct-to-consumer brand needed a modern storefront optimized for mobile conversions and integrated with local fulfillment centers.",
     challenge: "Extremely high mobile bounce rate and complex local payment gateway requirements not supported natively by Shopify.",
-    solution: "We developed a headless Shopify architecture using React to deliver sub-second mobile page loads and built custom payment integrations via Shopify APIs.",
+    solution: "We developed a headless Shopify architecture using React to optimize mobile Core Web Vitals and built custom payment integrations via Shopify APIs.",
     results: [
       "Delivered a headless React storefront integrated with Shopify eCommerce APIs",
       "Integrated regional payment gateways and automated inventory synchronization",
@@ -102,7 +102,7 @@ const projects = [
     gradient: "from-[#FD4F00]/20 to-[#6C24FA]/30",
     clientGoal: "Replace five different fragmented SaaS tools with one unified internal management system.",
     challenge: "Migrating highly sensitive recurring billing data safely while minimizing disruptions to daily gym operations.",
-    solution: "Built a secure, PCI-compliant web application utilizing Stripe for billing and a unified dashboard for all administrative tasks.",
+    solution: "Built a secure web application utilizing tokenized Stripe recurring billing and a unified dashboard for all administrative tasks.",
     results: [
       "Unified member management, attendance, and class scheduling into a single Next.js portal",
       "Migrated legacy member records and integrated automated Stripe recurring billing",

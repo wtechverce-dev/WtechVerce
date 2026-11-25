@@ -492,7 +492,7 @@ export default function Home() {
                   { title: "Engineering Excellence", desc: "Hand-crafted codebases built with Next.js, React, Node.js, and TypeScript — zero bloated templates." },
                   { title: "Flexible Engagement Models", desc: "Dedicated developer pods, turnkey sprint delivery, or MVP launches tailored to your roadmap." },
                   { title: "Dedicated Technical Leads", desc: "Direct collaboration with senior engineers who understand your system architecture inside-out." },
-                  { title: "Built for Production Scale", desc: "Engineered from day one for 99.9% uptime, enterprise security, and sub-second performance." },
+                  { title: "Built for Production Scale", desc: "Engineered from day one for cloud reliability, enterprise security, and strong Core Web Vitals performance." },
                 ].map((item, i) => (
                   <motion.div key={i} initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }} className="flex gap-4 items-start">
                     <div className="mt-1 w-6 h-6 rounded-full bg-[#6C24FA]/20 flex items-center justify-center text-[#6C24FA] shrink-0">
@@ -553,10 +553,10 @@ export default function Home() {
 
         <div className="flex gap-6 px-6 md:px-12 pb-20 overflow-x-auto snap-x snap-mandatory no-scrollbar">
           {[
-            { img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80", title: "SaaS Dashboard Redesign", cat: "Web Design & Development", color: "#6C24FA" },
-            { img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80", title: "B2B Lead Generation", cat: "SEO & Paid Ads", color: "#FD4F00" },
-            { img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=700&q=80", title: "eCommerce Scaling", cat: "Full Funnel Marketing", color: "#6C24FA" },
-            { img: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=700&q=80", title: "Law Firm Local Dominance", cat: "Local SEO", color: "#FD4F00" },
+            { img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80", title: "Custom SaaS Platform", cat: "SaaS & Node.js", color: "#6C24FA" },
+            { img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80", title: "Real Estate Web Portal", cat: "Next.js & PostgreSQL", color: "#FD4F00" },
+            { img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=700&q=80", title: "Headless Shopify Storefront", cat: "eCommerce Engineering", color: "#6C24FA" },
+            { img: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=700&q=80", title: "Gym Operations Software", cat: "Custom Software", color: "#FD4F00" },
           ].map((item, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.1 }}
               className="min-w-[340px] md:min-w-[460px] snap-center group cursor-pointer shrink-0">

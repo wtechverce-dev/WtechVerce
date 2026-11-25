@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, CheckCircle, Layers, Users, CreditCard, Lock, Cloud, Shield, Server, Zap } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle, Layers, Users, CreditCard, Lock, Cloud, Shield, Server, Zap, Database, Terminal, Check, Clock, TrendingUp } from "lucide-react";
 import Button from "@/components/ui/Button";
 import NoiseTexture from "@/components/ui/NoiseTexture";
 
@@ -41,6 +41,7 @@ export const metadata: Metadata = {
 export default function SaaSDevelopmentService() {
   return (
     <main className="min-h-screen bg-[#02050A] text-white overflow-x-hidden pt-32 pb-24">
+      {/* STRUCTURED DATA: SERVICE SCHEMA */}
       <Script id="service-schema" type="application/ld+json" strategy="beforeInteractive">
         {JSON.stringify({
           "@context": "https://schema.org",
@@ -51,7 +52,7 @@ export default function SaaSDevelopmentService() {
             "name": "WTechVerce",
             "url": "https://wtechverce.com"
           },
-          "description": "WTechVerce is a SaaS product development company delivering custom SaaS development services, multi-tenant cloud architecture, and automated subscription billing engines.",
+          "description": "WTechVerce is a premier SaaS product development company delivering custom SaaS development services, multi-tenant cloud application architecture, and automated Stripe recurring billing systems.",
           "areaServed": [
             { "@type": "Country", "name": "United States" },
             { "@type": "Country", "name": "United Kingdom" },
@@ -60,6 +61,8 @@ export default function SaaSDevelopmentService() {
           ]
         })}
       </Script>
+
+      {/* STRUCTURED DATA: FAQ SCHEMA */}
       <Script id="faq-schema" type="application/ld+json" strategy="beforeInteractive">
         {JSON.stringify({
           "@context": "https://schema.org",
@@ -70,23 +73,23 @@ export default function SaaSDevelopmentService() {
               "name": "What is included in your custom SaaS development services?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Our custom SaaS development services encompass product discovery, user dashboard design, multi-tenant database partitioning, automated subscription billing (Stripe, LemonSqueezy), role-based access control, and scalable cloud infrastructure deployment."
+                "text": "Our custom SaaS development services encompass product discovery, user dashboard design, multi-tenant database partitioning, automated subscription billing (Stripe, LemonSqueezy), role-based access control (RBAC), and scalable cloud infrastructure deployment."
               }
             },
             {
               "@type": "Question",
-              "name": "How do you ensure data isolation in multi-tenant SaaS software development?",
+              "name": "How do you ensure data isolation in multi-tenant SaaS development?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "We implement rigorous multi-tenant data isolation patterns—such as row-level security (RLS) in PostgreSQL or separate schema/database partitioning—ensuring that tenant records remain strictly segregated and encrypted."
+                "text": "In multi-tenant SaaS development, we implement rigorous tenant isolation patterns such as PostgreSQL Row-Level Security (RLS) or partitioned schemas. This guarantees complete separation of tenant records, prevents cross-tenant data leaks, and ensures enterprise compliance."
               }
             },
             {
               "@type": "Question",
-              "name": "Can you integrate Stripe for complex SaaS subscription billing?",
+              "name": "What makes a scalable SaaS platform architecture?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, we specialize in implementing Stripe billing systems, supporting multi-tier subscriptions, metered usage-based billing, seat add-ons, localized tax calculations, and prorated plan upgrades."
+                "text": "A robust SaaS platform architecture separates stateless frontend layers from distributed microservices, utilizes asynchronous background workers (Redis, BullMQ) for intensive tasks, and implements database connection pooling to handle thousands of concurrent tenant sessions without latency spikes."
               }
             },
             {
@@ -94,7 +97,15 @@ export default function SaaSDevelopmentService() {
               "name": "What is the typical timeline for an MVP with a SaaS product development company?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "A standard SaaS Minimum Viable Product (MVP) typically takes 8 to 12 weeks from initial architectural scoping to production launch, providing founders with an investor-ready, pilot-tested product."
+                "text": "A standard SaaS MVP development cycle typically takes 8 to 12 weeks from initial architectural scoping to production launch, delivering an investor-ready, pilot-tested product with functional payment processing and user management."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can a cloud based application development company help migrate our legacy system to SaaS?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, as a specialized cloud based application development company, we re-architect on-premise monolithic software into modern multi-tenant cloud applications hosted on AWS, Google Cloud, or Vercel, migrating legacy customer data without business disruption."
               }
             }
           ]
@@ -104,7 +115,7 @@ export default function SaaSDevelopmentService() {
       <NoiseTexture />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        {/* HERO */}
+        {/* HERO SECTION */}
         <div className="max-w-4xl mb-20">
           <Link href="/services" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4" /> Back to Services
@@ -119,10 +130,10 @@ export default function SaaSDevelopmentService() {
             </span>
           </h1>
           <p className="text-xl text-gray-300 leading-relaxed mb-6">
-            Transform your software vision into a scalable, recurring revenue platform with our end-to-end <strong className="text-white">saas development services</strong>. As a specialized <strong className="text-white">saas product development company</strong>, we engineer secure multi-tenant cloud platforms, automated billing engines, and intuitive dashboards designed for high retention.
+            Transform your software vision into a high-growth, recurring revenue asset with our battle-tested <strong className="text-white">saas development services</strong>. As a premier <strong className="text-white">saas product development company</strong> and specialized <strong className="text-white">cloud application development company</strong>, we engineer high-performance multi-tenant platforms, automated subscription engines, and intuitive client dashboards designed for maximum retention.
           </p>
           <p className="text-base text-gray-400 leading-relaxed mb-10">
-            From initial SaaS MVP engineering and tenant architecture scoping to enterprise cloud scaling, our full-stack engineers construct custom SaaS solutions with Next.js, Node.js, Python, PostgreSQL, and Stripe.
+            From initial <strong className="text-white">saas mvp development</strong> and foundational <strong className="text-white">saas platform architecture</strong> to enterprise-grade cloud scaling, our full-stack engineers construct high-yield <strong className="text-white">custom saas development</strong> solutions using Next.js, Node.js, Python, PostgreSQL, and Stripe.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button href="/contact" variant="primary" size="lg" filled>
@@ -134,19 +145,19 @@ export default function SaaSDevelopmentService() {
           </div>
         </div>
 
-        {/* INTRODUCTION / WHAT WE OFFER */}
+        {/* SEARCH INTENT: PROBLEM TO SOLUTION FRAMING */}
         <div className="grid md:grid-cols-2 gap-16 mb-32">
           <div>
             <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">Cloud Architecture</span>
             <h2 data-text-reveal className="text-3xl font-black mb-6">Engineered for Monthly Recurring Revenue (MRR) Growth</h2>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Engineering a software-as-a-service platform requires far more than basic CRUD development. It demands an enterprise cloud architecture capable of handling thousands of concurrent users, isolating tenant datasets with zero leakage risk, and automating billing cycles flawlessly.
+              Engineering a successful software-as-a-service application requires far more than basic CRUD development. It demands a sophisticated <strong className="text-white">saas platform architecture</strong> capable of supporting thousands of concurrent users, isolating tenant datasets with zero leakage risk, and managing subscription lifecycles with absolute precision.
             </p>
             <p className="text-gray-400 leading-relaxed mb-6">
-              As a dedicated <strong className="text-white">cloud application development company</strong>, we construct scalable SaaS ecosystems that support complex user tiers, self-service customer onboarding, and high-throughput background processing.
+              As an experienced <strong className="text-white">cloud based application development company</strong>, we construct scalable SaaS ecosystems that support complex user tiers, self-service customer onboarding, and high-throughput background processing. Our <strong className="text-white">saas software development</strong> practices ensure that your platform scales smoothly from your first 100 pilot users to tens of thousands of paying subscribers.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              Whether you are an early-stage founder building an MVP or a scaling enterprise migrating a legacy tool to the cloud, our <strong className="text-white">custom saas development</strong> engineers deliver clean, modular codebases built for high valuation and investor confidence.
+              Whether you are an early-stage founder requiring agile <strong className="text-white">saas mvp development</strong> or a scaling enterprise undertaking complex <strong className="text-white">multi-tenant saas development</strong>, our engineers build modular, investor-ready codebases with 100% full intellectual property ownership.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-6">
@@ -165,11 +176,129 @@ export default function SaaSDevelopmentService() {
           </div>
         </div>
 
-        {/* OUR PROCESS */}
+        {/* COMPARISON MATRIX: CUSTOM SAAS VS NO-CODE / OTS */}
+        <div className="mb-32">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">Architecture Evaluation</span>
+            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-4">Custom Multi-Tenant SaaS vs. No-Code &amp; OTS Tools</h2>
+            <p className="text-gray-400 text-base">
+              Discover why serious founders and enterprises transition from no-code prototypes to custom multi-tenant cloud software.
+            </p>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse border border-white/10 rounded-2xl bg-[#0A0F1A]">
+              <thead>
+                <tr className="border-b border-white/10 bg-white/[0.02]">
+                  <th className="p-4 md:p-6 text-sm font-bold uppercase tracking-wider text-gray-400">Architectural Metric</th>
+                  <th className="p-4 md:p-6 text-sm font-bold uppercase tracking-wider text-[#FD4F00]">Custom Multi-Tenant SaaS</th>
+                  <th className="p-4 md:p-6 text-sm font-bold uppercase tracking-wider text-gray-400">No-Code Tools (Bubble / Webflow)</th>
+                  <th className="p-4 md:p-6 text-sm font-bold uppercase tracking-wider text-gray-500">Off-the-Shelf SaaS White Labels</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-white/5 text-sm text-gray-300">
+                <tr>
+                  <td className="p-4 md:p-6 font-semibold text-white">Tenant Data Segregation</td>
+                  <td className="p-4 md:p-6 text-[#FD4F00]">PostgreSQL Row-Level Security (RLS) &amp; isolated schemas; zero cross-tenant leakage.</td>
+                  <td className="p-4 md:p-6 text-gray-400">Shared tables with client-side filters; significant data security risks.</td>
+                  <td className="p-4 md:p-6 text-gray-500">Black-box hosting; zero direct database control or compliance auditing.</td>
+                </tr>
+                <tr>
+                  <td className="p-4 md:p-6 font-semibold text-white">Billing &amp; Revenue Models</td>
+                  <td className="p-4 md:p-6 text-[#FD4F00]">Arbitrary custom pricing: seat-based, metered usage, feature flags, localized taxes.</td>
+                  <td className="p-4 md:p-6 text-gray-400">Rigid basic tiers; complex webhook reconciliation often breaks.</td>
+                  <td className="p-4 md:p-6 text-gray-500">High revenue-share cut (up to 20%) taken by the white-label vendor.</td>
+                </tr>
+                <tr>
+                  <td className="p-4 md:p-6 font-semibold text-white">Code &amp; IP Ownership</td>
+                  <td className="p-4 md:p-6 text-[#FD4F00]">100% intellectual property ownership; clean Git repo ready for venture diligence.</td>
+                  <td className="p-4 md:p-6 text-gray-400">Vendor lock-in; code cannot be exported or migrated if the platform shuts down.</td>
+                  <td className="p-4 md:p-6 text-gray-500">Zero IP ownership; you are renting an interface from a third party.</td>
+                </tr>
+                <tr>
+                  <td className="p-4 md:p-6 font-semibold text-white">Concurrency &amp; Latency</td>
+                  <td className="p-4 md:p-6 text-[#FD4F00]">Sub-100ms API response times via edge caching and distributed connection pooling.</td>
+                  <td className="p-4 md:p-6 text-gray-400">Frequent rate limits and performance degradation past 1,000 active users.</td>
+                  <td className="p-4 md:p-6 text-gray-500">Shared compute clusters with unpredicted latency spikes during peak hours.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* PILLARS OF SAAS ENGINEERING */}
+        <div className="mb-32">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">Full-Stack Cloud Core</span>
+            <h2 data-text-reveal className="text-3xl md:text-4xl font-black mb-4">Core Pillars of Scalable SaaS Engineering</h2>
+            <p className="text-gray-400 text-base">
+              Every custom SaaS product we engineer includes foundational infrastructure necessary for enterprise stability and valuation growth.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="p-8 border border-white/10 rounded-3xl bg-[#0A0F1A] hover:border-[#FD4F00]/40 transition-colors">
+              <Database className="w-10 h-10 text-[#FD4F00] mb-6" />
+              <h3 className="text-xl font-bold text-white mb-3">Multi-Tenant Database Design</h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                Engineered with Row-Level Security (RLS) in PostgreSQL or tenant schema partitioning, preventing data leaks while keeping hosting costs optimal across shared infrastructure.
+              </p>
+              <span className="text-xs text-[#FD4F00] font-semibold">PostgreSQL · Prisma · Supabase · RLS</span>
+            </div>
+
+            <div className="p-8 border border-white/10 rounded-3xl bg-[#0A0F1A] hover:border-[#FD4F00]/40 transition-colors">
+              <CreditCard className="w-10 h-10 text-[#FD4F00] mb-6" />
+              <h3 className="text-xl font-bold text-white mb-3">Subscription Billing Engines</h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                Automated recurring revenue infrastructure supporting multi-tier plans, seat-based add-ons, usage-based metering, self-service customer portals, and failed-payment dunning flows.
+              </p>
+              <span className="text-xs text-[#FD4F00] font-semibold">Stripe Billing · LemonSqueezy · Webhooks</span>
+            </div>
+
+            <div className="p-8 border border-white/10 rounded-3xl bg-[#0A0F1A] hover:border-[#FD4F00]/40 transition-colors">
+              <Lock className="w-10 h-10 text-[#FD4F00] mb-6" />
+              <h3 className="text-xl font-bold text-white mb-3">Granular RBAC &amp; Workspaces</h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                Hierarchical team management, role-based access control, audit logging, session management, and enterprise Single Sign-On (SAML/Okta) for frictionless enterprise sales.
+              </p>
+              <span className="text-xs text-[#FD4F00] font-semibold">NextAuth · Clerk · OAuth2 · Workspaces</span>
+            </div>
+
+            <div className="p-8 border border-white/10 rounded-3xl bg-[#0A0F1A] hover:border-[#FD4F00]/40 transition-colors">
+              <Zap className="w-10 h-10 text-[#FD4F00] mb-6" />
+              <h3 className="text-xl font-bold text-white mb-3">High-Throughput Background Jobs</h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                Decoupled task processing using Redis queues and serverless workers for heavy computations, batch PDF exports, email broadcasts, and third-party API sync without blocking the UI.
+              </p>
+              <span className="text-xs text-[#FD4F00] font-semibold">Redis · BullMQ · Inngest · Serverless</span>
+            </div>
+
+            <div className="p-8 border border-white/10 rounded-3xl bg-[#0A0F1A] hover:border-[#FD4F00]/40 transition-colors">
+              <TrendingUp className="w-10 h-10 text-[#FD4F00] mb-6" />
+              <h3 className="text-xl font-bold text-white mb-3">Usage Analytics &amp; Admin Dashboards</h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                Embedded telemetry dashboards giving founders real-time visibility into MRR, churn rates, feature adoption, and tenant resource consumption.
+              </p>
+              <span className="text-xs text-[#FD4F00] font-semibold">Tremor · Chart.js · PostgreSQL Aggregations</span>
+            </div>
+
+            <div className="p-8 border border-white/10 rounded-3xl bg-[#0A0F1A] hover:border-[#FD4F00]/40 transition-colors">
+              <Cloud className="w-10 h-10 text-[#FD4F00] mb-6" />
+              <h3 className="text-xl font-bold text-white mb-3">Global Edge Deployment</h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                Distributed edge hosting ensuring lightning-fast dashboard interactions worldwide, automated SSL provisioning for tenant custom domains, and zero-downtime rolling deploys.
+              </p>
+              <span className="text-xs text-[#FD4F00] font-semibold">AWS · Vercel · Cloudflare · Docker</span>
+            </div>
+          </div>
+        </div>
+
+        {/* AGILE SAAS LIFECYCLE */}
         <div className="mb-32">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-[#FD4F00] text-xs font-bold uppercase tracking-widest mb-3 block">Agile SaaS Lifecycle</span>
             <h2 data-text-reveal className="text-3xl md:text-4xl font-black">The SaaS Development Roadmap: From MVP to Enterprise Scale</h2>
+            <p className="text-gray-400 text-base mt-4">
+              A rapid, iterative roadmap designed to validate core hypotheses quickly and transition into sustainable monthly recurring revenue.
+            </p>
           </div>
           <div className="grid md:grid-cols-4 gap-8">
             {[
@@ -210,7 +339,7 @@ export default function SaaSDevelopmentService() {
           </div>
         </div>
 
-        {/* RELEVANT SAAS CASE STUDY */}
+        {/* RELEVANT SAAS CASE STUDY & KNOWLEDGE PILLARS */}
         <div className="mb-32">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
             <div>
@@ -262,25 +391,31 @@ export default function SaaSDevelopmentService() {
             <div className="border-b border-white/10 pb-6">
               <h4 className="text-lg font-bold mb-2">What is included in your custom SaaS development services?</h4>
               <p className="text-gray-400 leading-relaxed">
-                Our custom SaaS development services encompass product discovery, user dashboard design, multi-tenant database partitioning, automated subscription billing (Stripe, LemonSqueezy), role-based access control, and scalable cloud infrastructure deployment.
+                Our custom SaaS development services encompass product discovery, user dashboard design, multi-tenant database partitioning, automated subscription billing (Stripe, LemonSqueezy), role-based access control (RBAC), and scalable cloud infrastructure deployment.
               </p>
             </div>
             <div className="border-b border-white/10 pb-6">
-              <h4 className="text-lg font-bold mb-2">How do you ensure data isolation in multi-tenant SaaS software development?</h4>
+              <h4 className="text-lg font-bold mb-2">How do you ensure data isolation in multi-tenant SaaS development?</h4>
               <p className="text-gray-400 leading-relaxed">
-                We implement rigorous multi-tenant data isolation patterns—such as row-level security (RLS) in PostgreSQL or separate schema/database partitioning—ensuring that tenant records remain strictly segregated and encrypted.
+                In multi-tenant SaaS development, we implement rigorous tenant isolation patterns such as PostgreSQL Row-Level Security (RLS) or partitioned schemas. This guarantees complete separation of tenant records, prevents cross-tenant data leaks, and ensures enterprise compliance.
               </p>
             </div>
             <div className="border-b border-white/10 pb-6">
-              <h4 className="text-lg font-bold mb-2">Can you integrate Stripe for complex SaaS subscription billing?</h4>
+              <h4 className="text-lg font-bold mb-2">What makes a scalable SaaS platform architecture?</h4>
               <p className="text-gray-400 leading-relaxed">
-                Yes, we specialize in implementing Stripe billing systems, supporting multi-tier subscriptions, metered usage-based billing, seat add-ons, localized tax calculations, and prorated plan upgrades.
+                A robust SaaS platform architecture separates stateless frontend layers from distributed microservices, utilizes asynchronous background workers (Redis, BullMQ) for intensive tasks, and implements database connection pooling to handle thousands of concurrent tenant sessions without latency spikes.
               </p>
             </div>
             <div className="border-b border-white/10 pb-6">
               <h4 className="text-lg font-bold mb-2">What is the typical timeline for an MVP with a SaaS product development company?</h4>
               <p className="text-gray-400 leading-relaxed">
-                A standard SaaS Minimum Viable Product (MVP) typically takes 8 to 12 weeks from initial architectural scoping to production launch, providing founders with an investor-ready, pilot-tested product.
+                A standard SaaS MVP development cycle typically takes 8 to 12 weeks from initial architectural scoping to production launch, delivering an investor-ready, pilot-tested product with functional payment processing and user management.
+              </p>
+            </div>
+            <div className="border-b border-white/10 pb-6">
+              <h4 className="text-lg font-bold mb-2">Can a cloud based application development company help migrate our legacy system to SaaS?</h4>
+              <p className="text-gray-400 leading-relaxed">
+                Yes, as a specialized cloud based application development company, we re-architect on-premise monolithic software into modern multi-tenant cloud applications hosted on AWS, Google Cloud, or Vercel, migrating legacy customer data without business disruption.
               </p>
             </div>
           </div>

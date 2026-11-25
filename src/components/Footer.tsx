@@ -79,9 +79,11 @@ export default function Footer() {
                   ["Software Development", "/services/software-development"],
                   ["SaaS Development", "/services/saas-development"],
                   ["Web Development", "/services/web-development"],
+                  ["WordPress Development", "/services/wordpress-development"],
                   ["Ecommerce Solutions", "/services/ecommerce-development"],
                   ["Mobile App Development", "/services/mobile-app-development"],
                   ["UI/UX Design", "/services/ui-ux-design"],
+                  ["Website Redesign", "/services/website-redesign"],
                   ["SEO Services", "/services/seo"],
                 ].map(([label, href]) => (
                   <li key={label}>
@@ -97,7 +99,14 @@ export default function Footer() {
             <div>
               <h4 className="text-white font-black text-sm tracking-[0.2em] uppercase mb-6 opacity-40">Company</h4>
               <ul className="flex flex-col gap-4">
-                {[["Services Hub", "/services"], ["Portfolio", "/portfolio"], ["Process", "/process"], ["Blog", "/blog"], ["Contact", "/contact"]].map(([label, href]) => (
+                {[
+                  ["Services Hub", "/services"],
+                  ["Portfolio", "/portfolio"],
+                  ["Process", "/process"],
+                  ["Blog", "/blog"],
+                  ["Pakistan Agency", "/web-development-company-pakistan"],
+                  ["Contact", "/contact"],
+                ].map(([label, href]) => (
                   <li key={label}>
                     <Link href={href as string} className="text-white/60 hover:text-white hover:translate-x-1 transition-all inline-block font-medium text-sm">
                       {label}
@@ -111,10 +120,20 @@ export default function Footer() {
             <div>
               <h4 className="text-white font-black text-sm tracking-[0.2em] uppercase mb-6 opacity-40">Socials</h4>
               <ul className="flex flex-col gap-4">
-                {["LinkedIn", "Twitter / X", "Instagram", "GitHub"].map((s) => (
-                  <li key={s}>
-                    <a href="#" className="text-white/60 hover:text-[#FD4F00] hover:translate-x-1 transition-all inline-block font-medium text-sm flex items-center gap-1">
-                      {s} <span className="text-[10px] opacity-50">↗</span>
+                {[
+                  ["LinkedIn", "https://www.linkedin.com/company/wtechverce"],
+                  ["Twitter / X", "https://twitter.com/wtechverce"],
+                  ["GitHub", "https://github.com/wtechverce"],
+                  ["Facebook", "https://www.facebook.com/wtechverce"],
+                ].map(([label, href]) => (
+                  <li key={label}>
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white/60 hover:text-[#FD4F00] hover:translate-x-1 transition-all inline-block font-medium text-sm flex items-center gap-1"
+                    >
+                      {label} <span className="text-[10px] opacity-50">↗</span>
                     </a>
                   </li>
                 ))}
