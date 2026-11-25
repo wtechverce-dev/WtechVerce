@@ -38,13 +38,13 @@ export const metadata: Metadata = {
     "custom web app development",
   ],
   alternates: {
-    canonical: "https://wtechverce.com/services/web-development",
+    canonical: "https://wtechverce.com/services/web-development-services",
   },
   openGraph: {
     title: "Website Development Company & Web Agency | WTechVerce",
     description:
       "WTechVerce is a website development company providing custom web development services, bespoke web applications, and responsive portals.",
-    url: "https://wtechverce.com/services/web-development",
+    url: "https://wtechverce.com/services/web-development-services",
     type: "website",
   },
   twitter: {

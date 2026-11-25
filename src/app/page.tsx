@@ -173,7 +173,7 @@ export default function Home() {
 
           <div className="flex flex-col items-center gap-8 max-w-3xl text-center">
             <p className="text-gray-400 text-lg md:text-xl leading-relaxed">
-              We build <Link href="/services/custom-software-development" className="text-white hover:text-[#FD4F00]">custom software</Link> and <Link href="/services/web-development" className="text-white hover:text-[#FD4F00]">high-performance web applications</Link> for startups and growing businesses — from SaaS products to eCommerce platforms and enterprise tools.
+              We build <Link href="/services/custom-software-development" className="text-white hover:text-[#FD4F00]">custom software</Link> and <Link href="/services/web-development-services" className="text-white hover:text-[#FD4F00]">high-performance web applications</Link> for startups and growing businesses — from SaaS products to eCommerce platforms and enterprise tools.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto mt-4">
               <Button href="/contact" variant="primary" size="lg" filled>
@@ -369,7 +369,7 @@ export default function Home() {
 
             {/* Web Dev card — with background image */}
             <FadeIn delay={0.1} className="md:col-span-4">
-              <a href="/services/web-development" className="block rounded-[2.5rem] relative overflow-hidden flex flex-col justify-end h-full min-h-[340px] group" aria-label="Custom Web Development Services">
+              <a href="/services/web-development-services" className="block rounded-[2.5rem] relative overflow-hidden flex flex-col justify-end h-full min-h-[340px] group" aria-label="Custom Web Development Services">
                 {/* Background image */}
                 <img
                   src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=700&q=80"
@@ -393,7 +393,7 @@ export default function Home() {
 
             {/* Mobile App Development image card */}
             <FadeIn delay={0.15} className="md:col-span-4">
-              <a href="/services/mobile-app-development" className="block rounded-[2.5rem] bg-[#070D18] border border-white/5 relative overflow-hidden h-[360px] group hover:border-[#00B4D8]/30 transition-colors duration-500" aria-label="Custom Mobile App Development Services">
+              <a href="/services/mobile-app-development-services" className="block rounded-[2.5rem] bg-[#070D18] border border-white/5 relative overflow-hidden h-[360px] group hover:border-[#00B4D8]/30 transition-colors duration-500" aria-label="Custom Mobile App Development Services">
                 <img
                   src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80"
                   alt="Custom Mobile App Development Services"
@@ -438,7 +438,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="mt-6 sm:mt-0">
-                    <PillBtn href="/services/saas-development"><span className="flex items-center gap-2">Explore SaaS Dev <ArrowRight className="w-4 h-4" /></span></PillBtn>
+                    <PillBtn href="/services/saas-development-company"><span className="flex items-center gap-2">Explore SaaS Dev <ArrowRight className="w-4 h-4" /></span></PillBtn>
                   </div>
                 </div>
               </div>

@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     "professional off page link building services",
   ],
   alternates: {
-    canonical: "https://wtechverce.com/services/seo",
+    canonical: "https://wtechverce.com/services/seo-services",
   },
   openGraph: {
     title: "Technical SEO Services & Search Optimization | WTechVerce",
     description:
       "Boost organic search rankings with technical SEO services from WTechVerce. We optimize Core Web Vitals, site architecture, and indexation.",
-    url: "https://wtechverce.com/services/seo",
+    url: "https://wtechverce.com/services/seo-services",
     type: "website",
   },
   twitter: {

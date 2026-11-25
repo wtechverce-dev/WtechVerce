@@ -91,7 +91,7 @@ export default function PakistanWebDevelopmentService() {
             <Button href="/blog/website-development-cost-pakistan-2026" variant="outline" size="md">
               Read Cost Guide <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
-            <Button href="/services/web-development" variant="outline" size="md">
+            <Button href="/services/web-development-services" variant="outline" size="md">
               Global Services
             </Button>
           </div>

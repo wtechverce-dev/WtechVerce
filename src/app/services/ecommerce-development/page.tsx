@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     "headless ecommerce architecture",
   ],
   alternates: {
-    canonical: "https://wtechverce.com/services/ecommerce-development",
+    canonical: "https://wtechverce.com/services/ecommerce-development-services",
   },
   openGraph: {
     title: "eCommerce Web Development Company & Apps | WTechVerce",
     description:
       "WTechVerce is an ecommerce web development company. We engineer custom Shopify Plus stores, WooCommerce, and B2B online portals.",
-    url: "https://wtechverce.com/services/ecommerce-development",
+    url: "https://wtechverce.com/services/ecommerce-development-services",
     type: "website",
   },
   twitter: {

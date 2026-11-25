@@ -11,7 +11,7 @@ import Script from "next/script";
 const projects = [
   {
     slug: "custom-saas-platform-development",
-    serviceHref: "/services/saas-development",
+    serviceHref: "/services/saas-development-company",
     serviceTitle: "SaaS Product Development",
     guideHref: "/blog/what-is-custom-software-development",
     guideTitle: "Guide to Custom Software & SaaS Architecture",
@@ -31,7 +31,7 @@ const projects = [
   },
   {
     slug: "wordpress-business-website-development",
-    serviceHref: "/services/wordpress-development",
+    serviceHref: "/services/wordpress-development-services",
     serviceTitle: "WordPress & Local SEO Development",
     guideHref: "/blog/wordpress-vs-custom-website",
     guideTitle: "WordPress vs Custom Website Comparison",
@@ -51,7 +51,7 @@ const projects = [
   },
   {
     slug: "ecommerce-website-development",
-    serviceHref: "/services/ecommerce-development",
+    serviceHref: "/services/ecommerce-development-services",
     serviceTitle: "eCommerce Store Development",
     guideHref: "/blog/custom-website-development-cost",
     guideTitle: "eCommerce & Website Cost Guide 2026",
@@ -71,7 +71,7 @@ const projects = [
   },
   {
     slug: "real-estate-web-application",
-    serviceHref: "/services/web-development",
+    serviceHref: "/services/web-development-services",
     serviceTitle: "Custom Web Application Development",
     guideHref: "/blog/custom-website-development-cost",
     guideTitle: "Web Application Cost Breakdown",
@@ -111,7 +111,7 @@ const projects = [
   },
   {
     slug: "restaurant-ordering-system",
-    serviceHref: "/services/web-development",
+    serviceHref: "/services/web-development-services",
     serviceTitle: "Web & Real-Time App Development",
     guideHref: "/blog/what-is-custom-software-development",
     guideTitle: "Custom Software & Web API Guide",

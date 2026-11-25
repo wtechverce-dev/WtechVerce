@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Strategic Website Redesign & Modernization",
   description: "Modernize your website with strategic redesign services. Fix technical debt, enhance conversions, and preserve your existing SEO rankings.",
   alternates: {
-    canonical: "https://wtechverce.com/services/website-redesign",
+    canonical: "https://wtechverce.com/services/website-redesign-services",
   },
 };
 

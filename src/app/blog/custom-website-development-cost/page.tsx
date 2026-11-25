@@ -97,7 +97,7 @@ export default function BlogCustomWebCost() {
 
           <h2>What Is Custom Website Development?</h2>
           <p>
-            Custom website development means building your website from scratch using modern web technologies like <strong>React</strong>, <strong>Next.js</strong>, and <strong>Node.js</strong> — without relying on WordPress themes or website builders. Every element is designed and engineered specifically for your business. This is what <Link href="/services/web-development">WTechVerce specializes in</Link>.
+            Custom website development means building your website from scratch using modern web technologies like <strong>React</strong>, <strong>Next.js</strong>, and <strong>Node.js</strong> — without relying on WordPress themes or website builders. Every element is designed and engineered specifically for your business. This is what <Link href="/services/web-development-services">WTechVerce specializes in</Link>.
           </p>
 
           <h2>Cost Breakdown by Website Type</h2>
@@ -120,7 +120,7 @@ export default function BlogCustomWebCost() {
 
           <h3>4. SaaS Platform (MVP) — $15,000 to $60,000</h3>
           <p>
-            A Minimum Viable Product for a software-as-a-service business. Includes multi-tenant user management, subscription billing (Stripe), a core feature set, and admin analytics. See our <Link href="/services/saas-development">SaaS development service</Link> for details on what&apos;s involved.
+            A Minimum Viable Product for a software-as-a-service business. Includes multi-tenant user management, subscription billing (Stripe), a core feature set, and admin analytics. See our <Link href="/services/saas-development-company">SaaS development service</Link> for details on what&apos;s involved.
           </p>
 
           <h3>5. Enterprise Platform — $40,000 to $150,000+</h3>

@@ -77,14 +77,14 @@ export default function Footer() {
               <ul className="flex flex-col gap-4">
                 {[
                   ["Software Development", "/services/custom-software-development"],
-                  ["SaaS Development", "/services/saas-development"],
-                  ["Web Development", "/services/web-development"],
-                  ["WordPress Development", "/services/wordpress-development"],
-                  ["Ecommerce Solutions", "/services/ecommerce-development"],
-                  ["Mobile App Development", "/services/mobile-app-development"],
-                  ["UI/UX Design", "/services/ui-ux-design"],
-                  ["Website Redesign", "/services/website-redesign"],
-                  ["SEO Services", "/services/seo"],
+                  ["SaaS Development", "/services/saas-development-company"],
+                  ["Web Development", "/services/web-development-services"],
+                  ["WordPress Development", "/services/wordpress-development-services"],
+                  ["Ecommerce Solutions", "/services/ecommerce-development-services"],
+                  ["Mobile App Development", "/services/mobile-app-development-services"],
+                  ["UI/UX Design", "/services/ui-ux-design-services"],
+                  ["Website Redesign", "/services/website-redesign-services"],
+                  ["SEO Services", "/services/seo-services"],
                 ].map(([label, href]) => (
                   <li key={label}>
                     <Link href={href} className="text-white/60 hover:text-white hover:translate-x-1 transition-all inline-block font-medium text-sm">

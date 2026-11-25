@@ -89,7 +89,7 @@ export default function BlogPostWpVsCustom() {
 
           <h2>What Is a Custom Website?</h2>
           <p>
-            A custom website is built from scratch by developers using modern frameworks like <strong>React</strong>, <strong>Next.js</strong>, or <strong>Node.js</strong>. There is no pre-built template or CMS — every feature, page, and interaction is engineered specifically for your business requirements. This is what <Link href="/services/web-development">WTechVerce builds</Link> for clients who need performance, scalability, and unique functionality.
+            A custom website is built from scratch by developers using modern frameworks like <strong>React</strong>, <strong>Next.js</strong>, or <strong>Node.js</strong>. There is no pre-built template or CMS — every feature, page, and interaction is engineered specifically for your business requirements. This is what <Link href="/services/web-development-services">WTechVerce builds</Link> for clients who need performance, scalability, and unique functionality.
           </p>
 
           <h2>WordPress vs Custom Website: Head-to-Head Comparison</h2>
@@ -196,7 +196,7 @@ export default function BlogPostWpVsCustom() {
 
           <h2>Conclusion: Which Should You Choose?</h2>
           <p>
-            If speed-to-market and budget are your priorities, WordPress is a solid choice — especially for content sites and standard storefronts. If you are building something that needs to scale, integrate deeply with other systems, or perform at a high technical level, a <Link href="/services/web-development">custom web development approach</Link> is the right investment. Need help deciding? Our team at WTechVerce will assess your requirements and recommend the right architecture for free.
+            If speed-to-market and budget are your priorities, WordPress is a solid choice — especially for content sites and standard storefronts. If you are building something that needs to scale, integrate deeply with other systems, or perform at a high technical level, a <Link href="/services/web-development-services">custom web development approach</Link> is the right investment. Need help deciding? Our team at WTechVerce will assess your requirements and recommend the right architecture for free.
           </p>
         </div>
 

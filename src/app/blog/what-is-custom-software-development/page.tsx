@@ -235,7 +235,7 @@ export default function BlogWhatIsCustomSoftware() {
                 icon: <Code2 className="w-5 h-5 text-[#FF8833]" />,
                 title: "Custom SaaS Products (MVPs)",
                 desc: "Multi-tenant software-as-a-service platforms built to monetize subscription software. See our specialized SaaS development service.",
-                link: "/services/saas-development",
+                link: "/services/saas-development-company",
               },
               {
                 icon: <Shield className="w-5 h-5 text-[#00B4D8]" />,

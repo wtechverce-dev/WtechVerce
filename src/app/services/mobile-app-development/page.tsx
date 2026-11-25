@@ -40,13 +40,13 @@ export const metadata: Metadata = {
     "fitness app development services",
   ],
   alternates: {
-    canonical: "https://wtechverce.com/services/mobile-app-development",
+    canonical: "https://wtechverce.com/services/mobile-app-development-services",
   },
   openGraph: {
     title: "Custom Mobile App Development Services & Apps | WTechVerce",
     description:
       "WTechVerce provides custom mobile app development services for iOS and Android. High-performance React Native, Flutter, and scalable apps.",
-    url: "https://wtechverce.com/services/mobile-app-development",
+    url: "https://wtechverce.com/services/mobile-app-development-services",
     type: "website",
   },
   twitter: {
@@ -501,7 +501,7 @@ export default function MobileAppDevelopmentService() {
             <Button href="/services/custom-software-development" variant="outline" size="md">
               Software Development <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
-            <Button href="/services/web-development" variant="outline" size="md">
+            <Button href="/services/web-development-services" variant="outline" size="md">
               Web Development
             </Button>
           </div>

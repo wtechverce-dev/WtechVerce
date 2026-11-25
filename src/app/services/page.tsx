@@ -20,7 +20,7 @@ const allServices = [
   {
     icon: <Code className="w-7 h-7" />,
     title: "Custom Software Development",
-    slug: "software-development",
+    slug: "custom-software-development",
     description: "Enterprise-grade custom software, internal tools, and automation systems tailored to your complex business operations.",
     features: ["Enterprise Software", "API Integrations", "Database Design", "Cloud Architecture"],
     color: "#FD4F00",
@@ -28,7 +28,7 @@ const allServices = [
   {
     icon: <Cloud className="w-7 h-7" />,
     title: "SaaS Development",
-    slug: "saas-development",
+    slug: "saas-development-company",
     description: "Multi-tenant, secure, and highly scalable SaaS products engineered for high growth and subscription revenue.",
     features: ["Multi-Tenant Logic", "Stripe Billing", "User Management", "MVP to Scale"],
     color: "#8A2BE2",
@@ -36,7 +36,7 @@ const allServices = [
   {
     icon: <Code className="w-7 h-7" />,
     title: "Web Development",
-    slug: "web-development",
+    slug: "web-development-services",
     description: "Custom, high-performance websites and web applications built from scratch to perfectly align with your business goals.",
     features: ["Custom Web Apps", "React / Next.js", "Performance Optimized", "Scalable Architecture"],
     color: "#FD4F00",
@@ -44,7 +44,7 @@ const allServices = [
   {
     icon: <Cloud className="w-7 h-7" />,
     title: "WordPress Development",
-    slug: "wordpress-development",
+    slug: "wordpress-development-services",
     description: "Premium WordPress websites that are fast, secure, and easy for your team to manage without writing code.",
     features: ["Custom Themes", "Plugin Integration", "Headless WordPress", "Speed Optimization"],
     color: "#6C24FA",
@@ -52,7 +52,7 @@ const allServices = [
   {
     icon: <Settings className="w-7 h-7" />,
     title: "Ecommerce Development",
-    slug: "ecommerce-development",
+    slug: "ecommerce-development-services",
     description: "Conversion-focused online stores built on WooCommerce or Shopify that turn visitors into paying customers.",
     features: ["Custom Storefronts", "Payment Integration", "Inventory Sync", "Conversion Optimized"],
     color: "#FF8833",
@@ -60,7 +60,7 @@ const allServices = [
   {
     icon: <LayoutTemplate className="w-7 h-7" />,
     title: "UI/UX Design",
-    slug: "ui-ux-design",
+    slug: "ui-ux-design-services",
     description: "Data-backed design systems and user interfaces that look stunning and guide users seamlessly to conversion.",
     features: ["User Research", "Wireframing", "High-Fidelity UI", "Interactive Prototypes"],
     color: "#6B21A8",
@@ -68,7 +68,7 @@ const allServices = [
   {
     icon: <Server className="w-7 h-7" />,
     title: "Website Redesign",
-    slug: "website-redesign",
+    slug: "website-redesign-services",
     description: "Complete strategic overhauls of outdated websites to improve aesthetics, fix technical debt, and increase ROI.",
     features: ["UX Audit", "Modernization", "Content Migration", "No-Downtime Launch"],
     color: "#FD4F00",
@@ -76,7 +76,7 @@ const allServices = [
   {
     icon: <Smartphone className="w-7 h-7" />,
     title: "Mobile App Development",
-    slug: "mobile-app-development",
+    slug: "mobile-app-development-services",
     description: "Native iOS & Android and cross-platform mobile apps engineered for fluid performance and high user retention.",
     features: ["Native iOS & Android", "Cross-Platform Apps", "Mobile Wireframing", "App Store Launch"],
     color: "#00B4D8",
@@ -84,7 +84,7 @@ const allServices = [
   {
     icon: <Cpu className="w-7 h-7" />,
     title: "SEO Services",
-    slug: "seo",
+    slug: "seo-services",
     description: "Data-driven Search Engine Optimization to dominate local and global search results, driving high-intent organic traffic.",
     features: ["Local SEO", "Technical SEO", "Content Strategy", "Link Building"],
     color: "#4C1D95",

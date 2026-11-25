@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     "wordpress plugin development services",
   ],
   alternates: {
-    canonical: "https://wtechverce.com/services/wordpress-development",
+    canonical: "https://wtechverce.com/services/wordpress-development-services",
   },
   openGraph: {
     title: "Custom WordPress Web Development Services | WTechVerce",
     description:
       "WTechVerce provides custom WordPress development. We build fast, secure themes, custom plugins, and modern headless CMS web tools.",
-    url: "https://wtechverce.com/services/wordpress-development",
+    url: "https://wtechverce.com/services/wordpress-development-services",
     type: "website",
   },
   twitter: {

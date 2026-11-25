@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     "user experience and mobile interface wireframes",
   ],
   alternates: {
-    canonical: "https://wtechverce.com/services/ui-ux-design",
+    canonical: "https://wtechverce.com/services/ui-ux-design-services",
   },
   openGraph: {
     title: "UI/UX Design Services for Web & Mobile Apps | WTechVerce",
     description:
       "Modern UI/UX design services by WTechVerce. We craft clean, intuitive web and mobile interfaces, Figma design systems, and user journeys.",
-    url: "https://wtechverce.com/services/ui-ux-design",
+    url: "https://wtechverce.com/services/ui-ux-design-services",
     type: "website",
   },
   twitter: {

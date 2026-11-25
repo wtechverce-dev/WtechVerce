@@ -41,6 +41,46 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/services/seo',
+        destination: '/services/seo-services',
+        permanent: true,
+      },
+      {
+        source: '/services/saas-development',
+        destination: '/services/saas-development-company',
+        permanent: true,
+      },
+      {
+        source: '/services/web-development',
+        destination: '/services/web-development-services',
+        permanent: true,
+      },
+      {
+        source: '/services/mobile-app-development',
+        destination: '/services/mobile-app-development-services',
+        permanent: true,
+      },
+      {
+        source: '/services/wordpress-development',
+        destination: '/services/wordpress-development-services',
+        permanent: true,
+      },
+      {
+        source: '/services/ecommerce-development',
+        destination: '/services/ecommerce-development-services',
+        permanent: true,
+      },
+      {
+        source: '/services/ui-ux-design',
+        destination: '/services/ui-ux-design-services',
+        permanent: true,
+      },
+      {
+        source: '/services/website-redesign',
+        destination: '/services/website-redesign-services',
+        permanent: true,
+      },
+      {
         source: '/about',
         destination: '/#about',
         permanent: true,

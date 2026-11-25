@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     "saas platform architecture",
   ],
   alternates: {
-    canonical: "https://wtechverce.com/services/saas-development",
+    canonical: "https://wtechverce.com/services/saas-development-company",
   },
   openGraph: {
     title: "Custom SaaS Development Services & Platforms | WTechVerce",
     description:
       "Scale your product with our SaaS development services. WTechVerce engineers multi-tenant cloud software, billing engines, and rapid MVPs.",
-    url: "https://wtechverce.com/services/saas-development",
+    url: "https://wtechverce.com/services/saas-development-company",
     type: "website",
   },
   twitter: {
