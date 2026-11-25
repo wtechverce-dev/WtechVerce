@@ -76,7 +76,7 @@ export default function Footer() {
               <h4 className="text-white font-black text-sm tracking-[0.2em] uppercase mb-6 opacity-40">Services</h4>
               <ul className="flex flex-col gap-4">
                 {[
-                  ["Software Development", "/services/software-development"],
+                  ["Software Development", "/services/custom-software-development"],
                   ["SaaS Development", "/services/saas-development"],
                   ["Web Development", "/services/web-development"],
                   ["WordPress Development", "/services/wordpress-development"],

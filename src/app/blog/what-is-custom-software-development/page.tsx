@@ -278,7 +278,7 @@ export default function BlogWhatIsCustomSoftware() {
               From product discovery and architectural wireframing to full-stack engineering in React, Next.js, Node.js, and cloud backends — our dedicated engineering team delivers high-performance custom software tailored for US, UK, and international clients.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button href="/services/software-development" variant="primary" size="md">
+              <Button href="/services/custom-software-development" variant="primary" size="md">
                 Explore Custom Software Services <ArrowRight className="w-4 h-4 ml-1" />
               </Button>
               <Button href="/portfolio/custom-saas-platform-development" variant="outline" size="md">
@@ -475,7 +475,7 @@ export default function BlogWhatIsCustomSoftware() {
             <Button href="/contact" variant="primary" size="lg" filled>
               Schedule a Technical Consultation <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
-            <Button href="/services/software-development" variant="outline" size="lg">
+            <Button href="/services/custom-software-development" variant="outline" size="lg">
               View Software Services
             </Button>
           </div>

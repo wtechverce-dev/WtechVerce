@@ -91,7 +91,7 @@ const projects = [
   },
   {
     slug: "fitness-gym-management-software",
-    serviceHref: "/services/software-development",
+    serviceHref: "/services/custom-software-development",
     serviceTitle: "Custom Software Development",
     guideHref: "/blog/what-is-custom-software-development",
     guideTitle: "Complete Guide to Custom Software Engineering",

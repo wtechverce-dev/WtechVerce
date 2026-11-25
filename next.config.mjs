@@ -36,6 +36,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/services/software-development',
+        destination: '/services/custom-software-development',
+        permanent: true,
+      },
+      {
         source: '/about',
         destination: '/#about',
         permanent: true,

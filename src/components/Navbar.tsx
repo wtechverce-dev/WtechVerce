@@ -10,7 +10,7 @@ import { Menu, X, ChevronDown, Code, Cloud, Settings, LayoutTemplate, Server, Cp
 
 const servicesList = [
   { label: "Web Development", href: "/services/web-development", icon: <Code className="w-5 h-5 text-[#FF8833]" /> },
-  { label: "Software Dev", href: "/services/software-development", icon: <Cpu className="w-5 h-5 text-[#FD4F00]" /> },
+  { label: "Software Dev", href: "/services/custom-software-development", icon: <Cpu className="w-5 h-5 text-[#FD4F00]" /> },
   { label: "SaaS Dev", href: "/services/saas-development", icon: <Cloud className="w-5 h-5 text-[#6C24FA]" /> },
   { label: "Mobile Apps", href: "/services/mobile-app-development", icon: <Smartphone className="w-5 h-5 text-[#00B4D8]" /> },
   { label: "Ecommerce Dev", href: "/services/ecommerce-development", icon: <Settings className="w-5 h-5 text-[#6B21A8]" /> },

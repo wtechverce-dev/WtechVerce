@@ -498,7 +498,7 @@ export default function MobileAppDevelopmentService() {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
-            <Button href="/services/software-development" variant="outline" size="md">
+            <Button href="/services/custom-software-development" variant="outline" size="md">
               Software Development <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
             <Button href="/services/web-development" variant="outline" size="md">

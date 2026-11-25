@@ -34,13 +34,13 @@ export const metadata: Metadata = {
     "custom desktop app development",
   ],
   alternates: {
-    canonical: "https://wtechverce.com/services/software-development",
+    canonical: "https://wtechverce.com/services/custom-software-development",
   },
   openGraph: {
     title: "Custom Software Development Company & Apps | WTechVerce",
     description:
       "WTechVerce is a custom software development company. We engineer enterprise software, custom business tools, and scalable cloud apps.",
-    url: "https://wtechverce.com/services/software-development",
+    url: "https://wtechverce.com/services/custom-software-development",
     type: "website",
   },
   twitter: {

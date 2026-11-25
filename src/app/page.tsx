@@ -173,7 +173,7 @@ export default function Home() {
 
           <div className="flex flex-col items-center gap-8 max-w-3xl text-center">
             <p className="text-gray-400 text-lg md:text-xl leading-relaxed">
-              We build <Link href="/services/software-development" className="text-white hover:text-[#FD4F00]">custom software</Link> and <Link href="/services/web-development" className="text-white hover:text-[#FD4F00]">high-performance web applications</Link> for startups and growing businesses — from SaaS products to eCommerce platforms and enterprise tools.
+              We build <Link href="/services/custom-software-development" className="text-white hover:text-[#FD4F00]">custom software</Link> and <Link href="/services/web-development" className="text-white hover:text-[#FD4F00]">high-performance web applications</Link> for startups and growing businesses — from SaaS products to eCommerce platforms and enterprise tools.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto mt-4">
               <Button href="/contact" variant="primary" size="lg" filled>
@@ -362,7 +362,7 @@ export default function Home() {
                   </motion.div>
                   <h3 className="text-3xl font-black text-white mb-4">Custom Software Development</h3>
                   <p className="text-gray-400 mb-8 leading-relaxed">Enterprise software systems, internal business automation tools, and resilient microservices built to scale without technical debt.</p>
-                  <PillBtn href="/services/software-development"><span className="flex items-center gap-2">Explore Software Dev <ArrowRight className="w-4 h-4" /></span></PillBtn>
+                  <PillBtn href="/services/custom-software-development"><span className="flex items-center gap-2">Explore Software Dev <ArrowRight className="w-4 h-4" /></span></PillBtn>
                 </div>
               </div>
             </FadeIn>
