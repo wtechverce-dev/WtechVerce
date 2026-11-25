@@ -32,7 +32,7 @@ const nextConfig = {
       },
       {
         source: '/services/digital-marketing',
-        destination: '/services/seo',
+        destination: '/services/seo-services',
         permanent: true,
       },
       {
@@ -83,6 +83,21 @@ const nextConfig = {
       {
         source: '/about',
         destination: '/#about',
+        permanent: true,
+      },
+      {
+        source: '/blog/custom-web-development-small-business',
+        destination: '/services/web-development-services',
+        permanent: true,
+      },
+      {
+        source: '/blog/how-long-does-website-development-take',
+        destination: '/process',
+        permanent: true,
+      },
+      {
+        source: '/blog/what-is-custom-web-development',
+        destination: '/services/web-development-services',
         permanent: true,
       },
     ];
