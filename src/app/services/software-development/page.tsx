@@ -54,7 +54,7 @@ export const metadata: Metadata = {
 export default function SoftwareDevelopmentService() {
   return (
     <main className="min-h-screen bg-[#02050A] text-white overflow-x-hidden pt-32 pb-24">
-      <Script id="service-schema" type="application/ld+json" strategy="beforeInteractive">
+      <Script id="service-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
@@ -73,7 +73,7 @@ export default function SoftwareDevelopmentService() {
           ]
         })}
       </Script>
-      <Script id="faq-schema" type="application/ld+json" strategy="beforeInteractive">
+      <Script id="faq-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "FAQPage",
@@ -148,14 +148,15 @@ export default function SoftwareDevelopmentService() {
         </div>
 
         {/* HERO SHOWCASE IMAGE WITH SEMANTIC ALT */}
-        <div className="relative w-full h-[320px] md:h-[460px] rounded-3xl overflow-hidden border border-white/10 mb-32 group shadow-2xl">
+        <div className="relative w-full h-[320px] md:h-[460px] rounded-3xl overflow-hidden border border-white/10 mb-32 shadow-2xl">
           <Image
-            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1600&q=80"
+            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1400&q=75&fm=webp"
             alt="Custom software development company engineers building enterprise software systems"
             fill
-            className="object-cover group-hover:scale-105 transition-transform duration-700"
-            sizes="(max-width: 1200px) 100vw, 1200px"
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1400px"
             priority
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#02050A] via-[#02050A]/40 to-transparent" />
           <div className="absolute bottom-8 left-8 right-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -213,9 +214,9 @@ export default function SoftwareDevelopmentService() {
             <table className="w-full text-sm text-left">
               <thead className="border-b border-white/10 bg-white/[0.02]">
                 <tr>
-                  <th className="py-4 px-6 text-gray-400 font-bold uppercase text-xs">Business Dimension</th>
-                  <th className="py-4 px-6 text-gray-400 font-bold uppercase text-xs">Off-the-Shelf SaaS</th>
-                  <th className="py-4 px-6 text-[#FD4F00] font-bold uppercase text-xs">Custom Software Platform</th>
+                  <th scope="col" className="py-4 px-6 text-gray-400 font-bold uppercase text-xs">Business Dimension</th>
+                  <th scope="col" className="py-4 px-6 text-gray-400 font-bold uppercase text-xs">Off-the-Shelf SaaS</th>
+                  <th scope="col" className="py-4 px-6 text-[#FD4F00] font-bold uppercase text-xs">Custom Software Platform</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/5">
@@ -226,7 +227,7 @@ export default function SoftwareDevelopmentService() {
                   ["Intellectual Property", "Zero equity; vendor controls product roadmap", "Full GitHub repository and 100% IP ownership"],
                 ].map(([dim, ots, cust], idx) => (
                   <tr key={idx} className="hover:bg-white/[0.02] transition-colors">
-                    <td className="py-4 px-6 font-bold text-white">{dim}</td>
+                    <th scope="row" className="py-4 px-6 font-bold text-white text-left">{dim}</th>
                     <td className="py-4 px-6 text-gray-400">
                       <span className="inline-flex items-start gap-2"><XCircle className="w-4 h-4 text-red-400/70 shrink-0 mt-0.5" /> {ots}</span>
                     </td>
@@ -406,25 +407,25 @@ export default function SoftwareDevelopmentService() {
           </div>
           <div className="space-y-6">
             <div className="border-b border-white/10 pb-6">
-              <h4 className="text-lg font-bold mb-2">Why partner with an enterprise software development company instead of buying off-the-shelf software?</h4>
+              <h3 className="text-lg font-bold mb-2">Why partner with an enterprise software development company instead of buying off-the-shelf software?</h3>
               <p className="text-gray-400 leading-relaxed">
                 Partnering with a custom software development company gives you 100% intellectual property ownership, zero escalating per-seat subscription fees, and bespoke workflows tailored precisely to how your operations run.
               </p>
             </div>
             <div className="border-b border-white/10 pb-6">
-              <h4 className="text-lg font-bold mb-2">How long does the custom software development lifecycle take?</h4>
+              <h3 className="text-lg font-bold mb-2">How long does the custom software development lifecycle take?</h3>
               <p className="text-gray-400 leading-relaxed">
                 Focused internal tools and startup MVPs typically ship in 8 to 16 weeks, while multi-module enterprise platforms take 4 to 8 months delivered across transparent bi-weekly sprint milestones.
               </p>
             </div>
             <div className="border-b border-white/10 pb-6">
-              <h4 className="text-lg font-bold mb-2">Can we hire dedicated software developers or engage in outsourcing software development services?</h4>
+              <h3 className="text-lg font-bold mb-2">Can we hire dedicated software developers or engage in outsourcing software development services?</h3>
               <p className="text-gray-400 leading-relaxed">
                 Yes. We offer flexible engagement models including dedicated developer pods that join your daily standups and fixed-scope milestone teams with working-hour overlap for US and European stakeholders.
               </p>
             </div>
             <div className="border-b border-white/10 pb-6">
-              <h4 className="text-lg font-bold mb-2">Do you develop cross-platform desktop applications as well as cloud systems?</h4>
+              <h3 className="text-lg font-bold mb-2">Do you develop cross-platform desktop applications as well as cloud systems?</h3>
               <p className="text-gray-400 leading-relaxed">
                 Yes. As a desktop application development company, we build Windows, macOS, and Linux desktop tools connected directly to secure cloud APIs and local hardware workflows.
               </p>
